@@ -1,0 +1,1576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#ffffff">
+
+<title>DIPO BIO — Stylish Fonts</title>
+
+<style>
+*{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  background:#fff;
+  color:#111;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+}
+
+.container{
+  width:min(1000px,94%);
+  margin:auto;
+}
+
+/* HEADER */
+
+header{
+  background:#fff;
+  border-bottom:1px solid #e8e8e8;
+  padding:22px 0;
+  position:sticky;
+  top:0;
+  z-index:20;
+}
+
+.nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
+}
+
+.logo{
+  font-size:30px;
+  font-weight:900;
+  letter-spacing:-2px;
+}
+
+.logo span{
+  color:#2859d7;
+}
+
+.back{
+  color:#222;
+  font-size:18px;
+  font-weight:700;
+  text-decoration:none;
+}
+
+/* MAIN */
+
+main{
+  padding:38px 0 80px;
+}
+
+h1{
+  font-size:clamp(42px,8vw,72px);
+  line-height:1;
+  letter-spacing:-3px;
+  margin:0 0 20px;
+}
+
+.subtitle{
+  color:#777;
+  font-size:20px;
+  margin:0 0 30px;
+}
+
+/* INPUT */
+
+.input-box{
+  background:#fff;
+  border:2px solid #e5e2da;
+  border-radius:25px;
+  padding:15px;
+  box-shadow:0 8px 25px rgba(0,0,0,.04);
+  margin-bottom:14px;
+}
+
+.input-wrap{
+  position:relative;
+}
+
+textarea{
+  width:100%;
+  height:110px;
+  resize:none;
+  border:2px solid #e6e2d8;
+  border-radius:18px;
+  padding:20px 80px 20px 20px;
+  font-size:27px;
+  outline:none;
+  color:#111;
+  background:#fafafa;
+  font-family:inherit;
+}
+
+textarea:focus{
+  border-color:#2859d7;
+}
+
+.counter{
+  position:absolute;
+  right:18px;
+  top:18px;
+  color:#999;
+  font-size:16px;
+  font-weight:700;
+}
+
+/* SEARCH */
+
+.search-box{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  background:#fafafa;
+  border:2px solid #e5e2da;
+  border-radius:16px;
+  padding:0 16px;
+  margin-bottom:30px;
+}
+
+.search-icon{
+  font-size:21px;
+}
+
+.search-box input{
+  width:100%;
+  border:0;
+  outline:0;
+  background:transparent;
+  padding:16px 0;
+  font-size:17px;
+}
+
+.style-count{
+  white-space:nowrap;
+  color:#999;
+  font-size:14px;
+  font-weight:800;
+}
+
+/* CATEGORY */
+
+.category{
+  margin:28px 0 14px;
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.category h2{
+  margin:0;
+  color:#2859d7;
+  font-size:25px;
+  letter-spacing:-.5px;
+  white-space:nowrap;
+}
+
+.category-line{
+  height:2px;
+  background:#ddd;
+  flex:1;
+}
+
+.category-count{
+  background:#f3f5ff;
+  border:1px solid #dfe4f5;
+  border-radius:30px;
+  padding:7px 13px;
+  color:#555;
+  font-size:12px;
+  font-weight:800;
+  white-space:nowrap;
+}
+
+/* GRID */
+
+.font-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:12px;
+}
+
+/* CARD */
+
+.font-card{
+  position:relative;
+  background:#fff;
+  border:2px solid #e7e5df;
+  border-radius:19px;
+  padding:15px 16px 13px;
+  min-height:145px;
+  transition:.18s ease;
+  overflow:hidden;
+}
+
+.font-card:hover{
+  border-color:#2859d7;
+  transform:translateY(-2px);
+}
+
+.font-card.favorite{
+  border-color:#15945a;
+  background:#f1fff8;
+}
+
+.card-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:8px;
+  border-bottom:2px solid #eeeae2;
+  padding-bottom:10px;
+}
+
+.font-name{
+  color:#5e5e5e;
+  font-size:13px;
+  font-weight:900;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.badge{
+  background:#f6f6f4;
+  color:#999;
+  border-radius:10px;
+  padding:7px 10px;
+  font-size:10px;
+  font-weight:900;
+  white-space:nowrap;
+}
+
+/* PREVIEW */
+
+.preview{
+  height:42px;
+  display:flex;
+  align-items:center;
+  margin:10px 0;
+  font-size:20px;
+  line-height:1;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+
+/* BUTTONS */
+
+.actions{
+  display:flex;
+  justify-content:flex-end;
+  align-items:center;
+  gap:8px;
+}
+
+.favorite-btn{
+  width:42px;
+  height:36px;
+  border-radius:10px;
+  border:2px solid #e7e3da;
+  background:#fff;
+  font-size:20px;
+  color:#999;
+  cursor:pointer;
+}
+
+.favorite-btn.active{
+  color:#ff3b6b;
+  border-color:#ffb8c8;
+}
+
+.copy-btn{
+  border:0;
+  background:#2859d7;
+  color:#fff;
+  border-radius:10px;
+  padding:10px 20px;
+  min-width:90px;
+  font-size:13px;
+  font-weight:900;
+  cursor:pointer;
+}
+
+.copy-btn.copied{
+  background:#168b54;
+}
+
+/* EMPTY */
+
+.empty{
+  text-align:center;
+  padding:50px 20px;
+  color:#888;
+  display:none;
+}
+
+/* TOAST */
+
+.toast{
+  position:fixed;
+  left:50%;
+  bottom:25px;
+  transform:translate(-50%,120px);
+  background:#168b54;
+  color:#fff;
+  padding:16px 25px;
+  border-radius:17px;
+  font-weight:900;
+  font-size:15px;
+  box-shadow:0 12px 35px rgba(0,0,0,.2);
+  transition:.3s ease;
+  z-index:100;
+  text-align:center;
+}
+
+.toast.show{
+  transform:translate(-50%,0);
+}
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+  .container{
+    width:92%;
+  }
+
+  header{
+    padding:18px 0;
+  }
+
+  .logo{
+    font-size:25px;
+  }
+
+  .back{
+    font-size:16px;
+  }
+
+  main{
+    padding:30px 0 70px;
+  }
+
+  h1{
+    font-size:48px;
+    letter-spacing:-2.5px;
+  }
+
+  .subtitle{
+    font-size:17px;
+    margin-bottom:22px;
+  }
+
+  .input-box{
+    padding:10px;
+    border-radius:20px;
+  }
+
+  textarea{
+    height:82px;
+    font-size:22px;
+    padding:16px 60px 16px 16px;
+  }
+
+  .counter{
+    font-size:13px;
+    top:14px;
+    right:14px;
+  }
+
+  .search-box{
+    margin-bottom:20px;
+  }
+
+  .search-box input{
+    font-size:15px;
+    padding:13px 0;
+  }
+
+  .style-count{
+    font-size:11px;
+  }
+
+  .category{
+    margin:20px 0 10px;
+  }
+
+  .category h2{
+    font-size:20px;
+  }
+
+  .category-count{
+    padding:5px 9px;
+    font-size:10px;
+  }
+
+  /*
+    COMPACT MOBILE GRID
+    2 cards per row = 6 cards visible much faster
+  */
+
+  .font-grid{
+    grid-template-columns:repeat(2,1fr);
+    gap:9px;
+  }
+
+  .font-card{
+    min-height:126px;
+    border-radius:15px;
+    padding:11px 11px 10px;
+  }
+
+  .card-top{
+    padding-bottom:7px;
+  }
+
+  .font-name{
+    font-size:10px;
+    letter-spacing:1.3px;
+  }
+
+  .badge{
+    font-size:8px;
+    padding:5px 7px;
+  }
+
+  .preview{
+    height:34px;
+    margin:7px 0;
+    font-size:16px;
+  }
+
+  .actions{
+    gap:5px;
+  }
+
+  .favorite-btn{
+    width:34px;
+    height:31px;
+    font-size:17px;
+    border-radius:8px;
+  }
+
+  .copy-btn{
+    min-width:68px;
+    padding:8px 9px;
+    font-size:10px;
+    border-radius:8px;
+  }
+
+  .toast{
+    width:calc(100% - 40px);
+    font-size:14px;
+  }
+}
+
+/* VERY SMALL PHONES */
+
+@media(max-width:380px){
+
+  .logo{
+    font-size:22px;
+  }
+
+  .back{
+    font-size:14px;
+  }
+
+  h1{
+    font-size:42px;
+  }
+
+  .font-grid{
+    gap:7px;
+  }
+
+  .font-card{
+    min-height:118px;
+    padding:9px;
+  }
+
+  .preview{
+    font-size:14px;
+  }
+
+  .copy-btn{
+    min-width:60px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="container nav">
+
+    <div class="logo">
+      DIPO<span>WORLD</span>
+    </div>
+
+    <a class="back" href="index.html">
+      ← Bio Tools
+    </a>
+
+  </div>
+</header>
+
+<main class="container">
+
+  <h1>Stylish Fonts</h1>
+
+  <p class="subtitle">
+    Type text and copy your favorite style.
+  </p>
+
+  <!-- INPUT -->
+
+  <div class="input-box">
+
+    <div class="input-wrap">
+
+      <textarea
+        id="text"
+        maxlength="200"
+        placeholder="Enter or Paste Your Text"
+      >DIPO WORLD</textarea>
+
+      <div class="counter">
+        <span id="counter">10</span> / 200
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- SEARCH -->
+
+  <div class="search-box">
+
+    <span class="search-icon">🔎</span>
+
+    <input
+      id="search"
+      type="text"
+      placeholder="Search styles by name..."
+    >
+
+    <span class="style-count">
+      <span id="totalCount">120</span> styles
+    </span>
+
+  </div>
+
+  <!-- FONT RESULTS -->
+
+  <div id="fontContainer"></div>
+
+  <div id="empty" class="empty">
+    😭 No font style found.
+    <br>
+    Try another search.
+  </div>
+
+</main>
+
+<div id="toast" class="toast">
+  ✓ COPIED TO CLIPBOARD!
+</div>
+
+
+<script>
+
+/* =====================================================
+   UNICODE FONT MAPS
+===================================================== */
+
+const upperNormal =
+"ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+const lowerNormal =
+"abcdefghijklmnopqrstuvwxyz";
+
+const digitsNormal =
+"0123456789";
+
+
+const boldUpper =
+"𝐀𝐁𝐂𝐃𝐄𝐅𝐆𝐇𝐈𝐉𝐊𝐋𝐌𝐍𝐎𝐏𝐐𝐑𝐒𝐓𝐔𝐕𝐖𝐗𝐘𝐙";
+
+const boldLower =
+"𝐚𝐛𝐜𝐝𝐞𝐟𝐠𝐡𝐢𝐣𝐤𝐥𝐦𝐧𝐨𝐩𝐪𝐫𝐬𝐭𝐮𝐯𝐰𝐱𝐲𝐳";
+
+
+const italicUpper =
+"𝐴𝐵𝐶𝐷𝐸𝐹𝐺𝐻𝐼𝐽𝐾𝐿𝑀𝑁𝑂𝑃𝑄𝑅𝑆𝑇𝑈𝑉𝑊𝑋𝑌𝑍";
+
+const italicLower =
+"𝑎𝑏𝑐𝑑𝑒𝑓𝑔ℎ𝑖𝑗𝑘𝑙𝑚𝑛𝑜𝑝𝑞𝑟𝑠𝑡𝑢𝑣𝑤𝑥𝑦𝑧";
+
+
+const boldItalicUpper =
+"𝑨𝑩𝑪𝑫𝑬𝑭𝑮𝑯𝑰𝑱𝑲𝑳𝑴𝑵𝑶𝑷𝑸𝑹𝑺𝑻𝑼𝑽𝑾𝑿𝒀𝒁";
+
+const boldItalicLower =
+"𝒂𝒃𝒄𝒅𝒆𝒇𝒈𝒉𝒊𝒋𝒌𝒍𝒎𝒏𝒐𝒑𝒒𝒓𝒔𝒕𝒖𝒗𝒘𝒙𝒚𝒛";
+
+
+const doubleUpper =
+"𝔸𝔹ℂ𝔻𝔼𝔽𝔾ℍ𝕀𝕁𝕂𝕃𝕄ℕ𝕆ℙℚℝ𝕊𝕋𝕌𝕍𝕎𝕏𝕐ℤ";
+
+const doubleLower =
+"𝕒𝕓𝕔𝕕𝕖𝕗𝕘𝕙𝕚𝕛𝕜𝕝𝕞𝕟𝕠𝕡𝕢𝕣𝕤𝕥𝕦𝕧𝕨𝕩𝕪𝕫";
+
+
+const monoUpper =
+"𝙰𝙱𝙲𝙳𝙴𝙵𝙶𝙷𝙸𝙹𝙺𝙻𝙼𝙽𝙾𝙿𝚀𝚁𝚂𝚃𝚄𝚅𝚆𝚇𝚈𝚉";
+
+const monoLower =
+"𝚊𝚋𝚌𝚍𝚎𝚏𝚐𝚑𝚒𝚓𝚔𝚕𝚖𝚗𝚘𝚙𝚚𝚛𝚜𝚝𝚞𝚟𝚠𝚡𝚢𝚣";
+
+
+const circledUpper =
+"ⒶⒷⒸⒹⒺⒻⒼⒽⒾⒿⓀⓁⓂⓃⓄⓅⓆⓇⓈⓉⓊⓋⓌⓍⓎⓏ";
+
+
+const fullUpper =
+"ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺ";
+
+const fullLower =
+"ａｂｃｄｅｆｇｈｉｊｋｌｍｎｏｐｑｒｓｔｕｖｗｘｙｚ";
+
+
+/* =====================================================
+   TRANSLATOR
+===================================================== */
+
+function convert(text, upper, lower){
+
+  let result="";
+
+  for(const char of text){
+
+    const upperIndex =
+      upperNormal.indexOf(char.toUpperCase());
+
+    const lowerIndex =
+      lowerNormal.indexOf(char.toLowerCase());
+
+    if(
+      char >= "A" &&
+      char <= "Z" &&
+      upperIndex >= 0 &&
+      upper[upperIndex]
+    ){
+      result += upper[upperIndex];
+    }
+
+    else if(
+      char >= "a" &&
+      char <= "z" &&
+      lowerIndex >= 0 &&
+      lower[lowerIndex]
+    ){
+      result += lower[lowerIndex];
+    }
+
+    else{
+      result += char;
+    }
+  }
+
+  return result;
+}
+
+
+/* =====================================================
+   STYLE HELPERS
+===================================================== */
+
+const styles=[];
+
+function add(name,category,badge,fn){
+  styles.push({
+    name,
+    category,
+    badge,
+    fn
+  });
+}
+
+
+/* BASIC */
+
+add("Bold","🔥 Popular","FANCY",
+ t=>convert(t,boldUpper,boldLower));
+
+add("Italic","🔥 Popular","FANCY",
+ t=>convert(t,italicUpper,italicLower));
+
+add("Bold Italic","🔥 Popular","FANCY",
+ t=>convert(t,boldItalicUpper,boldItalicLower));
+
+add("Double","🔥 Popular","FANCY",
+ t=>convert(t,doubleUpper,doubleLower));
+
+add("Monospace","🔥 Popular","FANCY",
+ t=>convert(t,monoUpper,monoLower));
+
+add("Circled","🔥 Popular","FANCY",
+ t=>convert(t,circledUpper,circledUpper.toLowerCase()));
+
+add("Full Width","🔥 Popular","AESTHETIC",
+ t=>convert(t,fullUpper,fullLower));
+
+
+/* SYMBOL STYLES */
+
+add("Sparkle","✨ Aesthetic","GEN Z",
+ t=>"✦ "+t+" ✦");
+
+add("Sparkle 2","✨ Aesthetic","GEN Z",
+ t=>"✧ "+t+" ✧");
+
+add("Stars","✨ Aesthetic","GEN Z",
+ t=>"★ "+t+" ★");
+
+add("Stars 2","✨ Aesthetic","GEN Z",
+ t=>"☆ "+t+" ☆");
+
+add("Diamond","✨ Aesthetic","GEN Z",
+ t=>"◆ "+t+" ◆");
+
+add("Diamond 2","✨ Aesthetic","GEN Z",
+ t=>"◇ "+t+" ◇");
+
+add("Cloud","☁️ Cute","CUTE",
+ t=>"☁️ "+t+" ☁️");
+
+add("Flower","🌸 Cute","CUTE",
+ t=>"🌸 "+t+" 🌸");
+
+add("Butterfly","🦋 Cute","CUTE",
+ t=>"🦋 "+t+" 🦋");
+
+add("Cherry","🍒 Cute","CUTE",
+ t=>"🍒 "+t+" 🍒");
+
+add("Crown","👑 Luxury","HOT",
+ t=>"👑 "+t+" 👑");
+
+add("Fire","🔥 Hot","HOT",
+ t=>"🔥 "+t+" 🔥");
+
+add("Heart","❤️ Love","LOVE",
+ t=>"♡ "+t+" ♡");
+
+add("Heart 2","❤️ Love","LOVE",
+ t=>"♥ "+t+" ♥");
+
+add("Angel","😇 Cute","CUTE",
+ t=>"𓆩♡𓆪 "+t+" 𓆩♡𓆪");
+
+add("Peace","☮️ Aesthetic","VIBE",
+ t=>"☮️ "+t+" ☮️");
+
+add("Skull","💀 Dark","DARK",
+ t=>"☠ "+t+" ☠");
+
+add("Devil","😈 Hot","HOT",
+ t=>"😈 "+t+" 😈");
+
+add("Hot","🥵 Hot","HOT",
+ t=>"🥵 "+t+" 🥵");
+
+add("Money","💸 Luxury","FLEX",
+ t=>"💸 "+t+" 💸");
+
+add("Verified","✅ Social","SOCIAL",
+ t=>"✓ "+t);
+
+add("Arrow","➜ Social","GEN Z",
+ t=>"➜ "+t+" ⇢");
+
+add("Minimal","— Minimal","CLEAN",
+ t=>"— "+t+" —");
+
+add("Brackets","〔 Minimal 〕","CLEAN",
+ t=>"〔 "+t+" 〕");
+
+add("Japanese","和 Aesthetic","VIBE",
+ t=>"『 "+t+" 』");
+
+add("Kawaii","૮₍ ˶ᵔ ᵕ ᵔ˶ ₎ა","CUTE",
+ t=>"૮₍ ˶ᵔ ᵕ ᵔ˶ ₎ა "+t);
+
+add("Cute Face","Cute","CUTE",
+ t=>"(づ｡◕‿‿◕｡)づ "+t);
+
+add("Lenny","Meme","MEME",
+ t=>"☞ "+t+" ☜");
+
+add("Flex","💪 Gen Z","FLEX",
+ t=>"💪 "+t+" 🔥");
+
+add("Drip","💧 Gen Z","DRIP",
+ t=>"💧 "+t+" 💧");
+
+add("Aesthetic","✦ Aesthetic","VIBE",
+ t=>"⋆｡°✩ "+t+" ✩°｡⋆");
+
+add("Dreamy","☾ Dreamy","VIBE",
+ t=>"☾ "+t+" ☽");
+
+add("Moon","🌙 Aesthetic","VIBE",
+ t=>"☾ "+t+" ☽");
+
+add("Ocean","🌊 Vibe","VIBE",
+ t=>"🌊 "+t+" 🌊");
+
+add("Sun","☀️ Vibe","VIBE",
+ t=>"☀️ "+t+" ☀️");
+
+add("Energy","⚡ Gen Z","HOT",
+ t=>"⚡ "+t+" ⚡");
+
+add("Warning","⚠️ Gen Z","HOT",
+ t=>"⚠️ "+t+" ⚠️");
+
+add("No Cap","🧢 Gen Z","GEN Z",
+ t=>"🧢 "+t+" 🧢");
+
+add("Slay","💅 Gen Z","HOT",
+ t=>"💅 "+t+" ✨");
+
+add("Queen","👸 Gen Z","HOT",
+ t=>"👑 "+t+" 💅");
+
+add("Boss","😎 Gen Z","FLEX",
+ t=>"😎 "+t+" 💯");
+
+add("Cool","🕶️ Gen Z","COOL",
+ t=>"🕶️ "+t+" 🕶️");
+
+add("Vibe","✨ Gen Z","VIBE",
+ t=>"✨ "+t+" 🪩");
+
+add("Party","🪩 Gen Z","GEN Z",
+ t=>"🪩 "+t+" 🪩");
+
+add("Music","🎧 Gen Z","VIBE",
+ t=>"🎧 "+t+" 🎵");
+
+add("Gaming","🎮 Gen Z","GAMING",
+ t=>"🎮 "+t+" 🎮");
+
+add("Tech","💻 Gen Z","TECH",
+ t=>"💻 "+t+" ⚡");
+
+add("AI","🤖 Gen Z","TECH",
+ t=>"🤖 "+t+" AI");
+
+add("Rocket","🚀 Gen Z","FUTURE",
+ t=>"🚀 "+t+" 🚀");
+
+add("Galaxy","🌌 Aesthetic","VIBE",
+ t=>"🌌 "+t+" 🌌");
+
+add("Alien","👽 Gen Z","WEIRD",
+ t=>"👽 "+t+" 👽");
+
+add("Ghost","👻 Gen Z","DARK",
+ t=>"👻 "+t+" 👻");
+
+add("Vampire","🧛 Dark","DARK",
+ t=>"🧛 "+t+" 🧛");
+
+add("Dark","🖤 Dark","DARK",
+ t=>"🖤 "+t+" 🖤");
+
+add("Black Heart","🖤 Dark","DARK",
+ t=>"♥︎ "+t+" ♥︎");
+
+add("Broken","💔 Dark","DARK",
+ t=>"💔 "+t+" 💔");
+
+add("Red Flag","🚩 Gen Z","GEN Z",
+ t=>"🚩 "+t+" 🚩");
+
+add("Green Flag","🟢 Gen Z","GEN Z",
+ t=>"🟢 "+t+" 🟢");
+
+add("Blue Vibe","🔵 Vibe","VIBE",
+ t=>"🔵 "+t+" 🔵");
+
+add("Purple Vibe","🟣 Vibe","VIBE",
+ t=>"🟣 "+t+" 🟣");
+
+add("Orange","🟠 Vibe","VIBE",
+ t=>"🟠 "+t+" 🟠");
+
+add("Fire Line","🔥 Hot","HOT",
+ t=>"🔥 ━ "+t+" ━ 🔥");
+
+add("Star Line","⭐ Aesthetic","VIBE",
+ t=>"★ ── "+t+" ── ★");
+
+add("Fancy Line","✦ Fancy","FANCY",
+ t=>"╰┈➤ "+t+" ✦");
+
+add("Royal","♛ Luxury","LUXURY",
+ t=>"♛ "+t+" ♛");
+
+add("Luxury","♔ Luxury","LUXURY",
+ t=>"♔ "+t+" ♔");
+
+add("Diamond Line","◇ Luxury","LUXURY",
+ t=>"◇━━ "+t+" ━━◇");
+
+add("Classic","༺ Classic","CLASSIC",
+ t=>"༺ "+t+" ༻");
+
+add("Royal 2","꧁ Royal","LUXURY",
+ t=>"꧁ "+t+" ꧂");
+
+add("Mystic","𓆩 Mystic","MYSTIC",
+ t=>"𓆩 "+t+" 𓆪");
+
+add("Ancient","𓂀 Mystic","MYSTIC",
+ t=>"𓂀 "+t+" 𓂀");
+
+add("Egypt","𓂀 Aesthetic","MYSTIC",
+ t=>"𓂀 "+t+" 𓂀");
+
+add("Infinity","∞ Aesthetic","VIBE",
+ t=>"∞ "+t+" ∞");
+
+add("Infinity 2","♾️ Vibe","VIBE",
+ t=>"♾️ "+t+" ♾️");
+
+add("Cross","✝ Aesthetic","MYSTIC",
+ t=>"✝ "+t+" ✝");
+
+add("Flower 2","❀ Cute","CUTE",
+ t=>"❀ "+t+" ❀");
+
+add("Flower 3","✿ Cute","CUTE",
+ t=>"✿ "+t+" ✿");
+
+add("Rose","🌹 Love","LOVE",
+ t=>"🌹 "+t+" 🌹");
+
+add("Love Letter","💌 Love","LOVE",
+ t=>"💌 "+t+" 💌");
+
+add("Kiss","💋 Love","LOVE",
+ t=>"💋 "+t+" 💋");
+
+add("Love 2","💗 Love","LOVE",
+ t=>"💗 "+t+" 💗");
+
+add("Love 3","💖 Love","LOVE",
+ t=>"💖 "+t+" 💖");
+
+add("Sparkle Heart","💫 Love","LOVE",
+ t=>"💫 "+t+" 💫");
+
+add("Star Heart","💞 Love","LOVE",
+ t=>"★♡ "+t+" ♡★");
+
+add("Pretty","୨୧ Cute","CUTE",
+ t=>"୨୧ "+t+" ୨୧");
+
+add("Ribbon","🎀 Cute","CUTE",
+ t=>"🎀 "+t+" 🎀");
+
+add("Teddy","🧸 Cute","CUTE",
+ t=>"🧸 "+t+" 🧸");
+
+add("Bunny","🐰 Cute","CUTE",
+ t=>"🐰 "+t+" 🐰");
+
+add("Cat","🐱 Cute","CUTE",
+ t=>"ฅ^•ﻌ•^ฅ "+t);
+
+add("Bear","ʕ•ᴥ•ʔ Cute","CUTE",
+ t=>"ʕ•ᴥ•ʔ "+t);
+
+add("UwU","UwU","CUTE",
+ t=>"UwU "+t+" >w<");
+
+add("Emo","x_x","DARK",
+ t=>"x_x "+t+" x_x");
+
+add("Glitch","⚠ GLITCH","GLITCH",
+ t=>"⚠ "+t+" ⚠");
+
+add("Error","ERROR","GLITCH",
+ t=>"【ERROR】 "+t);
+
+add("404","404","GLITCH",
+ t=>"404 | "+t);
+
+add("Cyber","CYBER","TECH",
+ t=>"// "+t+" //");
+
+add("Matrix","MATRIX","TECH",
+ t=>"[ "+t+" ]");
+
+add("Code","CODE","TECH",
+ t=>"<"+t+">");
+
+add("Terminal","TERMINAL","TECH",
+ t=>"$ "+t);
+
+add("Hacker","HACKER","TECH",
+ t=>"root@"+t);
+
+add("Pixel","PIXEL","GAMING",
+ t=>"[ "+t+" ]");
+
+add("Arcade","ARCADE","GAMING",
+ t=>"★ "+t+" ★");
+
+add("Game Over","GAMING","GAMING",
+ t=>"GAME // "+t);
+
+add("XP","GAMING","GAMING",
+ t=>"+100 XP "+t);
+
+add("Level Up","GAMING","GAMING",
+ t=>"LEVEL UP ↑ "+t);
+
+add("Pro","GAMING","GAMING",
+ t=>"PRO • "+t);
+
+add("Legend","🏆 Gaming","GAMING",
+ t=>"🏆 "+t+" 🏆");
+
+add("Winner","🥇 Gaming","GAMING",
+ t=>"🥇 "+t+" 🥇");
+
+add("Fire Gamer","🔥 Gaming","GAMING",
+ t=>"🔥🎮 "+t+" 🎮🔥");
+
+add("Football","⚽ Sports","SPORT",
+ t=>"⚽ "+t+" ⚽");
+
+add("Champion","🏆 Sports","SPORT",
+ t=>"🏆 "+t+" 🏆");
+
+add("Verified 2","☑ Social","SOCIAL",
+ t=>"☑ "+t);
+
+add("Instagram","📸 Social","SOCIAL",
+ t=>"📸 "+t);
+
+add("Creator","🎬 Social","SOCIAL",
+ t=>"🎬 "+t);
+
+add("YouTube","▶ Social","SOCIAL",
+ t=>"▶ "+t);
+
+add("TikTok","♪ Social","SOCIAL",
+ t=>"♪ "+t);
+
+add("Follow","➕ Social","SOCIAL",
+ t=>"＋ "+t);
+
+add("Link","🔗 Social","SOCIAL",
+ t=>"🔗 "+t);
+
+add("Bio","✦ Social","SOCIAL",
+ t=>"✦ "+t+" ✦");
+
+add("Profile","👤 Social","SOCIAL",
+ t=>"👤 "+t);
+
+add("Minimal 2","• Minimal","CLEAN",
+ t=>"• "+t);
+
+add("Minimal 3","· Minimal","CLEAN",
+ t=>"· "+t+" ·");
+
+add("Simple","Simple","CLEAN",
+ t=>t);
+
+add("Clean Line","— Clean","CLEAN",
+ t=>"— "+t);
+
+add("Modern","MODERN","CLEAN",
+ t=>"「"+t+"」");
+
+add("Aesthetic Line","Aesthetic","VIBE",
+ t=>"˚₊‧ "+t+" ‧₊˚");
+
+add("Soft","Soft","CUTE",
+ t=>"♡ "+t+" ♡");
+
+add("Dream","Dream","VIBE",
+ t=>"｡･:* "+t+" *:･｡");
+
+add("Fairy","🧚 Fairy","CUTE",
+ t=>"🧚 "+t+" ✨");
+
+add("Magic","🪄 Magic","MYSTIC",
+ t=>"🪄 "+t+" ✨");
+
+add("Potion","🧪 Magic","MYSTIC",
+ t=>"🧪 "+t+" 🧪");
+
+add("Crystal","🔮 Magic","MYSTIC",
+ t=>"🔮 "+t+" 🔮");
+
+add("Moon Star","☾ Star","MYSTIC",
+ t=>"☾⋆ "+t+" ⋆☽");
+
+add("Night","🌙 Dark","DARK",
+ t=>"🌙 "+t+" 🌙");
+
+add("Midnight","☾ Dark","DARK",
+ t=>"☾ "+t+" ☾");
+
+add("Savage","😈 Gen Z","HOT",
+ t=>"😈 "+t+" 💀");
+
+add("Attitude","😎 Gen Z","HOT",
+ t=>"😎 "+t+" 🔥");
+
+add("Bad Boy","🖤 Gen Z","HOT",
+ t=>"🖤 "+t+" 😈");
+
+add("Bad Girl","💅 Gen Z","HOT",
+ t=>"💅 "+t+" 🖤");
+
+add("Main Character","✨ Gen Z","HOT",
+ t=>"✦ "+t+" ✦");
+
+add("Iconic","👑 Gen Z","HOT",
+ t=>"👑 "+t+" ✨");
+
+add("Slay 2","💅 Gen Z","HOT",
+ t=>"💅🏻 "+t+" 💅🏻");
+
+add("Hot Girl","🥵 Gen Z","HOT",
+ t=>"🥵 "+t+" 💋");
+
+add("Hot Boy","🔥 Gen Z","HOT",
+ t=>"🔥 "+t+" 😎");
+
+add("Drippy","💧 Gen Z","DRIP",
+ t=>"💧💧 "+t+" 💧💧");
+
+add("Flex 2","💪 Gen Z","FLEX",
+ t=>"💪 "+t+" 💰");
+
+add("Rich","💰 Luxury","FLEX",
+ t=>"💰 "+t+" 💰");
+
+add("Millionaire","💵 Luxury","FLEX",
+ t=>"💵 "+t+" 💵");
+
+add("CEO","👔 Luxury","FLEX",
+ t=>"👔 "+t+" 💼");
+
+add("VIP","💎 Luxury","LUXURY",
+ t=>"💎 "+t+" 💎");
+
+add("Diamond 3","💎 Luxury","LUXURY",
+ t=>"💎━━ "+t+" ━━💎");
+
+add("Gold","🥇 Luxury","LUXURY",
+ t=>"🥇 "+t+" 🥇");
+
+add("Platinum","⚜ Luxury","LUXURY",
+ t=>"⚜ "+t+" ⚜");
+
+add("Elite","♛ Luxury","LUXURY",
+ t=>"♛ "+t+" • ELITE");
+
+add("Premium","✦ Luxury","LUXURY",
+ t=>"✦ "+t+" • PREMIUM");
+
+add("Signature","✍️ Luxury","LUXURY",
+ t=>"✍️ "+t);
+
+add("Exclusive","🔐 Luxury","LUXURY",
+ t=>"🔐 "+t+" 🔐");
+
+
+/* =====================================================
+   ADD MORE UNIQUE VARIATIONS AUTOMATICALLY
+   Keeps library above 100 styles.
+===================================================== */
+
+const wrappers = [
+
+  ["Arrow Left","➜","➜"],
+  ["Arrow Right","➤","➤"],
+  ["Double Arrow","»","«"],
+  ["Chevron","‹","›"],
+  ["Triangle","△","△"],
+  ["Circle","◉","◉"],
+  ["Dot","•","•"],
+  ["Square","■","■"],
+  ["Hollow Square","□","□"],
+  ["Plus","＋","＋"],
+  ["Equals","＝","＝"],
+  ["Slash","/","/"],
+  ["Backslash","\\","\\"],
+  ["Vertical","│","│"],
+  ["Wave","〰","〰"],
+  ["Dash","━","━"],
+  ["Double Dash","━━","━━"],
+  ["Asterisk","＊","＊"],
+  ["Star 3","✶","✶"],
+  ["Star 4","✷","✷"],
+  ["Star 5","✸","✸"],
+  ["Star 6","✹","✹"],
+  ["Flower 4","❁","❁"],
+  ["Flower 5","❃","❃"],
+  ["Heart 4","♡","♡"],
+  ["Heart 5","ღ","ღ"],
+  ["Music 2","♫","♫"],
+  ["Music 3","♪","♪"],
+  ["Peace 2","☮","☮"],
+  ["Sun 2","☼","☼"],
+  ["Moon 2","☽","☾"],
+  ["Sparkle 3","✧","✧"],
+  ["Sparkle 4","✦","✦"],
+  ["Diamond 4","◇","◇"],
+  ["Diamond 5","◆","◆"],
+  ["Crown 2","♕","♕"],
+  ["Crown 3","♛","♛"],
+  ["Cross 2","✞","✞"],
+  ["Cross 3","✟","✟"],
+  ["Check","✓","✓"],
+  ["Check 2","✔","✔"],
+  ["Question","?","?"],
+  ["Exclamation","!","!"],
+  ["Brackets 2","【","】"],
+  ["Brackets 3","〖","〗"],
+  ["Brackets 4","〘","〙"],
+  ["Brackets 5","〈","〉"],
+  ["Brackets 6","《","》"],
+  ["Brackets 7","「","」"],
+  ["Brackets 8","『","』"],
+  ["Brackets 9","〔","〕"],
+  ["Brackets 10","〚","〛"]
+];
+
+wrappers.forEach((item,index)=>{
+
+  const [name,left,right]=item;
+
+  add(
+    name,
+    "✨ Symbols",
+    "FANCY",
+    text=>left+" "+text+" "+right
+  );
+
+});
+
+
+/* =====================================================
+   FINAL DATA
+===================================================== */
+
+const input =
+document.getElementById("text");
+
+const search =
+document.getElementById("search");
+
+const container =
+document.getElementById("fontContainer");
+
+const empty =
+document.getElementById("empty");
+
+const counter =
+document.getElementById("counter");
+
+const totalCount =
+document.getElementById("totalCount");
+
+const toast =
+document.getElementById("toast");
+
+
+/* =====================================================
+   RENDER
+===================================================== */
+
+function render(){
+
+  const text =
+    input.value.trim() || "Type above to preview";
+
+  const query =
+    search.value.toLowerCase().trim();
+
+  container.innerHTML="";
+
+  let visible =
+    styles.filter(style=>
+      style.name.toLowerCase().includes(query) ||
+      style.category.toLowerCase().includes(query) ||
+      style.badge.toLowerCase().includes(query)
+    );
+
+  totalCount.textContent=styles.length;
+
+  if(visible.length===0){
+
+    empty.style.display="block";
+    return;
+
+  }
+
+  empty.style.display="none";
+
+  const groups={};
+
+  visible.forEach(style=>{
+
+    if(!groups[style.category]){
+      groups[style.category]=[];
+    }
+
+    groups[style.category].push(style);
+
+  });
+
+
+  Object.keys(groups).forEach(category=>{
+
+    const section=
+      document.createElement("section");
+
+    const title=
+      document.createElement("div");
+
+    title.className="category";
+
+    title.innerHTML=`
+      <h2>${category}</h2>
+      <div class="category-line"></div>
+      <span class="category-count">
+        ${groups[category].length} STYLES
+      </span>
+    `;
+
+    const grid=
+      document.createElement("div");
+
+    grid.className="font-grid";
+
+
+    groups[category].forEach(style=>{
+
+      const card=
+        document.createElement("div");
+
+      card.className="font-card";
+
+
+      const top=
+        document.createElement("div");
+
+      top.className="card-top";
+
+      top.innerHTML=`
+        <span class="font-name">
+          ${style.name}
+        </span>
+
+        <span class="badge">
+          ${style.badge}
+        </span>
+      `;
+
+
+      const preview=
+        document.createElement("div");
+
+      preview.className="preview";
+
+      preview.textContent=
+        style.fn(text);
+
+
+      const actions=
+        document.createElement("div");
+
+      actions.className="actions";
+
+
+      const fav=
+        document.createElement("button");
+
+      fav.className="favorite-btn";
+
+      fav.innerHTML="♡";
+
+      fav.setAttribute(
+        "aria-label",
+        "Favorite"
+      );
+
+
+      fav.onclick=()=>{
+
+        fav.classList.toggle("active");
+
+        fav.innerHTML=
+          fav.classList.contains("active")
+          ? "♥"
+          : "♡";
+
+        card.classList.toggle(
+          "favorite"
+        );
+
+      };
+
+
+      const copy=
+        document.createElement("button");
+
+      copy.className="copy-btn";
+
+      copy.textContent="COPY";
+
+
+      copy.onclick=async()=>{
+
+        try{
+
+          await navigator.clipboard.writeText(
+            preview.textContent
+          );
+
+        }catch(e){
+
+          const temp=
+            document.createElement("textarea");
+
+          temp.value=
+            preview.textContent;
+
+          document.body.appendChild(temp);
+
+          temp.select();
+
+          document.execCommand("copy");
+
+          temp.remove();
+
+        }
+
+
+        copy.textContent="COPIED!";
+
+        copy.classList.add("copied");
+
+        showToast();
+
+
+        setTimeout(()=>{
+
+          copy.textContent="COPY";
+
+          copy.classList.remove("copied");
+
+        },1500);
+
+      };
+
+
+      actions.appendChild(fav);
+      actions.appendChild(copy);
+
+      card.appendChild(top);
+      card.appendChild(preview);
+      card.appendChild(actions);
+
+      grid.appendChild(card);
+
+    });
+
+
+    section.appendChild(title);
+    section.appendChild(grid);
+
+    container.appendChild(section);
+
+  });
+
+}
+
+
+/* =====================================================
+   TOAST
+===================================================== */
+
+let toastTimer;
+
+function showToast(){
+
+  toast.classList.add("show");
+
+  clearTimeout(toastTimer);
+
+  toastTimer=setTimeout(()=>{
+
+    toast.classList.remove("show");
+
+  },1800);
+
+}
+
+
+/* =====================================================
+   INPUT EVENTS
+===================================================== */
+
+input.addEventListener("input",()=>{
+
+  counter.textContent=
+    input.value.length;
+
+  render();
+
+});
+
+
+search.addEventListener(
+  "input",
+  render
+);
+
+
+/* =====================================================
+   START
+===================================================== */
+
+counter.textContent=
+  input.value.length;
+
+render();
+
+</script>
+
+</body>
+</html>

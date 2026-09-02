@@ -1,0 +1,99 @@
+{
+  "site": {
+    "name": "DIPO",
+    "brand": "DIPO WORLD",
+    "defaultTitle": "DIPO — AI Tools & Online Utilities",
+    "titleSuffix": " | DIPO",
+    "defaultDescription": "DIPO provides useful AI tools, QR code generators, barcode tools, bio generators and practical online utilities.",
+    "language": "en",
+    "locale": "en_IN"
+  },
+
+  "pages": {
+    "home": {
+      "title": "DIPO — AI Tools & Online Utilities",
+      "description": "Explore DIPO's AI tools, QR generators, barcode tools, bio generators and useful online utilities.",
+      "keywords": [
+        "DIPO",
+        "AI tools",
+        "online tools",
+        "free AI tools",
+        "QR code generator",
+        "barcode generator"
+      ],
+      "robots": "index,follow"
+    },
+
+    "about": {
+      "title": "About DIPO",
+      "description": "Learn about DIPO, its vision, tools and mission to create useful digital utilities.",
+      "keywords": [
+        "about DIPO",
+        "DIPO platform",
+        "DIPO tools"
+      ],
+      "robots": "index,follow"
+    },
+
+    "contact": {
+      "title": "Contact DIPO",
+      "description": "Contact DIPO for questions, feedback, support and business inquiries.",
+      "keywords": [
+        "contact DIPO",
+        "DIPO support",
+        "DIPO contact"
+      ],
+      "robots": "index,follow"
+    },
+
+    "privacy": {
+      "title": "Privacy Policy",
+      "description": "Read the DIPO Privacy Policy to understand how information and data are handled.",
+      "keywords": [
+        "DIPO privacy policy",
+        "privacy policy"
+      ],
+      "robots": "index,follow"
+    },
+
+    "terms": {
+      "title": "Terms of Service",
+      "description": "Read the DIPO Terms of Service governing the use of the website and its tools.",
+      "keywords": [
+        "DIPO terms",
+        "terms of service",
+        "terms and conditions"
+      ],
+      "robots": "index,follow"
+    },
+
+    "dipoBio": {
+      "title": "DIPO Bio — AI Bio Generator",
+      "description": "Create creative, professional and social media bios with DIPO Bio.",
+      "keywords": [
+        "AI bio generator",
+        "Instagram bio generator",
+        "social media bio generator",
+        "DIPO Bio"
+      ],
+      "robots": "index,follow"
+    },
+
+    "dipoQR": {
+      "title": "DIPO QR — QR Code & Barcode Tools",
+      "description": "Create, customize, preview and export QR codes and barcodes with DIPO QR.",
+      "keywords": [
+        "QR code generator",
+        "custom QR code",
+        "barcode generator",
+        "DIPO QR"
+      ],
+      "robots": "index,follow"
+    }
+  },
+
+  "social": {
+    "twitterCard": "summary_large_image",
+    "ogType": "website"
+  }
+}

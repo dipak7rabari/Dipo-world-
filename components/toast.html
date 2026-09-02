@@ -1,0 +1,47 @@
+<!-- DIPO WORLD — Toast -->
+
+<div
+  id="toast-container"
+  class="toast-container"
+  aria-live="polite"
+  aria-atomic="true"
+></div>
+
+<template id="toast-template">
+
+  <div class="toast" role="status">
+
+    <span class="toast-icon" data-toast-icon>
+      ✓
+    </span>
+
+    <div class="toast-content">
+
+      <strong
+        class="toast-title"
+        data-toast-title
+      >
+        Success
+      </strong>
+
+      <p
+        class="toast-message"
+        data-toast-message
+      >
+        Done successfully.
+      </p>
+
+    </div>
+
+    <button
+      type="button"
+      class="toast-close"
+      data-action="close-toast"
+      aria-label="Close notification"
+    >
+      ×
+    </button>
+
+  </div>
+
+</template>

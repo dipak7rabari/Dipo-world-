@@ -1,0 +1,124 @@
+/* =========================================================
+   DIPO WORLD — RESPONSIVE SYSTEM
+   Mobile First
+   ========================================================= */
+
+/* ---------------------------------------------------------
+   MOBILE
+   --------------------------------------------------------- */
+
+@media (max-width: 639px) {
+
+    .container {
+        width: min(
+            calc(100% - 24px),
+            var(--container-xl)
+        );
+    }
+
+    .dipo-card {
+        padding: 18px;
+        border-radius: 20px;
+    }
+
+    .dipo-grid-2,
+    .dipo-grid-3 {
+        grid-template-columns: 1fr;
+    }
+
+    .dipo-between {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .dipo-btn {
+        width: 100%;
+    }
+
+    .dipo-row-mobile-wrap {
+        flex-wrap: wrap;
+    }
+}
+
+/* ---------------------------------------------------------
+   TABLET
+   --------------------------------------------------------- */
+
+@media (min-width: 640px) {
+
+    .container {
+        width: min(
+            calc(100% - 40px),
+            var(--container-lg)
+        );
+    }
+
+    .dipo-grid-2 {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* ---------------------------------------------------------
+   LARGE TABLET
+   --------------------------------------------------------- */
+
+@media (min-width: 768px) {
+
+    .container {
+        width: min(
+            calc(100% - 48px),
+            var(--container-lg)
+        );
+    }
+
+    .dipo-grid-3 {
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+    }
+}
+
+/* ---------------------------------------------------------
+   DESKTOP
+   --------------------------------------------------------- */
+
+@media (min-width: 1024px) {
+
+    .container {
+        width: min(
+            calc(100% - 64px),
+            var(--container-xl)
+        );
+    }
+
+    .dipo-card {
+        padding: 28px;
+    }
+}
+
+/* ---------------------------------------------------------
+   LARGE DESKTOP
+   --------------------------------------------------------- */
+
+@media (min-width: 1280px) {
+
+    .container {
+        width: min(
+            calc(100% - 80px),
+            var(--container-xl)
+        );
+    }
+}
+
+/* ---------------------------------------------------------
+   TOUCH DEVICES
+   --------------------------------------------------------- */
+
+@media (hover: none) {
+
+    .dipo-card:hover,
+    .hover-lift:hover,
+    .dipo-btn:hover {
+        transform: none;
+    }
+}

@@ -1,0 +1,107 @@
+/* =========================================================
+   DIPO WORLD — TYPOGRAPHY
+   ========================================================= */
+
+.text-display {
+    font-size: clamp(2.4rem, 8vw, 5.5rem);
+    line-height: 0.98;
+    font-weight: 800;
+    letter-spacing: -0.055em;
+}
+
+.text-h1 {
+    font-size: clamp(2rem, 5vw, 3.6rem);
+    line-height: 1.05;
+    font-weight: 800;
+    letter-spacing: -0.045em;
+}
+
+.text-h2 {
+    font-size: clamp(1.7rem, 4vw, 2.7rem);
+    line-height: 1.1;
+    font-weight: 750;
+    letter-spacing: -0.035em;
+}
+
+.text-h3 {
+    font-size: clamp(1.25rem, 3vw, 1.7rem);
+    line-height: 1.2;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.text-body {
+    font-size: 1rem;
+    line-height: 1.65;
+    color: var(--text-secondary);
+}
+
+.text-small {
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color: var(--text-secondary);
+}
+
+.text-xs {
+    font-size: 0.75rem;
+    line-height: 1.4;
+}
+
+.text-muted {
+    color: var(--text-muted);
+}
+
+.text-secondary {
+    color: var(--text-secondary);
+}
+
+.text-primary {
+    color: var(--text-primary);
+}
+
+.text-white {
+    color: var(--text-light);
+}
+
+/* ---------------------------------------------------------
+   BRAND
+   --------------------------------------------------------- */
+
+.brand-text {
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    color: var(--dipo-navy-950);
+}
+
+.brand-gradient {
+    background: var(--gradient-brand);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* ---------------------------------------------------------
+   LABELS
+   --------------------------------------------------------- */
+
+.eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    font-size: 0.72rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+
+    color: var(--dipo-sage-600);
+}
+
+.section-title {
+    margin-bottom: 10px;
+}
+
+.section-description {
+    max-width: 620px;
+    color: var(--text-secondary);
+}

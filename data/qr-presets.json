@@ -1,0 +1,78 @@
+{
+  "version": "1.0.0",
+  "updated": "2026-08-31",
+  "presets": [
+    {
+      "id": "classic-black",
+      "name": "Classic Black",
+      "description": "Classic high contrast QR",
+      "dots": "square",
+      "corners": "square",
+      "foreground": "#000000",
+      "background": "#FFFFFF"
+    },
+    {
+      "id": "modern",
+      "name": "Modern",
+      "description": "Modern rounded QR",
+      "dots": "rounded",
+      "corners": "extra-rounded",
+      "foreground": "#111111",
+      "background": "#FFFFFF"
+    },
+    {
+      "id": "soft",
+      "name": "Soft",
+      "description": "Soft rounded design",
+      "dots": "dots",
+      "corners": "rounded",
+      "foreground": "#222222",
+      "background": "#FFFFFF"
+    },
+    {
+      "id": "midnight",
+      "name": "Midnight",
+      "description": "Dark premium QR",
+      "dots": "rounded",
+      "corners": "extra-rounded",
+      "foreground": "#FFFFFF",
+      "background": "#111111"
+    },
+    {
+      "id": "ocean",
+      "name": "Ocean",
+      "description": "Blue themed QR",
+      "dots": "rounded",
+      "corners": "rounded",
+      "foreground": "#0B5ED7",
+      "background": "#FFFFFF"
+    },
+    {
+      "id": "forest",
+      "name": "Forest",
+      "description": "Green themed QR",
+      "dots": "rounded",
+      "corners": "extra-rounded",
+      "foreground": "#176B45",
+      "background": "#FFFFFF"
+    },
+    {
+      "id": "royal",
+      "name": "Royal",
+      "description": "Premium royal QR",
+      "dots": "classy",
+      "corners": "extra-rounded",
+      "foreground": "#6B21A8",
+      "background": "#FFFFFF"
+    },
+    {
+      "id": "minimal",
+      "name": "Minimal",
+      "description": "Minimal clean QR",
+      "dots": "square",
+      "corners": "rounded",
+      "foreground": "#000000",
+      "background": "#FFFFFF"
+    }
+  ]
+}

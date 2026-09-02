@@ -1,0 +1,72 @@
+{
+  "brand": [
+    "DIPO",
+    "DIPO WORLD",
+    "DIPO LABS"
+  ],
+  "primary": [
+    "AI tools",
+    "online tools",
+    "free AI tools",
+    "QR code generator",
+    "barcode generator",
+    "AI bio generator",
+    "developer tools",
+    "web tools"
+  ],
+  "secondary": [
+    "free online tools",
+    "AI productivity tools",
+    "QR code maker",
+    "barcode maker",
+    "AI text generator",
+    "bio generator",
+    "developer utilities",
+    "online generator"
+  ],
+  "dipoBio": [
+    "AI bio generator",
+    "Instagram bio generator",
+    "social media bio generator",
+    "creative bio generator",
+    "professional bio generator",
+    "DIPO Bio"
+  ],
+  "dipoQR": [
+    "QR code generator",
+    "free QR code generator",
+    "custom QR code",
+    "artistic QR code",
+    "QR frames",
+    "QR preview",
+    "QR export",
+    "barcode generator"
+  ],
+  "pages": {
+    "home": [
+      "DIPO",
+      "DIPO WORLD",
+      "AI tools",
+      "online tools"
+    ],
+    "about": [
+      "about DIPO",
+      "DIPO tools",
+      "DIPO platform"
+    ],
+    "contact": [
+      "contact DIPO",
+      "DIPO support",
+      "DIPO contact"
+    ],
+    "privacy": [
+      "DIPO privacy policy",
+      "privacy policy"
+    ],
+    "terms": [
+      "DIPO terms",
+      "terms of service",
+      "terms and conditions"
+    ]
+  }
+}

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description"
+        content="DIPO QR Artistic QR Designer">
+
+  <title>Artistic QR | DIPO QR</title>
+
+  <style>
+    :root {
+      --bg:#07110b;
+      --card:#0d1a11;
+      --text:#f4f8f5;
+      --muted:#9baa9f;
+      --green:#22c55e;
+      --border:rgba(255,255,255,.09);
+    }
+
+    * {
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
+
+    body {
+      min-height:100vh;
+      background:var(--bg);
+      color:var(--text);
+      font-family:system-ui,-apple-system,BlinkMacSystemFont,
+        "Segoe UI",sans-serif;
+    }
+
+    a {
+      color:inherit;
+      text-decoration:none;
+    }
+
+    header {
+      min-height:65px;
+      padding:0 5%;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      border-bottom:1px solid var(--border);
+    }
+
+    .logo {
+      font-weight:800;
+      font-size:1.2rem;
+    }
+
+    .logo span {
+      color:var(--green);
+    }
+
+    main {
+      width:min(1000px,92%);
+      margin:auto;
+      padding:45px 0 80px;
+    }
+
+    .title {
+      margin-bottom:25px;
+    }
+
+    .title h1 {
+      font-size:clamp(2rem,6vw,3.3rem);
+      margin-bottom:8px;
+    }
+
+    .title p {
+      color:var(--muted);
+    }
+
+    .layout {
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:18px;
+    }
+
+    .panel {
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:18px;
+      padding:22px;
+    }
+
+    .field {
+      margin-bottom:17px;
+    }
+
+    label {
+      display:block;
+      margin-bottom:7px;
+      font-size:.85rem;
+      font-weight:650;
+    }
+
+    input,
+    select {
+      width:100%;
+      padding:12px;
+      border-radius:10px;
+      border:1px solid var(--border);
+      background:#07110b;
+      color:var(--text);
+      outline:none;
+    }
+
+    input:focus,
+    select:focus {
+      border-color:var(--green);
+    }
+
+    .preview {
+      min-height:360px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:#fff;
+      border-radius:14px;
+      margin-bottom:15px;
+    }
+
+    #artistic-qr-output {
+      width:260px;
+      height:260px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+
+    .actions {
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+
+    button,
+    .button {
+      border:0;
+      padding:11px 16px;
+      border-radius:10px;
+      background:var(--green);
+      color:#031008;
+      font-weight:750;
+      cursor:pointer;
+    }
+
+    .button.secondary,
+    button.secondary {
+      background:rgba(255,255,255,.07);
+      color:var(--text);
+      border:1px solid var(--border);
+    }
+
+    @media(max-width:700px) {
+      .layout {
+        grid-template-columns:1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <a href="./index.html" class="logo">
+    DIPO<span>QR</span>
+  </a>
+
+  <a href="./index.html">← QR Home</a>
+</header>
+
+<main
+  data-page="artistic-qr"
+  data-module="qr-styling">
+
+  <section class="title">
+    <h1>Artistic QR</h1>
+    <p>
+      Create a customized QR design with style, color and branding.
+    </p>
+  </section>
+
+  <section class="layout">
+
+    <div class="panel">
+
+      <div class="field">
+        <label for="qr-data">QR Content</label>
+
+        <input
+          id="qr-data"
+          data-qr-input
+          type="text"
+          placeholder="Enter URL or text">
+      </div>
+
+      <div class="field">
+        <label for="qr-style">QR Style</label>
+
+        <select
+          id="qr-style"
+          data-qr-style>
+          <option value="square">Square</option>
+          <option value="dots">Dots</option>
+          <option value="rounded">Rounded</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="qr-color">Foreground Color</label>
+
+        <input
+          id="qr-color"
+          data-qr-color
+          type="color"
+          value="#000000">
+      </div>
+
+      <div class="field">
+        <label for="qr-background">Background</label>
+
+        <input
+          id="qr-background"
+          data-qr-background
+          type="color"
+          value="#ffffff">
+      </div>
+
+      <div class="field">
+        <label for="qr-logo">Logo</label>
+
+        <input
+          id="qr-logo"
+          data-qr-logo
+          type="file"
+          accept="image/*">
+      </div>
+
+      <div class="actions">
+
+        <button
+          type="button"
+          data-action="generate-artistic-qr">
+          Generate
+        </button>
+
+        <a
+          class="button secondary"
+          href="./export.html"
+          data-action="open-export">
+          Export
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="panel">
+
+      <div
+        class="preview"
+        id="artistic-qr-preview"
+        data-qr-preview>
+
+        <div
+          id="artistic-qr-output"
+          data-qr-output>
+          QR Preview
+        </div>
+
+      </div>
+
+      <div class="actions">
+
+        <button
+          type="button"
+          class="secondary"
+          data-action="download-png">
+          PNG
+        </button>
+
+        <button
+          type="button"
+          class="secondary"
+          data-action="download-svg">
+          SVG
+        </button>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</main>
+
+</body>
+</html>

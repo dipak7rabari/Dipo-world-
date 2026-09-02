@@ -1,0 +1,78 @@
+{
+  "version": "1.0.0",
+  "updated": "2026-08-31",
+  "fonts": [
+    {
+      "id": "bold",
+      "name": "Bold",
+      "type": "unicode",
+      "description": "Bold Unicode style"
+    },
+    {
+      "id": "bold-italic",
+      "name": "Bold Italic",
+      "type": "unicode",
+      "description": "Bold italic Unicode style"
+    },
+    {
+      "id": "italic",
+      "name": "Italic",
+      "type": "unicode",
+      "description": "Italic Unicode style"
+    },
+    {
+      "id": "script",
+      "name": "Script",
+      "type": "unicode",
+      "description": "Elegant script style"
+    },
+    {
+      "id": "fraktur",
+      "name": "Fraktur",
+      "type": "unicode",
+      "description": "Gothic Fraktur style"
+    },
+    {
+      "id": "double",
+      "name": "Double Struck",
+      "type": "unicode",
+      "description": "Double struck mathematical style"
+    },
+    {
+      "id": "monospace",
+      "name": "Monospace",
+      "type": "unicode",
+      "description": "Monospace Unicode style"
+    },
+    {
+      "id": "circled",
+      "name": "Circled",
+      "type": "unicode",
+      "description": "Circled characters"
+    },
+    {
+      "id": "squared",
+      "name": "Squared",
+      "type": "unicode",
+      "description": "Squared characters"
+    },
+    {
+      "id": "small-caps",
+      "name": "Small Caps",
+      "type": "unicode",
+      "description": "Small capital style"
+    },
+    {
+      "id": "fullwidth",
+      "name": "Fullwidth",
+      "type": "unicode",
+      "description": "Fullwidth characters"
+    },
+    {
+      "id": "bubble",
+      "name": "Bubble",
+      "type": "unicode",
+      "description": "Bubble character style"
+    }
+  ]
+}

@@ -1,0 +1,1741 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#05070b">
+
+<title>DIPO BIO — Ultimate Bio Library</title>
+
+<style>
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+:root{
+  --bg:#040609;
+  --panel:#090c11;
+  --panel2:#0d1118;
+  --line:rgba(255,255,255,.085);
+  --text:#f7f9fb;
+  --muted:#858f9c;
+  --cyan:#67e8ff;
+  --blue:#319cff;
+  --purple:#8b7cff;
+  --pink:#ff6fd8;
+  --green:#65ffbd;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  min-height:100vh;
+  color:var(--text);
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Inter",
+    "SF Pro Display",
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+  background:
+    radial-gradient(
+      circle at 15% -5%,
+      rgba(103,232,255,.16),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 100% 10%,
+      rgba(139,124,255,.13),
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 50% 100%,
+      rgba(49,156,255,.08),
+      transparent 35%
+    ),
+    var(--bg);
+
+  overflow-x:hidden;
+}
+
+body:before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  opacity:.3;
+
+  background-image:
+    linear-gradient(
+      rgba(255,255,255,.018) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255,255,255,.018) 1px,
+      transparent 1px
+    );
+
+  background-size:42px 42px;
+
+  mask-image:
+    linear-gradient(
+      to bottom,
+      black,
+      transparent 90%
+    );
+}
+
+/* ==============================
+   HEADER
+============================== */
+
+header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+
+  background:rgba(4,6,9,.72);
+  backdrop-filter:blur(22px);
+  -webkit-backdrop-filter:blur(22px);
+
+  border-bottom:1px solid var(--line);
+}
+
+.nav{
+  width:min(1180px,92%);
+  min-height:72px;
+  margin:auto;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.logo{
+  font-size:24px;
+  font-weight:950;
+  letter-spacing:-1.5px;
+}
+
+.logo span{
+  color:var(--cyan);
+
+  text-shadow:
+    0 0 18px rgba(103,232,255,.45),
+    0 0 45px rgba(49,156,255,.2);
+}
+
+.back{
+  color:#9aa4b0;
+  text-decoration:none;
+  font-size:14px;
+  font-weight:800;
+
+  transition:.2s;
+}
+
+.back:hover{
+  color:white;
+}
+
+/* ==============================
+   MAIN
+============================== */
+
+.container{
+  width:min(1180px,92%);
+  margin:auto;
+}
+
+main{
+  padding:55px 0 90px;
+}
+
+/* ==============================
+   HERO
+============================== */
+
+.hero{
+  text-align:center;
+  max-width:800px;
+  margin:auto;
+}
+
+.eyebrow{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+
+  padding:9px 15px;
+
+  border:1px solid rgba(103,232,255,.18);
+  background:rgba(103,232,255,.045);
+
+  border-radius:999px;
+
+  color:#aeefff;
+
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:1px;
+
+  box-shadow:
+    0 0 35px rgba(103,232,255,.06);
+}
+
+.dot{
+  width:7px;
+  height:7px;
+  border-radius:50%;
+
+  background:var(--cyan);
+
+  box-shadow:
+    0 0 12px var(--cyan);
+}
+
+.hero h1{
+  margin-top:22px;
+
+  font-size:
+    clamp(46px,8vw,86px);
+
+  line-height:.9;
+  letter-spacing:-5px;
+  font-weight:950;
+}
+
+.hero h1 span{
+  color:transparent;
+
+  background:
+    linear-gradient(
+      100deg,
+      #fff,
+      var(--cyan),
+      var(--blue),
+      var(--purple),
+      #fff
+    );
+
+  background-size:300% auto;
+
+  -webkit-background-clip:text;
+  background-clip:text;
+
+  animation:
+    gradientMove 6s linear infinite;
+}
+
+@keyframes gradientMove{
+  to{
+    background-position:300% center;
+  }
+}
+
+.hero p{
+  max-width:590px;
+  margin:21px auto 0;
+
+  color:var(--muted);
+
+  font-size:16px;
+  line-height:1.65;
+}
+
+/* ==============================
+   QUICK STATS
+============================== */
+
+.stats{
+  display:flex;
+  justify-content:center;
+  gap:9px;
+  flex-wrap:wrap;
+
+  margin-top:25px;
+}
+
+.stat{
+  padding:8px 12px;
+
+  border-radius:10px;
+
+  background:rgba(255,255,255,.035);
+  border:1px solid var(--line);
+
+  color:#aab3bd;
+
+  font-size:11px;
+  font-weight:800;
+}
+
+.stat b{
+  color:#fff;
+}
+
+/* ==============================
+   CONTROL AREA
+============================== */
+
+.controls{
+  margin-top:42px;
+
+  display:flex;
+  gap:11px;
+
+  align-items:center;
+  justify-content:center;
+
+  flex-wrap:wrap;
+}
+
+.search{
+  width:min(480px,100%);
+  position:relative;
+}
+
+.search input{
+  width:100%;
+  height:54px;
+
+  border-radius:17px;
+
+  border:1px solid var(--line);
+
+  background:
+    rgba(255,255,255,.035);
+
+  color:white;
+
+  padding:
+    0 18px 0 48px;
+
+  outline:none;
+
+  font-size:14px;
+
+  transition:.25s;
+}
+
+.search input::placeholder{
+  color:#59636f;
+}
+
+.search input:focus{
+  border-color:
+    rgba(103,232,255,.4);
+
+  box-shadow:
+    0 0 0 4px rgba(103,232,255,.055),
+    0 0 35px rgba(103,232,255,.07);
+}
+
+.search-icon{
+  position:absolute;
+
+  left:17px;
+  top:50%;
+
+  transform:translateY(-50%);
+
+  color:#77828e;
+
+  font-size:19px;
+}
+
+.random{
+  height:54px;
+
+  padding:0 18px;
+
+  border-radius:17px;
+
+  border:1px solid
+    rgba(103,232,255,.2);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(103,232,255,.1),
+      rgba(49,156,255,.07)
+    );
+
+  color:#c6f7ff;
+
+  font-weight:900;
+  font-size:13px;
+
+  cursor:pointer;
+
+  transition:.22s;
+}
+
+.random:hover{
+  transform:translateY(-2px);
+
+  border-color:
+    rgba(103,232,255,.45);
+
+  box-shadow:
+    0 10px 35px
+    rgba(103,232,255,.1);
+}
+
+/* ==============================
+   FILTERS
+============================== */
+
+.filters{
+  margin-top:24px;
+
+  display:flex;
+  gap:8px;
+
+  overflow-x:auto;
+
+  padding:3px 2px 8px;
+
+  scrollbar-width:none;
+}
+
+.filters::-webkit-scrollbar{
+  display:none;
+}
+
+.filter{
+  flex:none;
+
+  border:1px solid var(--line);
+
+  background:
+    rgba(255,255,255,.03);
+
+  color:#858f9b;
+
+  padding:9px 14px;
+
+  border-radius:999px;
+
+  font-size:11px;
+  font-weight:900;
+
+  cursor:pointer;
+
+  transition:.2s;
+}
+
+.filter:hover{
+  color:white;
+}
+
+.filter.active{
+  color:#001117;
+
+  background:var(--cyan);
+
+  border-color:var(--cyan);
+
+  box-shadow:
+    0 0 25px
+    rgba(103,232,255,.17);
+}
+
+/* ==============================
+   SECTION
+============================== */
+
+.section{
+  margin-top:38px;
+}
+
+.section-top{
+  display:flex;
+
+  align-items:end;
+  justify-content:space-between;
+
+  margin-bottom:16px;
+}
+
+.section-title{
+  font-size:21px;
+  font-weight:950;
+  letter-spacing:-.5px;
+}
+
+.template-count{
+  color:#68737f;
+  font-size:12px;
+}
+
+/* ==============================
+   GRID
+============================== */
+
+.grid{
+  display:grid;
+
+  grid-template-columns:
+    repeat(3,1fr);
+
+  gap:16px;
+}
+
+/* ==============================
+   CARD
+============================== */
+
+.card{
+  position:relative;
+
+  padding:16px;
+
+  border-radius:23px;
+
+  border:1px solid var(--line);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,.055),
+      rgba(255,255,255,.018)
+    );
+
+  overflow:hidden;
+
+  transition:
+    transform .3s,
+    border-color .3s,
+    box-shadow .3s;
+}
+
+.card:before{
+  content:"";
+
+  position:absolute;
+
+  width:200px;
+  height:200px;
+
+  top:-120px;
+  right:-90px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(103,232,255,.14),
+      transparent 70%
+    );
+
+  filter:blur(20px);
+
+  pointer-events:none;
+}
+
+.card:hover{
+  transform:translateY(-6px);
+
+  border-color:
+    rgba(103,232,255,.25);
+
+  box-shadow:
+    0 25px 70px rgba(0,0,0,.35),
+    0 0 40px rgba(103,232,255,.045);
+}
+
+/* ==============================
+   CARD HEADER
+============================== */
+
+.card-head{
+  display:flex;
+
+  align-items:center;
+  justify-content:space-between;
+
+  gap:10px;
+
+  margin-bottom:13px;
+}
+
+.card-title{
+  font-size:13px;
+  font-weight:950;
+}
+
+.tag{
+  flex:none;
+
+  padding:5px 8px;
+
+  border-radius:8px;
+
+  background:
+    rgba(103,232,255,.065);
+
+  border:1px solid
+    rgba(103,232,255,.1);
+
+  color:#79eaff;
+
+  font-size:9px;
+  font-weight:950;
+
+  letter-spacing:.6px;
+}
+
+.favorite{
+  position:absolute;
+
+  right:14px;
+  bottom:71px;
+
+  width:34px;
+  height:34px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  border-radius:11px;
+
+  border:1px solid var(--line);
+
+  background:#080b0f;
+
+  color:#7c8792;
+
+  cursor:pointer;
+
+  transition:.2s;
+
+  z-index:5;
+}
+
+.favorite:hover{
+  color:#ff75bd;
+
+  border-color:
+    rgba(255,117,189,.25);
+}
+
+.favorite.saved{
+  color:#ff75bd;
+
+  background:
+    rgba(255,117,189,.08);
+
+  border-color:
+    rgba(255,117,189,.2);
+}
+
+/* ==============================
+   BIO
+============================== */
+
+.bio{
+  min-height:205px;
+
+  display:flex;
+  align-items:flex-start;
+
+  padding:18px;
+
+  border-radius:17px;
+
+  background:
+    radial-gradient(
+      circle at 100% 0,
+      rgba(103,232,255,.035),
+      transparent 35%
+    ),
+    #040609;
+
+  border:1px solid
+    rgba(255,255,255,.07);
+
+  color:#e8edf2;
+
+  white-space:pre-wrap;
+
+  line-height:1.7;
+
+  font-size:13px;
+
+  overflow:hidden;
+}
+
+/* ==============================
+   ACTIONS
+============================== */
+
+.actions{
+  display:grid;
+
+  grid-template-columns:
+    1.25fr 1fr;
+
+  gap:8px;
+
+  margin-top:11px;
+}
+
+.btn{
+  height:44px;
+
+  border-radius:12px;
+
+  cursor:pointer;
+
+  font-size:12px;
+
+  font-weight:950;
+
+  transition:.2s;
+}
+
+.use{
+  border:0;
+
+  color:#001016;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--cyan),
+      var(--blue)
+    );
+
+  box-shadow:
+    0 8px 25px
+    rgba(49,156,255,.1);
+}
+
+.use:hover{
+  transform:translateY(-2px);
+
+  box-shadow:
+    0 12px 30px
+    rgba(49,156,255,.2);
+}
+
+.copy{
+  border:1px solid var(--line);
+
+  background:
+    rgba(255,255,255,.035);
+
+  color:#b9c1c9;
+}
+
+.copy:hover{
+  color:white;
+
+  border-color:
+    rgba(103,232,255,.25);
+}
+
+/* ==============================
+   EMPTY
+============================== */
+
+.empty{
+  display:none;
+
+  text-align:center;
+
+  padding:80px 20px;
+
+  color:#66717d;
+}
+
+.empty-icon{
+  font-size:45px;
+  margin-bottom:10px;
+}
+
+/* ==============================
+   FOOTER
+============================== */
+
+footer{
+  margin-top:70px;
+
+  padding-top:25px;
+
+  border-top:1px solid var(--line);
+
+  text-align:center;
+
+  color:#56616c;
+
+  font-size:11px;
+}
+
+/* ==============================
+   MOBILE
+============================== */
+
+@media(max-width:900px){
+
+  .grid{
+    grid-template-columns:
+      repeat(2,1fr);
+  }
+
+}
+
+@media(max-width:650px){
+
+  .container{
+    width:91%;
+  }
+
+  main{
+    padding-top:42px;
+  }
+
+  .nav{
+    min-height:64px;
+  }
+
+  .logo{
+    font-size:21px;
+  }
+
+  .back{
+    font-size:12px;
+  }
+
+  .hero h1{
+    font-size:48px;
+    letter-spacing:-3px;
+  }
+
+  .hero p{
+    font-size:14px;
+  }
+
+  .grid{
+    grid-template-columns:1fr;
+  }
+
+  .card{
+    border-radius:21px;
+  }
+
+  .bio{
+    min-height:185px;
+    font-size:13px;
+  }
+
+  .filters{
+    margin-left:-2px;
+    margin-right:-2px;
+  }
+
+}
+
+@media(max-width:400px){
+
+  .hero h1{
+    font-size:43px;
+  }
+
+  .random{
+    width:100%;
+  }
+
+}
+</style>
+</head>
+
+
+<body>
+
+<header>
+
+  <div class="nav">
+
+    <div class="logo">
+      DIPO<span>BIO</span>
+    </div>
+
+    <a
+      href="index.html"
+      class="back"
+    >
+      ← Bio Tools
+    </a>
+
+  </div>
+
+</header>
+
+
+<main class="container">
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+  <div class="eyebrow">
+    <span class="dot"></span>
+    THE ULTIMATE GEN-Z BIO LIBRARY
+  </div>
+
+  <h1>
+    Pick Your<br>
+    <span>Vibe.</span>
+  </h1>
+
+  <p>
+    Don't write a boring bio.
+    Pick a vibe, make it yours and
+    let your profile speak. 🩵
+  </p>
+
+  <div class="stats">
+
+    <div class="stat">
+      <b id="totalStat">30+</b> Styles
+    </div>
+
+    <div class="stat">
+      ⚡ Instant Copy
+    </div>
+
+    <div class="stat">
+      📱 Mobile Ready
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     SEARCH + RANDOM
+========================= -->
+
+<div class="controls">
+
+  <div class="search">
+
+    <span class="search-icon">⌕</span>
+
+    <input
+      id="search"
+      type="text"
+      placeholder="Search your vibe..."
+      autocomplete="off"
+    >
+
+  </div>
+
+  <button
+    class="random"
+    id="randomBtn"
+  >
+    🎲 Surprise Me
+  </button>
+
+</div>
+
+
+<!-- =========================
+     FILTERS
+========================= -->
+
+<div class="filters">
+
+  <button
+    class="filter active"
+    data-filter="all"
+  >
+    ✨ All
+  </button>
+
+  <button
+    class="filter"
+    data-filter="gaming"
+  >
+    🎮 Gaming
+  </button>
+
+  <button
+    class="filter"
+    data-filter="creator"
+  >
+    🎬 Creator
+  </button>
+
+  <button
+    class="filter"
+    data-filter="attitude"
+  >
+    🔥 Attitude
+  </button>
+
+  <button
+    class="filter"
+    data-filter="aesthetic"
+  >
+    🦋 Aesthetic
+  </button>
+
+  <button
+    class="filter"
+    data-filter="luxury"
+  >
+    💎 Luxury
+  </button>
+
+  <button
+    class="filter"
+    data-filter="minimal"
+  >
+    ◌ Minimal
+  </button>
+
+</div>
+
+
+<!-- =========================
+     TEMPLATE SECTION
+========================= -->
+
+<section class="section">
+
+  <div class="section-top">
+
+    <div class="section-title">
+      🔥 Trending Now
+    </div>
+
+    <div
+      class="template-count"
+      id="count"
+    >
+      30 styles
+    </div>
+
+  </div>
+
+  <div
+    class="grid"
+    id="templates"
+  ></div>
+
+  <div
+    class="empty"
+    id="empty"
+  >
+    <div class="empty-icon">
+      🌀
+    </div>
+
+    <b>No vibe found.</b>
+
+    <br>
+
+    <small>
+      Try another search.
+    </small>
+
+  </div>
+
+</section>
+
+
+<footer>
+  DIPO BIO • Your profile. Your identity. Your vibe. 🩵
+</footer>
+
+</main>
+
+
+<script>
+
+/* =========================================================
+   DIPO BIO — GOD LEVEL TEMPLATE DATABASE
+========================================================= */
+
+const templates = [
+
+/* ================= GAMING ================= */
+
+{
+ title:"Gamer × YouTuber",
+ category:"gaming",
+ tag:"TRENDING",
+ text:`🎮 Gamer • YouTuber
+🔥 Gaming • Shorts • Vibes
+⚡ Play Hard. Stay Real.
+👇 New video below`
+},
+
+{
+ title:"Gaming Legend",
+ category:"gaming",
+ tag:"HOT",
+ text:`🎮 Gaming Is My Escape
+🏆 Play • Win • Repeat
+🔥 Noob? Never Heard.
+🎧 Lost In The Game`
+},
+
+{
+ title:"Gaming.exe",
+ category:"gaming",
+ tag:"NEW",
+ text:`🎮 gamer.exe
+🕹️ playing my own story
+⚡ online sometimes
+👇 watch me play`
+},
+
+{
+ title:"Clutch Mode",
+ category:"gaming",
+ tag:"HOT",
+ text:`🎮 Clutch Mode: ON
+🔥 Aim • Grind • Repeat
+🏆 Built For The Lobby
+⚡ See you in-game`
+},
+
+{
+ title:"Controller Soul",
+ category:"gaming",
+ tag:"VIRAL",
+ text:`🕹️ Controller in hand
+🎧 Music in ears
+🔥 Dreams in mind
+🎮 Game on.`
+},
+
+/* ================= CREATOR ================= */
+
+{
+ title:"Creator Mode",
+ category:"creator",
+ tag:"VIRAL",
+ text:`🎬 Content Creator
+🚀 Creating • Building • Growing
+🧠 Ideas > Excuses
+👇 Latest drop`
+},
+
+{
+ title:"Digital Creator",
+ category:"creator",
+ tag:"NEW",
+ text:`✦ Digital Creator
+🎥 Turning ideas into content
+⚡ Creating my own lane
+👇 Come along`
+},
+
+{
+ title:"YouTube Energy",
+ category:"creator",
+ tag:"HOT",
+ text:`▶️ YouTuber
+🎬 Videos • Stories • Chaos
+🚀 Building something big
+👇 Watch the latest`
+},
+
+{
+ title:"Content Machine",
+ category:"creator",
+ tag:"TRENDING",
+ text:`🎬 Creator
+⚡ Create. Upload. Repeat.
+🔥 Ideas never sleep
+🚀 Bigger things loading...`
+},
+
+{
+ title:"Main Creator",
+ category:"creator",
+ tag:"NEW",
+ text:`🎥 Creator
+🪩 Main character energy
+✨ Making memories into content
+🩵 Stay tuned`
+},
+
+/* ================= ATTITUDE ================= */
+
+{
+ title:"Silent Attitude",
+ category:"attitude",
+ tag:"HOT",
+ text:`🖤 Silent but dangerous
+👑 I know my worth
+⚡ Less talk. More action.
+💯 Stay real`
+},
+
+{
+ title:"Main Character",
+ category:"attitude",
+ tag:"VIRAL",
+ text:`♛ Main Character Energy
+🖤 No competition
+🔥 My vibe. My rules.
+⚡ Watch me glow`
+},
+
+{
+ title:"Cold Vibes",
+ category:"attitude",
+ tag:"NEW",
+ text:`🥶 Cold mind
+🖤 Clean heart
+⚡ Sharp attitude
+👑 Different by choice`
+},
+
+{
+ title:"Own Lane",
+ category:"attitude",
+ tag:"HOT",
+ text:`⚡ Built Different
+🖤 Walking my own path
+🔥 No explanation needed
+♛ Just watch`
+},
+
+{
+ title:"Zero Explanation",
+ category:"attitude",
+ tag:"VIRAL",
+ text:`🖤 No explanation.
+⚡ No validation.
+🔥 Just evolution.
+👑 That's it.`
+},
+
+/* ================= AESTHETIC ================= */
+
+{
+ title:"Ocean Soul",
+ category:"aesthetic",
+ tag:"UNIQUE",
+ text:`🌀⋆˚࿔ 𝐲𝐨𝐮𝐫 𝐧𝐚𝐦𝐞 𝜗𝜚˚⋆🌀
+𓂃𓂃𓂃𓊝 ࿐𓂃𓂃𓂃
+🐬˚˖𓍢ִ໋ 🐋✧˚.🐟⋆˖°🐚
+ᴀʀᴛɪsᴛ | ᴅʀᴇᴀᴍᴇʀ
+◌🌊◌ ⬡ ◌🌑◌
+⫷ 𓆝𓆟𓆞 𝙏𝙝𝙚 𝙨𝙚𝙖 𝙞𝙨 𝙢𝙮 𝙨𝙠𝙮 ⫸`
+},
+
+{
+ title:"Soft Aesthetic",
+ category:"aesthetic",
+ tag:"TRENDING",
+ text:`𓆩♡𓆪 𝐘𝐨𝐮𝐫 𝐍𝐚𝐦𝐞
+☁️ living slowly
+୨୧ collecting little moments
+🌷 soft heart • strong mind
+☾ somewhere between dreams`
+},
+
+{
+ title:"Midnight Soul",
+ category:"aesthetic",
+ tag:"NEW",
+ text:`☾ 𝐌𝐢𝐝𝐧𝐢𝐠𝐡𝐭 𝐒𝐨𝐮𝐥
+✦ lost in my own universe
+𖤐 music • dreams • memories
+🖤 romanticizing life
+☽ see you in another timeline`
+},
+
+{
+ title:"Starboy",
+ category:"aesthetic",
+ tag:"HOT",
+ text:`𖤐 𝐒𝐭𝐚𝐫𝐛𝐨𝐲
+✦ made of late nights
+🌙 chasing impossible dreams
+🪐 somewhere in my universe
+♡ stay curious`
+},
+
+{
+ title:"Cloud Nine",
+ category:"aesthetic",
+ tag:"NEW",
+ text:`☁️ somewhere above reality
+♡ soft thoughts • loud dreams
+🦋 becoming my best version
+✦ one day at a time`
+},
+
+/* ================= LUXURY ================= */
+
+{
+ title:"Luxury King",
+ category:"luxury",
+ tag:"PREMIUM",
+ text:`♛ 𝐘𝐨𝐮𝐫 𝐍𝐚𝐦𝐞
+💎 Class speaks louder
+🖤 Private life • Big dreams
+🥂 Built different
+♛ Stay rare`
+},
+
+{
+ title:"Rich Energy",
+ category:"luxury",
+ tag:"HOT",
+ text:`💎 Taste over trends
+♛ Standards stay high
+🖤 Quiet luxury
+⚡ Bigger vision
+✦ Never ordinary`
+},
+
+{
+ title:"Black Gold",
+ category:"luxury",
+ tag:"PREMIUM",
+ text:`🖤 BLACK MIND
+💛 GOLDEN DREAMS
+♛ CLASS NEVER EXPIRES
+⚡ Built To Stand Out`
+},
+
+{
+ title:"Elite",
+ category:"luxury",
+ tag:"NEW",
+ text:`♛ ELITE MINDSET
+💎 Rare energy
+🖤 Clean circle
+⚡ Big vision
+🥂 Different level`
+},
+
+/* ================= MINIMAL ================= */
+
+{
+ title:"Clean Profile",
+ category:"minimal",
+ tag:"CLEAN",
+ text:`Your Name
+Creator • Gamer
+India
+Building my own story.`
+},
+
+{
+ title:"Simple Vibe",
+ category:"minimal",
+ tag:"NEW",
+ text:`✦ Your Name
+🎮 Gamer | 🎬 YouTuber
+🩵 Good vibes only
+↓ Let's connect`
+},
+
+{
+ title:"One Line",
+ category:"minimal",
+ tag:"MINIMAL",
+ text:`Your Name • Gamer • YouTuber 🎮🎬
+creating memories, not excuses ✦`
+},
+
+{
+ title:"Lowkey",
+ category:"minimal",
+ tag:"HOT",
+ text:`just your name.
+gamer • creator • human
+here for the vibes 🩵`
+},
+
+{
+ title:"No Bio Needed",
+ category:"minimal",
+ tag:"CLEAN",
+ text:`Your Name.
+Doing my thing.
+That's the bio.`
+}
+
+];
+
+
+/* =========================================================
+   ELEMENTS
+========================================================= */
+
+const root =
+  document.getElementById("templates");
+
+const search =
+  document.getElementById("search");
+
+const count =
+  document.getElementById("count");
+
+const empty =
+  document.getElementById("empty");
+
+const randomBtn =
+  document.getElementById("randomBtn");
+
+const totalStat =
+  document.getElementById("totalStat");
+
+let activeFilter = "all";
+
+
+/* =========================================================
+   TOTAL
+========================================================= */
+
+totalStat.textContent =
+  templates.length + "+";
+
+
+/* =========================================================
+   FAVORITES
+========================================================= */
+
+let favorites =
+  JSON.parse(
+    localStorage.getItem("dipoBioFavorites") || "[]"
+  );
+
+
+/* =========================================================
+   ESCAPE HTML
+========================================================= */
+
+function escapeHTML(text){
+
+  return text
+    .replace(/&/g,"&amp;")
+    .replace(/</g,"&lt;")
+    .replace(/>/g,"&gt;")
+    .replace(/"/g,"&quot;")
+    .replace(/'/g,"&#039;");
+
+}
+
+
+/* =========================================================
+   RENDER
+========================================================= */
+
+function render(){
+
+  const query =
+    search.value
+      .toLowerCase()
+      .trim();
+
+  const filtered =
+    templates.filter(item=>{
+
+      const filterMatch =
+        activeFilter === "all" ||
+        item.category === activeFilter;
+
+      const searchMatch =
+        !query ||
+        item.title
+          .toLowerCase()
+          .includes(query) ||
+
+        item.category
+          .toLowerCase()
+          .includes(query) ||
+
+        item.text
+          .toLowerCase()
+          .includes(query);
+
+      return filterMatch && searchMatch;
+
+    });
+
+
+  root.innerHTML = "";
+
+
+  filtered.forEach((template,index)=>{
+
+    const id =
+      templates.indexOf(template);
+
+    const saved =
+      favorites.includes(id);
+
+
+    const card =
+      document.createElement("article");
+
+    card.className = "card";
+
+
+    card.innerHTML = `
+
+      <div class="card-head">
+
+        <div class="card-title">
+          ${template.title}
+        </div>
+
+        <div class="tag">
+          ${template.tag}
+        </div>
+
+      </div>
+
+
+      <div class="bio">
+        ${escapeHTML(template.text)}
+      </div>
+
+
+      <button
+        class="favorite ${saved ? "saved" : ""}"
+        aria-label="Favorite"
+      >
+        ${saved ? "♥" : "♡"}
+      </button>
+
+
+      <div class="actions">
+
+        <button
+          class="btn use"
+        >
+          ✨ Use Template
+        </button>
+
+        <button
+          class="btn copy"
+        >
+          ⧉ Copy
+        </button>
+
+      </div>
+
+    `;
+
+
+    /* =====================
+       USE
+    ===================== */
+
+    card
+      .querySelector(".use")
+      .onclick = ()=>{
+
+        localStorage.setItem(
+          "dipoBio",
+          template.text
+        );
+
+        localStorage.setItem(
+          "dipoBioTemplate",
+          template.title
+        );
+
+        window.location.href =
+          "preview.html";
+
+      };
+
+
+    /* =====================
+       COPY
+    ===================== */
+
+    card
+      .querySelector(".copy")
+      .onclick = async ()=>{
+
+        const button =
+          card.querySelector(".copy");
+
+        try{
+
+          await navigator.clipboard
+            .writeText(template.text);
+
+          button.textContent =
+            "✓ Copied";
+
+          setTimeout(()=>{
+
+            button.textContent =
+              "⧉ Copy";
+
+          },1400);
+
+        }catch{
+
+          button.textContent =
+            "Select & Copy";
+
+        }
+
+      };
+
+
+    /* =====================
+       FAVORITE
+    ===================== */
+
+    card
+      .querySelector(".favorite")
+      .onclick = ()=>{
+
+        const index =
+          favorites.indexOf(id);
+
+
+        if(index === -1){
+
+          favorites.push(id);
+
+        }else{
+
+          favorites.splice(index,1);
+
+        }
+
+
+        localStorage.setItem(
+          "dipoBioFavorites",
+          JSON.stringify(favorites)
+        );
+
+
+        render();
+
+      };
+
+
+    root.appendChild(card);
+
+  });
+
+
+  count.textContent =
+    `${filtered.length} ${
+      filtered.length === 1
+        ? "style"
+        : "styles"
+    }`;
+
+
+  empty.style.display =
+    filtered.length
+      ? "none"
+      : "block";
+
+}
+
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+search.addEventListener(
+  "input",
+  render
+);
+
+
+/* =========================================================
+   FILTER
+========================================================= */
+
+document
+  .querySelectorAll(".filter")
+  .forEach(button=>{
+
+    button.onclick = ()=>{
+
+      document
+        .querySelectorAll(".filter")
+        .forEach(btn=>{
+          btn.classList.remove("active");
+        });
+
+      button.classList.add("active");
+
+      activeFilter =
+        button.dataset.filter;
+
+      render();
+
+    };
+
+  });
+
+
+/* =========================================================
+   SURPRISE ME
+========================================================= */
+
+randomBtn.onclick = ()=>{
+
+  const random =
+    templates[
+      Math.floor(
+        Math.random() *
+        templates.length
+      )
+    ];
+
+
+  localStorage.setItem(
+    "dipoBio",
+    random.text
+  );
+
+  localStorage.setItem(
+    "dipoBioTemplate",
+    random.title
+  );
+
+
+  window.location.href =
+    "preview.html";
+
+};
+
+
+/* =========================================================
+   INITIAL
+========================================================= */
+
+render();
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,1781 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+
+<title>DIPO BIO — Kaomoji</title>
+
+<style>
+*{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  background:#050505;
+  color:#fff;
+  font-family:Arial,Helvetica,sans-serif;
+  min-height:100vh;
+}
+
+button,
+input,
+select{
+  font:inherit;
+}
+
+button{
+  cursor:pointer;
+}
+
+.container{
+  width:min(1050px,92%);
+  margin:auto;
+}
+
+/* ================= HEADER ================= */
+
+header{
+  position:sticky;
+  top:0;
+  z-index:100;
+  padding:18px 0;
+  background:rgba(5,5,5,.92);
+  backdrop-filter:blur(18px);
+  border-bottom:1px solid #222;
+}
+
+.nav{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+
+.logo{
+  font-size:25px;
+  font-weight:900;
+  letter-spacing:-1px;
+}
+
+.logo span{
+  color:#00ff66;
+}
+
+.nav a{
+  color:#aaa;
+  text-decoration:none;
+  font-size:16px;
+}
+
+.nav a:hover{
+  color:#00ff66;
+}
+
+/* ================= HERO ================= */
+
+main{
+  padding:42px 0 80px;
+}
+
+.hero{
+  margin-bottom:28px;
+}
+
+.badge{
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  padding:7px 12px;
+  border:1px solid #183c27;
+  background:#07140c;
+  color:#00ff66;
+  border-radius:999px;
+  font-size:12px;
+  font-weight:800;
+  margin-bottom:14px;
+}
+
+h1{
+  font-size:clamp(38px,7vw,64px);
+  margin:0;
+  letter-spacing:-2.5px;
+}
+
+.subtitle{
+  color:#888;
+  font-size:17px;
+  margin-top:12px;
+  line-height:1.5;
+}
+
+/* ================= NAME BUILDER ================= */
+
+.builder{
+  background:linear-gradient(145deg,#101010,#080808);
+  border:1px solid #242424;
+  border-radius:20px;
+  padding:20px;
+  margin:30px 0 38px;
+  box-shadow:0 15px 50px rgba(0,0,0,.35);
+}
+
+.builder-title{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:15px;
+  margin-bottom:15px;
+}
+
+.builder-title strong{
+  font-size:18px;
+}
+
+.live{
+  color:#00ff66;
+  font-size:12px;
+  font-weight:bold;
+}
+
+.name-input{
+  width:100%;
+  padding:17px 18px;
+  border-radius:13px;
+  border:1px solid #292929;
+  outline:none;
+  background:#050505;
+  color:#fff;
+  font-size:18px;
+}
+
+.name-input:focus{
+  border-color:#00ff66;
+  box-shadow:0 0 0 3px rgba(0,255,102,.08);
+}
+
+.preview{
+  margin-top:16px;
+  padding:22px 16px;
+  min-height:95px;
+  border-radius:15px;
+  background:#050505;
+  border:1px solid #202020;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+
+.preview-label{
+  color:#666;
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:1.5px;
+  margin-bottom:8px;
+}
+
+.preview-text{
+  font-size:clamp(24px,5vw,38px);
+  font-weight:800;
+  word-break:break-word;
+}
+
+.preview-kaomoji{
+  color:#00ff66;
+}
+
+.controls{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+  margin-top:14px;
+}
+
+.control{
+  background:#0d0d0d;
+  border:1px solid #242424;
+  color:#fff;
+  padding:12px;
+  border-radius:12px;
+}
+
+.control label{
+  display:block;
+  color:#777;
+  font-size:11px;
+  margin-bottom:7px;
+}
+
+.control select{
+  width:100%;
+  border:0;
+  outline:0;
+  color:#fff;
+  background:#0d0d0d;
+}
+
+.mode-buttons{
+  display:flex;
+  gap:7px;
+  flex-wrap:wrap;
+}
+
+.mode-btn{
+  flex:1;
+  min-width:80px;
+  border:1px solid #282828;
+  background:#111;
+  color:#aaa;
+  padding:10px;
+  border-radius:9px;
+}
+
+.mode-btn.active{
+  background:#00ff66;
+  color:#001108;
+  border-color:#00ff66;
+  font-weight:800;
+}
+
+.builder-actions{
+  display:flex;
+  gap:9px;
+  margin-top:12px;
+}
+
+.primary-btn,
+.secondary-btn{
+  border:0;
+  border-radius:11px;
+  padding:12px 16px;
+  font-weight:800;
+}
+
+.primary-btn{
+  background:#00ff66;
+  color:#001108;
+  flex:1;
+}
+
+.secondary-btn{
+  background:#181818;
+  border:1px solid #292929;
+  color:#fff;
+}
+
+/* ================= SEARCH ================= */
+
+.tools{
+  display:flex;
+  gap:9px;
+  margin-bottom:20px;
+}
+
+.search{
+  flex:1;
+  background:#0d0d0d;
+  border:1px solid #252525;
+  border-radius:12px;
+  padding:14px 15px;
+  color:#fff;
+  outline:none;
+}
+
+.search:focus{
+  border-color:#00ff66;
+}
+
+.random-btn{
+  background:#111;
+  color:#fff;
+  border:1px solid #292929;
+  border-radius:12px;
+  padding:0 17px;
+}
+
+/* ================= CATEGORIES ================= */
+
+.category{
+  margin-top:36px;
+}
+
+.category-head{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom:13px;
+}
+
+.category-title{
+  color:#00ff66;
+  font-size:22px;
+  font-weight:900;
+  margin:0;
+}
+
+.category-count{
+  color:#555;
+  font-size:12px;
+}
+
+/* ================= GRID ================= */
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+}
+
+.item{
+  min-height:145px;
+  background:#0c0c0c;
+  border:1px solid #242424;
+  border-radius:15px;
+  padding:18px 12px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  transition:.18s ease;
+}
+
+.item:hover{
+  border-color:#00ff66;
+  transform:translateY(-2px);
+}
+
+.item.selected{
+  border-color:#00ff66;
+  box-shadow:0 0 0 1px #00ff66 inset,
+             0 0 25px rgba(0,255,102,.08);
+}
+
+.face{
+  min-height:48px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  font-size:25px;
+  line-height:1.35;
+  word-break:break-word;
+  margin-bottom:14px;
+}
+
+.item-actions{
+  display:flex;
+  gap:7px;
+  width:100%;
+  justify-content:center;
+}
+
+.copy-btn,
+.add-btn,
+.like-btn{
+  border:0;
+  border-radius:9px;
+  padding:9px 11px;
+  font-weight:800;
+}
+
+.copy-btn{
+  background:#00ff66;
+  color:#001108;
+}
+
+.add-btn{
+  background:#191919;
+  color:#fff;
+  border:1px solid #292929;
+}
+
+.like-btn{
+  background:#191919;
+  color:#aaa;
+  border:1px solid #292929;
+  min-width:40px;
+}
+
+.like-btn.active{
+  color:#ff4f8b;
+  border-color:#ff4f8b;
+}
+
+/* ================= EMPTY ================= */
+
+.empty{
+  display:none;
+  text-align:center;
+  padding:45px 10px;
+  color:#666;
+}
+
+/* ================= TOAST ================= */
+
+.toast{
+  position:fixed;
+  left:50%;
+  bottom:25px;
+  transform:translate(-50%,20px);
+  background:#00ff66;
+  color:#001108;
+  padding:12px 18px;
+  border-radius:999px;
+  font-size:14px;
+  font-weight:900;
+  opacity:0;
+  pointer-events:none;
+  transition:.25s ease;
+  z-index:999;
+  box-shadow:0 10px 30px rgba(0,255,102,.2);
+}
+
+.toast.show{
+  opacity:1;
+  transform:translate(-50%,0);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:760px){
+
+  main{
+    padding-top:32px;
+  }
+
+  .controls{
+    grid-template-columns:1fr;
+  }
+
+  .grid{
+    grid-template-columns:repeat(2,1fr);
+    gap:9px;
+  }
+
+  .item{
+    min-height:135px;
+    padding:15px 8px;
+  }
+
+  .face{
+    font-size:22px;
+  }
+
+  .copy-btn,
+  .add-btn,
+  .like-btn{
+    padding:8px 9px;
+    font-size:12px;
+  }
+
+}
+
+@media(max-width:430px){
+
+  .container{
+    width:94%;
+  }
+
+  .nav a{
+    font-size:14px;
+  }
+
+  .logo{
+    font-size:22px;
+  }
+
+  .tools{
+    flex-direction:column;
+  }
+
+  .random-btn{
+    padding:12px;
+  }
+
+  .builder{
+    padding:15px;
+  }
+
+  .grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .preview-text{
+    font-size:22px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="container nav">
+    <div class="logo">
+      DIPO<span>BIO</span>
+    </div>
+
+    <a href="index.html">
+      ← Bio Tools
+    </a>
+  </div>
+</header>
+
+
+<main class="container">
+
+  <section class="hero">
+
+    <div class="badge">
+      ⚡ GEN-Z BIO BUILDER
+    </div>
+
+    <h1>Kaomoji</h1>
+
+    <p class="subtitle">
+      Build your perfect name + kaomoji combo.
+      Tap, mix, copy & flex. ✨
+    </p>
+
+  </section>
+
+
+  <!-- ================= NAME BUILDER ================= -->
+
+  <section class="builder">
+
+    <div class="builder-title">
+      <strong>✨ Name Builder</strong>
+      <span class="live">● LIVE</span>
+    </div>
+
+    <input
+      id="nameInput"
+      class="name-input"
+      type="text"
+      maxlength="40"
+      placeholder="Enter your name..."
+      autocomplete="off"
+    >
+
+    <div class="preview">
+
+      <div class="preview-label">
+        Your Bio Style
+      </div>
+
+      <div
+        id="previewText"
+        class="preview-text"
+      >
+        Your Name <span class="preview-kaomoji">✦</span>
+      </div>
+
+    </div>
+
+
+    <div class="controls">
+
+      <!-- MODE -->
+
+      <div class="control">
+
+        <label>KAOMOJI POSITION</label>
+
+        <div class="mode-buttons">
+
+          <button
+            class="mode-btn"
+            data-mode="prefix"
+          >
+            Before
+          </button>
+
+          <button
+            class="mode-btn active"
+            data-mode="suffix"
+          >
+            After
+          </button>
+
+          <button
+            class="mode-btn"
+            data-mode="both"
+          >
+            Both
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <!-- SEPARATOR -->
+
+      <div class="control">
+
+        <label>STYLE / SEPARATOR</label>
+
+        <select id="separator">
+
+          <option value=" ">
+            Space — Name ♡
+          </option>
+
+          <option value=" • ">
+            • — Name • ♡
+          </option>
+
+          <option value=" | ">
+            | — Name | ♡
+          </option>
+
+          <option value=" ~ ">
+            ~ — Name ~ ♡
+          </option>
+
+          <option value=" ♡ ">
+            ♡ — Name ♡ ♡
+          </option>
+
+          <option value=" ✦ ">
+            ✦ — Name ✦ ♡
+          </option>
+
+          <option value="">
+            None — Name♡
+          </option>
+
+        </select>
+
+      </div>
+
+    </div>
+
+
+    <div class="builder-actions">
+
+      <button
+        class="primary-btn"
+        id="copyNameBtn"
+      >
+        📋 Copy Bio
+      </button>
+
+      <button
+        class="secondary-btn"
+        id="randomNameBtn"
+      >
+        🎲 Random
+      </button>
+
+      <button
+        class="secondary-btn"
+        id="clearBtn"
+      >
+        ×
+      </button>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= SEARCH ================= -->
+
+  <div class="tools">
+
+    <input
+      id="search"
+      class="search"
+      type="search"
+      placeholder="🔎 Search kaomoji..."
+      autocomplete="off"
+    >
+
+    <button
+      id="randomBtn"
+      class="random-btn"
+    >
+      🎲 Random Kaomoji
+    </button>
+
+  </div>
+
+
+  <div id="categories"></div>
+
+  <div id="empty" class="empty">
+    😭 No kaomoji found.
+    <br>
+    Try another search.
+  </div>
+
+</main>
+
+
+<div id="toast" class="toast">
+  Copied ✨
+</div>
+
+
+<script>
+
+/* =========================================================
+   DIPO BIO — GOD LEVEL KAOMOJI DATABASE
+========================================================= */
+
+const kaomojiData = {
+
+  "🔥 Gen Z": [
+
+    "૮₍˶ᵔ ᵕ ᵔ˶₎ა",
+    "૮₍ ˃ ⤙ ˂ ₎ა",
+    "૮₍ ´• ˕ •` ₎ა",
+    "૮₍ ˶•⤙•˶ ₎ა",
+    "૮₍˵• ɞ •˵₎ა",
+    "૮₍˶ •. • ⑅₎ა",
+    "(˶ᵔ ᵕ ᵔ˶)",
+    "(˶˃ ᵕ ˂˶)",
+    "(๑˃ᴗ˂)ﻭ",
+    "(๑•̀ᗝ•́)૭",
+    "(≧◡≦)",
+    "(≧▽≦)",
+    "(｡•̀ᴗ-)✧",
+    "(｡•̀ᴗ-)✧",
+    "(¬‿¬)",
+    "(⌐■_■)",
+    "(▀̿Ĺ̯▀̿ ̿)",
+    "(•̀ᴗ•́)و",
+    "(•̀ω•́)✧",
+    "(ง'̀-'́)ง",
+    "(ง •̀_•́)ง",
+    "(╯°□°）╯︵",
+    "¯\\_(ツ)_/¯",
+    "┬─┬ノ( º _ ºノ)",
+    "ᕙ(⇀‸↼‶)ᕗ",
+    "ᕦ(ò_óˇ)ᕤ",
+    "ฅ^•ﻌ•^ฅ",
+    "ฅ^•ﻌ•^ฅ",
+    "ʕ•ᴥ•ʔ",
+    "ʕ•́ᴥ•̀ʔっ",
+    "(づ｡◕‿‿◕｡)づ",
+    "(っ˘ω˘ς )",
+    "(っ◔◡◔)っ",
+    "(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧",
+    "(ノಠ益ಠ)ノ彡",
+    "(☞ﾟヮﾟ)☞",
+    "☜(˚▽˚)☞",
+    "(☞ຈل͜ຈ)☞",
+    "👁️👄👁️",
+    "😎👉👉",
+    "✨(˶ᵔ ᵕ ᵔ˶)✨",
+    "♡(˃͈ દ ˂͈ ༶ )",
+    "✧( •̀ᴗ•́ )و",
+    "★彡(≧▽≦)彡★"
+
+  ],
+
+
+  "🥰 Cute": [
+
+    "(｡♥‿♥｡)",
+    "(♥ω♥*)",
+    "(♡ω♡)",
+    "(´｡• ᵕ •｡`)",
+    "(´꒳`)",
+    "(˶˘ ³˘(꒳ ˶ )",
+    "(づ￣ ³￣)づ",
+    "(つ≧▽≦)つ",
+    "(つ✧ω✧)つ",
+    "(灬º‿º灬)♡",
+    "(◕‿◕✿)",
+    "(✿◠‿◠)",
+    "(｡･ω･｡)",
+    "(｡•́‿•̀｡)",
+    "(｡•̀ᴗ-)✧",
+    "(๑>◡<๑)",
+    "(๑˘︶˘๑)",
+    "(๑♡⌓♡๑)",
+    "(๑♡3♡๑)",
+    "(♡°▽°♡)",
+    "(♡˙︶˙♡)",
+    "(´• ᴗ •`)",
+    "(´,,•ω•,,)♡",
+    "(っ˘з(˘⌣˘ )",
+    "(っ˘з(˘⌣˘ )♡",
+    "(づ˶•༝•˶)づ",
+    "( ˘ ³˘)♥",
+    "♡(˃͈ દ ˂͈ ༶ )",
+    "♡(｡- ω -)",
+    "♡(>ᴗ<)",
+    "♡´･ᴗ･`♡",
+    "♡(˶˃ ᵕ ˂˶)",
+    "૮₍ ˶ᵔ ᵕ ᵔ˶ ₎ა",
+    "૮₍˶ •. • ⑅₎ა",
+    "૮₍ ´• ˕ •` ₎ა",
+    "ʚ♡ɞ",
+    "꒰ঌ(⃔ ⌯' '⌯)⃕໒꒱",
+    "꒰ ˶• ༝ •˶꒱",
+    "꒰ᐢ. .ᐢ꒱",
+    "꒰ ˘͈ ᵕ ˘͈ ᐢ꒱",
+    "૮₍˃̵֊ ˂̵₎ა",
+    "(˶ᵔ ᵕ ᵔ˶) ♡"
+
+  ],
+
+
+  "😎 Cool": [
+
+    "(⌐■_■)",
+    "(▀̿Ĺ̯▀̿ ̿)",
+    "(•_•) ( •_•)>⌐■-■",
+    "(⌐■-■)",
+    "(¬‿¬)",
+    "(¬‿¬ )",
+    "( ͡° ͜ʖ ͡°)",
+    "( ͡°╭͜ʖ╮͡° )",
+    "(▀̿Ĺ̯▀̿ ̿)",
+    "(ง ͠° ͟ل͜ ͡°)ง",
+    "(•̀ᴗ•́)و",
+    "(•̀ω•́)✧",
+    "B)",
+    "B-)",
+    "8-)",
+    "😎",
+    "😎🔥",
+    "😎✨",
+    "★彡",
+    "彡★",
+    "★_★",
+    "☆_☆",
+    "✦_✦",
+    "⚡(⌐■_■)",
+    "༼ つ ◕_◕ ༽つ",
+    "༼ つ ಥ_ಥ ༽つ",
+    "ᕙ(⇀‸↼‶)ᕗ",
+    "ᕦ(ò_óˇ)ᕤ",
+    "╚═━一",
+    "︻デ═一",
+    "▄︻デ══━一",
+    "☠︎",
+    "☠︎︎",
+    "♛",
+    "♕",
+    "♚",
+    "♔",
+    "𓆩♡𓆪",
+    "𓆩⚡𓆪",
+    "𓆩★𓆪"
+
+  ],
+
+
+  "💀 Savage": [
+
+    "☠️",
+    "☠︎",
+    "☠︎︎",
+    "💀",
+    "༼ つ ◕_◕ ༽つ",
+    "༼ つ ಥ_ಥ ༽つ",
+    "༼ つ ͡° ͜ʖ ͡° ༽つ",
+    "(ಠ_ಠ)",
+    "(ಠ‿ಠ)",
+    "(ಠ益ಠ)",
+    "(ಠ⌣ಠ)",
+    "(ಠ_ರೃ)",
+    "(ಠ╭╮ಠ)",
+    "(ಥ_ಥ)",
+    "(ಥ﹏ಥ)",
+    "(ಥ⌣ಥ)",
+    "(ノಠ益ಠ)ノ彡┻━┻",
+    "(╯°□°）╯︵ ┻━┻",
+    "┻━┻ ︵ヽ(`Д´)ﾉ︵ ┻━┻",
+    "┬─┬ノ( º _ ºノ)",
+    "¯\\_(ツ)_/¯",
+    "(ง'̀-'́)ง",
+    "ᕙ(⇀‸↼‶)ᕗ",
+    "ᕦ(ò_óˇ)ᕤ",
+    "ಠ⌣ಠ",
+    "ಠ‿ಠ",
+    "¬_¬",
+    "¬‿¬",
+    "ಠಿ_ಠ",
+    "ಥ‿ಥ",
+    "ಡ_ಡ",
+    "ರ_ರ",
+    "ಠoಠ",
+    "ಠ~ಠ",
+    "ಠ‸ಠ",
+    "ಠ╭╮ಠ",
+    "𓆩☠︎𓆪",
+    "☠︎︎𓆩𓆪",
+    "💀🖤",
+    "☠️⚡"
+
+  ],
+
+
+  "💕 Love": [
+
+    "♡",
+    "♥",
+    "❤",
+    "ღ",
+    "❥",
+    "❣",
+    "💕",
+    "💗",
+    "💖",
+    "💘",
+    "💝",
+    "💞",
+    "💓",
+    "💟",
+    "🖤",
+    "🤍",
+    "❤️‍🔥",
+    "♡(˃͈ દ ˂͈ ༶ )",
+    "(｡♥‿♥｡)",
+    "(♡ω♡)",
+    "(♥ω♥*)",
+    "(っ˘з(˘⌣˘ )",
+    "(灬º‿º灬)♡",
+    "(´,,•ω•,,)♡",
+    "(๑♡⌓♡๑)",
+    "(♡°▽°♡)",
+    "♡´･ᴗ･`♡",
+    "♡(>ᴗ<)",
+    "♡(˶˃ ᵕ ˂˶)",
+    "꒰ঌ♡໒꒱",
+    "𓆩♡𓆪",
+    "𓆩♥𓆪",
+    "୨♡୧",
+    "♡̷̷̷",
+    "ෆ",
+    "ᰔ",
+    "ꨄ",
+    "ᥫ᭡",
+    "ღゝ◡╹)ノ♡",
+    "(づ￣ ³￣)づ ♡"
+
+  ],
+
+
+  "✨ Aesthetic": [
+
+    "✦",
+    "✧",
+    "⋆",
+    "｡ﾟ✶ฺ.ヽ(*´∀`*)ﾉ.✶ฺﾟ｡",
+    "˚₊‧꒰ა ☆ ໒꒱ ‧₊˚",
+    "✧･ﾟ: *✧･ﾟ:*",
+    "*:･ﾟ✧*:･ﾟ✧",
+    "⋆｡ﾟ✶°✩",
+    "｡･:*˚:✧｡",
+    "✦ . 　⁺ 　 . ✦",
+    "✧˖°",
+    "⋆⁺₊⋆ ☀︎ ⋆⁺₊⋆",
+    "˚ ༘♡ ⋆｡˚",
+    "₊˚⊹♡",
+    "⊹ ࣪ ˖",
+    "⋆.ೃ࿔*:･",
+    "𓂃 ࣪˖ ִֶָ𐀔",
+    "𓆩♡𓆪",
+    "𓆩✧𓆪",
+    "𓆩★𓆪",
+    "୨୧",
+    "꧁༺༻꧂",
+    "༺═────────────═༻",
+    "•───────•",
+    "╰┈➤",
+    "┈┈┈୨୧┈┈┈",
+    "˚₊‧꒰ა ♡ ໒꒱ ‧₊˚",
+    "★彡[ᴅʀᴇᴀᴍ]彡★",
+    "✩°｡⋆⸜ 🎧✮",
+    "☾⋆⁺₊✧",
+    "☼",
+    "☽",
+    "☾",
+    "☀︎",
+    "☁︎",
+    "𓇼",
+    "𓆉",
+    "𓆩⚡𓆪"
+
+  ],
+
+
+  "🐱 Animals": [
+
+    "ฅ^•ﻌ•^ฅ",
+    "ฅ(＾・ω・＾ฅ)",
+    "ฅ^._.^ฅ",
+    "(=^･ω･^=)",
+    "(=^･ω･^=)ﾉ",
+    "(＾• ω •＾)",
+    "(≧ω≦)",
+    "(=｀ω´=)",
+    "(^._.^)ﾉ",
+    "ʕ•ᴥ•ʔ",
+    "ʕ•́ᴥ•̀ʔっ",
+    "ʕっ•ᴥ•ʔっ",
+    "ʕ•̀ω•́ʔ✧",
+    "૮・ﻌ・ა",
+    "૮₍ ˶ᵔ ᵕ ᵔ˶ ₎ა",
+    "૮₍˶ •. • ⑅₎ა",
+    "U・ᴥ・U",
+    "U^ｪ^U",
+    "(•ㅅ•)",
+    "(•ө•)",
+    "(◕ᴥ◕)",
+    "(❍ᴥ❍ʋ)",
+    "(=ω=)",
+    "(・ω・)",
+    "(•ω•)",
+    "(ㅇㅅㅇ❀)",
+    "ᶘᵒᴥᵒᶅ",
+    "ฅ^•ﻌ•^ฅ♡",
+    "ʕ•ﻌ•ʔ",
+    "ʕっ˘ڡ˘ςʔ",
+    "ʕ￫ᴥ￩ʔ",
+    "ʕ≧ᴥ≦ʔ",
+    "૮₍˶ᵔ ᵕ ᵔ˶₎ა♡",
+    "𓆩🐾𓆪"
+
+  ],
+
+
+  "😂 Funny": [
+
+    "( ͡° ͜ʖ ͡°)",
+    "( ͡ᵔ ͜ʖ ͡ᵔ )",
+    "( ͡°╭͜ʖ╮͡° )",
+    "(☞ﾟヮﾟ)☞",
+    "☜(˚▽˚)☞",
+    "☜(⌒▽⌒)☞",
+    "┬─┬ノ( º _ ºノ)",
+    "┻━┻ ︵ヽ(`Д´)ﾉ︵ ┻━┻",
+    "(╯°□°）╯︵ ┻━┻",
+    "(ノಠ益ಠ)ノ彡┻━┻",
+    "¯\\_(ツ)_/¯",
+    "ツ",
+    "シ",
+    "ッ",
+    "ヅ",
+    "メ",
+    "乂",
+    "ಠ_ಠ",
+    "ಠ‿ಠ",
+    "ಡ_ಡ",
+    "ರ_ರ",
+    "(•_•)",
+    "(•_•) ( •_•)>⌐■-■",
+    "( •_•)>⌐■-■",
+    "⌐■_■",
+    "(ง ͠° ͟ل͜ ͡°)ง",
+    "༼ つ ◕_◕ ༽つ",
+    "༼ つ ಥ_ಥ ༽つ",
+    "༼ つ ͡° ͜ʖ ͡° ༽つ",
+    "ᕙ(⇀‸↼‶)ᕗ",
+    "ᕦ(ò_óˇ)ᕤ",
+    "ლ(ಠ益ಠლ)",
+    "ლ(´ڡ`ლ)",
+    "ヽ༼ຈل͜ຈ༽ﾉ",
+    "༼ ºل͟º ༽",
+    "༼ つ ಥ_ಥ ༽つ"
+
+  ],
+
+
+  "😴 Mood": [
+
+    "(￣o￣) zzZ",
+    "(－_－) zzZ",
+    "(＿ ＿*) Z z z",
+    "(∪｡∪)｡｡｡zzz",
+    "(ᴗ˳ᴗ)",
+    "(¬_¬)",
+    "(¬‿¬)",
+    "(•_•)",
+    "(._.)",
+    "(；一_一)",
+    "(；￣Д￣)",
+    "(╥﹏╥)",
+    "(ಥ﹏ಥ)",
+    "(T_T)",
+    "(ToT)",
+    "(ಥ_ಥ)",
+    "(；ω；)",
+    "(´• ᴗ •`)",
+    "(｡•́︿•̀｡)",
+    "(｡•́‿•̀｡)",
+    "(╯︵╰,)",
+    "(´；ω；`)",
+    "(っ˘̩╭╮˘̩)っ",
+    "ಥ_ಥ",
+    "ಠ_ಠ",
+    "ಠ⌣ಠ",
+    "¬_¬",
+    "._.",
+    "•́  ‿ ,•̀",
+    "•́ ᴗ •̀",
+    "ಥ‿ಥ",
+    "ಡ_ಡ",
+    "ರ_ರ",
+    "ʕ•́ᴥ•̀ʔっ"
+
+  ],
+
+
+  "👑 Royal": [
+
+    "♛",
+    "♕",
+    "♚",
+    "♔",
+    "👑",
+    "♛♡",
+    "♕✦",
+    "♚⚡",
+    "♔♡",
+    "꧁♛꧂",
+    "꧁♕꧂",
+    "༺♛༻",
+    "༺♕༻",
+    "𓆩♛𓆪",
+    "𓆩♕𓆪",
+    "♛彡",
+    "彡♛",
+    "★♛★",
+    "✦♛✦",
+    "♛┈┈",
+    "┈┈♛",
+    "♔ • ♕",
+    "♚ • ♛",
+    "👑✨",
+    "👑⚡",
+    "👑🖤",
+    "♛🖤",
+    "♕🤍",
+    "꧁༒♛༒꧂",
+    "꧁༺♛༻꧂"
+
+  ],
+
+
+  "⚡ Symbols": [
+
+    "★",
+    "☆",
+    "✦",
+    "✧",
+    "✪",
+    "✫",
+    "✬",
+    "✭",
+    "✮",
+    "✯",
+    "✰",
+    "⋆",
+    "⁂",
+    "❖",
+    "◇",
+    "◆",
+    "○",
+    "●",
+    "◉",
+    "◎",
+    "☀",
+    "☾",
+    "☽",
+    "⚡",
+    "☁",
+    "☂",
+    "☯",
+    "☮",
+    "☢",
+    "☠",
+    "∞",
+    "※",
+    "々",
+    "〆",
+    "彡",
+    "ツ",
+    "シ",
+    "メ",
+    "乂",
+    "×",
+    "✓",
+    "✔",
+    "✕",
+    "✖",
+    "➜",
+    "➤",
+    "➳",
+    "➵",
+    "➶",
+    "➷",
+    "↗",
+    "↘",
+    "↙",
+    "↖"
+
+  ]
+
+};
+
+
+/* =========================================================
+   STATE
+========================================================= */
+
+let selectedKaomoji = "✦";
+let mode = "suffix";
+let separator = " ";
+
+const favorites =
+  JSON.parse(
+    localStorage.getItem("dipoKaomojiFavorites") || "[]"
+  );
+
+
+/* =========================================================
+   ELEMENTS
+========================================================= */
+
+const root =
+  document.getElementById("categories");
+
+const search =
+  document.getElementById("search");
+
+const empty =
+  document.getElementById("empty");
+
+const nameInput =
+  document.getElementById("nameInput");
+
+const previewText =
+  document.getElementById("previewText");
+
+const separatorInput =
+  document.getElementById("separator");
+
+const toast =
+  document.getElementById("toast");
+
+
+/* =========================================================
+   UNIQUE DATA
+========================================================= */
+
+function getAll(){
+
+  const all = [];
+
+  Object.values(kaomojiData).forEach(arr=>{
+    arr.forEach(item=>{
+      if(!all.includes(item)){
+        all.push(item);
+      }
+    });
+  });
+
+  return all;
+}
+
+
+/* =========================================================
+   PREVIEW
+========================================================= */
+
+function updatePreview(){
+
+  const name =
+    nameInput.value.trim() || "Your Name";
+
+  let result = "";
+
+  if(mode === "prefix"){
+
+    result =
+      selectedKaomoji +
+      separator +
+      name;
+
+  }
+
+  else if(mode === "both"){
+
+    result =
+      selectedKaomoji +
+      separator +
+      name +
+      separator +
+      selectedKaomoji;
+
+  }
+
+  else{
+
+    result =
+      name +
+      separator +
+      selectedKaomoji;
+
+  }
+
+  previewText.textContent = result;
+}
+
+
+/* =========================================================
+   COPY
+========================================================= */
+
+async function copyText(text){
+
+  try{
+
+    await navigator.clipboard.writeText(text);
+
+    showToast("Copied ✨");
+
+  }catch(error){
+
+    const temp =
+      document.createElement("textarea");
+
+    temp.value = text;
+
+    document.body.appendChild(temp);
+
+    temp.select();
+
+    document.execCommand("copy");
+
+    temp.remove();
+
+    showToast("Copied ✨");
+  }
+}
+
+
+function getBio(){
+
+  const name =
+    nameInput.value.trim() || "Your Name";
+
+  if(mode === "prefix"){
+
+    return selectedKaomoji +
+      separator +
+      name;
+
+  }
+
+  if(mode === "both"){
+
+    return selectedKaomoji +
+      separator +
+      name +
+      separator +
+      selectedKaomoji;
+
+  }
+
+  return name +
+    separator +
+    selectedKaomoji;
+}
+
+
+/* =========================================================
+   TOAST
+========================================================= */
+
+let toastTimer;
+
+function showToast(message){
+
+  toast.textContent = message;
+
+  toast.classList.add("show");
+
+  clearTimeout(toastTimer);
+
+  toastTimer =
+    setTimeout(()=>{
+      toast.classList.remove("show");
+    },1600);
+}
+
+
+/* =========================================================
+   RENDER
+========================================================= */
+
+function render(filter=""){
+
+  root.innerHTML = "";
+
+  let total = 0;
+
+  Object.entries(kaomojiData).forEach(
+    ([category,items])=>{
+
+      const filtered =
+        items.filter(item =>
+          item.toLowerCase()
+            .includes(filter.toLowerCase())
+        );
+
+      if(!filtered.length) return;
+
+      total += filtered.length;
+
+      const section =
+        document.createElement("section");
+
+      section.className = "category";
+
+      const head =
+        document.createElement("div");
+
+      head.className = "category-head";
+
+      const title =
+        document.createElement("h2");
+
+      title.className = "category-title";
+
+      title.textContent = category;
+
+      const count =
+        document.createElement("span");
+
+      count.className = "category-count";
+
+      count.textContent =
+        filtered.length + " styles";
+
+      head.appendChild(title);
+      head.appendChild(count);
+
+      const grid =
+        document.createElement("div");
+
+      grid.className = "grid";
+
+      filtered.forEach(item=>{
+
+        const card =
+          document.createElement("div");
+
+        card.className = "item";
+
+        if(item === selectedKaomoji){
+          card.classList.add("selected");
+        }
+
+        const face =
+          document.createElement("div");
+
+        face.className = "face";
+
+        face.textContent = item;
+
+
+        /* COPY */
+
+        const copy =
+          document.createElement("button");
+
+        copy.className = "copy-btn";
+
+        copy.textContent = "Copy";
+
+        copy.onclick = ()=>{
+          copyText(item);
+        };
+
+
+        /* ADD TO NAME */
+
+        const add =
+          document.createElement("button");
+
+        add.className = "add-btn";
+
+        add.textContent = "＋ Add";
+
+        add.onclick = ()=>{
+
+          selectedKaomoji = item;
+
+          updatePreview();
+
+          render(search.value);
+
+          document
+            .querySelector(".builder")
+            .scrollIntoView({
+              behavior:"smooth",
+              block:"center"
+            });
+
+          showToast("Added to name ✨");
+        };
+
+
+        /* FAVORITE */
+
+        const like =
+          document.createElement("button");
+
+        like.className = "like-btn";
+
+        const isFav =
+          favorites.includes(item);
+
+        if(isFav){
+          like.classList.add("active");
+        }
+
+        like.textContent =
+          isFav ? "♥" : "♡";
+
+        like.onclick = ()=>{
+
+          const index =
+            favorites.indexOf(item);
+
+          if(index === -1){
+
+            favorites.push(item);
+
+            like.classList.add("active");
+
+            like.textContent = "♥";
+
+            showToast("Added to favorites ❤️");
+
+          }else{
+
+            favorites.splice(index,1);
+
+            like.classList.remove("active");
+
+            like.textContent = "♡";
+
+            showToast("Removed from favorites");
+          }
+
+          localStorage.setItem(
+            "dipoKaomojiFavorites",
+            JSON.stringify(favorites)
+          );
+        };
+
+
+        const actions =
+          document.createElement("div");
+
+        actions.className =
+          "item-actions";
+
+        actions.appendChild(copy);
+        actions.appendChild(add);
+        actions.appendChild(like);
+
+        card.appendChild(face);
+        card.appendChild(actions);
+
+        grid.appendChild(card);
+
+      });
+
+
+      section.appendChild(head);
+      section.appendChild(grid);
+
+      root.appendChild(section);
+
+    }
+  );
+
+
+  empty.style.display =
+    total ? "none" : "block";
+}
+
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+search.addEventListener(
+  "input",
+  ()=>{
+    render(search.value);
+  }
+);
+
+
+/* =========================================================
+   SELECTED MODE
+========================================================= */
+
+document
+  .querySelectorAll(".mode-btn")
+  .forEach(btn=>{
+
+    btn.addEventListener("click",()=>{
+
+      document
+        .querySelectorAll(".mode-btn")
+        .forEach(b=>{
+          b.classList.remove("active");
+        });
+
+      btn.classList.add("active");
+
+      mode =
+        btn.dataset.mode;
+
+      updatePreview();
+
+    });
+
+  });
+
+
+/* =========================================================
+   SEPARATOR
+========================================================= */
+
+separatorInput.addEventListener(
+  "change",
+  ()=>{
+    separator =
+      separatorInput.value;
+
+    updatePreview();
+  }
+);
+
+
+/* =========================================================
+   LIVE NAME
+========================================================= */
+
+nameInput.addEventListener(
+  "input",
+  updatePreview
+);
+
+
+/* =========================================================
+   COPY BIO
+========================================================= */
+
+document
+  .getElementById("copyNameBtn")
+  .onclick = ()=>{
+    copyText(getBio());
+  };
+
+
+/* =========================================================
+   RANDOM KAOMOJI
+========================================================= */
+
+function randomKaomoji(){
+
+  const all =
+    getAll();
+
+  selectedKaomoji =
+    all[
+      Math.floor(
+        Math.random() * all.length
+      )
+    ];
+
+  updatePreview();
+
+  render(search.value);
+
+  showToast("Random style 🎲");
+}
+
+
+document
+  .getElementById("randomBtn")
+  .onclick =
+  randomKaomoji;
+
+
+document
+  .getElementById("randomNameBtn")
+  .onclick =
+  randomKaomoji;
+
+
+/* =========================================================
+   CLEAR
+========================================================= */
+
+document
+  .getElementById("clearBtn")
+  .onclick = ()=>{
+
+    nameInput.value = "";
+
+    selectedKaomoji = "✦";
+
+    mode = "suffix";
+
+    separator = " ";
+
+    separatorInput.value = " ";
+
+    document
+      .querySelectorAll(".mode-btn")
+      .forEach(btn=>{
+        btn.classList.remove("active");
+      });
+
+    document
+      .querySelector('[data-mode="suffix"]')
+      .classList.add("active");
+
+    updatePreview();
+
+    render(search.value);
+
+    nameInput.focus();
+  };
+
+
+/* =========================================================
+   START
+========================================================= */
+
+updatePreview();
+
+render();
+
+</script>
+
+</body>
+</html>

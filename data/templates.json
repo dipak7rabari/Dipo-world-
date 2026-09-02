@@ -1,0 +1,76 @@
+{
+  "version": "1.0.0",
+  "updated": "2026-08-31",
+  "templates": [
+    {
+      "id": "creator-01",
+      "category": "creator",
+      "title": "Content Creator",
+      "description": "Simple creator bio",
+      "text": "🎬 Content Creator\n🔥 Creating Every Day\n📍 India\n👇 Follow My Journey"
+    },
+    {
+      "id": "gaming-01",
+      "category": "gaming",
+      "title": "Gaming Bio",
+      "description": "Gaming profile bio",
+      "text": "🎮 Gamer\n🔥 Gaming • Streaming • Fun\n🏆 Play. Win. Repeat.\n👇 Join The Squad"
+    },
+    {
+      "id": "business-01",
+      "category": "business",
+      "title": "Business",
+      "description": "Professional business bio",
+      "text": "💼 Official Business\n✨ Quality • Trust • Service\n📍 India\n📩 DM For Business"
+    },
+    {
+      "id": "aesthetic-01",
+      "category": "aesthetic",
+      "title": "Aesthetic",
+      "description": "Minimal aesthetic bio",
+      "text": "𓆩♡𓆪 Dreamer\n☾ Creating My Own Story\n˚₊‧ Living In The Moment ‧₊˚"
+    },
+    {
+      "id": "attitude-01",
+      "category": "attitude",
+      "title": "Attitude",
+      "description": "Bold attitude bio",
+      "text": "👑 Born To Stand Out\n⚡ No Competition\n🖤 My Life • My Rules\n🔥 Stay Real"
+    },
+    {
+      "id": "student-01",
+      "category": "student",
+      "title": "Student",
+      "description": "Student profile",
+      "text": "📚 Student\n🎯 Dream Big\n🚀 Building My Future\n✨ One Step At A Time"
+    },
+    {
+      "id": "love-01",
+      "category": "love",
+      "title": "Love",
+      "description": "Romantic bio",
+      "text": "♡ Love More\n🌙 Dream More\n✨ Smile More\n𓆩♡𓆪 Stay Blessed"
+    },
+    {
+      "id": "influencer-01",
+      "category": "creator",
+      "title": "Influencer",
+      "description": "Social media influencer",
+      "text": "✨ Digital Creator\n📸 Lifestyle • Travel • Fun\n🤝 Open For Collaboration\n📩 DM Me"
+    },
+    {
+      "id": "professional-01",
+      "category": "professional",
+      "title": "Professional",
+      "description": "Clean professional profile",
+      "text": "💼 Professional\n🚀 Turning Ideas Into Reality\n📍 India\n📩 Let's Connect"
+    },
+    {
+      "id": "motivational-01",
+      "category": "motivation",
+      "title": "Motivation",
+      "description": "Motivational profile",
+      "text": "🔥 Believe In Yourself\n💪 Work Hard\n🎯 Stay Focused\n🏆 Never Give Up"
+    }
+  ]
+}

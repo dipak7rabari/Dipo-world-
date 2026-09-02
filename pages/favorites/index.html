@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+  >
+
+  <meta
+    name="description"
+    content="Your saved and favorite items in DIPO WORLD."
+  >
+
+  <meta
+    name="robots"
+    content="index, follow"
+  >
+
+  <meta
+    name="theme-color"
+    content="#f5f7f2"
+  >
+
+  <link
+    rel="canonical"
+    href="/pages/favorites/"
+  >
+
+  <title>Favorites — DIPO WORLD</title>
+
+  <link
+    rel="stylesheet"
+    href="../../assets/css/app.css"
+  >
+
+  <link
+    rel="manifest"
+    href="../../manifest.json"
+  >
+
+  <link
+    rel="icon"
+    href="../../favicon.ico"
+  >
+</head>
+
+<body
+  class="page page-favorites"
+  data-page="favorites"
+  data-product="dipo-world"
+>
+
+  <!-- Accessibility -->
+  <a
+    class="skip-link"
+    href="#main-content"
+  >
+    Skip to content
+  </a>
+
+
+  <!-- Global Navigation -->
+  <header
+    id="site-header"
+    data-component="navbar"
+    data-component-src="../../components/navbar.html"
+  >
+    <!-- Navbar component -->
+  </header>
+
+
+  <!-- Main Content -->
+  <main
+    id="main-content"
+    tabindex="-1"
+  >
+
+    <!-- Hero -->
+    <section
+      class="page-hero section"
+      aria-labelledby="favorites-title"
+    >
+
+      <div class="container">
+
+        <span class="section-kicker">
+          SAVED
+        </span>
+
+        <h1 id="favorites-title">
+          Favorites.
+        </h1>
+
+        <p class="page-hero-description">
+          Keep your favorite DIPO WORLD creations and tools
+          in one place.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- Favorites Application Area -->
+    <section
+      class="favorites-section section"
+      aria-labelledby="favorites-content-title"
+    >
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <span class="section-kicker">
+            YOUR COLLECTION
+          </span>
+
+          <h2 id="favorites-content-title">
+            Saved items
+          </h2>
+
+          <p>
+            Your saved items will appear here.
+          </p>
+
+        </div>
+
+
+        <!-- Favorites Root -->
+        <div
+          id="favorites-root"
+          class="favorites-root"
+          data-component="favorites"
+          data-storage-key="dipo-world-favorites"
+          aria-live="polite"
+        >
+
+          <!--
+            The favorites component can render saved items here.
+
+            This container is intentionally kept stable so the
+            existing lib/ and components/ architecture can connect
+            to it without replacing this page later.
+          -->
+
+          <div
+            class="empty-state"
+            id="favorites-empty-state"
+          >
+
+            <div
+              class="empty-state-icon"
+              aria-hidden="true"
+            >
+              ★
+            </div>
+
+            <h3>
+              No favorites yet
+            </h3>
+
+            <p>
+              Save your favorite creations and they will appear
+              here for quick access.
+            </p>
+
+            <div class="empty-state-actions">
+
+              <a
+                class="btn btn-primary"
+                href="../home/"
+                data-route="/home"
+              >
+                Explore DIPO WORLD
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- Quick Access -->
+    <section
+      class="section"
+      aria-labelledby="quick-access-title"
+    >
+
+      <div class="container">
+
+        <div class="section-heading section-heading-center">
+
+          <span class="section-kicker">
+            CREATE
+          </span>
+
+          <h2 id="quick-access-title">
+            Start something new
+          </h2>
+
+          <p>
+            Create something and save it to your favorites.
+          </p>
+
+        </div>
+
+
+        <div class="product-grid">
+
+
+          <!-- DIPO BIO -->
+          <a
+            class="product-card product-card-link-card"
+            href="../dipo-bio/"
+            data-route="/dipo-bio"
+          >
+
+            <div
+              class="product-card-icon"
+              aria-hidden="true"
+            >
+              Aa
+            </div>
+
+            <div class="product-card-content">
+
+              <h3>
+                DIPO BIO
+              </h3>
+
+              <p>
+                Create stylish bios, text, symbols and profile
+                content.
+              </p>
+
+              <span class="product-card-link">
+                <span>Open DIPO BIO</span>
+                <span aria-hidden="true">→</span>
+              </span>
+
+            </div>
+
+          </a>
+
+
+          <!-- DIPO QR -->
+          <a
+            class="product-card product-card-link-card"
+            href="../dipo-qr/"
+            data-route="/dipo-qr"
+          >
+
+            <div
+              class="product-card-icon"
+              aria-hidden="true"
+            >
+              QR
+            </div>
+
+            <div class="product-card-content">
+
+              <h3>
+                DIPO QR
+              </h3>
+
+              <p>
+                Create QR codes, artistic QR designs and
+                barcodes.
+              </p>
+
+              <span class="product-card-link">
+                <span>Open DIPO QR</span>
+                <span aria-hidden="true">→</span>
+              </span>
+
+            </div>
+
+          </a>
+
+
+          <!-- Home -->
+          <a
+            class="product-card product-card-link-card"
+            href="../home/"
+            data-route="/home"
+          >
+
+            <div
+              class="product-card-icon"
+              aria-hidden="true"
+            >
+              ⌂
+            </div>
+
+            <div class="product-card-content">
+
+              <h3>
+                DIPO WORLD
+              </h3>
+
+              <p>
+                Explore the complete DIPO WORLD experience.
+              </p>
+
+              <span class="product-card-link">
+                <span>Go to Home</span>
+                <span aria-hidden="true">→</span>
+              </span>
+
+            </div>
+
+          </a>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- Favorites Information -->
+    <section
+      class="section"
+      aria-labelledby="favorites-info-title"
+    >
+
+      <div class="container">
+
+        <article class="content-card">
+
+          <span class="section-kicker">
+            ABOUT FAVORITES
+          </span>
+
+          <h2 id="favorites-info-title">
+            Your saved workspace
+          </h2>
+
+          <p>
+            Favorites are designed to provide quick access to
+            creations and items that you want to use again.
+          </p>
+
+          <p>
+            Depending on the connected feature, saved information
+            may be stored locally on your device or handled by the
+            application's configured storage system.
+          </p>
+
+          <p>
+            Always keep a separate copy of important content before
+            deleting or clearing saved data.
+          </p>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- Legal / Privacy -->
+    <section
+      class="section"
+      aria-labelledby="favorites-privacy-title"
+    >
+
+      <div class="container">
+
+        <div class="section-heading section-heading-center">
+
+          <span class="section-kicker">
+            PRIVACY
+          </span>
+
+          <h2 id="favorites-privacy-title">
+            Need more information?
+          </h2>
+
+          <p>
+            Read the DIPO WORLD privacy and usage information.
+          </p>
+
+        </div>
+
+
+        <div class="inline-actions">
+
+          <a
+            class="btn btn-secondary"
+            href="../privacy/"
+            data-route="/privacy"
+          >
+            Privacy Policy
+          </a>
+
+          <a
+            class="btn btn-secondary"
+            href="../terms/"
+            data-route="/terms"
+          >
+            Terms of Use
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- Global Footer -->
+  <footer
+    id="site-footer"
+    data-component="footer"
+    data-component-src="../../components/footer.html"
+  >
+    <!-- Footer component -->
+  </footer>
+
+
+  <!-- Mobile Navigation -->
+  <nav
+    id="bottom-navigation"
+    data-component="bottom-nav"
+    data-component-src="../../components/bottom-nav.html"
+    aria-label="Mobile navigation"
+  >
+    <!-- Bottom navigation component -->
+  </nav>
+
+
+  <!-- Toast -->
+  <div
+    id="toast-root"
+    data-component="toast"
+    aria-live="polite"
+    aria-atomic="true"
+  >
+    <!-- Toast component -->
+  </div>
+
+
+  <!-- Application -->
+  <script
+    type="module"
+    src="../../assets/js/core/app.js"
+  ></script>
+
+</body>
+</html>

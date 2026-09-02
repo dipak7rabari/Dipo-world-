@@ -1,0 +1,416 @@
+/* =========================================================
+   DIPO WORLD — GLOBAL CSS RESET
+   Version: 1.0
+   Purpose:
+   Remove inconsistent browser defaults and create a
+   predictable foundation for the entire application.
+   ========================================================= */
+
+
+/* =========================================================
+   BOX SIZING
+   ========================================================= */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   DOCUMENT
+   ========================================================= */
+
+html {
+    margin: 0;
+    padding: 0;
+
+    width: 100%;
+    min-height: 100%;
+
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+
+    scroll-behavior: smooth;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+}
+
+
+/* =========================================================
+   BODY
+   ========================================================= */
+
+body {
+    margin: 0;
+    padding: 0;
+
+    width: 100%;
+    min-height: 100vh;
+
+    overflow-x: hidden;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    text-rendering: optimizeLegibility;
+}
+
+
+/* =========================================================
+   ROOT APP CONTAINER
+   ========================================================= */
+
+#app,
+#root {
+    width: 100%;
+    min-height: 100vh;
+}
+
+
+/* =========================================================
+   HEADINGS
+   ========================================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+
+/* =========================================================
+   PARAGRAPHS
+   ========================================================= */
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* =========================================================
+   LISTS
+   ========================================================= */
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+
+/* =========================================================
+   LINKS
+   ========================================================= */
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:focus-visible {
+    outline: 3px solid var(--color-brand-teal);
+    outline-offset: 3px;
+}
+
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+button,
+input,
+textarea,
+select {
+    margin: 0;
+
+    font: inherit;
+}
+
+button {
+    padding: 0;
+
+    border: 0;
+    background: transparent;
+
+    color: inherit;
+
+    cursor: pointer;
+
+    -webkit-tap-highlight-color: transparent;
+}
+
+button:disabled {
+    cursor: not-allowed;
+}
+
+
+/* =========================================================
+   FORM ELEMENTS
+   ========================================================= */
+
+input,
+textarea,
+select {
+    border: 0;
+    outline: none;
+
+    background: transparent;
+
+    color: inherit;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: inherit;
+    opacity: 0.55;
+}
+
+textarea {
+    resize: vertical;
+}
+
+
+/* =========================================================
+   SEARCH / NUMBER INPUT CLEANUP
+   ========================================================= */
+
+input[type="search"] {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+    -webkit-appearance: none;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    margin: 0;
+
+    -webkit-appearance: none;
+}
+
+
+/* =========================================================
+   IMAGES
+   ========================================================= */
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+
+    max-width: 100%;
+}
+
+
+/* =========================================================
+   SVG
+   ========================================================= */
+
+svg {
+    flex-shrink: 0;
+}
+
+
+/* =========================================================
+   FIGURE
+   ========================================================= */
+
+figure {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* =========================================================
+   TABLE
+   ========================================================= */
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/* =========================================================
+   HR
+   ========================================================= */
+
+hr {
+    height: 0;
+    margin: 0;
+
+    border: 0;
+    border-top: 1px solid var(--border-soft);
+}
+
+
+/* =========================================================
+   BLOCKQUOTES
+   ========================================================= */
+
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* =========================================================
+   CODE
+   ========================================================= */
+
+pre,
+code,
+kbd,
+samp {
+    font-family:
+        ui-monospace,
+        SFMono-Regular,
+        Menlo,
+        Monaco,
+        Consolas,
+        "Liberation Mono",
+        "Courier New",
+        monospace;
+}
+
+
+/* =========================================================
+   FIELDSET
+   ========================================================= */
+
+fieldset {
+    min-width: 0;
+
+    margin: 0;
+    padding: 0;
+
+    border: 0;
+}
+
+
+/* =========================================================
+   DIALOG
+   ========================================================= */
+
+dialog {
+    padding: 0;
+
+    border: 0;
+
+    color: inherit;
+}
+
+
+/* =========================================================
+   DETAILS / SUMMARY
+   ========================================================= */
+
+summary {
+    cursor: pointer;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+
+/* =========================================================
+   SELECTION
+   ========================================================= */
+
+::selection {
+    background: var(--color-brand-teal);
+    color: var(--color-white);
+}
+
+
+/* =========================================================
+   FOCUS
+   ========================================================= */
+
+:focus {
+    outline: none;
+}
+
+:focus-visible {
+    outline: 3px solid var(--color-brand-teal);
+    outline-offset: 3px;
+}
+
+
+/* =========================================================
+   TOUCH DEVICES
+   ========================================================= */
+
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+/* =========================================================
+   IOS / SAFARI
+   ========================================================= */
+
+button,
+input,
+textarea,
+select {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+   ========================================================= */
+
+[hidden] {
+    display: none !important;
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}

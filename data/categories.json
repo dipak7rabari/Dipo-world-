@@ -1,0 +1,90 @@
+{
+  "version": "1.0.0",
+  "updated": "2026-08-31",
+  "categories": [
+    {
+      "id": "creator",
+      "name": "Creator",
+      "description": "Creator and content profiles",
+      "icon": "🎬"
+    },
+    {
+      "id": "gaming",
+      "name": "Gaming",
+      "description": "Gaming profiles and bios",
+      "icon": "🎮"
+    },
+    {
+      "id": "business",
+      "name": "Business",
+      "description": "Business and professional profiles",
+      "icon": "💼"
+    },
+    {
+      "id": "professional",
+      "name": "Professional",
+      "description": "Professional profile styles",
+      "icon": "🚀"
+    },
+    {
+      "id": "aesthetic",
+      "name": "Aesthetic",
+      "description": "Aesthetic profile styles",
+      "icon": "✨"
+    },
+    {
+      "id": "attitude",
+      "name": "Attitude",
+      "description": "Bold and attitude profiles",
+      "icon": "🔥"
+    },
+    {
+      "id": "love",
+      "name": "Love",
+      "description": "Love and relationship profiles",
+      "icon": "❤️"
+    },
+    {
+      "id": "student",
+      "name": "Student",
+      "description": "Student profile templates",
+      "icon": "📚"
+    },
+    {
+      "id": "motivation",
+      "name": "Motivation",
+      "description": "Motivational profile templates",
+      "icon": "💪"
+    },
+    {
+      "id": "symbols",
+      "name": "Symbols",
+      "description": "Unicode symbols",
+      "icon": "✦"
+    },
+    {
+      "id": "kaomoji",
+      "name": "Kaomoji",
+      "description": "Japanese-style text faces",
+      "icon": "૮"
+    },
+    {
+      "id": "fonts",
+      "name": "Fonts",
+      "description": "Stylish Unicode fonts",
+      "icon": "𝔄"
+    },
+    {
+      "id": "qr",
+      "name": "QR Code",
+      "description": "QR generation and customization",
+      "icon": "▦"
+    },
+    {
+      "id": "barcode",
+      "name": "Barcode",
+      "description": "Barcode generation",
+      "icon": "▥"
+    }
+  ]
+}

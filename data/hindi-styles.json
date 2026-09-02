@@ -1,0 +1,62 @@
+{
+  "version": "1.0.0",
+  "updated": "2026-08-31",
+  "styles": [
+    {
+      "id": "hindi-simple",
+      "name": "Hindi Simple",
+      "description": "Clean Hindi bio style",
+      "prefix": "",
+      "suffix": ""
+    },
+    {
+      "id": "hindi-aesthetic",
+      "name": "Hindi Aesthetic",
+      "description": "Aesthetic Hindi bio",
+      "prefix": "𓆩♡𓆪 ",
+      "suffix": " ♡"
+    },
+    {
+      "id": "hindi-royal",
+      "name": "Hindi Royal",
+      "description": "Royal Hindi bio",
+      "prefix": "👑 ",
+      "suffix": " ⚜"
+    },
+    {
+      "id": "hindi-attitude",
+      "name": "Hindi Attitude",
+      "description": "Attitude Hindi bio",
+      "prefix": "🔥 ",
+      "suffix": " 🔥"
+    },
+    {
+      "id": "hindi-love",
+      "name": "Hindi Love",
+      "description": "Romantic Hindi bio",
+      "prefix": "❤️ ",
+      "suffix": " ❤️"
+    },
+    {
+      "id": "hinglish-cool",
+      "name": "Hinglish Cool",
+      "description": "Modern Hinglish bio",
+      "prefix": "✨ ",
+      "suffix": " ✨"
+    },
+    {
+      "id": "hinglish-attitude",
+      "name": "Hinglish Attitude",
+      "description": "Bold Hinglish bio",
+      "prefix": "⚡ ",
+      "suffix": " 👑"
+    },
+    {
+      "id": "hinglish-creator",
+      "name": "Hinglish Creator",
+      "description": "Creator-focused Hinglish bio",
+      "prefix": "🎬 ",
+      "suffix": " 🚀"
+    }
+  ]
+}

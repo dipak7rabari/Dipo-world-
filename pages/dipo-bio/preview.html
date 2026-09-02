@@ -1,0 +1,1939 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+
+<title>DIPO BIO — God Mode Preview</title>
+
+<style>
+*{
+  box-sizing:border-box;
+  -webkit-tap-highlight-color:transparent;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  background:
+    radial-gradient(circle at 50% -10%,rgba(0,255,102,.08),transparent 35%),
+    #050505;
+  color:#fff;
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Arial,
+    sans-serif;
+  min-height:100vh;
+}
+
+button,
+textarea,
+input,
+select{
+  font:inherit;
+}
+
+button{
+  cursor:pointer;
+}
+
+.container{
+  width:min(1100px,92%);
+  margin:auto;
+}
+
+/* ================= HEADER ================= */
+
+header{
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:rgba(5,5,5,.88);
+  backdrop-filter:blur(18px);
+  -webkit-backdrop-filter:blur(18px);
+  border-bottom:1px solid #202020;
+}
+
+.nav{
+  min-height:72px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+
+.logo{
+  font-size:25px;
+  font-weight:900;
+  letter-spacing:-1px;
+}
+
+.logo span{
+  color:#00ff66;
+}
+
+.back{
+  color:#999;
+  text-decoration:none;
+  transition:.2s;
+}
+
+.back:hover{
+  color:#00ff66;
+}
+
+/* ================= MAIN ================= */
+
+main{
+  padding:45px 0 80px;
+}
+
+.hero{
+  margin-bottom:30px;
+}
+
+.badge{
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  padding:7px 11px;
+  border:1px solid rgba(0,255,102,.25);
+  background:rgba(0,255,102,.06);
+  border-radius:999px;
+  color:#00ff66;
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:.5px;
+}
+
+h1{
+  font-size:clamp(36px,6vw,58px);
+  line-height:1;
+  margin:18px 0 12px;
+  letter-spacing:-2px;
+}
+
+.hero p{
+  color:#888;
+  font-size:17px;
+  margin:0;
+}
+
+/* ================= STUDIO ================= */
+
+.studio{
+  display:grid;
+  grid-template-columns:390px 1fr;
+  gap:22px;
+  align-items:start;
+}
+
+/* ================= PHONE ================= */
+
+.preview-card{
+  position:sticky;
+  top:95px;
+}
+
+.phone{
+  position:relative;
+  overflow:hidden;
+  min-height:650px;
+  background:
+    linear-gradient(145deg,#151515,#090909);
+  border:1px solid #292929;
+  border-radius:34px;
+  box-shadow:
+    0 25px 80px rgba(0,0,0,.55),
+    0 0 0 1px rgba(255,255,255,.02);
+}
+
+.phone-top{
+  height:48px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-bottom:1px solid #222;
+}
+
+.camera{
+  width:55px;
+  height:6px;
+  border-radius:10px;
+  background:#222;
+}
+
+.phone-content{
+  padding:28px 23px 35px;
+}
+
+.platform{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  color:#777;
+  font-size:13px;
+  margin-bottom:25px;
+}
+
+.platform strong{
+  color:#fff;
+}
+
+/* avatar */
+
+.avatar{
+  width:94px;
+  height:94px;
+  border-radius:50%;
+  margin:0 auto 15px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  background:
+    linear-gradient(135deg,#00ff66,#00b84f);
+
+  color:#000;
+  font-size:30px;
+  font-weight:900;
+
+  border:4px solid #0b0b0b;
+  box-shadow:
+    0 0 0 1px #333,
+    0 0 35px rgba(0,255,102,.14);
+
+  transition:.35s;
+}
+
+.profile{
+  text-align:center;
+}
+
+.username{
+  font-size:22px;
+  font-weight:850;
+  letter-spacing:-.4px;
+  word-break:break-word;
+}
+
+.kaomoji{
+  color:#00ff66;
+  font-weight:700;
+}
+
+.handle{
+  margin-top:5px;
+  color:#777;
+  font-size:14px;
+}
+
+.bio{
+  white-space:pre-wrap;
+  word-break:break-word;
+  line-height:1.65;
+  color:#e4e4e4;
+  font-size:15px;
+  margin:24px auto 0;
+  max-width:310px;
+}
+
+.bio:empty:before{
+  content:"Your bio will appear here...";
+  color:#555;
+}
+
+/* stats */
+
+.stats{
+  display:flex;
+  justify-content:space-around;
+  gap:10px;
+  margin-top:28px;
+  padding-top:20px;
+  border-top:1px solid #252525;
+}
+
+.stat strong{
+  font-size:17px;
+}
+
+.stat span{
+  display:block;
+  color:#666;
+  font-size:12px;
+  margin-top:4px;
+}
+
+/* verification */
+
+.verify{
+  display:inline-flex;
+  width:17px;
+  height:17px;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  background:#00ff66;
+  color:#000;
+  font-size:11px;
+  margin-left:4px;
+}
+
+/* ================= EDITOR ================= */
+
+.editor{
+  background:
+    linear-gradient(145deg,#111,#090909);
+  border:1px solid #252525;
+  border-radius:22px;
+  padding:22px;
+}
+
+.editor-header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:15px;
+  margin-bottom:20px;
+}
+
+.editor h2{
+  margin:0;
+  font-size:20px;
+}
+
+.god{
+  color:#00ff66;
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:1px;
+}
+
+/* fields */
+
+.field{
+  margin-bottom:17px;
+}
+
+.field label{
+  display:block;
+  color:#aaa;
+  font-size:12px;
+  font-weight:700;
+  margin-bottom:7px;
+}
+
+input,
+select,
+textarea{
+  width:100%;
+  background:#070707;
+  color:#fff;
+  border:1px solid #292929;
+  border-radius:12px;
+  outline:none;
+  transition:.2s;
+}
+
+input,
+select{
+  height:46px;
+  padding:0 13px;
+}
+
+textarea{
+  min-height:190px;
+  padding:15px;
+  resize:vertical;
+  line-height:1.6;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+  border-color:#00ff66;
+  box-shadow:0 0 0 3px rgba(0,255,102,.07);
+}
+
+/* ================= NAME + KAOMOJI ================= */
+
+.name-row{
+  display:grid;
+  grid-template-columns:1fr 135px;
+  gap:10px;
+}
+
+.kaomoji-box{
+  margin-top:8px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:7px;
+}
+
+.k-btn{
+  border:1px solid #292929;
+  background:#0b0b0b;
+  color:#ddd;
+  border-radius:9px;
+  padding:7px 9px;
+  font-size:14px;
+  transition:.18s;
+}
+
+.k-btn:hover,
+.k-btn.active{
+  border-color:#00ff66;
+  color:#00ff66;
+  background:rgba(0,255,102,.06);
+}
+
+/* ================= TOOLBAR ================= */
+
+.toolbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
+  margin:8px 0 12px;
+}
+
+.counter{
+  color:#666;
+  font-size:12px;
+}
+
+.counter.good{
+  color:#00ff66;
+}
+
+.counter.warn{
+  color:#ffb000;
+}
+
+.counter.bad{
+  color:#ff4545;
+}
+
+.progress{
+  height:4px;
+  background:#1d1d1d;
+  border-radius:20px;
+  overflow:hidden;
+  margin-bottom:17px;
+}
+
+.progress-bar{
+  width:0%;
+  height:100%;
+  background:#00ff66;
+  transition:.25s;
+}
+
+/* ================= BUTTONS ================= */
+
+.actions{
+  display:grid;
+  grid-template-columns:1.4fr 1fr 1fr;
+  gap:9px;
+  margin-top:15px;
+}
+
+.btn{
+  min-height:45px;
+  border:1px solid transparent;
+  border-radius:11px;
+  padding:10px 13px;
+  font-weight:800;
+  transition:.2s;
+}
+
+.primary{
+  background:#00ff66;
+  color:#000;
+}
+
+.primary:hover{
+  transform:translateY(-1px);
+  box-shadow:0 8px 25px rgba(0,255,102,.18);
+}
+
+.secondary{
+  background:#191919;
+  border-color:#2b2b2b;
+  color:#fff;
+}
+
+.secondary:hover{
+  border-color:#00ff66;
+  color:#00ff66;
+}
+
+.danger{
+  background:#151515;
+  border-color:#252525;
+  color:#aaa;
+}
+
+/* ================= PRESETS ================= */
+
+.section-title{
+  margin:28px 0 12px;
+  color:#aaa;
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:.7px;
+  text-transform:uppercase;
+}
+
+.presets{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:8px;
+}
+
+.preset{
+  text-align:left;
+  background:#0b0b0b;
+  border:1px solid #242424;
+  border-radius:11px;
+  padding:11px;
+  color:#ddd;
+  transition:.2s;
+}
+
+.preset:hover{
+  border-color:#00ff66;
+  transform:translateY(-1px);
+}
+
+.preset-title{
+  display:block;
+  color:#fff;
+  font-weight:800;
+  font-size:13px;
+}
+
+.preset-desc{
+  display:block;
+  color:#666;
+  font-size:11px;
+  margin-top:4px;
+}
+
+/* ================= THEMES ================= */
+
+.themes{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+}
+
+.theme{
+  width:34px;
+  height:34px;
+  border-radius:50%;
+  border:2px solid #292929;
+  cursor:pointer;
+}
+
+.theme.active{
+  border-color:#fff;
+  box-shadow:0 0 0 2px #00ff66;
+}
+
+.t-green{background:#00ff66}
+.t-purple{background:#a855f7}
+.t-blue{background:#3b82f6}
+.t-pink{background:#ec4899}
+.t-orange{background:#f97316}
+
+/* ================= TOAST ================= */
+
+.toast{
+  position:fixed;
+  left:50%;
+  bottom:28px;
+  transform:translate(-50%,20px);
+  opacity:0;
+  pointer-events:none;
+
+  background:#00ff66;
+  color:#000;
+  padding:11px 17px;
+  border-radius:999px;
+  font-weight:900;
+  font-size:13px;
+
+  box-shadow:0 10px 40px rgba(0,255,102,.2);
+  transition:.3s;
+  z-index:500;
+}
+
+.toast.show{
+  opacity:1;
+  transform:translate(-50%,0);
+}
+
+/* ================= FOOTER ================= */
+
+.tip{
+  margin-top:20px;
+  padding:13px 14px;
+  border:1px solid #222;
+  border-radius:12px;
+  color:#666;
+  font-size:12px;
+  line-height:1.5;
+}
+
+.tip strong{
+  color:#00ff66;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:820px){
+
+  main{
+    padding-top:30px;
+  }
+
+  .studio{
+    grid-template-columns:1fr;
+  }
+
+  .preview-card{
+    position:relative;
+    top:auto;
+    order:1;
+  }
+
+  .editor{
+    order:2;
+  }
+
+  .phone{
+    max-width:390px;
+    margin:auto;
+  }
+}
+
+@media(max-width:500px){
+
+  .container{
+    width:calc(100% - 28px);
+  }
+
+  .nav{
+    min-height:64px;
+  }
+
+  .logo{
+    font-size:22px;
+  }
+
+  .back{
+    font-size:13px;
+  }
+
+  h1{
+    font-size:40px;
+  }
+
+  .hero p{
+    font-size:15px;
+  }
+
+  .editor{
+    padding:17px;
+    border-radius:18px;
+  }
+
+  .name-row{
+    grid-template-columns:1fr;
+  }
+
+  .actions{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .actions .primary{
+    grid-column:1/-1;
+  }
+
+  .presets{
+    grid-template-columns:1fr;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="container nav">
+    <div class="logo">DIPO<span>BIO</span></div>
+
+    <a class="back" href="index.html">
+      ← Bio Tools
+    </a>
+  </div>
+</header>
+
+
+<main class="container">
+
+  <section class="hero">
+
+    <span class="badge">✦ GOD MODE BIO STUDIO</span>
+
+    <h1>Bio Preview</h1>
+
+    <p>
+      Build your bio. Style your name. Preview everything.
+    </p>
+
+  </section>
+
+
+  <div class="studio">
+
+    <!-- ================= LIVE PREVIEW ================= -->
+
+    <section class="preview-card">
+
+      <div class="phone">
+
+        <div class="phone-top">
+          <div class="camera"></div>
+        </div>
+
+        <div class="phone-content">
+
+          <div class="platform">
+            <span>LIVE PREVIEW</span>
+            <strong id="platformLabel">Instagram</strong>
+          </div>
+
+
+          <div class="avatar" id="avatar">
+            D
+          </div>
+
+
+          <div class="profile">
+
+            <div class="username">
+
+              <span id="previewName">
+                Your Name
+              </span>
+
+              <span
+                class="kaomoji"
+                id="previewKaomoji">
+              </span>
+
+              <span class="verify">✓</span>
+
+            </div>
+
+
+            <div
+              class="handle"
+              id="previewHandle">
+              @username
+            </div>
+
+
+            <div
+              class="bio"
+              id="previewBio">
+              Your bio will appear here.
+            </div>
+
+
+            <div class="stats">
+
+              <div class="stat">
+                <strong id="previewPosts">128</strong>
+                <span>Posts</span>
+              </div>
+
+              <div class="stat">
+                <strong id="previewFollowers">1.2K</strong>
+                <span>Followers</span>
+              </div>
+
+              <div class="stat">
+                <strong id="previewFollowing">256</strong>
+                <span>Following</span>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= EDITOR ================= -->
+
+    <section class="editor">
+
+      <div class="editor-header">
+
+        <h2>Build Your Bio</h2>
+
+        <span class="god">
+          GEN-Z • PRO • GOD
+        </span>
+
+      </div>
+
+
+      <!-- NAME -->
+
+      <div class="field">
+
+        <label>
+          NAME + KAOMOJI
+        </label>
+
+        <div class="name-row">
+
+          <input
+            id="nameInput"
+            type="text"
+            maxlength="30"
+            placeholder="Your Name">
+
+          <select id="kaomojiSelect">
+
+            <option value="">
+              No Kaomoji
+            </option>
+
+            <option value=" ✦">
+              ✦ Star
+            </option>
+
+            <option value=" ♡">
+              ♡ Heart
+            </option>
+
+            <option value=" ᵔᴥᵔ">
+              ᵔᴥᵔ Cute
+            </option>
+
+            <option value=" (¬‿¬)">
+              (¬‿¬)
+            </option>
+
+            <option value=" (•‿•)">
+              (•‿•)
+            </option>
+
+            <option value=" 𓆩♡𓆪">
+              𓆩♡𓆪
+            </option>
+
+            <option value=" ༺♡༻">
+              ༺♡༻
+            </option>
+
+            <option value=" ⋆｡°✩">
+              ⋆｡°✩
+            </option>
+
+            <option value=" ૮₍˶ᵔ ᵕ ᵔ˶₎ა">
+              ૮₍ᵔ ᵕ ᵔ₎ა
+            </option>
+
+          </select>
+
+        </div>
+
+
+        <div class="kaomoji-box">
+
+          <button class="k-btn" data-k=" ✦">
+            ✦
+          </button>
+
+          <button class="k-btn" data-k=" ♡">
+            ♡
+          </button>
+
+          <button class="k-btn" data-k=" 𓆩♡𓆪">
+            𓆩♡𓆪
+          </button>
+
+          <button class="k-btn" data-k=" ᵔᴥᵔ">
+            ᵔᴥᵔ
+          </button>
+
+          <button class="k-btn" data-k=" ⋆｡°✩">
+            ⋆｡°✩
+          </button>
+
+          <button class="k-btn" data-k=" ༺♡༻">
+            ༺♡༻
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <!-- USERNAME -->
+
+      <div class="field">
+
+        <label>USERNAME</label>
+
+        <input
+          id="usernameInput"
+          type="text"
+          maxlength="30"
+          placeholder="@username">
+
+      </div>
+
+
+      <!-- PLATFORM -->
+
+      <div class="field">
+
+        <label>PLATFORM PREVIEW</label>
+
+        <select id="platformSelect">
+
+          <option value="Instagram">
+            Instagram
+          </option>
+
+          <option value="TikTok">
+            TikTok
+          </option>
+
+          <option value="X">
+            X / Twitter
+          </option>
+
+          <option value="Profile">
+            Social Profile
+          </option>
+
+        </select>
+
+      </div>
+
+
+      <!-- BIO -->
+
+      <div class="field">
+
+        <label>
+          YOUR BIO
+        </label>
+
+        <textarea
+          id="editor"
+          maxlength="150"
+          placeholder="Write something that feels like you..."></textarea>
+
+
+        <div class="toolbar">
+
+          <span
+            class="counter"
+            id="counter">
+            0 / 150
+          </span>
+
+          <span
+            class="counter"
+            id="saveStatus">
+            Auto-saved
+          </span>
+
+        </div>
+
+        <div class="progress">
+          <div
+            class="progress-bar"
+            id="progressBar">
+          </div>
+        </div>
+
+      </div>
+
+
+      <!-- STATS -->
+
+      <div class="field">
+
+        <label>PROFILE STATS</label>
+
+        <div class="name-row">
+
+          <input
+            id="postsInput"
+            type="text"
+            placeholder="Posts">
+
+          <input
+            id="followersInput"
+            type="text"
+            placeholder="Followers">
+
+        </div>
+
+        <input
+          id="followingInput"
+          style="margin-top:10px"
+          type="text"
+          placeholder="Following">
+
+      </div>
+
+
+      <!-- PRESETS -->
+
+      <div class="section-title">
+        ⚡ Gen-Z Bio Presets
+      </div>
+
+      <div class="presets">
+
+        <button
+          class="preset"
+          data-bio="creating my own story ✦
+coffee • code • chaos
+lowkey building something big 🚀">
+
+          <span class="preset-title">
+            🚀 Main Character
+          </span>
+
+          <span class="preset-desc">
+            Builder / creator vibe
+          </span>
+
+        </button>
+
+
+        <button
+          class="preset"
+          data-bio="less talking.
+more doing. ⚡
+watch me level up.">
+
+          <span class="preset-title">
+            ⚡ Silent Grind
+          </span>
+
+          <span class="preset-desc">
+            Minimal & powerful
+          </span>
+
+        </button>
+
+
+        <button
+          class="preset"
+          data-bio="just vibes ♡
+making memories
+living my era ✨">
+
+          <span class="preset-title">
+            ♡ Soft Gen-Z
+          </span>
+
+          <span class="preset-desc">
+            Cute aesthetic
+          </span>
+
+        </button>
+
+
+        <button
+          class="preset"
+          data-bio="digital creator ✦
+ideas → reality
+building the future 🚀">
+
+          <span class="preset-title">
+            💻 Creator
+          </span>
+
+          <span class="preset-desc">
+            Creator / tech vibe
+          </span>
+
+        </button>
+
+
+        <button
+          class="preset"
+          data-bio="offline body.
+online dreams.
+∞ possibilities.">
+
+          <span class="preset-title">
+            ∞ Dreamer
+          </span>
+
+          <span class="preset-desc">
+            Clean aesthetic
+          </span>
+
+        </button>
+
+
+        <button
+          class="preset"
+          data-bio="not perfect.
+just becoming better
+every single day. 🖤">
+
+          <span class="preset-title">
+            🖤 Real
+          </span>
+
+          <span class="preset-desc">
+            Simple & authentic
+          </span>
+
+        </button>
+
+      </div>
+
+
+      <!-- THEMES -->
+
+      <div class="section-title">
+        🎨 Avatar Theme
+      </div>
+
+      <div class="themes">
+
+        <button
+          class="theme t-green active"
+          data-theme="green"
+          aria-label="Green">
+        </button>
+
+        <button
+          class="theme t-purple"
+          data-theme="purple"
+          aria-label="Purple">
+        </button>
+
+        <button
+          class="theme t-blue"
+          data-theme="blue"
+          aria-label="Blue">
+        </button>
+
+        <button
+          class="theme t-pink"
+          data-theme="pink"
+          aria-label="Pink">
+        </button>
+
+        <button
+          class="theme t-orange"
+          data-theme="orange"
+          aria-label="Orange">
+        </button>
+
+      </div>
+
+
+      <!-- ACTIONS -->
+
+      <div class="actions">
+
+        <button
+          class="btn primary"
+          id="copyBtn">
+          📋 Copy Bio
+        </button>
+
+        <button
+          class="btn secondary"
+          id="generateBtn">
+          ✨ Generate
+        </button>
+
+        <button
+          class="btn danger"
+          id="resetBtn">
+          ↺ Reset
+        </button>
+
+      </div>
+
+
+      <div class="tip">
+        <strong>PRO TIP:</strong>
+        Choose a kaomoji and it will automatically appear
+        directly after your name. Your settings are saved
+        automatically on this device.
+      </div>
+
+    </section>
+
+  </div>
+
+</main>
+
+
+<div class="toast" id="toast">
+  ✓ Copied to clipboard
+</div>
+
+
+<script>
+
+/* =====================================================
+   DIPO BIO — GOD MODE ENGINE
+===================================================== */
+
+const $ = id => document.getElementById(id);
+
+
+/* ================= ELEMENTS ================= */
+
+const editor =
+  $("editor");
+
+const nameInput =
+  $("nameInput");
+
+const usernameInput =
+  $("usernameInput");
+
+const kaomojiSelect =
+  $("kaomojiSelect");
+
+const platformSelect =
+  $("platformSelect");
+
+const postsInput =
+  $("postsInput");
+
+const followersInput =
+  $("followersInput");
+
+const followingInput =
+  $("followingInput");
+
+const previewBio =
+  $("previewBio");
+
+const previewName =
+  $("previewName");
+
+const previewKaomoji =
+  $("previewKaomoji");
+
+const previewHandle =
+  $("previewHandle");
+
+const previewPosts =
+  $("previewPosts");
+
+const previewFollowers =
+  $("previewFollowers");
+
+const previewFollowing =
+  $("previewFollowing");
+
+const avatar =
+  $("avatar");
+
+const counter =
+  $("counter");
+
+const progressBar =
+  $("progressBar");
+
+const saveStatus =
+  $("saveStatus");
+
+const platformLabel =
+  $("platformLabel");
+
+const toast =
+  $("toast");
+
+
+/* ================= DEFAULT DATA ================= */
+
+const defaults = {
+
+  name:"Your Name",
+
+  username:"@username",
+
+  kaomoji:"",
+
+  bio:"Your bio will appear here.",
+
+  platform:"Instagram",
+
+  posts:"128",
+
+  followers:"1.2K",
+
+  following:"256",
+
+  theme:"green"
+
+};
+
+
+/* ================= LOAD ================= */
+
+function loadData(){
+
+  try{
+
+    const saved =
+      JSON.parse(
+        localStorage.getItem("dipoBioGodMode")
+      );
+
+    const data =
+      saved || defaults;
+
+    nameInput.value =
+      data.name ?? defaults.name;
+
+    usernameInput.value =
+      data.username ?? defaults.username;
+
+    kaomojiSelect.value =
+      data.kaomoji ?? defaults.kaomoji;
+
+    editor.value =
+      data.bio ?? defaults.bio;
+
+    platformSelect.value =
+      data.platform ?? defaults.platform;
+
+    postsInput.value =
+      data.posts ?? defaults.posts;
+
+    followersInput.value =
+      data.followers ?? defaults.followers;
+
+    followingInput.value =
+      data.following ?? defaults.following;
+
+    setTheme(
+      data.theme || "green",
+      false
+    );
+
+  }catch(error){
+
+    console.log(
+      "DIPO BIO storage reset."
+    );
+
+  }
+
+  updatePreview();
+
+}
+
+
+/* ================= SAVE ================= */
+
+function saveData(){
+
+  const data = {
+
+    name:nameInput.value,
+
+    username:usernameInput.value,
+
+    kaomoji:kaomojiSelect.value,
+
+    bio:editor.value,
+
+    platform:platformSelect.value,
+
+    posts:postsInput.value,
+
+    followers:followersInput.value,
+
+    following:followingInput.value,
+
+    theme:
+      document
+      .querySelector(".theme.active")
+      ?.dataset.theme || "green"
+
+  };
+
+
+  localStorage.setItem(
+    "dipoBioGodMode",
+    JSON.stringify(data)
+  );
+
+
+  saveStatus.textContent =
+    "✓ Saved";
+
+  saveStatus.classList.add("good");
+
+
+  clearTimeout(
+    window.saveTimer
+  );
+
+  window.saveTimer =
+    setTimeout(()=>{
+
+      saveStatus.textContent =
+        "Auto-saved";
+
+      saveStatus.classList.remove(
+        "good"
+      );
+
+    },1200);
+
+}
+
+
+/* ================= UPDATE ================= */
+
+function updatePreview(){
+
+  let name =
+    nameInput.value.trim();
+
+  let username =
+    usernameInput.value.trim();
+
+  if(!name){
+    name = "Your Name";
+  }
+
+  if(!username){
+    username = "@username";
+  }
+
+  if(
+    username &&
+    !username.startsWith("@")
+  ){
+    username =
+      "@" + username;
+  }
+
+
+  previewName.textContent =
+    name;
+
+  previewKaomoji.textContent =
+    kaomojiSelect.value;
+
+  previewHandle.textContent =
+    username;
+
+  previewBio.textContent =
+    editor.value ||
+    "Your bio will appear here.";
+
+  previewPosts.textContent =
+    postsInput.value || "0";
+
+  previewFollowers.textContent =
+    followersInput.value || "0";
+
+  previewFollowing.textContent =
+    followingInput.value || "0";
+
+  platformLabel.textContent =
+    platformSelect.value;
+
+
+  /* avatar */
+
+  const firstLetter =
+    name
+      .replace(/[^a-zA-Z0-9]/g,"")
+      .charAt(0)
+      .toUpperCase();
+
+  avatar.textContent =
+    firstLetter || "D";
+
+
+  updateCounter();
+
+  saveData();
+
+}
+
+
+/* ================= CHARACTER COUNTER ================= */
+
+function updateCounter(){
+
+  const length =
+    editor.value.length;
+
+  const max = 150;
+
+  const percentage =
+    Math.min(
+      (length / max) * 100,
+      100
+    );
+
+  counter.textContent =
+    `${length} / ${max}`;
+
+  progressBar.style.width =
+    percentage + "%";
+
+
+  counter.classList.remove(
+    "good",
+    "warn",
+    "bad"
+  );
+
+
+  if(length < 100){
+
+    counter.classList.add(
+      "good"
+    );
+
+  }else if(length < 140){
+
+    counter.classList.add(
+      "warn"
+    );
+
+  }else{
+
+    counter.classList.add(
+      "bad"
+    );
+
+  }
+
+}
+
+
+/* ================= TOAST ================= */
+
+function showToast(message){
+
+  toast.textContent =
+    message;
+
+  toast.classList.add(
+    "show"
+  );
+
+  clearTimeout(
+    window.toastTimer
+  );
+
+  window.toastTimer =
+    setTimeout(()=>{
+
+      toast.classList.remove(
+        "show"
+      );
+
+    },1800);
+
+}
+
+
+/* ================= COPY ================= */
+
+function copyBio(){
+
+  const bio =
+    editor.value.trim();
+
+  if(!bio){
+
+    showToast(
+      "Write a bio first ✍️"
+    );
+
+    return;
+
+  }
+
+
+  navigator.clipboard
+    .writeText(bio)
+    .then(()=>{
+
+      showToast(
+        "✓ Bio copied!"
+      );
+
+    })
+    .catch(()=>{
+
+      showToast(
+        "Copy failed"
+      );
+
+    });
+
+}
+
+
+/* ================= THEME ================= */
+
+const themeColors = {
+
+  green:[
+    "#00ff66",
+    "#00b84f"
+  ],
+
+  purple:[
+    "#c084fc",
+    "#7c3aed"
+  ],
+
+  blue:[
+    "#60a5fa",
+    "#2563eb"
+  ],
+
+  pink:[
+    "#f472b6",
+    "#db2777"
+  ],
+
+  orange:[
+    "#fb923c",
+    "#ea580c"
+  ]
+
+};
+
+
+function setTheme(
+  theme,
+  shouldSave=true
+){
+
+  const colors =
+    themeColors[theme]
+    || themeColors.green;
+
+
+  avatar.style.background =
+    `linear-gradient(
+      135deg,
+      ${colors[0]},
+      ${colors[1]}
+    )`;
+
+
+  document
+    .querySelectorAll(".theme")
+    .forEach(btn=>{
+
+      btn.classList.toggle(
+        "active",
+        btn.dataset.theme === theme
+      );
+
+    });
+
+
+  if(shouldSave){
+    saveData();
+  }
+
+}
+
+
+/* ================= INPUT EVENTS ================= */
+
+[
+  nameInput,
+  usernameInput,
+  editor,
+  postsInput,
+  followersInput,
+  followingInput,
+  kaomojiSelect,
+  platformSelect
+
+].forEach(element=>{
+
+  element.addEventListener(
+    "input",
+    updatePreview
+  );
+
+  element.addEventListener(
+    "change",
+    updatePreview
+  );
+
+});
+
+
+/* ================= KAOMOJI QUICK PICK ================= */
+
+document
+  .querySelectorAll(".k-btn")
+  .forEach(button=>{
+
+    button.addEventListener(
+      "click",
+      ()=>{
+
+        const value =
+          button.dataset.k;
+
+        kaomojiSelect.value =
+          value;
+
+        document
+          .querySelectorAll(".k-btn")
+          .forEach(btn=>{
+            btn.classList.remove(
+              "active"
+            );
+          });
+
+        button.classList.add(
+          "active"
+        );
+
+        updatePreview();
+
+      }
+    );
+
+  });
+
+
+/* ================= BIO PRESETS ================= */
+
+document
+  .querySelectorAll(".preset")
+  .forEach(button=>{
+
+    button.addEventListener(
+      "click",
+      ()=>{
+
+        editor.value =
+          button.dataset.bio;
+
+        updatePreview();
+
+        showToast(
+          "✦ Gen-Z preset applied"
+        );
+
+        editor.scrollIntoView({
+          behavior:"smooth",
+          block:"center"
+        });
+
+      }
+    );
+
+  });
+
+
+/* ================= THEMES ================= */
+
+document
+  .querySelectorAll(".theme")
+  .forEach(button=>{
+
+    button.addEventListener(
+      "click",
+      ()=>{
+
+        setTheme(
+          button.dataset.theme
+        );
+
+        showToast(
+          "🎨 Theme changed"
+        );
+
+      }
+    );
+
+  });
+
+
+/* ================= GENERATOR ================= */
+
+const generatedBios = [
+
+`building my own universe ✦
+creator • dreamer • doer
+watch this space 🚀`,
+
+`not here to fit in.
+here to build something
+worth remembering. ⚡`,
+
+`dream big.
+move silent.
+let the results talk. 🖤`,
+
+`just vibes ♡
+big dreams ∞
+main character energy ✨`,
+
+`code • create • repeat.
+turning ideas into reality 💻
+one level at a time.`,
+
+`offline sometimes.
+dreaming always.
+living my era ✦`,
+
+`zero excuses.
+100% energy.
+∞ possibilities.`,
+
+`creating something different.
+if you know, you know. 👀`
+
+];
+
+
+$("generateBtn")
+  .addEventListener(
+    "click",
+    ()=>{
+
+      const random =
+        generatedBios[
+          Math.floor(
+            Math.random() *
+            generatedBios.length
+          )
+        ];
+
+      editor.value =
+        random;
+
+      updatePreview();
+
+      showToast(
+        "✨ Fresh bio generated!"
+      );
+
+    }
+  );
+
+
+/* ================= COPY BUTTON ================= */
+
+$("copyBtn")
+  .addEventListener(
+    "click",
+    copyBio
+  );
+
+
+/* ================= RESET ================= */
+
+$("resetBtn")
+  .addEventListener(
+    "click",
+    ()=>{
+
+      const ok =
+        confirm(
+          "Reset your DIPO BIO preview?"
+        );
+
+      if(!ok) return;
+
+      localStorage.removeItem(
+        "dipoBioGodMode"
+      );
+
+      nameInput.value =
+        defaults.name;
+
+      usernameInput.value =
+        defaults.username;
+
+      kaomojiSelect.value =
+        defaults.kaomoji;
+
+      editor.value =
+        defaults.bio;
+
+      platformSelect.value =
+        defaults.platform;
+
+      postsInput.value =
+        defaults.posts;
+
+      followersInput.value =
+        defaults.followers;
+
+      followingInput.value =
+        defaults.following;
+
+      setTheme(
+        "green",
+        false
+      );
+
+      updatePreview();
+
+      showToast(
+        "↺ Preview reset"
+      );
+
+    }
+  );
+
+
+/* ================= INIT ================= */
+
+loadData();
+
+</script>
+
+</body>
+</html>

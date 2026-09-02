@@ -1,0 +1,83 @@
+{
+  "version": "1.0.0",
+  "updated": "2026-08-31",
+  "presets": [
+    {
+      "id": "code128",
+      "name": "Code 128",
+      "format": "CODE128",
+      "description": "General purpose barcode",
+      "displayValue": true,
+      "lineColor": "#000000",
+      "background": "#FFFFFF",
+      "width": 2,
+      "height": 80
+    },
+    {
+      "id": "ean13",
+      "name": "EAN-13",
+      "format": "EAN13",
+      "description": "Retail product barcode",
+      "displayValue": true,
+      "lineColor": "#000000",
+      "background": "#FFFFFF",
+      "width": 2,
+      "height": 80
+    },
+    {
+      "id": "ean8",
+      "name": "EAN-8",
+      "format": "EAN8",
+      "description": "Compact retail barcode",
+      "displayValue": true,
+      "lineColor": "#000000",
+      "background": "#FFFFFF",
+      "width": 2,
+      "height": 80
+    },
+    {
+      "id": "upca",
+      "name": "UPC-A",
+      "format": "UPC",
+      "description": "North American retail barcode",
+      "displayValue": true,
+      "lineColor": "#000000",
+      "background": "#FFFFFF",
+      "width": 2,
+      "height": 80
+    },
+    {
+      "id": "itf14",
+      "name": "ITF-14",
+      "format": "ITF14",
+      "description": "Shipping and logistics barcode",
+      "displayValue": true,
+      "lineColor": "#000000",
+      "background": "#FFFFFF",
+      "width": 2,
+      "height": 80
+    },
+    {
+      "id": "msi",
+      "name": "MSI",
+      "format": "MSI",
+      "description": "Inventory barcode",
+      "displayValue": true,
+      "lineColor": "#000000",
+      "background": "#FFFFFF",
+      "width": 2,
+      "height": 80
+    },
+    {
+      "id": "pharmacode",
+      "name": "Pharmacode",
+      "format": "pharmacode",
+      "description": "Pharmaceutical barcode format",
+      "displayValue": false,
+      "lineColor": "#000000",
+      "background": "#FFFFFF",
+      "width": 2,
+      "height": 80
+    }
+  ]
+}

@@ -1,0 +1,416 @@
+/* =========================================================
+   DIPO WORLD — APPLICATION LAYER
+   Final CSS entry layer
+   ========================================================= */
+
+/* ---------------------------------------------------------
+   APP BACKGROUND
+   --------------------------------------------------------- */
+
+body {
+    background:
+        radial-gradient(
+            circle at 10% 0%,
+            rgba(169, 226, 250, 0.18),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 90% 10%,
+            rgba(139, 169, 165, 0.14),
+            transparent 28%
+        ),
+        var(--bg-main);
+}
+
+/* ---------------------------------------------------------
+   APP SCREEN
+   --------------------------------------------------------- */
+
+#app {
+    opacity: 1;
+    transition:
+        opacity 450ms var(--ease-standard);
+}
+
+#app.app-loading {
+    opacity: 0;
+}
+
+/* ---------------------------------------------------------
+   PAGE
+   --------------------------------------------------------- */
+
+.page {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+}
+
+.page-content {
+    padding-top: var(--space-8);
+    padding-bottom: var(--space-16);
+}
+
+/* ---------------------------------------------------------
+   HERO
+   --------------------------------------------------------- */
+
+.dipo-hero {
+    position: relative;
+
+    overflow: hidden;
+
+    padding:
+        48px 24px;
+
+    border-radius:
+        var(--radius-2xl);
+
+    background:
+        var(--gradient-soft);
+
+    border:
+        1px solid
+        var(--border-soft);
+
+    box-shadow:
+        var(--shadow-sm);
+}
+
+.dipo-hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 220px;
+    height: 220px;
+
+    right: -70px;
+    top: -80px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(114, 201, 236, 0.20);
+
+    filter: blur(2px);
+}
+
+.dipo-hero::after {
+    content: "";
+
+    position: absolute;
+
+    width: 160px;
+    height: 160px;
+
+    left: -80px;
+    bottom: -90px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(111, 143, 139, 0.14);
+}
+
+/* ---------------------------------------------------------
+   TOOL STUDIO
+   --------------------------------------------------------- */
+
+.dipo-studio {
+    display: grid;
+    gap: var(--space-6);
+
+    margin-top: var(--space-6);
+}
+
+.dipo-studio-controls {
+    min-width: 0;
+}
+
+.dipo-studio-preview {
+    min-width: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 320px;
+
+    background:
+        var(--gradient-soft);
+
+    border-radius:
+        var(--radius-xl);
+
+    border:
+        1px solid
+        var(--border-soft);
+}
+
+/* ---------------------------------------------------------
+   PREVIEW CANVAS
+   --------------------------------------------------------- */
+
+.dipo-preview {
+    width: min(100%, 360px);
+
+    aspect-ratio: 1 / 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: white;
+
+    border-radius: var(--radius-lg);
+
+    box-shadow: var(--shadow-md);
+
+    overflow: hidden;
+}
+
+/* ---------------------------------------------------------
+   BIO SYMBOL GRID
+   --------------------------------------------------------- */
+
+.bio-symbol-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 10px;
+}
+
+.bio-symbol-item {
+    min-height: 72px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px;
+
+    border-radius: var(--radius-md);
+
+    background: white;
+
+    border:
+        1px solid
+        var(--border-soft);
+
+    font-size: 1.35rem;
+
+    cursor: pointer;
+
+    transition:
+        transform var(--transition-fast),
+        background var(--transition-normal),
+        box-shadow var(--transition-normal);
+}
+
+.bio-symbol-item:hover {
+    background: var(--dipo-blue-50);
+    box-shadow: var(--shadow-sm);
+    transform: translateY(-2px);
+}
+
+.bio-symbol-item:active {
+    transform: scale(0.95);
+}
+
+/* ---------------------------------------------------------
+   FONT RESULT
+   --------------------------------------------------------- */
+
+.bio-font-result {
+    position: relative;
+
+    padding: 18px;
+
+    border-radius: var(--radius-md);
+
+    background: var(--dipo-blue-50);
+
+    border:
+        1px solid
+        var(--dipo-blue-200);
+
+    word-break: break-word;
+}
+
+.bio-font-copy {
+    position: absolute;
+
+    right: 10px;
+    top: 10px;
+}
+
+/* ---------------------------------------------------------
+   QR PREVIEW
+   --------------------------------------------------------- */
+
+.qr-preview-shell {
+    position: relative;
+
+    width: min(100%, 420px);
+
+    padding: 22px;
+
+    border-radius: var(--radius-xl);
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #edf7f8
+        );
+
+    box-shadow: var(--shadow-lg);
+}
+
+.qr-preview-brand {
+    text-align: center;
+
+    margin-top: 14px;
+
+    font-size: 0.75rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.08em;
+
+    color: var(--dipo-navy-800);
+}
+
+/* ---------------------------------------------------------
+   QR CONTROL PANEL
+   --------------------------------------------------------- */
+
+.qr-controls {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-5);
+}
+
+.qr-option-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.qr-option {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 42px;
+
+    padding:
+        8px 13px;
+
+    border-radius:
+        var(--radius-pill);
+
+    border:
+        1px solid
+        var(--border-soft);
+
+    background: white;
+
+    font-size: 0.82rem;
+    font-weight: 700;
+
+    transition:
+        all var(--transition-fast);
+}
+
+.qr-option:hover {
+    background: var(--dipo-blue-50);
+}
+
+.qr-option.active {
+    background: var(--dipo-navy-950);
+    color: white;
+
+    border-color:
+        var(--dipo-navy-950);
+}
+
+/* ---------------------------------------------------------
+   BOTTOM NAV SAFE AREA
+   --------------------------------------------------------- */
+
+.has-bottom-nav {
+    padding-bottom:
+        calc(
+            var(--bottom-nav-height)
+            + env(safe-area-inset-bottom)
+            + 24px
+        );
+}
+
+/* ---------------------------------------------------------
+   IOS SAFE AREA
+   --------------------------------------------------------- */
+
+.safe-bottom {
+    padding-bottom:
+        env(safe-area-inset-bottom);
+}
+
+.safe-top {
+    padding-top:
+        env(safe-area-inset-top);
+}
+
+/* ---------------------------------------------------------
+   DESKTOP STUDIO
+   --------------------------------------------------------- */
+
+@media (min-width: 900px) {
+
+    .dipo-studio {
+        grid-template-columns:
+            minmax(0, 0.9fr)
+            minmax(0, 1.1fr);
+
+        align-items: start;
+    }
+
+    .dipo-studio-preview {
+        position: sticky;
+        top: 96px;
+    }
+
+    .bio-symbol-grid {
+        grid-template-columns:
+            repeat(5, minmax(0, 1fr));
+    }
+}
+
+/* ---------------------------------------------------------
+   MOBILE APP POLISH
+   --------------------------------------------------------- */
+
+@media (max-width: 639px) {
+
+    .page-content {
+        padding-top: 20px;
+        padding-bottom: 48px;
+    }
+
+    .dipo-hero {
+        padding: 32px 20px;
+        border-radius: 26px;
+    }
+
+    .dipo-studio-preview {
+        min-height: 280px;
+    }
+
+    .qr-preview-shell {
+        padding: 16px;
+    }
+}

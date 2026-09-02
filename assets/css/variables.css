@@ -1,0 +1,315 @@
+/* =========================================================
+   DIPO WORLD — DESIGN TOKENS
+   Version: 1.0
+   Purpose: Global colors, spacing, radius, shadows,
+            typography and motion variables.
+   ========================================================= */
+
+:root {
+
+    /* =====================================================
+       BRAND COLORS
+       Inspired by the DIPO WORLD reference UI:
+       soft blue + sage teal + white + deep navy.
+       ===================================================== */
+
+    --color-brand-blue: #DDEFF7;
+    --color-brand-blue-soft: #EEF8FC;
+    --color-brand-blue-light: #F5FBFD;
+    --color-brand-blue-medium: #B9DCEB;
+
+    --color-brand-teal: #6F8F8E;
+    --color-brand-teal-dark: #587877;
+    --color-brand-teal-light: #8FA9A8;
+    --color-brand-teal-soft: #DCE8E7;
+
+    --color-white: #FFFFFF;
+    --color-white-soft: #FAFCFD;
+
+    --color-navy: #102A43;
+    --color-navy-dark: #081C2E;
+    --color-navy-soft: #29445B;
+
+    --color-black: #111111;
+
+    /* =====================================================
+       TEXT COLORS
+       ===================================================== */
+
+    --text-primary: #102A43;
+    --text-secondary: #526779;
+    --text-muted: #7B8C99;
+    --text-light: #A6B3BC;
+    --text-white: #FFFFFF;
+
+    /* =====================================================
+       BACKGROUND COLORS
+       ===================================================== */
+
+    --bg-main: #F7FBFD;
+    --bg-surface: #FFFFFF;
+    --bg-soft: #EEF8FC;
+    --bg-blue: #DDEFF7;
+    --bg-teal: #DCE8E7;
+    --bg-dark: #102A43;
+
+    /* =====================================================
+       BORDERS
+       ===================================================== */
+
+    --border-soft: rgba(16, 42, 67, 0.08);
+    --border-medium: rgba(16, 42, 67, 0.14);
+    --border-strong: rgba(16, 42, 67, 0.22);
+
+    /* =====================================================
+       BRAND GRADIENTS
+       ===================================================== */
+
+    --gradient-brand:
+        linear-gradient(
+            135deg,
+            #DDEFF7 0%,
+            #FFFFFF 48%,
+            #DCE8E7 100%
+        );
+
+    --gradient-soft:
+        linear-gradient(
+            135deg,
+            #EEF8FC 0%,
+            #FFFFFF 100%
+        );
+
+    --gradient-teal:
+        linear-gradient(
+            135deg,
+            #6F8F8E 0%,
+            #8FA9A8 100%
+        );
+
+    --gradient-dark:
+        linear-gradient(
+            135deg,
+            #102A43 0%,
+            #29445B 100%
+        );
+
+    /* =====================================================
+       STATUS COLORS
+       ===================================================== */
+
+    --color-success: #3D8B72;
+    --color-warning: #C28A35;
+    --color-danger: #C65A5A;
+    --color-info: #4C8AA8;
+
+    /* =====================================================
+       SPACING SYSTEM
+       ===================================================== */
+
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-3: 12px;
+    --space-4: 16px;
+    --space-5: 20px;
+    --space-6: 24px;
+    --space-7: 28px;
+    --space-8: 32px;
+    --space-9: 40px;
+    --space-10: 48px;
+    --space-11: 56px;
+    --space-12: 64px;
+    --space-13: 80px;
+    --space-14: 96px;
+
+    /* =====================================================
+       BORDER RADIUS
+       ===================================================== */
+
+    --radius-xs: 6px;
+    --radius-sm: 10px;
+    --radius-md: 14px;
+    --radius-lg: 20px;
+    --radius-xl: 28px;
+    --radius-2xl: 36px;
+    --radius-pill: 999px;
+
+    /* =====================================================
+       SHADOW SYSTEM
+       ===================================================== */
+
+    --shadow-xs:
+        0 2px 8px rgba(16, 42, 67, 0.05);
+
+    --shadow-sm:
+        0 4px 14px rgba(16, 42, 67, 0.07);
+
+    --shadow-md:
+        0 10px 30px rgba(16, 42, 67, 0.09);
+
+    --shadow-lg:
+        0 18px 50px rgba(16, 42, 67, 0.12);
+
+    --shadow-xl:
+        0 28px 80px rgba(16, 42, 67, 0.16);
+
+    /* =====================================================
+       GLASS EFFECT
+       ===================================================== */
+
+    --glass-bg: rgba(255, 255, 255, 0.72);
+    --glass-border: rgba(255, 255, 255, 0.65);
+    --glass-blur: 18px;
+
+    /* =====================================================
+       LAYOUT
+       ===================================================== */
+
+    --container-xs: 480px;
+    --container-sm: 640px;
+    --container-md: 768px;
+    --container-lg: 1024px;
+    --container-xl: 1200px;
+    --container-2xl: 1400px;
+
+    --navbar-height: 72px;
+    --mobile-nav-height: 68px;
+
+    /* =====================================================
+       Z-INDEX SYSTEM
+       ===================================================== */
+
+    --z-base: 1;
+    --z-content: 10;
+    --z-header: 100;
+    --z-dropdown: 500;
+    --z-sticky: 800;
+    --z-modal: 1000;
+    --z-toast: 1100;
+    --z-loader: 1200;
+
+    /* =====================================================
+       MOTION
+       ===================================================== */
+
+    --ease-standard:
+        cubic-bezier(0.16, 1, 0.3, 1);
+
+    --ease-smooth:
+        cubic-bezier(0.22, 1, 0.36, 1);
+
+    --ease-bounce:
+        cubic-bezier(0.34, 1.56, 0.64, 1);
+
+    --duration-fast: 160ms;
+    --duration-normal: 280ms;
+    --duration-slow: 500ms;
+    --duration-slower: 800ms;
+
+    /* =====================================================
+       OPACITY
+       ===================================================== */
+
+    --opacity-disabled: 0.45;
+    --opacity-muted: 0.65;
+    --opacity-hover: 0.85;
+
+    /* =====================================================
+       CONTROL HEIGHTS
+       ===================================================== */
+
+    --control-sm: 36px;
+    --control-md: 44px;
+    --control-lg: 52px;
+    --control-xl: 60px;
+
+    /* =====================================================
+       ICON SIZES
+       ===================================================== */
+
+    --icon-xs: 14px;
+    --icon-sm: 18px;
+    --icon-md: 22px;
+    --icon-lg: 28px;
+    --icon-xl: 36px;
+    --icon-2xl: 48px;
+
+    /* =====================================================
+       APP SPECIFIC
+       ===================================================== */
+
+    --bio-accent: #6F8F8E;
+    --bio-surface: #EEF8FC;
+
+    --qr-accent: #102A43;
+    --qr-surface: #DDEFF7;
+
+    /* =====================================================
+       SAFE AREA
+       ===================================================== */
+
+    --safe-top: env(safe-area-inset-top, 0px);
+    --safe-bottom: env(safe-area-inset-bottom, 0px);
+    --safe-left: env(safe-area-inset-left, 0px);
+    --safe-right: env(safe-area-inset-right, 0px);
+}
+
+
+/* =========================================================
+   DARK MODE TOKENS
+   Future-ready.
+   No UI needs to be changed when dark mode is activated.
+   ========================================================= */
+
+[data-theme="dark"] {
+
+    --text-primary: #F5FAFC;
+    --text-secondary: #B7C6D0;
+    --text-muted: #8295A2;
+    --text-light: #617583;
+
+    --bg-main: #0B1824;
+    --bg-surface: #102A3A;
+    --bg-soft: #132F40;
+    --bg-blue: #17394B;
+    --bg-teal: #294846;
+    --bg-dark: #06131E;
+
+    --border-soft: rgba(255, 255, 255, 0.08);
+    --border-medium: rgba(255, 255, 255, 0.14);
+    --border-strong: rgba(255, 255, 255, 0.22);
+
+    --glass-bg: rgba(16, 42, 58, 0.72);
+    --glass-border: rgba(255, 255, 255, 0.10);
+
+    --shadow-xs:
+        0 2px 8px rgba(0, 0, 0, 0.16);
+
+    --shadow-sm:
+        0 4px 14px rgba(0, 0, 0, 0.20);
+
+    --shadow-md:
+        0 10px 30px rgba(0, 0, 0, 0.25);
+
+    --shadow-lg:
+        0 18px 50px rgba(0, 0, 0, 0.30);
+
+    --shadow-xl:
+        0 28px 80px rgba(0, 0, 0, 0.38);
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   Accessibility support.
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    :root {
+        --duration-fast: 0ms;
+        --duration-normal: 0ms;
+        --duration-slow: 0ms;
+        --duration-slower: 0ms;
+    }
+}

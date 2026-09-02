@@ -1,0 +1,39 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "#website",
+      "name": "DIPO",
+      "alternateName": [
+        "DIPO WORLD",
+        "DIPO LABS"
+      ],
+      "description": "DIPO provides AI tools, QR generators, barcode tools, bio generators and useful online utilities.",
+      "inLanguage": "en"
+    },
+    {
+      "@type": "Organization",
+      "@id": "#organization",
+      "name": "DIPO",
+      "alternateName": "DIPO WORLD",
+      "description": "DIPO creates useful AI-powered and online digital tools."
+    },
+    {
+      "@type": "WebApplication",
+      "@id": "#dipo-bio",
+      "name": "DIPO Bio",
+      "applicationCategory": "UtilitiesApplication",
+      "description": "AI-powered bio generation tools for creative and professional bios.",
+      "operatingSystem": "Any"
+    },
+    {
+      "@type": "WebApplication",
+      "@id": "#dipo-qr",
+      "name": "DIPO QR",
+      "applicationCategory": "UtilitiesApplication",
+      "description": "QR code and barcode creation, customization, preview and export tools.",
+      "operatingSystem": "Any"
+    }
+  ]
+}

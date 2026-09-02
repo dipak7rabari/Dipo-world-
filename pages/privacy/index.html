@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="DIPO LABS Privacy Policy — Learn how DIPO LABS handles data, privacy, local storage, analytics, security and third-party services."
+  >
+
+  <meta
+    name="robots"
+    content="index, follow"
+  >
+
+  <title>Privacy Policy | DIPO LABS</title>
+
+  <style>
+    :root {
+      --bg: #0b0f14;
+      --surface: #111720;
+      --surface-2: #161e28;
+      --border: #26313d;
+      --text: #f3f6f8;
+      --muted: #aab4bf;
+      --accent: #35d07f;
+      --accent-soft: rgba(53, 208, 127, 0.10);
+      --link: #62d99a;
+      --max-width: 900px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Arial,
+        sans-serif;
+      line-height: 1.7;
+    }
+
+    a {
+      color: var(--link);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    header {
+      border-bottom: 1px solid var(--border);
+      background: rgba(11, 15, 20, 0.96);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(12px);
+    }
+
+    .header-inner {
+      width: min(var(--max-width), calc(100% - 32px));
+      margin: 0 auto;
+      min-height: 64px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      color: var(--text);
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+    }
+
+    .brand span {
+      color: var(--accent);
+    }
+
+    .back-link {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .back-link:hover {
+      color: var(--text);
+    }
+
+    main {
+      width: min(var(--max-width), calc(100% - 32px));
+      margin: 0 auto;
+      padding: 56px 0 80px;
+    }
+
+    .hero {
+      margin-bottom: 42px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      padding: 6px 10px;
+      border: 1px solid rgba(53, 208, 127, 0.25);
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 16px 0 12px;
+      font-size: clamp(32px, 6vw, 52px);
+      line-height: 1.1;
+      letter-spacing: -1.5px;
+    }
+
+    .updated {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .intro {
+      margin-top: 24px;
+      padding: 20px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: var(--surface);
+      color: #dbe2e8;
+    }
+
+    .toc {
+      margin: 32px 0 44px;
+      padding: 22px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: var(--surface);
+    }
+
+    .toc-title {
+      margin: 0 0 12px;
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    .toc ol {
+      margin: 0;
+      padding-left: 22px;
+    }
+
+    .toc li {
+      margin: 6px 0;
+      color: var(--muted);
+    }
+
+    section {
+      margin: 0 0 42px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    section:last-of-type {
+      border-bottom: none;
+    }
+
+    h2 {
+      margin: 0 0 14px;
+      font-size: 25px;
+      line-height: 1.25;
+    }
+
+    h3 {
+      margin: 24px 0 8px;
+      font-size: 18px;
+    }
+
+    p {
+      margin: 0 0 14px;
+      color: #d2dae1;
+    }
+
+    ul {
+      margin: 10px 0 18px;
+      padding-left: 24px;
+    }
+
+    li {
+      margin: 8px 0;
+      color: #d2dae1;
+    }
+
+    strong {
+      color: var(--text);
+    }
+
+    .privacy-card {
+      margin-top: 20px;
+      padding: 18px;
+      border-left: 3px solid var(--accent);
+      border-radius: 8px;
+      background: var(--accent-soft);
+    }
+
+    .privacy-card p {
+      margin: 0;
+    }
+
+    .contact-box {
+      padding: 22px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: var(--surface);
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      background: #080b0f;
+    }
+
+    .footer-inner {
+      width: min(var(--max-width), calc(100% - 32px));
+      margin: 0 auto;
+      padding: 28px 0;
+
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .footer-copy {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      font-size: 13px;
+    }
+
+    @media (max-width: 600px) {
+      .header-inner {
+        min-height: 58px;
+      }
+
+      main {
+        padding-top: 40px;
+      }
+
+      .intro,
+      .toc,
+      .contact-box {
+        padding: 18px;
+      }
+
+      h2 {
+        font-size: 22px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="header-inner">
+
+      <a
+        class="brand"
+        href="../../index.html"
+        aria-label="DIPO LABS Home"
+      >
+        DIPO <span>LABS</span>
+      </a>
+
+      <a
+        class="back-link"
+        href="../../index.html"
+      >
+        ← Back to Home
+      </a>
+
+    </div>
+  </header>
+
+
+  <main>
+
+    <div class="hero">
+
+      <span class="eyebrow">
+        Privacy
+      </span>
+
+      <h1>
+        Privacy Policy
+      </h1>
+
+      <p class="updated">
+        Last updated: September 1, 2026
+      </p>
+
+      <div class="intro">
+        <p>
+          DIPO LABS respects your privacy. This Privacy Policy explains
+          what information may be handled when you use DIPO LABS,
+          how that information may be used, and the choices available
+          to you.
+        </p>
+
+        <p>
+          Our privacy approach is based on data minimization,
+          transparency, security, and local-first functionality
+          wherever practical.
+        </p>
+      </div>
+
+    </div>
+
+
+    <nav class="toc" aria-label="Privacy Policy contents">
+
+      <p class="toc-title">
+        Contents
+      </p>
+
+      <ol>
+        <li><a href="#information">Information We Handle</a></li>
+        <li><a href="#local-storage">Local Storage & Preferences</a></li>
+        <li><a href="#tools">DIPO LABS Tools & AI Features</a></li>
+        <li><a href="#analytics">Analytics</a></li>
+        <li><a href="#cookies">Cookies & Similar Technologies</a></li>
+        <li><a href="#third-party">Third-Party Services</a></li>
+        <li><a href="#security">Security</a></li>
+        <li><a href="#children">Children's Privacy</a></li>
+        <li><a href="#rights">Your Choices & Rights</a></li>
+        <li><a href="#changes">Changes to This Policy</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ol>
+
+    </nav>
+
+
+    <section id="information">
+
+      <h2>
+        1. Information We Handle
+      </h2>
+
+      <p>
+        DIPO LABS is designed to minimize unnecessary collection
+        of personal information.
+      </p>
+
+      <p>
+        Depending on the features you use, information that may be
+        handled can include:
+      </p>
+
+      <ul>
+        <li>
+          Information you voluntarily enter into a tool.
+        </li>
+
+        <li>
+          Preferences required to operate parts of the website.
+        </li>
+
+        <li>
+          Recently used items or favorites stored on your device.
+        </li>
+
+        <li>
+          Technical information required for basic website operation.
+        </li>
+      </ul>
+
+      <div class="privacy-card">
+        <p>
+          <strong>Privacy principle:</strong>
+          DIPO LABS does not intentionally collect unnecessary
+          personal information simply because it is available.
+        </p>
+      </div>
+
+    </section>
+
+
+    <section id="local-storage">
+
+      <h2>
+        2. Local Storage & Preferences
+      </h2>
+
+      <p>
+        Some DIPO LABS features may use browser storage such as
+        localStorage to remember information on your device.
+      </p>
+
+      <p>
+        This can include preferences, recently used tools,
+        favorites, interface settings, or other non-sensitive
+        application data.
+      </p>
+
+      <p>
+        Local data normally remains in your browser unless you
+        clear it or a feature specifically sends information
+        to an external service.
+      </p>
+
+    </section>
+
+
+    <section id="tools">
+
+      <h2>
+        3. DIPO LABS Tools & AI Features
+      </h2>
+
+      <p>
+        DIPO LABS may provide tools that generate, transform,
+        analyze, preview, or process content.
+      </p>
+
+      <p>
+        When a feature operates entirely in your browser,
+        the relevant processing may occur locally on your device.
+      </p>
+
+      <p>
+        Some future or optional features may require an external
+        service or API to process a request. When this happens,
+        information necessary for that feature may be transmitted
+        to the relevant service.
+      </p>
+
+      <p>
+        You should avoid entering passwords, payment information,
+        private keys, confidential documents, or other sensitive
+        information into tools unless the feature explicitly
+        requires and securely supports it.
+      </p>
+
+    </section>
+
+
+    <section id="analytics">
+
+      <h2>
+        4. Analytics
+      </h2>
+
+      <p>
+        DIPO LABS may use privacy-conscious analytics in the future
+        to understand general website performance and usage.
+      </p>
+
+      <p>
+        Analytics, when enabled, should be used to improve the
+        service rather than to collect unnecessary sensitive
+        information.
+      </p>
+
+      <p>
+        Analytics should not intentionally collect sensitive
+        personal information through normal website usage.
+      </p>
+
+    </section>
+
+
+    <section id="cookies">
+
+      <h2>
+        5. Cookies & Similar Technologies
+      </h2>
+
+      <p>
+        DIPO LABS may use cookies or browser technologies when
+        necessary for functionality, preferences, security,
+        or optional analytics.
+      </p>
+
+      <p>
+        You can generally control or delete cookies through your
+        browser settings. Disabling certain technologies may affect
+        some website functionality.
+      </p>
+
+    </section>
+
+
+    <section id="third-party">
+
+      <h2>
+        6. Third-Party Services
+      </h2>
+
+      <p>
+        Certain DIPO LABS features may rely on third-party services,
+        APIs, hosting providers, analytics providers, or other
+        infrastructure.
+      </p>
+
+      <p>
+        When a third-party service is required, the information
+        sent to that service will depend on the feature being used
+        and the service's own privacy practices.
+      </p>
+
+      <p>
+        Third-party services may have their own privacy policies
+        and terms. Users should review those policies when using
+        features that depend on external services.
+      </p>
+
+    </section>
+
+
+    <section id="security">
+
+      <h2>
+        7. Security
+      </h2>
+
+      <p>
+        DIPO LABS is designed with reasonable security practices
+        appropriate to the website and its features.
+      </p>
+
+      <p>
+        We aim to reduce unnecessary data collection and avoid
+        storing sensitive information when it is not required.
+      </p>
+
+      <p>
+        However, no internet service or electronic storage system
+        can be guaranteed to be completely secure.
+      </p>
+
+    </section>
+
+
+    <section id="children">
+
+      <h2>
+        8. Children's Privacy
+      </h2>
+
+      <p>
+        DIPO LABS does not intentionally design its services to
+        collect unnecessary personal information from children.
+      </p>
+
+      <p>
+        If you believe that personal information has been provided
+        through DIPO LABS inappropriately, please contact us so
+        that the matter can be reviewed.
+      </p>
+
+    </section>
+
+
+    <section id="rights">
+
+      <h2>
+        9. Your Choices & Rights
+      </h2>
+
+      <p>
+        Depending on your location and applicable law, you may
+        have rights regarding personal information associated
+        with your use of a service.
+      </p>
+
+      <p>
+        You may also be able to:
+      </p>
+
+      <ul>
+        <li>
+          Clear locally stored website data from your browser.
+        </li>
+
+        <li>
+          Disable optional cookies or analytics through available
+          controls or browser settings.
+        </li>
+
+        <li>
+          Stop using a feature that requires information you do
+          not wish to provide.
+        </li>
+
+        <li>
+          Contact DIPO LABS with privacy-related questions or
+          requests.
+        </li>
+      </ul>
+
+    </section>
+
+
+    <section id="changes">
+
+      <h2>
+        10. Changes to This Policy
+      </h2>
+
+      <p>
+        This Privacy Policy may be updated when DIPO LABS introduces
+        new features, changes its services, or needs to reflect
+        legal or operational requirements.
+      </p>
+
+      <p>
+        The latest version will be published on this page with
+        an updated revision date.
+      </p>
+
+    </section>
+
+
+    <section id="contact">
+
+      <h2>
+        11. Contact
+      </h2>
+
+      <div class="contact-box">
+
+        <p>
+          If you have questions, concerns, or requests regarding
+          this Privacy Policy, please contact DIPO LABS through
+          the official contact method provided on the website.
+        </p>
+
+        <p>
+          <strong>DIPO LABS</strong>
+        </p>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <footer>
+
+    <div class="footer-inner">
+
+      <div class="footer-copy">
+        © 2026 DIPO LABS. All rights reserved.
+      </div>
+
+      <nav
+        class="footer-links"
+        aria-label="Legal links"
+      >
+
+        <a href="../../index.html">
+          Home
+        </a>
+
+        <a href="../terms/index.html">
+          Terms
+        </a>
+
+        <a href="../privacy/index.html">
+          Privacy
+        </a>
+
+        <a href="../disclaimer/index.html">
+          Disclaimer
+        </a>
+
+        <a href="../copyright/index.html">
+          Copyright
+        </a>
+
+      </nav>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "redirects": [],
+  "aliases": {
+    "/": "/",
+    "/about": "/pages/about/",
+    "/contact": "/pages/contact/",
+    "/privacy": "/pages/privacy/",
+    "/terms": "/pages/terms/",
+    "/dipo-bio": "/pages/dipo-bio/",
+    "/dipo-qr": "/pages/dipo-qr/"
+  }
+}

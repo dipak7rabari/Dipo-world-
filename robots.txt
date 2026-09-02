@@ -1,0 +1,20 @@
+User-agent: *
+Allow: /
+
+# Main website
+Allow: /index.html
+
+# Public pages
+Allow: /pages/
+
+# Public assets
+Allow: /assets/
+Allow: /components/
+Allow: /lib/
+
+# Do not crawl internal/test areas
+Disallow: /tests/
+Disallow: /.vscode/
+
+# Sitemap
+Sitemap: /sitemap.xml

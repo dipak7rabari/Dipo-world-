@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+  >
+
+  <meta
+    name="theme-color"
+    content="#052f31"
+  >
+
+  <meta
+    name="description"
+    content="DIPO BIO — Create stylish digital bios, discover templates, fonts, symbols and creative identity tools."
+  >
+
+  <title>DIPO BIO — Digital Identity Studio</title>
+
+
+  <style>
+
+    /* =========================================================
+       DIPO BIO — NEXT GEN
+       ========================================================= */
+
+    :root {
+
+      --bg: #f3faf5;
+
+      --dark: #042f31;
+      --dark-2: #073d3f;
+
+      --green: #54bd78;
+      --green-soft: #c8eaca;
+
+      --text: #052d2f;
+      --muted: #6c8081;
+
+      --white: #ffffff;
+
+      --border:
+        rgba(5,45,47,.10);
+
+      --radius:
+        28px;
+
+      --max:
+        1150px;
+
+    }
+
+
+    * {
+      box-sizing: border-box;
+    }
+
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+
+    body {
+
+      margin: 0;
+
+      min-height: 100vh;
+
+      color: var(--text);
+
+      font-family:
+        Inter,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+      background:
+
+        radial-gradient(
+          circle at 85% 5%,
+          rgba(84,189,120,.17),
+          transparent 30%
+        ),
+
+        var(--bg);
+
+      -webkit-font-smoothing: antialiased;
+
+      overflow-x: hidden;
+
+    }
+
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+
+    /* =========================================================
+       HEADER
+       ========================================================= */
+
+    header {
+
+      position: sticky;
+
+      top: 0;
+
+      z-index: 100;
+
+      background:
+        rgba(243,250,245,.82);
+
+      backdrop-filter:
+        blur(20px);
+
+      border-bottom:
+        1px solid var(--border);
+
+    }
+
+
+    .nav {
+
+      width:
+        min(
+          calc(100% - 28px),
+          var(--max)
+        );
+
+      min-height: 74px;
+
+      margin: auto;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+    }
+
+
+    .logo {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 11px;
+
+      font-weight: 950;
+
+      font-size: 19px;
+
+      letter-spacing: -1px;
+
+    }
+
+
+    .logo-mark {
+
+      width: 45px;
+      height: 45px;
+
+      display: grid;
+
+      place-items: center;
+
+      border-radius: 15px;
+
+      background:
+        var(--dark);
+
+      color: white;
+
+      font-size: 21px;
+
+      box-shadow:
+        0 10px 30px
+        rgba(4,47,49,.18);
+
+    }
+
+
+    .logo span {
+      color: var(--green);
+    }
+
+
+    .back {
+
+      padding:
+        10px 15px;
+
+      border-radius: 13px;
+
+      color: var(--muted);
+
+      font-size: 13px;
+
+      font-weight: 800;
+
+      transition:
+        .2s ease;
+
+    }
+
+
+    .back:hover {
+
+      color: var(--dark);
+
+      background:
+        rgba(84,189,120,.10);
+
+      transform:
+        translateX(-3px);
+
+    }
+
+
+    /* =========================================================
+       HERO
+       ========================================================= */
+
+    main {
+
+      width:
+        min(
+          calc(100% - 28px),
+          var(--max)
+        );
+
+      margin: auto;
+
+    }
+
+
+    .hero {
+
+      position: relative;
+
+      overflow: hidden;
+
+      margin-top: 28px;
+
+      padding:
+        clamp(55px, 9vw, 100px)
+        25px;
+
+      text-align: center;
+
+      border-radius:
+        38px;
+
+      background:
+
+        linear-gradient(
+          135deg,
+          #ffffff,
+          #eaf7ed
+        );
+
+      border:
+        1px solid var(--border);
+
+      box-shadow:
+        0 30px 80px
+        rgba(5,45,47,.08);
+
+      animation:
+        enter .8s cubic-bezier(.16,1,.3,1);
+
+    }
+
+
+    @keyframes enter {
+
+      from {
+        opacity: 0;
+        transform:
+          translateY(25px)
+          scale(.97);
+      }
+
+      to {
+        opacity: 1;
+        transform:
+          translateY(0)
+          scale(1);
+      }
+
+    }
+
+
+    .hero::before {
+
+      content: "";
+
+      position: absolute;
+
+      width: 430px;
+      height: 430px;
+
+      right: -180px;
+      top: -260px;
+
+      border-radius: 50%;
+
+      background:
+        var(--green-soft);
+
+      opacity: .8;
+
+      animation:
+        rotate 16s linear infinite;
+
+    }
+
+
+    @keyframes rotate {
+
+      to {
+        transform:
+          rotate(360deg);
+      }
+
+    }
+
+
+    .hero-content {
+
+      position: relative;
+
+      z-index: 2;
+
+      max-width: 800px;
+
+      margin: auto;
+
+    }
+
+
+    .badge {
+
+      display: inline-flex;
+
+      padding:
+        8px 13px;
+
+      border-radius:
+        999px;
+
+      color:
+        #358650;
+
+      background:
+        rgba(84,189,120,.10);
+
+      border:
+        1px solid
+        rgba(84,189,120,.20);
+
+      font-size: 11px;
+
+      font-weight: 900;
+
+      letter-spacing: 1px;
+
+    }
+
+
+    h1 {
+
+      margin:
+        24px 0 18px;
+
+      font-size:
+        clamp(44px, 8vw, 82px);
+
+      line-height: .96;
+
+      letter-spacing: -4px;
+
+      font-weight: 950;
+
+    }
+
+
+    h1 span {
+      color: var(--green);
+    }
+
+
+    .hero p {
+
+      max-width: 650px;
+
+      margin: auto;
+
+      color: var(--muted);
+
+      line-height: 1.75;
+
+      font-size:
+        clamp(15px, 2vw, 18px);
+
+    }
+
+
+    /* =========================================================
+       TOOLS
+       ========================================================= */
+
+    .tools {
+
+      padding:
+        35px 0 90px;
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(
+          3,
+          minmax(0,1fr)
+        );
+
+      gap: 16px;
+
+    }
+
+
+    .card {
+
+      position: relative;
+
+      overflow: hidden;
+
+      min-height: 230px;
+
+      padding: 25px;
+
+      border-radius:
+        var(--radius);
+
+      border:
+        1px solid var(--border);
+
+      background:
+        rgba(255,255,255,.78);
+
+      box-shadow:
+        0 15px 45px
+        rgba(5,45,47,.055);
+
+      transition:
+        transform .3s
+        cubic-bezier(.16,1,.3,1),
+        box-shadow .3s,
+        border-color .3s;
+
+    }
+
+
+    .card:hover {
+
+      transform:
+        translateY(-8px);
+
+      box-shadow:
+        0 28px 60px
+        rgba(5,45,47,.11);
+
+      border-color:
+        rgba(84,189,120,.30);
+
+    }
+
+
+    .card::after {
+
+      content: "";
+
+      position: absolute;
+
+      width: 130px;
+      height: 130px;
+
+      right: -65px;
+      top: -65px;
+
+      border-radius: 50%;
+
+      background:
+        #c9eacc;
+
+      opacity: .65;
+
+      transition:
+        transform .4s;
+
+    }
+
+
+    .card:hover::after {
+      transform:
+        scale(1.5);
+    }
+
+
+    .icon {
+
+      position: relative;
+
+      z-index: 2;
+
+      width: 52px;
+      height: 52px;
+
+      display: grid;
+
+      place-items: center;
+
+      margin-bottom: 22px;
+
+      border-radius: 16px;
+
+      color: white;
+
+      background:
+        var(--dark);
+
+      font-size: 22px;
+
+      font-weight: 900;
+
+    }
+
+
+    .card h2 {
+
+      position: relative;
+
+      z-index: 2;
+
+      margin:
+        0 0 9px;
+
+      font-size: 20px;
+
+      letter-spacing: -.6px;
+
+    }
+
+
+    .card p {
+
+      position: relative;
+
+      z-index: 2;
+
+      margin: 0;
+
+      color: var(--muted);
+
+      font-size: 13px;
+
+      line-height: 1.65;
+
+    }
+
+
+    .go {
+
+      position: relative;
+
+      z-index: 2;
+
+      display: inline-block;
+
+      margin-top: 18px;
+
+      color: var(--dark);
+
+      font-size: 13px;
+
+      font-weight: 900;
+
+    }
+
+
+    .go::after {
+
+      content: " →";
+
+      color: var(--green);
+
+      transition:
+        .2s;
+
+    }
+
+
+    .card:hover .go::after {
+      margin-left: 4px;
+    }
+
+
+    /* =========================================================
+       FOOTER
+       ========================================================= */
+
+    footer {
+
+      padding:
+        48px 20px
+        30px;
+
+      text-align: center;
+
+      color: #8ba3a4;
+
+      background:
+        var(--dark);
+
+      border-top:
+        1px solid
+        rgba(255,255,255,.06);
+
+    }
+
+
+    .footer-main {
+
+      color: white;
+
+      font-weight: 800;
+
+      font-size: 14px;
+
+    }
+
+
+    .footer-main span {
+      color: #ff5c7a;
+    }
+
+
+    .credit {
+
+      margin-top: 13px;
+
+      color: #d7e7da;
+
+      font-size: 18px;
+
+      font-weight: 850;
+
+    }
+
+
+    .copyright {
+
+      margin-top: 8px;
+
+      color: #789394;
+
+      font-size: 12px;
+
+    }
+
+
+    /* =========================================================
+       MOBILE
+       ========================================================= */
+
+    @media (max-width: 850px) {
+
+      .tools {
+
+        grid-template-columns:
+          repeat(2,1fr);
+
+      }
+
+    }
+
+
+    @media (max-width: 560px) {
+
+      .tools {
+
+        grid-template-columns:
+          1fr;
+
+      }
+
+      .hero {
+
+        border-radius:
+          28px;
+
+      }
+
+      h1 {
+
+        letter-spacing:
+          -3px;
+
+      }
+
+      .card {
+
+        min-height:
+          210px;
+
+      }
+
+    }
+
+
+    @media (prefers-reduced-motion: reduce) {
+
+      *,
+      *::before,
+      *::after {
+
+        animation: none !important;
+        transition: none !important;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- =========================================================
+       HEADER
+       ========================================================= -->
+
+  <header>
+
+    <nav class="nav">
+
+      <a
+        href="../../index.html"
+        class="logo"
+      >
+
+        <span class="logo-mark">
+          D
+        </span>
+
+        DIPO <span>BIO</span>
+
+      </a>
+
+
+      <a
+        href="../../index.html"
+        class="back"
+      >
+        ← DIPO WORLD
+      </a>
+
+    </nav>
+
+  </header>
+
+
+  <!-- =========================================================
+       MAIN
+       ========================================================= -->
+
+  <main>
+
+
+    <section class="hero">
+
+      <div class="hero-content">
+
+        <div class="badge">
+          DIPO WORLD • BIO STUDIO
+        </div>
+
+
+        <h1>
+          Create Your
+          <br>
+          <span>Perfect Bio.</span>
+        </h1>
+
+
+        <p>
+          Build a digital identity that actually
+          feels like you. Generate, remix,
+          customize and preview your bio with
+          DIPO BIO.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- =======================================================
+         TOOLS
+         ======================================================= -->
+
+    <section class="tools">
+
+
+      <a
+        class="card"
+        href="./bio-generator.html"
+      >
+
+        <div class="icon">
+          ✨
+        </div>
+
+        <h2>
+          Bio Generator
+        </h2>
+
+        <p>
+          Create a personalized social bio
+          using your details and preferred style.
+        </p>
+
+        <span class="go">
+          Open Generator
+        </span>
+
+      </a>
+
+
+      <a
+        class="card"
+        href="./bio-remix.html"
+      >
+
+        <div class="icon">
+          🔄
+        </div>
+
+        <h2>
+          Bio Remix
+        </h2>
+
+        <p>
+          Transform an existing bio into
+          multiple fresh creative styles.
+        </p>
+
+        <span class="go">
+          Remix Bio
+        </span>
+
+      </a>
+
+
+      <a
+        class="card"
+        href="./templates.html"
+      >
+
+        <div class="icon">
+          ▤
+        </div>
+
+        <h2>
+          Templates
+        </h2>
+
+        <p>
+          Discover ready-made professional,
+          creator and aesthetic bio templates.
+        </p>
+
+        <span class="go">
+          View Templates
+        </span>
+
+      </a>
+
+
+      <a
+        class="card"
+        href="./fonts.html"
+      >
+
+        <div class="icon">
+          Aa
+        </div>
+
+        <h2>
+          Fonts
+        </h2>
+
+        <p>
+          Turn ordinary text into stylish
+          Unicode typography.
+        </p>
+
+        <span class="go">
+          Explore Fonts
+        </span>
+
+      </a>
+
+
+      <a
+        class="card"
+        href="./symbols.html"
+      >
+
+        <div class="icon">
+          ✦
+        </div>
+
+        <h2>
+          Symbols
+        </h2>
+
+        <p>
+          Find decorative symbols and
+          characters for your digital identity.
+        </p>
+
+        <span class="go">
+          Browse Symbols
+        </span>
+
+      </a>
+
+
+      <a
+        class="card"
+        href="./kaomoji.html"
+      >
+
+        <div class="icon">
+          ◕‿◕
+        </div>
+
+        <h2>
+          Kaomoji
+        </h2>
+
+        <p>
+          Copy expressive Japanese-style
+          kaomoji for your profile.
+        </p>
+
+        <span class="go">
+          Browse Kaomoji
+        </span>
+
+      </a>
+
+
+      <a
+        class="card"
+        href="./preview.html"
+      >
+
+        <div class="icon">
+          ◉
+        </div>
+
+        <h2>
+          Bio Preview
+        </h2>
+
+        <p>
+          Preview your final bio before
+          using it on social platforms.
+        </p>
+
+        <span class="go">
+          Open Preview
+        </span>
+
+      </a>
+
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================================================
+       FOOTER
+       ========================================================= -->
+
+  <footer>
+
+    <div class="footer-main">
+      Made With <span>❤️</span> in India
+    </div>
+
+    <div class="credit">
+      𝔄 𝔇𝔐 𝔭𝔯𝔬𝔡𝔲𝔠𝔱
+    </div>
+
+    <div class="copyright">
+      All copyrights reserved @
+      𝔄 𝔇𝔐 𝔭𝔯𝔬𝔡𝔲𝔠𝔱
+    </div>
+
+  </footer>
+
+
+</body>
+</html>

@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description"
+        content="DIPO QR Preview and QR Code Studio">
+
+  <title>QR Preview | DIPO QR</title>
+
+  <style>
+    :root {
+      --bg:#07110b;
+      --card:#0d1a11;
+      --text:#f4f8f5;
+      --muted:#9baa9f;
+      --green:#22c55e;
+      --red:#ef4444;
+      --border:rgba(255,255,255,.09);
+    }
+
+    * {
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
+
+    body {
+      min-height:100vh;
+      background:var(--bg);
+      color:var(--text);
+      font-family:system-ui,sans-serif;
+    }
+
+    a {
+      color:inherit;
+      text-decoration:none;
+    }
+
+    header {
+      min-height:65px;
+      padding:0 5%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      border-bottom:1px solid var(--border);
+    }
+
+    .logo {
+      font-weight:800;
+    }
+
+    .logo span {
+      color:var(--green);
+    }
+
+    main {
+      width:min(1000px,92%);
+      margin:auto;
+      padding:45px 0 80px;
+    }
+
+    h1 {
+      font-size:clamp(2rem,6vw,3.3rem);
+      margin-bottom:8px;
+    }
+
+    .intro {
+      color:var(--muted);
+      margin-bottom:25px;
+    }
+
+    .layout {
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:18px;
+    }
+
+    .panel {
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:18px;
+      padding:22px;
+    }
+
+    .field {
+      margin-bottom:18px;
+    }
+
+    label {
+      display:block;
+      margin-bottom:7px;
+      font-size:.85rem;
+      font-weight:650;
+    }
+
+    textarea,
+    select,
+    input {
+      width:100%;
+      padding:12px;
+      border-radius:10px;
+      border:1px solid var(--border);
+      background:#07110b;
+      color:var(--text);
+      outline:none;
+      font:inherit;
+    }
+
+    textarea {
+      min-height:130px;
+      resize:vertical;
+    }
+
+    .preview-box {
+      min-height:400px;
+      border-radius:14px;
+      background:#fff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:#111;
+    }
+
+    #qr-output {
+      width:280px;
+      height:280px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+
+    .status {
+      margin-top:15px;
+      padding:12px;
+      border-radius:10px;
+      background:rgba(255,255,255,.05);
+      color:var(--muted);
+      font-size:.88rem;
+    }
+
+    .status.valid {
+      border:1px solid rgba(34,197,94,.3);
+      color:var(--green);
+    }
+
+    .status.invalid {
+      border:1px solid rgba(239,68,68,.3);
+      color:var(--red);
+    }
+
+    .actions {
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:18px;
+    }
+
+    button,
+    .button {
+      padding:11px 16px;
+      border-radius:10px;
+      border:0;
+      background:var(--green);
+      color:#031008;
+      font-weight:750;
+      cursor:pointer;
+    }
+
+    .secondary {
+      background:rgba(255,255,255,.07);
+      color:var(--text);
+      border:1px solid var(--border);
+    }
+
+    @media(max-width:720px) {
+      .layout {
+        grid-template-columns:1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <a href="./index.html" class="logo">
+    DIPO<span>QR</span>
+  </a>
+
+  <a href="./index.html">← QR Home</a>
+</header>
+
+<main
+  data-page="qr-preview"
+  data-module="qr-generator">
+
+  <h1>QR Preview</h1>
+
+  <p class="intro">
+    Enter your content and preview the generated QR code.
+  </p>
+
+  <section class="layout">
+
+    <div class="panel">
+
+      <div class="field">
+
+        <label for="qr-content">
+          QR Content
+        </label>
+
+        <textarea
+          id="qr-content"
+          data-qr-content
+          placeholder="https://example.com"></textarea>
+
+      </div>
+
+      <div class="field">
+
+        <label for="qr-error-level">
+          Error Correction
+        </label>
+
+        <select
+          id="qr-error-level"
+          data-qr-error-level>
+
+          <option value="L">Low</option>
+          <option value="M" selected>Medium</option>
+          <option value="Q">Quartile</option>
+          <option value="H">High</option>
+
+        </select>
+
+      </div>
+
+      <div class="actions">
+
+        <button
+          type="button"
+          data-action="generate-qr">
+          Generate QR
+        </button>
+
+        <button
+          type="button"
+          class="secondary"
+          data-action="clear-qr">
+          Clear
+        </button>
+
+      </div>
+
+      <div
+        id="qr-status"
+        class="status"
+        data-qr-status>
+        Enter content to generate a QR code.
+      </div>
+
+    </div>
+
+    <div class="panel">
+
+      <div
+        id="qr-preview"
+        class="preview-box"
+        data-qr-preview>
+
+        <div
+          id="qr-output"
+          data-qr-output>
+          QR Preview
+        </div>
+
+      </div>
+
+      <div class="actions">
+
+        <a
+          href="./artistic-qr.html"
+          class="button secondary">
+          Customize
+        </a>
+
+        <a
+          href="./qr-frames.html"
+          class="button secondary">
+          Add Frame
+        </a>
+
+        <a
+          href="./export.html"
+          class="button">
+          Export
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</main>
+
+</body>
+</html>
