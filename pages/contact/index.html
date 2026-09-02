@@ -1,691 +1,2072 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f7fbff">
+<meta name="description" content="Contact DIPO WORLD — General enquiries, feedback, business partnerships and support.">
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0, viewport-fit=cover"
-  >
+<title>Contact — DIPO WORLD</title>
 
-  <meta
-    name="description"
-    content="Contact DIPO WORLD for questions, feedback, suggestions, business enquiries and support."
-  >
+<style>
+/* =========================================================
+   DIPO WORLD — CONTACT
+   GEN-Z • PREMIUM • FUTURE • MOBILE FIRST
+========================================================= */
 
-  <meta
-    name="robots"
-    content="index, follow"
-  >
+:root{
+  --bg:#f7fbff;
+  --card:rgba(255,255,255,.78);
+  --white:#fff;
+  --text:#101827;
+  --muted:#687386;
+  --line:#e5ebf3;
+  --blue:#2860ff;
+  --blue2:#6b8cff;
+  --cyan:#43d8ff;
+  --green:#16a66a;
+  --pink:#ff4f8b;
+  --yellow:#ffb800;
+  --shadow:0 20px 60px rgba(28,55,100,.09);
+  --radius:26px;
+}
 
-  <meta
-    name="theme-color"
-    content="#f5f7f2"
-  >
+*{
+  box-sizing:border-box;
+}
 
-  <link
-    rel="canonical"
-    href="/pages/contact/"
-  >
+html{
+  scroll-behavior:smooth;
+}
 
-  <title>Contact DIPO WORLD</title>
+body{
+  margin:0;
+  color:var(--text);
+  background:
+    radial-gradient(circle at 10% 5%,rgba(67,216,255,.14),transparent 28%),
+    radial-gradient(circle at 90% 15%,rgba(40,96,255,.10),transparent 30%),
+    linear-gradient(180deg,#fbfdff 0%,#f6faff 100%);
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "SF Pro Display",
+    "SF Pro Text",
+    "Segoe UI",
+    Arial,
+    sans-serif;
+  overflow-x:hidden;
+}
 
-  <link
-    rel="stylesheet"
-    href="../../assets/css/app.css"
-  >
+a{
+  color:inherit;
+}
 
-  <link
-    rel="manifest"
-    href="../../manifest.json"
-  >
+button,
+input,
+textarea,
+select{
+  font:inherit;
+}
 
-  <link
-    rel="icon"
-    href="../../favicon.ico"
-  >
+button{
+  -webkit-tap-highlight-color:transparent;
+}
+
+::selection{
+  background:#dbe6ff;
+  color:#10204d;
+}
+
+
+/* =========================================================
+   BACKGROUND ORBS
+========================================================= */
+
+body::before,
+body::after{
+  content:"";
+  position:fixed;
+  width:230px;
+  height:230px;
+  border-radius:50%;
+  filter:blur(60px);
+  pointer-events:none;
+  z-index:-1;
+  opacity:.55;
+}
+
+body::before{
+  top:180px;
+  left:-120px;
+  background:#bcefff;
+}
+
+body::after{
+  top:650px;
+  right:-130px;
+  background:#cbd7ff;
+}
+
+
+/* =========================================================
+   SKIP LINK
+========================================================= */
+
+.skip{
+  position:absolute;
+  left:15px;
+  top:-60px;
+  background:#111827;
+  color:#fff;
+  padding:12px 16px;
+  border-radius:12px;
+  z-index:999;
+  text-decoration:none;
+  font-weight:800;
+}
+
+.skip:focus{
+  top:15px;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.header{
+  position:sticky;
+  top:0;
+  z-index:100;
+  border-bottom:1px solid rgba(220,227,237,.8);
+  background:rgba(255,255,255,.78);
+  backdrop-filter:blur(22px);
+  -webkit-backdrop-filter:blur(22px);
+}
+
+.nav{
+  width:min(1120px,92%);
+  min-height:72px;
+  margin:auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:15px;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  text-decoration:none;
+}
+
+.brand-mark{
+  width:39px;
+  height:39px;
+  border-radius:13px;
+  display:grid;
+  place-items:center;
+  color:#fff;
+  font-size:16px;
+  font-weight:950;
+  background:
+    linear-gradient(135deg,#111827,#2860ff 55%,#53dfff);
+  box-shadow:
+    0 8px 22px rgba(40,96,255,.22);
+}
+
+.brand-text{
+  font-size:19px;
+  font-weight:950;
+  letter-spacing:-.8px;
+}
+
+.brand-text span{
+  color:var(--blue);
+}
+
+.back-btn{
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  text-decoration:none;
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:13px;
+  padding:10px 14px;
+  color:#273142;
+  font-size:12px;
+  font-weight:900;
+  transition:.2s ease;
+}
+
+.back-btn:hover{
+  transform:translateY(-2px);
+  border-color:#b9c9f5;
+  box-shadow:0 8px 25px rgba(30,60,120,.08);
+}
+
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+main{
+  width:min(1120px,92%);
+  margin:auto;
+  padding:48px 0 90px;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+  position:relative;
+  padding:24px 0 42px;
+}
+
+.hero-badge{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:9px 14px;
+  border:1px solid #dce6ff;
+  background:rgba(239,244,255,.85);
+  color:#315bd0;
+  border-radius:50px;
+  font-size:10px;
+  font-weight:950;
+  letter-spacing:1.2px;
+  text-transform:uppercase;
+  animation:fadeUp .7s ease both;
+}
+
+.live-dot{
+  width:7px;
+  height:7px;
+  border-radius:50%;
+  background:#22bd78;
+  box-shadow:0 0 0 5px rgba(34,189,120,.12);
+  animation:pulse 1.8s infinite;
+}
+
+.hero h1{
+  max-width:800px;
+  margin:17px 0 14px;
+  font-size:clamp(48px,8vw,88px);
+  line-height:.91;
+  letter-spacing:-5px;
+  font-weight:950;
+  animation:fadeUp .75s .08s ease both;
+}
+
+.hero h1 span{
+  background:
+    linear-gradient(
+      100deg,
+      #111827 0%,
+      #2860ff 43%,
+      #42cfff 75%,
+      #111827 100%
+    );
+  background-size:220% auto;
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+  animation:gradientMove 6s linear infinite;
+}
+
+.hero p{
+  max-width:650px;
+  margin:0;
+  color:var(--muted);
+  font-size:18px;
+  line-height:1.65;
+  animation:fadeUp .75s .16s ease both;
+}
+
+.hero-line{
+  width:100%;
+  height:1px;
+  margin-top:35px;
+  background:linear-gradient(
+    90deg,
+    transparent,
+    #dfe7f2,
+    transparent
+  );
+}
+
+
+/* =========================================================
+   CONTACT OPTIONS
+========================================================= */
+
+.section-label{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin:0 0 18px;
+  color:#8490a1;
+  font-size:10px;
+  font-weight:950;
+  letter-spacing:1.8px;
+  text-transform:uppercase;
+}
+
+.section-label::before{
+  content:"";
+  width:24px;
+  height:2px;
+  border-radius:3px;
+  background:var(--blue);
+}
+
+.section-title{
+  margin:0 0 8px;
+  font-size:clamp(30px,5vw,48px);
+  line-height:1;
+  letter-spacing:-2.5px;
+  font-weight:950;
+}
+
+.section-subtitle{
+  margin:0 0 25px;
+  color:var(--muted);
+  font-size:15px;
+  line-height:1.6;
+}
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:15px;
+  margin-bottom:65px;
+}
+
+.contact-card{
+  position:relative;
+  min-height:250px;
+  padding:25px;
+  border:1px solid rgba(220,228,239,.9);
+  border-radius:var(--radius);
+  background:var(--card);
+  backdrop-filter:blur(16px);
+  -webkit-backdrop-filter:blur(16px);
+  box-shadow:var(--shadow);
+  overflow:hidden;
+  transition:
+    transform .25s ease,
+    box-shadow .25s ease,
+    border-color .25s ease;
+  animation:fadeUp .7s ease both;
+}
+
+.contact-card:nth-child(2){
+  animation-delay:.07s;
+}
+
+.contact-card:nth-child(3){
+  animation-delay:.14s;
+}
+
+.contact-card:nth-child(4){
+  animation-delay:.21s;
+}
+
+.contact-card::before{
+  content:"";
+  position:absolute;
+  width:150px;
+  height:150px;
+  border-radius:50%;
+  right:-60px;
+  top:-60px;
+  background:rgba(40,96,255,.07);
+}
+
+.contact-card:hover{
+  transform:translateY(-6px);
+  border-color:#c8d6fa;
+  box-shadow:0 28px 70px rgba(30,60,120,.13);
+}
+
+.card-icon{
+  width:52px;
+  height:52px;
+  display:grid;
+  place-items:center;
+  margin-bottom:22px;
+  border-radius:17px;
+  font-size:23px;
+  background:#f0f4ff;
+  border:1px solid #dfe7ff;
+}
+
+.contact-card:nth-child(2) .card-icon{
+  background:#fff1f6;
+  border-color:#ffd7e5;
+}
+
+.contact-card:nth-child(3) .card-icon{
+  background:#fff8e8;
+  border-color:#ffe6ad;
+}
+
+.contact-card:nth-child(4) .card-icon{
+  background:#edfbf4;
+  border-color:#ccefdc;
+}
+
+.card-tag{
+  margin-bottom:8px;
+  color:#8a94a4;
+  font-size:9px;
+  font-weight:950;
+  letter-spacing:1.3px;
+  text-transform:uppercase;
+}
+
+.contact-card h3{
+  margin:0 0 10px;
+  font-size:25px;
+  letter-spacing:-1px;
+}
+
+.contact-card p{
+  min-height:52px;
+  margin:0 0 22px;
+  color:#687386;
+  font-size:14px;
+  line-height:1.65;
+}
+
+.card-link{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  text-decoration:none;
+  color:var(--blue);
+  font-size:13px;
+  font-weight:950;
+}
+
+.card-link span{
+  transition:.2s ease;
+}
+
+.card-link:hover span{
+  transform:translateX(5px);
+}
+
+
+/* =========================================================
+   DIRECT CONTACT
+========================================================= */
+
+.direct{
+  margin-bottom:70px;
+}
+
+.direct-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:15px;
+}
+
+.direct-card{
+  display:flex;
+  align-items:center;
+  gap:15px;
+  padding:18px;
+  border:1px solid var(--line);
+  background:rgba(255,255,255,.82);
+  border-radius:20px;
+  text-decoration:none;
+  box-shadow:0 10px 30px rgba(30,50,90,.05);
+  transition:.2s ease;
+}
+
+.direct-card:hover{
+  transform:translateY(-3px);
+  border-color:#c5d3f5;
+  box-shadow:0 18px 40px rgba(30,50,90,.09);
+}
+
+.direct-icon{
+  width:46px;
+  height:46px;
+  flex:0 0 46px;
+  display:grid;
+  place-items:center;
+  border-radius:14px;
+  font-size:20px;
+  background:#eef3ff;
+}
+
+.direct-card:nth-child(2) .direct-icon{
+  background:#fff0f6;
+}
+
+.direct-card:nth-child(3) .direct-icon{
+  background:#edf9f3;
+}
+
+.direct-card:nth-child(4) .direct-icon{
+  background:#fff8e7;
+}
+
+.direct-info{
+  min-width:0;
+}
+
+.direct-info small{
+  display:block;
+  color:#929aaa;
+  margin-bottom:3px;
+  font-size:9px;
+  font-weight:950;
+  letter-spacing:1px;
+  text-transform:uppercase;
+}
+
+.direct-info strong{
+  display:block;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  font-size:14px;
+}
+
+
+/* =========================================================
+   MESSAGE SECTION
+========================================================= */
+
+.message-section{
+  display:grid;
+  grid-template-columns:.8fr 1.2fr;
+  gap:25px;
+  align-items:start;
+  margin-bottom:80px;
+}
+
+.message-copy{
+  position:sticky;
+  top:105px;
+}
+
+.message-copy h2{
+  margin:0 0 13px;
+  font-size:clamp(34px,5vw,55px);
+  line-height:.98;
+  letter-spacing:-3px;
+  font-weight:950;
+}
+
+.message-copy h2 span{
+  color:var(--blue);
+}
+
+.message-copy p{
+  margin:0;
+  color:var(--muted);
+  font-size:15px;
+  line-height:1.7;
+}
+
+.mini-note{
+  display:inline-flex;
+  margin-top:20px;
+  padding:8px 11px;
+  border-radius:10px;
+  background:#fff;
+  border:1px solid var(--line);
+  color:#7d8797;
+  font-size:10px;
+  font-weight:850;
+}
+
+
+/* FORM */
+
+.form-card{
+  padding:25px;
+  border:1px solid var(--line);
+  border-radius:28px;
+  background:rgba(255,255,255,.85);
+  box-shadow:var(--shadow);
+}
+
+.form-row{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:13px;
+}
+
+.field{
+  margin-bottom:15px;
+}
+
+.field label{
+  display:block;
+  margin:0 0 7px 2px;
+  color:#414b5b;
+  font-size:11px;
+  font-weight:950;
+}
+
+.field input,
+.field select,
+.field textarea{
+  width:100%;
+  border:1px solid #dfe5ed;
+  outline:none;
+  border-radius:14px;
+  background:#f9fbfd;
+  color:#182131;
+  padding:13px 14px;
+  font-size:14px;
+  transition:.2s ease;
+}
+
+.field input,
+.field select{
+  height:48px;
+}
+
+.field textarea{
+  min-height:145px;
+  resize:vertical;
+  line-height:1.55;
+}
+
+.field input::placeholder,
+.field textarea::placeholder{
+  color:#a4acb8;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus{
+  background:#fff;
+  border-color:#7e9df7;
+  box-shadow:0 0 0 4px rgba(40,96,255,.08);
+}
+
+.form-bottom{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+}
+
+.char-count{
+  color:#9aa2af;
+  font-size:10px;
+  font-weight:800;
+}
+
+.send-btn{
+  border:0;
+  border-radius:14px;
+  padding:13px 20px;
+  background:#111827;
+  color:#fff;
+  cursor:pointer;
+  font-size:12px;
+  font-weight:950;
+  box-shadow:0 12px 25px rgba(17,24,39,.18);
+  transition:.2s ease;
+}
+
+.send-btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 16px 30px rgba(17,24,39,.24);
+}
+
+.send-btn:active{
+  transform:scale(.97);
+}
+
+
+/* =========================================================
+   SOCIAL
+========================================================= */
+
+.social-section{
+  padding:30px;
+  border-radius:30px;
+  background:
+    radial-gradient(circle at 85% 20%,rgba(67,216,255,.17),transparent 28%),
+    radial-gradient(circle at 15% 90%,rgba(40,96,255,.13),transparent 30%),
+    #111827;
+  color:#fff;
+  overflow:hidden;
+  position:relative;
+  margin-bottom:70px;
+}
+
+.social-section::after{
+  content:"✦";
+  position:absolute;
+  right:35px;
+  top:18px;
+  color:rgba(255,255,255,.16);
+  font-size:80px;
+  line-height:1;
+}
+
+.social-label{
+  color:#9faabd;
+  font-size:9px;
+  font-weight:950;
+  letter-spacing:1.7px;
+  text-transform:uppercase;
+}
+
+.social-section h2{
+  margin:10px 0 8px;
+  font-size:clamp(30px,5vw,48px);
+  letter-spacing:-2.5px;
+  line-height:1;
+}
+
+.social-section p{
+  max-width:620px;
+  margin:0 0 24px;
+  color:#aeb7c6;
+  font-size:14px;
+  line-height:1.65;
+}
+
+.social-links{
+  display:flex;
+  flex-wrap:wrap;
+  gap:9px;
+}
+
+.social-link{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  text-decoration:none;
+  border:1px solid rgba(255,255,255,.13);
+  background:rgba(255,255,255,.07);
+  color:#fff;
+  border-radius:13px;
+  padding:11px 14px;
+  font-size:11px;
+  font-weight:900;
+  transition:.2s ease;
+}
+
+.social-link:hover{
+  background:rgba(255,255,255,.13);
+  transform:translateY(-2px);
+}
+
+
+/* =========================================================
+   FAQ
+========================================================= */
+
+.faq{
+  margin-bottom:75px;
+}
+
+.faq-list{
+  display:grid;
+  gap:9px;
+}
+
+details{
+  border:1px solid var(--line);
+  background:rgba(255,255,255,.75);
+  border-radius:17px;
+  overflow:hidden;
+  transition:.2s ease;
+}
+
+details[open]{
+  border-color:#cdd9f4;
+  box-shadow:0 10px 30px rgba(30,50,100,.06);
+}
+
+summary{
+  list-style:none;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:15px;
+  padding:17px 18px;
+  font-size:13px;
+  font-weight:900;
+}
+
+summary::-webkit-details-marker{
+  display:none;
+}
+
+summary::after{
+  content:"+";
+  width:25px;
+  height:25px;
+  flex:0 0 25px;
+  display:grid;
+  place-items:center;
+  border-radius:8px;
+  background:#f0f3f8;
+  color:#647083;
+  font-size:16px;
+  transition:.2s ease;
+}
+
+details[open] summary::after{
+  content:"−";
+  background:#eaf0ff;
+  color:var(--blue);
+}
+
+.faq-answer{
+  padding:0 18px 18px;
+  color:#737e8e;
+  font-size:13px;
+  line-height:1.65;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer{
+  border-top:1px solid var(--line);
+  padding:30px 0 25px;
+}
+
+.footer-inner{
+  width:min(1120px,92%);
+  margin:auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+
+.footer-brand{
+  font-size:15px;
+  font-weight:950;
+}
+
+.footer-brand span{
+  color:var(--blue);
+}
+
+.footer-copy{
+  color:#8993a2;
+  font-size:10px;
+  line-height:1.7;
+  text-align:right;
+}
+
+.footer-copy strong{
+  color:#566173;
+}
+
+
+/* =========================================================
+   TOAST
+========================================================= */
+
+.toast{
+  position:fixed;
+  left:50%;
+  bottom:24px;
+  z-index:999;
+  transform:translate(-50%,130px);
+  opacity:0;
+  pointer-events:none;
+  background:#111827;
+  color:#fff;
+  padding:13px 18px;
+  border-radius:14px;
+  font-size:11px;
+  font-weight:950;
+  box-shadow:0 15px 40px rgba(0,0,0,.22);
+  transition:.3s ease;
+}
+
+.toast.show{
+  transform:translate(-50%,0);
+  opacity:1;
+}
+
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes fadeUp{
+  from{
+    opacity:0;
+    transform:translateY(18px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+@keyframes pulse{
+  0%,100%{
+    transform:scale(1);
+    opacity:1;
+  }
+  50%{
+    transform:scale(.75);
+    opacity:.65;
+  }
+}
+
+@keyframes gradientMove{
+  0%{
+    background-position:0% center;
+  }
+  100%{
+    background-position:220% center;
+  }
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:800px){
+
+  main{
+    padding-top:30px;
+  }
+
+  .hero{
+    padding-top:16px;
+  }
+
+  .hero h1{
+    letter-spacing:-3.5px;
+  }
+
+  .contact-grid{
+    grid-template-columns:1fr;
+  }
+
+  .direct-grid{
+    grid-template-columns:1fr;
+  }
+
+  .message-section{
+    grid-template-columns:1fr;
+  }
+
+  .message-copy{
+    position:static;
+  }
+
+}
+
+
+@media(max-width:600px){
+
+  .nav{
+    min-height:62px;
+  }
+
+  .brand-mark{
+    width:35px;
+    height:35px;
+    border-radius:11px;
+  }
+
+  .brand-text{
+    font-size:17px;
+  }
+
+  .back-btn{
+    padding:9px 11px;
+    font-size:10px;
+  }
+
+  main{
+    width:92%;
+    padding-bottom:60px;
+  }
+
+  .hero{
+    padding-bottom:32px;
+  }
+
+  .hero-badge{
+    font-size:8px;
+    padding:8px 11px;
+  }
+
+  .hero h1{
+    margin-top:15px;
+    font-size:51px;
+    letter-spacing:-3px;
+  }
+
+  .hero p{
+    font-size:15px;
+  }
+
+  .contact-card{
+    min-height:225px;
+    padding:20px;
+    border-radius:21px;
+  }
+
+  .contact-card h3{
+    font-size:22px;
+  }
+
+  .contact-card p{
+    font-size:13px;
+  }
+
+  .direct{
+    margin-bottom:55px;
+  }
+
+  .section-title{
+    font-size:34px;
+    letter-spacing:-1.8px;
+  }
+
+  .form-card{
+    padding:17px;
+    border-radius:21px;
+  }
+
+  .form-row{
+    grid-template-columns:1fr;
+    gap:0;
+  }
+
+  .form-bottom{
+    align-items:stretch;
+    flex-direction:column;
+  }
+
+  .send-btn{
+    width:100%;
+  }
+
+  .social-section{
+    padding:22px;
+    border-radius:23px;
+  }
+
+  .social-section h2{
+    font-size:34px;
+  }
+
+  .social-links{
+    display:grid;
+    grid-template-columns:1fr;
+  }
+
+  .social-link{
+    justify-content:center;
+  }
+
+  .footer-inner{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .footer-copy{
+    text-align:left;
+  }
+
+  .toast{
+    width:calc(100% - 35px);
+    text-align:center;
+  }
+
+}
+
+
+@media(max-width:380px){
+
+  .hero h1{
+    font-size:44px;
+  }
+
+  .contact-card{
+    padding:17px;
+  }
+
+  .direct-card{
+    padding:14px;
+  }
+
+  .direct-info strong{
+    font-size:12px;
+  }
+
+}
+
+
+/* ACCESSIBILITY */
+
+@media(prefers-reduced-motion:reduce){
+
+  *,
+  *::before,
+  *::after{
+    animation-duration:.01ms !important;
+    animation-iteration-count:1 !important;
+    scroll-behavior:auto !important;
+    transition-duration:.01ms !important;
+  }
+
+}
+</style>
 </head>
 
-<body
-  class="page page-contact"
-  data-page="contact"
-  data-product="dipo-world"
->
 
-  <!-- Accessibility -->
-  <a
-    class="skip-link"
-    href="#main-content"
-  >
-    Skip to content
-  </a>
+<body>
+
+<a class="skip" href="#content">
+  Skip to content
+</a>
 
 
-  <!-- Global Navigation -->
-  <header
-    id="site-header"
-    data-component="navbar"
-    data-component-src="../../components/navbar.html"
-  >
-    <!-- Navbar component -->
-  </header>
+<!-- =======================================================
+     HEADER
+======================================================= -->
 
+<header class="header">
 
-  <!-- Main Content -->
-  <main
-    id="main-content"
-    class="contact-page"
-    tabindex="-1"
-  >
+  <nav class="nav">
 
-    <!-- Page Hero -->
-    <section
-      class="page-hero section"
-      aria-labelledby="contact-title"
-    >
+    <a
+      class="brand"
+      href="../../index.html"
+      aria-label="DIPO WORLD Home">
 
-      <div class="container">
-
-        <span class="section-kicker">
-          CONTACT
-        </span>
-
-        <h1 id="contact-title">
-          Let's connect.
-        </h1>
-
-        <p class="page-hero-description">
-          Have a question, suggestion, feedback or business enquiry?
-          We'd love to hear from you.
-        </p>
-
+      <div class="brand-mark">
+        D
       </div>
 
-    </section>
-
-
-    <!-- Contact Options -->
-    <section
-      class="contact-options-section section"
-      aria-labelledby="contact-options-title"
-    >
-
-      <div class="container">
-
-        <div class="section-heading">
-
-          <span class="section-kicker">
-            GET IN TOUCH
-          </span>
-
-          <h2 id="contact-options-title">
-            How can we help?
-          </h2>
-
-          <p>
-            Choose the option that best matches your enquiry.
-          </p>
-
-        </div>
-
-
-        <div class="feature-grid">
-
-
-          <!-- General -->
-          <article class="feature-item contact-card">
-
-            <div
-              class="feature-icon"
-              aria-hidden="true"
-            >
-              ♡
-            </div>
-
-            <h3>
-              General Enquiry
-            </h3>
-
-            <p>
-              Questions about DIPO WORLD, its tools or how the platform
-              works.
-            </p>
-
-            <a
-              class="product-card-link"
-              href="mailto:hello@dipolabs.io"
-            >
-              <span>Send an email</span>
-              <span aria-hidden="true">→</span>
-            </a>
-
-          </article>
-
-
-          <!-- Feedback -->
-          <article class="feature-item contact-card">
-
-            <div
-              class="feature-icon"
-              aria-hidden="true"
-            >
-              ✦
-            </div>
-
-            <h3>
-              Feedback
-            </h3>
-
-            <p>
-              Found something that can be improved? Share your ideas
-              and suggestions with us.
-            </p>
-
-            <a
-              class="product-card-link"
-              href="mailto:feedback@dipolabs.io"
-            >
-              <span>Share feedback</span>
-              <span aria-hidden="true">→</span>
-            </a>
-
-          </article>
-
-
-          <!-- Business -->
-          <article class="feature-item contact-card">
-
-            <div
-              class="feature-icon"
-              aria-hidden="true"
-            >
-              ◌
-            </div>
-
-            <h3>
-              Business
-            </h3>
-
-            <p>
-              For partnerships, collaborations, product opportunities
-              or other business enquiries.
-            </p>
-
-            <a
-              class="product-card-link"
-              href="mailto:business@dipolabs.io"
-            >
-              <span>Business enquiry</span>
-              <span aria-hidden="true">→</span>
-            </a>
-
-          </article>
-
-
-          <!-- Support -->
-          <article class="feature-item contact-card">
-
-            <div
-              class="feature-icon"
-              aria-hidden="true"
-            >
-              ⚡
-            </div>
-
-            <h3>
-              Support
-            </h3>
-
-            <p>
-              Need help with a DIPO BIO or DIPO QR feature?
-              Contact us for assistance.
-            </p>
-
-            <a
-              class="product-card-link"
-              href="mailto:support@dipolabs.io"
-            >
-              <span>Get support</span>
-              <span aria-hidden="true">→</span>
-            </a>
-
-          </article>
-
-
-        </div>
-
+      <div class="brand-text">
+        DIPO<span>WORLD</span>
       </div>
 
-    </section>
+    </a>
 
 
-    <!-- Contact Form -->
-    <section
-      class="contact-form-section section"
-      aria-labelledby="message-title"
-    >
+    <a
+      class="back-btn"
+      href="../../index.html">
 
-      <div class="container">
+      ← Home
 
-        <div class="content-card">
+    </a>
 
-          <div class="section-heading">
-
-            <span class="section-kicker">
-              MESSAGE
-            </span>
-
-            <h2 id="message-title">
-              Send us a message.
-            </h2>
-
-            <p>
-              This form is prepared for future contact-form integration.
-            </p>
-
-          </div>
-
-
-          <form
-            id="contact-form"
-            class="contact-form"
-            data-form="contact"
-            novalidate
-          >
-
-            <!-- Name -->
-            <div class="form-field">
-
-              <label
-                for="contact-name"
-              >
-                Your name
-              </label>
-
-              <input
-                id="contact-name"
-                name="name"
-                type="text"
-                autocomplete="name"
-                placeholder="Enter your name"
-                maxlength="100"
-              >
-
-              <small
-                class="form-error"
-                data-error-for="name"
-                aria-live="polite"
-              ></small>
-
-            </div>
-
-
-            <!-- Email -->
-            <div class="form-field">
-
-              <label
-                for="contact-email"
-              >
-                Email address
-              </label>
-
-              <input
-                id="contact-email"
-                name="email"
-                type="email"
-                autocomplete="email"
-                placeholder="you@example.com"
-                maxlength="254"
-              >
-
-              <small
-                class="form-error"
-                data-error-for="email"
-                aria-live="polite"
-              ></small>
-
-            </div>
-
-
-            <!-- Subject -->
-            <div class="form-field">
-
-              <label
-                for="contact-subject"
-              >
-                Subject
-              </label>
-
-              <select
-                id="contact-subject"
-                name="subject"
-              >
-
-                <option value="">
-                  Select an option
-                </option>
-
-                <option value="general">
-                  General enquiry
-                </option>
-
-                <option value="feedback">
-                  Feedback
-                </option>
-
-                <option value="support">
-                  Product support
-                </option>
-
-                <option value="business">
-                  Business enquiry
-                </option>
-
-                <option value="other">
-                  Other
-                </option>
-
-              </select>
-
-              <small
-                class="form-error"
-                data-error-for="subject"
-                aria-live="polite"
-              ></small>
-
-            </div>
-
-
-            <!-- Message -->
-            <div class="form-field">
-
-              <label
-                for="contact-message"
-              >
-                Message
-              </label>
-
-              <textarea
-                id="contact-message"
-                name="message"
-                rows="6"
-                placeholder="Write your message..."
-                maxlength="3000"
-              ></textarea>
-
-              <small
-                class="form-help"
-              >
-                Maximum 3000 characters.
-              </small>
-
-              <small
-                class="form-error"
-                data-error-for="message"
-                aria-live="polite"
-              ></small>
-
-            </div>
-
-
-            <!-- Submit -->
-            <div class="form-actions">
-
-              <button
-                type="submit"
-                class="btn btn-primary"
-                id="contact-submit"
-              >
-                <span>
-                  Send Message
-                </span>
-
-                <span
-                  aria-hidden="true"
-                >
-                  →
-                </span>
-              </button>
-
-              <p
-                class="form-status"
-                id="contact-form-status"
-                aria-live="polite"
-              ></p>
-
-            </div>
-
-          </form>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- Instagram -->
-    <section
-      class="contact-social-section section"
-      aria-labelledby="instagram-title"
-    >
-
-      <div class="container">
-
-        <div class="content-card content-card-center">
-
-          <span class="section-kicker">
-            SOCIAL
-          </span>
-
-          <h2 id="instagram-title">
-            Follow DIPO LABS
-          </h2>
-
-          <p>
-            Follow us on Instagram for DIPO WORLD updates,
-            announcements and creative content.
-          </p>
-
-          <a
-            class="btn btn-secondary"
-            href="https://instagram.com/dipolabs.io"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Open DIPO LABS Instagram"
-          >
-            @dipolabs.io
-          </a>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- FAQ -->
-    <section
-      class="contact-faq-section section"
-      aria-labelledby="faq-title"
-    >
-
-      <div class="container">
-
-        <div class="section-heading">
-
-          <span class="section-kicker">
-            FAQ
-          </span>
-
-          <h2 id="faq-title">
-            Before you contact us.
-          </h2>
-
-        </div>
-
-
-        <div class="faq-list">
-
-
-          <details class="faq-item">
-
-            <summary>
-              Is DIPO WORLD free to use?
-            </summary>
-
-            <p>
-              DIPO WORLD is designed to provide accessible and
-              lightweight digital tools. Individual product features
-              may have their own usage rules.
-            </p>
-
-          </details>
-
-
-          <details class="faq-item">
-
-            <summary>
-              Does DIPO BIO support stylish Unicode text?
-            </summary>
-
-            <p>
-              Yes. DIPO BIO is designed for Unicode fonts, symbols,
-              kaomoji, templates and creative bio text.
-            </p>
-
-          </details>
-
-
-          <details class="faq-item">
-
-            <summary>
-              Can I create QR codes with DIPO QR?
-            </summary>
-
-            <p>
-              Yes. DIPO QR is designed for artistic QR creation,
-              customization, barcode tools and export functionality.
-            </p>
-
-          </details>
-
-
-          <details class="faq-item">
-
-            <summary>
-              How can I report a problem?
-            </summary>
-
-            <p>
-              Use the support contact option above and describe the
-              issue clearly, including the feature where the problem
-              occurred.
-            </p>
-
-          </details>
-
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- Final CTA -->
-    <section
-      class="cta-section section"
-      aria-labelledby="contact-cta-title"
-    >
-
-      <div class="container">
-
-        <div class="cta-card">
-
-          <div class="cta-content">
-
-            <span class="section-kicker">
-              DIPO WORLD
-            </span>
-
-            <h2 id="contact-cta-title">
-              Keep creating.
-            </h2>
-
-            <p>
-              Explore DIPO WORLD and discover the tools built for
-              your digital creativity.
-            </p>
-
-          </div>
-
-          <div class="cta-actions">
-
-            <a
-              class="btn btn-primary"
-              href="../dipo-bio/"
-              data-route="/bio"
-            >
-              DIPO BIO
-            </a>
-
-            <a
-              class="btn btn-secondary"
-              href="../dipo-qr/"
-              data-route="/qr"
-            >
-              DIPO QR
-            </a>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-  </main>
-
-
-  <!-- Global Footer -->
-  <footer
-    id="site-footer"
-    data-component="footer"
-    data-component-src="../../components/footer.html"
-  >
-    <!-- Footer component -->
-  </footer>
-
-
-  <!-- Mobile Navigation -->
-  <nav
-    id="bottom-navigation"
-    data-component="bottom-nav"
-    data-component-src="../../components/bottom-nav.html"
-    aria-label="Mobile navigation"
-  >
-    <!-- Bottom navigation component -->
   </nav>
 
+</header>
 
-  <!-- Toast -->
-  <div
-    id="toast-root"
-    data-component="toast"
-    aria-live="polite"
-    aria-atomic="true"
-  >
-    <!-- Toast component -->
+
+<main id="content">
+
+
+<!-- =======================================================
+     HERO
+======================================================= -->
+
+<section class="hero">
+
+  <div class="hero-badge">
+
+    <span class="live-dot"></span>
+
+    DIPO WORLD • CONTACT
+
   </div>
 
 
-  <!-- Application -->
-  <script
-    type="module"
-    src="../../assets/js/core/app.js"
-  ></script>
+  <h1>
+    Let's <span>connect.</span>
+  </h1>
+
+
+  <p>
+    Have a question, idea, suggestion, feedback or
+    business opportunity? Send us a message.
+    We're building DIPO WORLD for creators like you.
+  </p>
+
+
+  <div class="hero-line"></div>
+
+</section>
+
+
+
+<!-- =======================================================
+     CONTACT OPTIONS
+======================================================= -->
+
+<section>
+
+  <div class="section-label">
+    GET IN TOUCH
+  </div>
+
+  <h2 class="section-title">
+    How can we help?
+  </h2>
+
+  <p class="section-subtitle">
+    Choose the option that best matches your enquiry.
+  </p>
+
+
+  <div class="contact-grid">
+
+
+    <!-- GENERAL -->
+
+    <article class="contact-card">
+
+      <div class="card-icon">
+        ♡
+      </div>
+
+      <div class="card-tag">
+        START HERE
+      </div>
+
+      <h3>
+        General Enquiry
+      </h3>
+
+      <p>
+        Questions about DIPO WORLD, its tools,
+        features or how the platform works.
+      </p>
+
+      <a
+        class="card-link"
+        href="mailto:dipak7rabari@gmail.com?subject=DIPO%20WORLD%20General%20Enquiry">
+
+        Send an email
+
+        <span>→</span>
+
+      </a>
+
+    </article>
+
+
+    <!-- FEEDBACK -->
+
+    <article class="contact-card">
+
+      <div class="card-icon">
+        ✦
+      </div>
+
+      <div class="card-tag">
+        HELP US IMPROVE
+      </div>
+
+      <h3>
+        Feedback
+      </h3>
+
+      <p>
+        Found something that can be improved?
+        Share your ideas, suggestions and experience.
+      </p>
+
+      <a
+        class="card-link"
+        href="mailto:dipak7rabari@gmail.com?subject=DIPO%20WORLD%20Feedback">
+
+        Share feedback
+
+        <span>→</span>
+
+      </a>
+
+    </article>
+
+
+    <!-- BUSINESS -->
+
+    <article class="contact-card">
+
+      <div class="card-icon">
+        ⚡
+      </div>
+
+      <div class="card-tag">
+        PARTNERSHIPS
+      </div>
+
+      <h3>
+        Business
+      </h3>
+
+      <p>
+        For partnerships, collaborations, product
+        opportunities or other business enquiries.
+      </p>
+
+      <a
+        class="card-link"
+        href="mailto:dipak7rabari@gmail.com?subject=DIPO%20WORLD%20Business%20Enquiry">
+
+        Business enquiry
+
+        <span>→</span>
+
+      </a>
+
+    </article>
+
+
+    <!-- SUPPORT -->
+
+    <article class="contact-card">
+
+      <div class="card-icon">
+        ✚
+      </div>
+
+      <div class="card-tag">
+        NEED HELP?
+      </div>
+
+      <h3>
+        Support
+      </h3>
+
+      <p>
+        Need help with a DIPO BIO or DIPO QR
+        feature? Contact us for assistance.
+      </p>
+
+      <a
+        class="card-link"
+        href="mailto:dipak7rabari@gmail.com?subject=DIPO%20WORLD%20Support">
+
+        Get support
+
+        <span>→</span>
+
+      </a>
+
+    </article>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =======================================================
+     DIRECT CONTACT
+======================================================= -->
+
+<section class="direct">
+
+  <div class="section-label">
+    DIRECT CONTACT
+  </div>
+
+  <h2 class="section-title">
+    Reach us directly.
+  </h2>
+
+  <p class="section-subtitle">
+    Pick whichever channel is easiest for you.
+  </p>
+
+
+  <div class="direct-grid">
+
+
+    <!-- EMAIL -->
+
+    <a
+      class="direct-card"
+      href="mailto:dipak7rabari@gmail.com">
+
+      <div class="direct-icon">
+        ✉️
+      </div>
+
+      <div class="direct-info">
+
+        <small>
+          Email
+        </small>
+
+        <strong>
+          dipak7rabari@gmail.com
+        </strong>
+
+      </div>
+
+    </a>
+
+
+    <!-- INSTAGRAM -->
+
+    <a
+      class="direct-card"
+      href="https://www.instagram.com/dipolabs.io?igsi=b2pvMmlsOTlyNWE3&utm_source=qr"
+      target="_blank"
+      rel="noopener noreferrer">
+
+      <div class="direct-icon">
+        ◎
+      </div>
+
+      <div class="direct-info">
+
+        <small>
+          Instagram
+        </small>
+
+        <strong>
+          @dipolabs.io
+        </strong>
+
+      </div>
+
+    </a>
+
+
+    <!-- TELEGRAM -->
+
+    <a
+      class="direct-card"
+      href="https://t.me/Dmproduct1"
+      target="_blank"
+      rel="noopener noreferrer">
+
+      <div class="direct-icon">
+        ✈️
+      </div>
+
+      <div class="direct-info">
+
+        <small>
+          Telegram
+        </small>
+
+        <strong>
+          Dmproduct1
+        </strong>
+
+      </div>
+
+    </a>
+
+
+    <!-- QUICK SUPPORT -->
+
+    <a
+      class="direct-card"
+      href="mailto:dipak7rabari@gmail.com?subject=Quick%20Support">
+
+      <div class="direct-icon">
+        ⚡
+      </div>
+
+      <div class="direct-info">
+
+        <small>
+          Quick Support
+        </small>
+
+        <strong>
+          Start a conversation →
+        </strong>
+
+      </div>
+
+    </a>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =======================================================
+     MESSAGE FORM
+======================================================= -->
+
+<section class="message-section">
+
+
+  <div class="message-copy">
+
+    <div class="section-label">
+      MESSAGE
+    </div>
+
+    <h2>
+      Send us a<br>
+      <span>message.</span>
+    </h2>
+
+    <p>
+      Tell us what's on your mind.
+      The form opens your email app with
+      everything filled in automatically.
+    </p>
+
+    <div class="mini-note">
+      🔒 No external form service required
+    </div>
+
+  </div>
+
+
+  <form
+    id="contactForm"
+    class="form-card">
+
+
+    <div class="form-row">
+
+      <div class="field">
+
+        <label for="name">
+          YOUR NAME
+        </label>
+
+        <input
+          id="name"
+          name="name"
+          type="text"
+          autocomplete="name"
+          placeholder="Enter your name"
+          required>
+
+      </div>
+
+
+      <div class="field">
+
+        <label for="email">
+          EMAIL ADDRESS
+        </label>
+
+        <input
+          id="email"
+          name="email"
+          type="email"
+          autocomplete="email"
+          placeholder="you@example.com"
+          required>
+
+      </div>
+
+    </div>
+
+
+    <div class="field">
+
+      <label for="subject">
+        SUBJECT
+      </label>
+
+      <select
+        id="subject"
+        name="subject"
+        required>
+
+        <option value="">
+          Select an option
+        </option>
+
+        <option value="General Enquiry">
+          General Enquiry
+        </option>
+
+        <option value="Feedback">
+          Feedback
+        </option>
+
+        <option value="Business Enquiry">
+          Business Enquiry
+        </option>
+
+        <option value="DIPO BIO Support">
+          DIPO BIO Support
+        </option>
+
+        <option value="DIPO QR Support">
+          DIPO QR Support
+        </option>
+
+        <option value="Bug Report">
+          Bug Report
+        </option>
+
+        <option value="Other">
+          Other
+        </option>
+
+      </select>
+
+    </div>
+
+
+    <div class="field">
+
+      <label for="message">
+        MESSAGE
+      </label>
+
+      <textarea
+        id="message"
+        name="message"
+        maxlength="3000"
+        placeholder="Write your message..."
+        required></textarea>
+
+    </div>
+
+
+    <div class="form-bottom">
+
+      <div class="char-count">
+        <span id="charCount">0</span> / 3000 characters
+      </div>
+
+      <button
+        class="send-btn"
+        type="submit">
+
+        Send Message →
+
+      </button>
+
+    </div>
+
+
+  </form>
+
+</section>
+
+
+
+<!-- =======================================================
+     SOCIAL
+======================================================= -->
+
+<section class="social-section">
+
+  <div class="social-label">
+    SOCIAL
+  </div>
+
+  <h2>
+    Follow DIPO LABS
+  </h2>
+
+  <p>
+    Follow us for DIPO WORLD updates,
+    new tools, announcements, experiments
+    and creative content.
+  </p>
+
+
+  <div class="social-links">
+
+    <a
+      class="social-link"
+      href="https://www.instagram.com/dipolabs.io?igsi=b2pvMmlsOTlyNWE3&utm_source=qr"
+      target="_blank"
+      rel="noopener noreferrer">
+
+      ◎ Instagram
+      <span>↗</span>
+
+    </a>
+
+
+    <a
+      class="social-link"
+      href="https://t.me/Dmproduct1"
+      target="_blank"
+      rel="noopener noreferrer">
+
+      ✈ Telegram
+      <span>↗</span>
+
+    </a>
+
+
+    <a
+      class="social-link"
+      href="mailto:dipak7rabari@gmail.com">
+
+      ✉ Email
+      <span>↗</span>
+
+    </a>
+
+  </div>
+
+</section>
+
+
+
+<!-- =======================================================
+     FAQ
+======================================================= -->
+
+<section class="faq">
+
+  <div class="section-label">
+    FAQ
+  </div>
+
+  <h2 class="section-title">
+    Before you contact us.
+  </h2>
+
+  <p class="section-subtitle">
+    A few quick answers.
+  </p>
+
+
+  <div class="faq-list">
+
+
+    <details>
+
+      <summary>
+        Is DIPO WORLD free to use?
+      </summary>
+
+      <div class="faq-answer">
+        DIPO WORLD includes free tools and features.
+        Some future products or advanced features
+        may have separate plans.
+      </div>
+
+    </details>
+
+
+    <details>
+
+      <summary>
+        Does DIPO BIO support stylish Unicode text?
+      </summary>
+
+      <div class="faq-answer">
+        Yes. DIPO BIO is designed for stylish
+        Unicode text, bios, usernames, symbols,
+        kaomoji and creative profile content.
+      </div>
+
+    </details>
+
+
+    <details>
+
+      <summary>
+        Can I create QR codes with DIPO QR?
+      </summary>
+
+      <div class="faq-answer">
+        Yes. DIPO QR is designed for creating
+        custom QR experiences including links,
+        text and other supported formats.
+      </div>
+
+    </details>
+
+
+    <details>
+
+      <summary>
+        How can I report a problem?
+      </summary>
+
+      <div class="faq-answer">
+        Use the message form above or email
+        us directly at
+        dipak7rabari@gmail.com.
+      </div>
+
+    </details>
+
+
+    <details>
+
+      <summary>
+        Can I contact DIPO LABS for collaboration?
+      </summary>
+
+      <div class="faq-answer">
+        Yes. Select Business Enquiry in the
+        contact form or email us directly with
+        your collaboration details.
+      </div>
+
+    </details>
+
+
+  </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =======================================================
+     FOOTER
+======================================================= -->
+
+<footer class="footer">
+
+  <div class="footer-inner">
+
+    <div class="footer-brand">
+      DIPO<span>WORLD</span>
+    </div>
+
+    <div class="footer-copy">
+
+      Made With ❤️ in India<br>
+
+      <strong>
+        𝔄 𝔇𝔐 𝔭𝔯𝔬𝔡𝔲𝔠𝔱
+      </strong>
+
+      <br>
+
+      All copyrights reserved @
+      <strong>
+        𝔄 𝔇𝔐 𝔭𝔯𝔬𝔡𝔲𝔠𝔱
+      </strong>
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+
+<!-- TOAST -->
+
+<div
+  id="toast"
+  class="toast"
+  role="status"
+  aria-live="polite">
+</div>
+
+
+
+<script>
+
+/* =========================================================
+   DIPO WORLD CONTACT ENGINE
+========================================================= */
+
+const form =
+  document.getElementById("contactForm");
+
+const message =
+  document.getElementById("message");
+
+const charCount =
+  document.getElementById("charCount");
+
+const toast =
+  document.getElementById("toast");
+
+
+/* =========================================================
+   CHARACTER COUNTER
+========================================================= */
+
+message.addEventListener("input", () => {
+
+  charCount.textContent =
+    message.value.length;
+
+});
+
+
+/* =========================================================
+   TOAST
+========================================================= */
+
+let toastTimer;
+
+function showToast(text){
+
+  toast.textContent = text;
+
+  toast.classList.add("show");
+
+  clearTimeout(toastTimer);
+
+  toastTimer =
+    setTimeout(() => {
+
+      toast.classList.remove("show");
+
+    },2200);
+
+}
+
+
+/* =========================================================
+   CONTACT FORM
+   Opens user's default email app
+========================================================= */
+
+form.addEventListener("submit",(event)=>{
+
+  event.preventDefault();
+
+
+  const name =
+    document.getElementById("name")
+    .value.trim();
+
+  const email =
+    document.getElementById("email")
+    .value.trim();
+
+  const subject =
+    document.getElementById("subject")
+    .value.trim();
+
+  const text =
+    message.value.trim();
+
+
+  if(!name || !email || !subject || !text){
+
+    showToast("⚠ Please complete all fields.");
+
+    return;
+
+  }
+
+
+  const mailSubject =
+    `DIPO WORLD — ${subject}`;
+
+
+  const body =
+`Hello DIPO WORLD,
+
+Name: ${name}
+Email: ${email}
+
+Subject: ${subject}
+
+Message:
+${text}
+
+-------------------------
+Sent from DIPO WORLD Contact
+`;
+
+
+  const mailto =
+    "mailto:dipak7rabari@gmail.com" +
+    "?subject=" +
+    encodeURIComponent(mailSubject) +
+    "&body=" +
+    encodeURIComponent(body);
+
+
+  window.location.href = mailto;
+
+
+  showToast("✉ Opening your email app…");
+
+});
+
+
+/* =========================================================
+   CARD REVEAL
+========================================================= */
+
+const revealItems =
+  document.querySelectorAll(
+    ".contact-card,.direct-card,.form-card,.faq details"
+  );
+
+
+if("IntersectionObserver" in window){
+
+  const observer =
+    new IntersectionObserver(
+      entries => {
+
+        entries.forEach(entry => {
+
+          if(entry.isIntersecting){
+
+            entry.target.style.animation =
+              "fadeUp .65s ease both";
+
+            observer.unobserve(
+              entry.target
+            );
+
+          }
+
+        });
+
+      },
+      {
+        threshold:.08
+      }
+    );
+
+
+  revealItems.forEach(item => {
+
+    item.style.opacity = "0";
+
+    observer.observe(item);
+
+  });
+
+}
+
+</script>
 
 </body>
 </html>
