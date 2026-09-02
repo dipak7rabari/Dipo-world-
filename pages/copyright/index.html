@@ -1,610 +1,1575 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f5f9ff">
+<meta name="description" content="DIPO WORLD Copyright — information about ownership, original project materials, trademarks, generated content and third-party assets.">
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0, viewport-fit=cover"
-  >
+<title>DIPO WORLD — Copyright</title>
 
-  <meta
-    name="description"
-    content="Copyright and intellectual property information for DIPO WORLD, DIPO BIO and DIPO QR."
-  >
+<style>
+:root{
+  --bg:#f7faff;
+  --card:#ffffff;
+  --soft:#eef5ff;
+  --soft2:#f4f8fc;
+  --line:#dfe8f2;
+  --text:#101827;
+  --muted:#667085;
+  --blue:#2859d7;
+  --blue2:#1747c7;
+  --teal:#149b91;
+  --green:#15945a;
+  --red:#e54867;
+  --shadow:0 14px 45px rgba(30,65,110,.08);
+  --radius:26px;
+}
 
-  <meta
-    name="robots"
-    content="index, follow"
-  >
+*{
+  box-sizing:border-box;
+}
 
-  <meta
-    name="theme-color"
-    content="#f5f7f2"
-  >
+html{
+  scroll-behavior:smooth;
+}
 
-  <link
-    rel="canonical"
-    href="/pages/copyright/"
-  >
+body{
+  margin:0;
+  background:
+    radial-gradient(circle at 10% 0%,rgba(40,89,215,.08),transparent 28%),
+    radial-gradient(circle at 90% 8%,rgba(20,155,145,.07),transparent 24%),
+    var(--bg);
+  color:var(--text);
+  font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",Arial,sans-serif;
+  line-height:1.7;
+}
 
-  <title>Copyright — DIPO WORLD</title>
+a{
+  color:inherit;
+}
 
-  <link
-    rel="stylesheet"
-    href="../../assets/css/app.css"
-  >
+button,
+a{
+  -webkit-tap-highlight-color:transparent;
+}
 
-  <link
-    rel="manifest"
-    href="../../manifest.json"
-  >
+.container{
+  width:min(1080px,92%);
+  margin:auto;
+}
 
-  <link
-    rel="icon"
-    href="../../favicon.ico"
-  >
+/* =========================
+   HEADER
+========================= */
+
+header{
+  position:sticky;
+  top:0;
+  z-index:50;
+  background:rgba(247,250,255,.88);
+  backdrop-filter:blur(18px);
+  -webkit-backdrop-filter:blur(18px);
+  border-bottom:1px solid rgba(223,232,242,.9);
+}
+
+.nav{
+  min-height:76px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:9px;
+  text-decoration:none;
+  font-size:24px;
+  font-weight:950;
+  letter-spacing:-1.5px;
+}
+
+.logo-mark{
+  width:38px;
+  height:38px;
+  border-radius:13px;
+  display:grid;
+  place-items:center;
+  background:linear-gradient(135deg,#2859d7,#6d8fff);
+  color:#fff;
+  box-shadow:0 8px 22px rgba(40,89,215,.25);
+  font-size:18px;
+}
+
+.logo span{
+  color:var(--blue);
+}
+
+.back{
+  text-decoration:none;
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:9px 14px;
+  font-size:14px;
+  font-weight:800;
+  box-shadow:0 5px 18px rgba(30,65,110,.05);
+  transition:.2s ease;
+}
+
+.back:hover{
+  transform:translateY(-2px);
+  border-color:#b9c9e4;
+}
+
+/* =========================
+   MAIN
+========================= */
+
+main{
+  padding:34px 0 80px;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+  position:relative;
+  overflow:hidden;
+  padding:34px 28px;
+  border:1px solid #dce7f4;
+  border-radius:32px;
+  background:
+    linear-gradient(135deg,rgba(255,255,255,.97),rgba(240,247,255,.95));
+  box-shadow:var(--shadow);
+}
+
+.hero::before{
+  content:"";
+  position:absolute;
+  width:180px;
+  height:180px;
+  border-radius:50%;
+  background:rgba(40,89,215,.08);
+  right:-65px;
+  top:-70px;
+}
+
+.hero::after{
+  content:"";
+  position:absolute;
+  width:120px;
+  height:120px;
+  border-radius:50%;
+  background:rgba(20,155,145,.07);
+  left:-55px;
+  bottom:-55px;
+}
+
+.eyebrow{
+  position:relative;
+  z-index:1;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:7px 12px;
+  border-radius:999px;
+  background:#eef4ff;
+  border:1px solid #dce6ff;
+  color:var(--blue);
+  font-size:11px;
+  font-weight:950;
+  letter-spacing:1.4px;
+  text-transform:uppercase;
+}
+
+.hero h1{
+  position:relative;
+  z-index:1;
+  margin:18px 0 12px;
+  max-width:800px;
+  font-size:clamp(42px,8vw,76px);
+  line-height:.98;
+  letter-spacing:-4px;
+}
+
+.hero h1 span{
+  color:var(--blue);
+}
+
+.hero-text{
+  position:relative;
+  z-index:1;
+  max-width:720px;
+  margin:0;
+  color:var(--muted);
+  font-size:17px;
+}
+
+.updated{
+  position:relative;
+  z-index:1;
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:22px;
+}
+
+.updated span{
+  padding:7px 11px;
+  border-radius:10px;
+  background:#fff;
+  border:1px solid var(--line);
+  color:#6b7280;
+  font-size:12px;
+  font-weight:800;
+}
+
+/* =========================
+   QUICK NAV
+========================= */
+
+.quick-nav{
+  margin:20px 0;
+  display:flex;
+  gap:9px;
+  overflow-x:auto;
+  padding-bottom:4px;
+  scrollbar-width:none;
+}
+
+.quick-nav::-webkit-scrollbar{
+  display:none;
+}
+
+.quick-nav a{
+  flex:0 0 auto;
+  text-decoration:none;
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:13px;
+  padding:9px 13px;
+  color:#536174;
+  font-size:12px;
+  font-weight:850;
+  transition:.2s ease;
+}
+
+.quick-nav a:hover{
+  color:var(--blue);
+  border-color:#bfd0ee;
+  background:#f5f8ff;
+}
+
+/* =========================
+   NOTICE
+========================= */
+
+.notice{
+  margin:22px 0;
+  padding:20px;
+  border-radius:22px;
+  border:1px solid #d7e4f5;
+  background:linear-gradient(135deg,#edf5ff,#f8fbff);
+  display:flex;
+  gap:15px;
+  align-items:flex-start;
+}
+
+.notice-icon{
+  width:42px;
+  height:42px;
+  flex:0 0 42px;
+  border-radius:14px;
+  display:grid;
+  place-items:center;
+  background:#fff;
+  border:1px solid #dbe6f4;
+  font-size:20px;
+}
+
+.notice strong{
+  display:block;
+  margin-bottom:3px;
+  font-size:15px;
+}
+
+.notice p{
+  margin:0;
+  color:var(--muted);
+  font-size:14px;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+
+.section{
+  scroll-margin-top:95px;
+  margin-top:48px;
+}
+
+.section-label{
+  color:var(--blue);
+  font-size:11px;
+  font-weight:950;
+  letter-spacing:1.8px;
+  text-transform:uppercase;
+  margin-bottom:7px;
+}
+
+.section h2{
+  margin:0 0 12px;
+  font-size:clamp(29px,5vw,42px);
+  line-height:1.08;
+  letter-spacing:-1.8px;
+}
+
+.section-intro{
+  margin:0 0 22px;
+  color:var(--muted);
+  font-size:16px;
+  max-width:760px;
+}
+
+/* =========================
+   CONTENT CARDS
+========================= */
+
+.card-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:14px;
+}
+
+.card{
+  background:rgba(255,255,255,.96);
+  border:1px solid var(--line);
+  border-radius:22px;
+  padding:21px;
+  box-shadow:0 8px 28px rgba(30,65,110,.045);
+  transition:.22s ease;
+}
+
+.card:hover{
+  transform:translateY(-3px);
+  border-color:#c6d5eb;
+  box-shadow:0 14px 38px rgba(30,65,110,.08);
+}
+
+.card-icon{
+  width:44px;
+  height:44px;
+  border-radius:14px;
+  display:grid;
+  place-items:center;
+  background:#f0f5ff;
+  border:1px solid #dfe8fb;
+  font-size:21px;
+  margin-bottom:14px;
+}
+
+.card h3{
+  margin:0 0 8px;
+  font-size:20px;
+  letter-spacing:-.5px;
+}
+
+.card p{
+  margin:0;
+  color:#626f80;
+  font-size:14px;
+}
+
+.card.full{
+  grid-column:1/-1;
+}
+
+/* =========================
+   LEGAL LIST
+========================= */
+
+.legal-list{
+  display:grid;
+  gap:12px;
+  margin-top:20px;
+}
+
+.legal-item{
+  display:flex;
+  gap:14px;
+  align-items:flex-start;
+  padding:17px;
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:18px;
+}
+
+.legal-number{
+  width:34px;
+  height:34px;
+  flex:0 0 34px;
+  display:grid;
+  place-items:center;
+  border-radius:11px;
+  background:#eef4ff;
+  color:var(--blue);
+  font-size:12px;
+  font-weight:950;
+}
+
+.legal-item h3{
+  margin:0 0 3px;
+  font-size:16px;
+}
+
+.legal-item p{
+  margin:0;
+  color:var(--muted);
+  font-size:13px;
+}
+
+/* =========================
+   BRAND BLOCK
+========================= */
+
+.brand-card{
+  position:relative;
+  overflow:hidden;
+  padding:28px;
+  border-radius:28px;
+  color:#fff;
+  background:
+    radial-gradient(circle at 90% 10%,rgba(255,255,255,.18),transparent 25%),
+    linear-gradient(135deg,#142342,#2859d7);
+  box-shadow:0 18px 45px rgba(40,89,215,.2);
+}
+
+.brand-card small{
+  color:rgba(255,255,255,.7);
+  font-weight:900;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+}
+
+.brand-card h2{
+  margin:10px 0;
+  font-size:clamp(34px,7vw,55px);
+  letter-spacing:-3px;
+}
+
+.brand-products{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin:17px 0;
+}
+
+.brand-products span{
+  padding:8px 12px;
+  border-radius:12px;
+  background:rgba(255,255,255,.12);
+  border:1px solid rgba(255,255,255,.18);
+  font-size:12px;
+  font-weight:850;
+}
+
+.brand-card p{
+  margin:0;
+  max-width:700px;
+  color:rgba(255,255,255,.82);
+  font-size:14px;
+}
+
+/* =========================
+   SIGNATURE
+========================= */
+
+.signature{
+  margin-top:20px;
+  padding:22px;
+  border:1px solid var(--line);
+  border-radius:22px;
+  background:#fff;
+  text-align:center;
+}
+
+.signature .made{
+  color:#647184;
+  font-size:14px;
+  font-weight:700;
+}
+
+.signature .heart{
+  font-size:22px;
+}
+
+.signature .dm{
+  margin-top:9px;
+  font-size:24px;
+  font-weight:800;
+}
+
+.signature .rights{
+  margin-top:7px;
+  color:#8a94a3;
+  font-size:12px;
+  font-weight:700;
+}
+
+/* =========================
+   RELATED DOCS
+========================= */
+
+.docs{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+}
+
+.doc{
+  display:block;
+  text-decoration:none;
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:19px;
+  padding:18px;
+  transition:.2s ease;
+}
+
+.doc:hover{
+  transform:translateY(-3px);
+  border-color:#b9cbe7;
+}
+
+.doc-icon{
+  font-size:21px;
+}
+
+.doc h3{
+  margin:11px 0 3px;
+  font-size:16px;
+}
+
+.doc p{
+  margin:0;
+  color:var(--muted);
+  font-size:12px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+  margin-top:65px;
+  border-top:1px solid var(--line);
+  padding:35px 0 45px;
+  background:rgba(255,255,255,.55);
+}
+
+.footer-brand{
+  font-size:20px;
+  font-weight:950;
+  letter-spacing:-1px;
+}
+
+.footer-brand span{
+  color:var(--blue);
+}
+
+.footer-text{
+  color:#7a8594;
+  font-size:13px;
+  margin:9px 0 20px;
+}
+
+.footer-links{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px 17px;
+}
+
+.footer-links a{
+  color:#536174;
+  text-decoration:none;
+  font-size:12px;
+  font-weight:800;
+}
+
+.footer-links a:hover{
+  color:var(--blue);
+}
+
+.footer-bottom{
+  margin-top:24px;
+  padding-top:18px;
+  border-top:1px solid #e7edf4;
+  color:#8a94a3;
+  font-size:11px;
+}
+
+/* =========================
+   BACK TO TOP
+========================= */
+
+.top-btn{
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  z-index:40;
+  width:46px;
+  height:46px;
+  border:1px solid #d4dfed;
+  border-radius:15px;
+  background:rgba(255,255,255,.92);
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+  color:var(--blue);
+  font-size:19px;
+  font-weight:900;
+  cursor:pointer;
+  box-shadow:0 12px 30px rgba(20,50,90,.13);
+  opacity:0;
+  pointer-events:none;
+  transform:translateY(10px);
+  transition:.25s ease;
+}
+
+.top-btn.show{
+  opacity:1;
+  pointer-events:auto;
+  transform:translateY(0);
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:700px){
+
+  .container{
+    width:92%;
+  }
+
+  .nav{
+    min-height:67px;
+  }
+
+  .logo{
+    font-size:20px;
+  }
+
+  .logo-mark{
+    width:34px;
+    height:34px;
+    border-radius:11px;
+    font-size:16px;
+  }
+
+  .back{
+    padding:8px 11px;
+    font-size:12px;
+  }
+
+  main{
+    padding:20px 0 60px;
+  }
+
+  .hero{
+    padding:26px 20px;
+    border-radius:25px;
+  }
+
+  .hero h1{
+    font-size:49px;
+    letter-spacing:-2.8px;
+  }
+
+  .hero-text{
+    font-size:15px;
+    line-height:1.6;
+  }
+
+  .updated span{
+    font-size:10px;
+  }
+
+  .notice{
+    padding:16px;
+    border-radius:19px;
+  }
+
+  .notice-icon{
+    width:38px;
+    height:38px;
+    flex-basis:38px;
+  }
+
+  .notice p{
+    font-size:13px;
+  }
+
+  .section{
+    margin-top:38px;
+  }
+
+  .section h2{
+    font-size:30px;
+    letter-spacing:-1.4px;
+  }
+
+  .section-intro{
+    font-size:14px;
+  }
+
+  .card-grid{
+    grid-template-columns:1fr;
+    gap:10px;
+  }
+
+  .card.full{
+    grid-column:auto;
+  }
+
+  .card{
+    padding:18px;
+    border-radius:19px;
+  }
+
+  .card h3{
+    font-size:18px;
+  }
+
+  .card p{
+    font-size:13px;
+  }
+
+  .legal-item{
+    padding:14px;
+  }
+
+  .legal-item h3{
+    font-size:15px;
+  }
+
+  .legal-item p{
+    font-size:12px;
+  }
+
+  .brand-card{
+    padding:23px 20px;
+    border-radius:24px;
+  }
+
+  .brand-card h2{
+    font-size:40px;
+    letter-spacing:-2px;
+  }
+
+  .docs{
+    grid-template-columns:1fr;
+  }
+
+  .signature{
+    padding:20px 15px;
+  }
+
+  .signature .dm{
+    font-size:21px;
+  }
+
+  footer{
+    margin-top:45px;
+  }
+}
+
+@media(max-width:380px){
+
+  .hero h1{
+    font-size:43px;
+  }
+
+  .logo{
+    font-size:18px;
+  }
+
+  .back{
+    font-size:11px;
+  }
+}
+</style>
 </head>
 
-<body
-  class="page page-copyright"
-  data-page="copyright"
-  data-product="dipo-world"
->
+<body>
 
-  <!-- Accessibility -->
-  <a
-    class="skip-link"
-    href="#main-content"
-  >
-    Skip to content
-  </a>
+<header>
+  <div class="container nav">
 
+    <a href="../../index.html" class="logo">
+      <span class="logo-mark">D</span>
+      DIPO<span>WORLD</span>
+    </a>
 
-  <!-- Global Navigation -->
-  <header
-    id="site-header"
-    data-component="navbar"
-    data-component-src="../../components/navbar.html"
-  >
-    <!-- Navbar component -->
-  </header>
+    <a href="../../index.html" class="back">
+      ← DIPO WORLD
+    </a>
 
+  </div>
+</header>
 
-  <!-- Main Content -->
-  <main
-    id="main-content"
-    class="legal-page"
-    tabindex="-1"
-  >
 
-    <!-- Page Hero -->
-    <section
-      class="page-hero section"
-      aria-labelledby="copyright-title"
-    >
+<main class="container">
 
-      <div class="container">
+  <!-- HERO -->
 
-        <span class="section-kicker">
-          LEGAL
-        </span>
+  <section class="hero">
 
-        <h1 id="copyright-title">
-          Copyright.
-        </h1>
+    <div class="eyebrow">
+      © LEGAL · COPYRIGHT
+    </div>
 
-        <p class="page-hero-description">
-          Information about ownership, original content and
-          third-party materials used by DIPO WORLD.
-        </p>
+    <h1>
+      Copyright<span>.</span>
+    </h1>
 
-      </div>
+    <p class="hero-text">
+      Information about ownership, original project materials,
+      trademarks, generated content and third-party resources
+      used throughout DIPO WORLD.
+    </p>
 
-    </section>
+    <div class="updated">
+      <span>© DIPO WORLD</span>
+      <span>DIPO BIO</span>
+      <span>DIPO QR</span>
+      <span>All Rights Reserved</span>
+    </div>
 
+  </section>
 
-    <!-- Copyright Notice -->
-    <section
-      class="legal-content-section section"
-      aria-labelledby="notice-title"
-    >
 
-      <div class="container">
+  <!-- QUICK NAV -->
 
-        <article class="content-card">
-
-          <span class="section-kicker">
-            COPYRIGHT NOTICE
-          </span>
-
-          <h2 id="notice-title">
-            DIPO WORLD
-          </h2>
-
-          <p>
-            DIPO WORLD, including its original interface design,
-            original written content, original graphics and original
-            project assets, is protected by applicable copyright and
-            intellectual property laws.
-          </p>
-
-          <p>
-            The names DIPO WORLD, DIPO BIO and DIPO QR are used as
-            project and product identifiers. Their use does not grant
-            permission to copy, reproduce, redistribute or represent
-            the project as your own.
-          </p>
-
-        </article>
-
-      </div>
-
-    </section>
-
-
-    <!-- Ownership -->
-    <section
-      class="legal-content-section section"
-      aria-labelledby="ownership-title"
-    >
-
-      <div class="container">
-
-        <article class="content-card">
-
-          <span class="section-kicker">
-            OWNERSHIP
-          </span>
-
-          <h2 id="ownership-title">
-            Original Project Materials
-          </h2>
-
-          <p>
-            Unless otherwise stated, original DIPO WORLD application
-            code, UI structure, original written content, original
-            design elements and original project assets belong to the
-            project owner and are subject to the applicable project
-            license.
-          </p>
-
-          <p>
-            No part of the original project should be copied,
-            republished, resold or redistributed as an independent
-            product without appropriate authorization.
-          </p>
-
-        </article>
-
-      </div>
-
-    </section>
-
-
-    <!-- Third Party -->
-    <section
-      class="legal-content-section section"
-      aria-labelledby="third-party-title"
-    >
-
-      <div class="container">
-
-        <article class="content-card">
-
-          <span class="section-kicker">
-            THIRD-PARTY MATERIALS
-          </span>
-
-          <h2 id="third-party-title">
-            Third-party libraries and assets
-          </h2>
-
-          <p>
-            DIPO WORLD may use third-party open-source libraries,
-            browser technologies, fonts, icons or other resources.
-          </p>
-
-          <p>
-            Third-party materials remain the property of their
-            respective authors, creators or organizations.
-          </p>
-
-          <p>
-            Their use is governed by the applicable license,
-            copyright notice or terms provided by the respective
-            owner.
-          </p>
-
-          <p>
-            Third-party copyright and license notices must not be
-            removed when required by their applicable licenses.
-          </p>
-
-        </article>
-
-      </div>
-
-    </section>
-
-
-    <!-- Trademarks -->
-    <section
-      class="legal-content-section section"
-      aria-labelledby="trademark-title"
-    >
-
-      <div class="container">
-
-        <article class="content-card">
-
-          <span class="section-kicker">
-            TRADEMARKS
-          </span>
-
-          <h2 id="trademark-title">
-            Names and logos
-          </h2>
-
-          <p>
-            Third-party names, trademarks, logos and brand identities
-            displayed through the platform belong to their respective
-            owners.
-          </p>
-
-          <p>
-            Their appearance within a tool or generated design does
-            not necessarily indicate sponsorship, endorsement or
-            affiliation.
-          </p>
-
-          <p>
-            Users are responsible for ensuring that their use of
-            third-party trademarks and brand assets complies with
-            applicable laws and permissions.
-          </p>
-
-        </article>
-
-      </div>
-
-    </section>
-
-
-    <!-- User Generated Content -->
-    <section
-      class="legal-content-section section"
-      aria-labelledby="user-content-title"
-    >
-
-      <div class="container">
-
-        <article class="content-card">
-
-          <span class="section-kicker">
-            USER CONTENT
-          </span>
-
-          <h2 id="user-content-title">
-            Content created by users
-          </h2>
-
-          <p>
-            DIPO WORLD tools may allow users to enter text, links,
-            images, logos or other content for processing or
-            generation.
-          </p>
-
-          <p>
-            Users remain responsible for the content they submit,
-            generate, download or distribute using the platform.
-          </p>
-
-          <p>
-            Users should not use DIPO WORLD to create or distribute
-            content that violates applicable law, intellectual
-            property rights or the rights of others.
-          </p>
-
-        </article>
-
-      </div>
-
-    </section>
-
-
-    <!-- Generated Content -->
-    <section
-      class="legal-content-section section"
-      aria-labelledby="generated-title"
-    >
-
-      <div class="container">
-
-        <article class="content-card">
-
-          <span class="section-kicker">
-            GENERATED CONTENT
-          </span>
-
-          <h2 id="generated-title">
-            Generated designs
-          </h2>
-
-          <p>
-            DIPO BIO and DIPO QR may generate text layouts, symbols,
-            QR codes, barcodes and other tool outputs based on
-            information supplied by the user.
-          </p>
-
-          <p>
-            Users are responsible for checking generated results
-            before publishing, printing, selling or distributing them.
-          </p>
-
-          <p>
-            A generated result should not be assumed to grant
-            ownership of third-party trademarks, logos, symbols or
-            copyrighted material contained within the user's input.
-          </p>
-
-        </article>
-
-      </div>
-
-    </section>
-
-
-    <!-- Brand Attribution -->
-    <section
-      class="legal-content-section section"
-      aria-labelledby="brand-title"
-    >
-
-      <div class="container">
-
-        <article class="brand-card">
-
-          <span class="section-kicker">
-            BRAND
-          </span>
-
-          <h2 id="brand-title">
-            DIPO WORLD
-          </h2>
-
-          <p>
-            DIPO BIO · DIPO QR
-          </p>
-
-          <p>
-            Made With ❤️ in India
-          </p>
-
-          <p>
-            𝔄 𝔇𝔐 𝔭𝔯𝔬𝔡𝔲𝔠𝔱
-          </p>
-
-        </article>
-
-      </div>
-
-    </section>
-
-
-    <!-- Copyright Footer Notice -->
-    <section
-      class="legal-content-section section"
-      aria-labelledby="reserved-title"
-    >
-
-      <div class="container">
-
-        <article class="content-card content-card-center">
-
-          <span class="section-kicker">
-            RIGHTS RESERVED
-          </span>
-
-          <h2 id="reserved-title">
-            All copyrights reserved
-          </h2>
-
-          <p>
-            @ 𝔄 𝔇𝔐 𝔭𝔯𝔬𝔡𝔲𝔠𝔱
-          </p>
-
-          <p>
-            For licensing, permissions or other copyright-related
-            questions, please contact the project owner through the
-            official contact channel.
-          </p>
-
-          <a
-            class="btn btn-primary"
-            href="../contact/"
-            data-route="/contact"
-          >
-            Contact DIPO WORLD
-          </a>
-
-        </article>
-
-      </div>
-
-    </section>
-
-
-    <!-- Legal Navigation -->
-    <section
-      class="legal-navigation-section section"
-      aria-labelledby="legal-navigation-title"
-    >
-
-      <div class="container">
-
-        <div class="section-heading section-heading-center">
-
-          <span class="section-kicker">
-            MORE INFORMATION
-          </span>
-
-          <h2 id="legal-navigation-title">
-            Legal documents
-          </h2>
-
-        </div>
-
-
-        <div class="product-grid">
-
-
-          <a
-            class="product-card product-card-link-card"
-            href="../privacy/"
-            data-route="/privacy"
-          >
-
-            <div
-              class="product-card-icon"
-              aria-hidden="true"
-            >
-              ◌
-            </div>
-
-            <div class="product-card-content">
-
-              <h3>
-                Privacy Policy
-              </h3>
-
-              <p>
-                Learn how DIPO WORLD approaches privacy and data.
-              </p>
-
-              <span class="product-card-link">
-                <span>Read Privacy Policy</span>
-                <span aria-hidden="true">→</span>
-              </span>
-
-            </div>
-
-          </a>
-
-
-          <a
-            class="product-card product-card-link-card"
-            href="../terms/"
-            data-route="/terms"
-          >
-
-            <div
-              class="product-card-icon"
-              aria-hidden="true"
-            >
-              ✦
-            </div>
-
-            <div class="product-card-content">
-
-              <h3>
-                Terms of Use
-              </h3>
-
-              <p>
-                Read the rules and conditions for using the platform.
-              </p>
-
-              <span class="product-card-link">
-                <span>Read Terms</span>
-                <span aria-hidden="true">→</span>
-              </span>
-
-            </div>
-
-          </a>
-
-
-          <a
-            class="product-card product-card-link-card"
-            href="../disclaimer/"
-            data-route="/disclaimer"
-          >
-
-            <div
-              class="product-card-icon"
-              aria-hidden="true"
-            >
-              ⚠
-            </div>
-
-            <div class="product-card-content">
-
-              <h3>
-                Disclaimer
-              </h3>
-
-              <p>
-                Important information about generated content and
-                tool usage.
-              </p>
-
-              <span class="product-card-link">
-                <span>Read Disclaimer</span>
-                <span aria-hidden="true">→</span>
-              </span>
-
-            </div>
-
-          </a>
-
-
-        </div>
-
-      </div>
-
-    </section>
-
-  </main>
-
-
-  <!-- Global Footer -->
-  <footer
-    id="site-footer"
-    data-component="footer"
-    data-component-src="../../components/footer.html"
-  >
-    <!-- Footer component -->
-  </footer>
-
-
-  <!-- Mobile Navigation -->
-  <nav
-    id="bottom-navigation"
-    data-component="bottom-nav"
-    data-component-src="../../components/bottom-nav.html"
-    aria-label="Mobile navigation"
-  >
-    <!-- Bottom navigation component -->
+  <nav class="quick-nav" aria-label="Copyright sections">
+    <a href="#ownership">Ownership</a>
+    <a href="#original">Original Work</a>
+    <a href="#third-party">Third-Party</a>
+    <a href="#trademarks">Trademarks</a>
+    <a href="#user-content">User Content</a>
+    <a href="#generated">Generated</a>
+    <a href="#brand">Brand</a>
   </nav>
 
 
-  <!-- Toast -->
-  <div
-    id="toast-root"
-    data-component="toast"
-    aria-live="polite"
-    aria-atomic="true"
-  >
-    <!-- Toast component -->
+  <!-- NOTICE -->
+
+  <div class="notice">
+
+    <div class="notice-icon">©</div>
+
+    <div>
+      <strong>Copyright notice</strong>
+
+      <p>
+        DIPO WORLD and its original project materials are intended
+        to remain identifiable as part of the DIPO WORLD project.
+        Please respect applicable copyright, intellectual property
+        and trademark laws when using or sharing project materials.
+      </p>
+    </div>
+
   </div>
 
 
-  <!-- Application -->
-  <script
-    type="module"
-    src="../../assets/js/core/app.js"
-  ></script>
+  <!-- OWNERSHIP -->
+
+  <section class="section" id="ownership">
+
+    <div class="section-label">
+      01 · Ownership
+    </div>
+
+    <h2>Who owns DIPO WORLD?</h2>
+
+    <p class="section-intro">
+      DIPO WORLD is a digital project containing original interface,
+      written content, design systems, product concepts and project
+      assets created for the platform.
+    </p>
+
+    <div class="card-grid">
+
+      <article class="card">
+
+        <div class="card-icon">🌐</div>
+
+        <h3>DIPO WORLD</h3>
+
+        <p>
+          The DIPO WORLD project identity, interface structure,
+          original written materials and original design direction
+          are part of the project and are protected to the extent
+          provided by applicable law.
+        </p>
+
+      </article>
+
+
+      <article class="card">
+
+        <div class="card-icon">🧬</div>
+
+        <h3>DIPO BIO</h3>
+
+        <p>
+          DIPO BIO is a DIPO WORLD product concept and product
+          identifier. Its original interface, layouts, written
+          materials and project-specific assets form part of
+          the DIPO WORLD ecosystem.
+        </p>
+
+      </article>
+
+
+      <article class="card">
+
+        <div class="card-icon">▣</div>
+
+        <h3>DIPO QR</h3>
+
+        <p>
+          DIPO QR is a DIPO WORLD product concept covering QR,
+          barcode and related creative utility experiences.
+          Original project-specific materials remain associated
+          with the DIPO WORLD project.
+        </p>
+
+      </article>
+
+
+      <article class="card">
+
+        <div class="card-icon">𝔄</div>
+
+        <h3>A DM Product</h3>
+
+        <p>
+          The A DM Product identity is used as the project/product
+          branding associated with DIPO WORLD and its related
+          experiences.
+        </p>
+
+      </article>
+
+    </div>
+
+  </section>
+
+
+  <!-- ORIGINAL MATERIALS -->
+
+  <section class="section" id="original">
+
+    <div class="section-label">
+      02 · Original Work
+    </div>
+
+    <h2>Original Project Materials</h2>
+
+    <p class="section-intro">
+      Original materials created specifically for DIPO WORLD should
+      not be copied, republished or represented as an independent
+      project without appropriate authorization.
+    </p>
+
+    <div class="legal-list">
+
+      <div class="legal-item">
+
+        <div class="legal-number">01</div>
+
+        <div>
+          <h3>Original interface design</h3>
+          <p>
+            Original layouts, visual hierarchy, components and
+            project-specific UI structures belong to the project
+            subject to applicable rights and licenses.
+          </p>
+        </div>
+
+      </div>
+
+
+      <div class="legal-item">
+
+        <div class="legal-number">02</div>
+
+        <div>
+          <h3>Original written content</h3>
+          <p>
+            Original descriptions, product copy, documentation,
+            labels and other project-written materials should not
+            be republished as your own.
+          </p>
+        </div>
+
+      </div>
+
+
+      <div class="legal-item">
+
+        <div class="legal-number">03</div>
+
+        <div>
+          <h3>Original graphics & assets</h3>
+          <p>
+            Project-specific graphics, icons, illustrations,
+            layouts and other original assets may be protected
+            by applicable intellectual property laws.
+          </p>
+        </div>
+
+      </div>
+
+
+      <div class="legal-item">
+
+        <div class="legal-number">04</div>
+
+        <div>
+          <h3>Project code</h3>
+          <p>
+            Code may be subject to the applicable project license
+            or other permissions. Review the relevant license before
+            copying, modifying or redistributing project code.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- THIRD PARTY -->
+
+  <section class="section" id="third-party">
+
+    <div class="section-label">
+      03 · Third-Party
+    </div>
+
+    <h2>Third-party libraries & assets</h2>
+
+    <p class="section-intro">
+      DIPO WORLD may use third-party libraries, browser technologies,
+      fonts, icons, open-source software or other resources.
+    </p>
+
+    <div class="card-grid">
+
+      <article class="card">
+
+        <div class="card-icon">🧩</div>
+
+        <h3>Separate ownership</h3>
+
+        <p>
+          Third-party materials remain the property of their
+          respective authors, creators, developers or organizations.
+        </p>
+
+      </article>
+
+
+      <article class="card">
+
+        <div class="card-icon">📜</div>
+
+        <h3>Applicable licenses</h3>
+
+        <p>
+          Third-party materials are governed by their respective
+          licenses, copyright notices and applicable terms.
+        </p>
+
+      </article>
+
+
+      <article class="card full">
+
+        <div class="card-icon">⚖️</div>
+
+        <h3>License compliance</h3>
+
+        <p>
+          Third-party copyright notices, attribution requirements
+          and license conditions should not be removed where the
+          applicable license requires them to remain available.
+        </p>
+
+      </article>
+
+    </div>
+
+  </section>
+
+
+  <!-- TRADEMARKS -->
+
+  <section class="section" id="trademarks">
+
+    <div class="section-label">
+      04 · Brand Identity
+    </div>
+
+    <h2>Names, logos & trademarks</h2>
+
+    <p class="section-intro">
+      Brand names and identities shown throughout DIPO WORLD may
+      identify either DIPO WORLD or their respective third-party
+      owners.
+    </p>
+
+    <div class="card-grid">
+
+      <article class="card">
+
+        <div class="card-icon">™</div>
+
+        <h3>DIPO WORLD</h3>
+
+        <p>
+          DIPO WORLD is used as the primary project/platform
+          identifier within this ecosystem.
+        </p>
+
+      </article>
+
+
+      <article class="card">
+
+        <div class="card-icon">✦</div>
+
+        <h3>DIPO Products</h3>
+
+        <p>
+          DIPO BIO and DIPO QR are used as product identifiers
+          associated with the DIPO WORLD project.
+        </p>
+
+      </article>
+
+
+      <article class="card full">
+
+        <div class="card-icon">®</div>
+
+        <h3>Third-party brands</h3>
+
+        <p>
+          Third-party names, logos, trademarks and brand identities
+          displayed through a tool or generated result belong to
+          their respective owners. Their appearance does not
+          automatically indicate sponsorship, endorsement or
+          affiliation with DIPO WORLD.
+        </p>
+
+      </article>
+
+    </div>
+
+  </section>
+
+
+  <!-- USER CONTENT -->
+
+  <section class="section" id="user-content">
+
+    <div class="section-label">
+      05 · User Content
+    </div>
+
+    <h2>Content created by users</h2>
+
+    <p class="section-intro">
+      Some DIPO WORLD tools may allow users to enter text, links,
+      images, logos or other content for processing or generation.
+    </p>
+
+    <div class="card-grid">
+
+      <article class="card">
+
+        <div class="card-icon">👤</div>
+
+        <h3>Your content</h3>
+
+        <p>
+          Users remain responsible for the content they submit,
+          generate, download, publish or distribute using the
+          platform.
+        </p>
+
+      </article>
+
+
+      <article class="card">
+
+        <div class="card-icon">🔎</div>
+
+        <h3>Rights & permissions</h3>
+
+        <p>
+          Users should ensure that they have appropriate rights or
+          permissions for content they upload or use in generated
+          designs.
+        </p>
+
+      </article>
+
+
+      <article class="card full">
+
+        <div class="card-icon">⚠️</div>
+
+        <h3>Respect the rights of others</h3>
+
+        <p>
+          DIPO WORLD should not be used to create or distribute
+          content that violates applicable law, intellectual
+          property rights, privacy rights or the rights of others.
+        </p>
+
+      </article>
+
+    </div>
+
+  </section>
+
+
+  <!-- GENERATED CONTENT -->
+
+  <section class="section" id="generated">
+
+    <div class="section-label">
+      06 · Generated Content
+    </div>
+
+    <h2>Generated designs & results</h2>
+
+    <p class="section-intro">
+      DIPO WORLD tools may generate or transform text layouts,
+      symbols, QR codes, barcodes and other outputs based on
+      information supplied by the user.
+    </p>
+
+    <div class="card-grid">
+
+      <article class="card">
+
+        <div class="card-icon">✨</div>
+
+        <h3>Generated output</h3>
+
+        <p>
+          Generated results may depend on user input, browser
+          capabilities, available technologies and the tool being
+          used.
+        </p>
+
+      </article>
+
+
+      <article class="card">
+
+        <div class="card-icon">✓</div>
+
+        <h3>Review before publishing</h3>
+
+        <p>
+          Users should review generated results before publishing,
+          printing, selling or distributing them.
+        </p>
+
+      </article>
+
+
+      <article class="card full">
+
+        <div class="card-icon">©</div>
+
+        <h3>Third-party material inside user input</h3>
+
+        <p>
+          A generated result does not automatically grant ownership
+          of third-party trademarks, logos, symbols, copyrighted
+          materials or other protected content supplied through
+          user input.
+        </p>
+
+      </article>
+
+    </div>
+
+  </section>
+
+
+  <!-- BRAND -->
+
+  <section class="section" id="brand">
+
+    <div class="section-label">
+      07 · Project Brand
+    </div>
+
+    <div class="brand-card">
+
+      <small>DIPO WORLD ECOSYSTEM</small>
+
+      <h2>DIPO WORLD</h2>
+
+      <div class="brand-products">
+        <span>DIPO BIO</span>
+        <span>DIPO QR</span>
+        <span>Creative Tools</span>
+        <span>Digital Utility</span>
+      </div>
+
+      <p>
+        A creative digital ecosystem focused on useful,
+        customizable and easy-to-use browser-based tools.
+      </p>
+
+    </div>
+
+
+    <div class="signature">
+
+      <div class="made">
+        Made With <span class="heart">❤️</span> in India
+      </div>
+
+      <div class="dm">
+        𝔄 𝔇𝔐 𝔭𝔯𝔬𝔡𝔲𝔠𝔱
+      </div>
+
+      <div class="rights">
+        All copyrights reserved @ 𝔄 𝔇𝔐 𝔭𝔯𝔬𝔡𝔲𝔠𝔱
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- IMPORTANT -->
+
+  <section class="section">
+
+    <div class="section-label">
+      08 · Important
+    </div>
+
+    <h2>Before using project materials</h2>
+
+    <p class="section-intro">
+      If you want to reuse, redistribute, modify or commercially
+      use DIPO WORLD project-specific materials, review the
+      applicable project license and obtain appropriate permission
+      where required.
+    </p>
+
+    <div class="card-grid">
+
+      <article class="card">
+
+        <div class="card-icon">📖</div>
+
+        <h3>Read the license</h3>
+
+        <p>
+          Different third-party resources may have different
+          permissions and restrictions.
+        </p>
+
+      </article>
+
+
+      <article class="card">
+
+        <div class="card-icon">⚖️</div>
+
+        <h3>Follow applicable law</h3>
+
+        <p>
+          Copyright, trademark, privacy and intellectual property
+          rules may apply depending on how materials are used.
+        </p>
+
+      </article>
+
+    </div>
+
+  </section>
+
+
+  <!-- RELATED DOCUMENTS -->
+
+  <section class="section">
+
+    <div class="section-label">
+      09 · More Information
+    </div>
+
+    <h2>Legal documents</h2>
+
+    <p class="section-intro">
+      Explore the other DIPO WORLD legal documents for additional
+      information.
+    </p>
+
+    <div class="docs">
+
+      <a class="doc" href="../privacy/index.html">
+
+        <div class="doc-icon">🔐</div>
+
+        <h3>Privacy Policy</h3>
+
+        <p>
+          Privacy and data practices.
+        </p>
+
+      </a>
+
+
+      <a class="doc" href="../terms/index.html">
+
+        <div class="doc-icon">📋</div>
+
+        <h3>Terms of Use</h3>
+
+        <p>
+          Rules and conditions.
+        </p>
+
+      </a>
+
+
+      <a class="doc" href="../disclaimer/index.html">
+
+        <div class="doc-icon">⚠️</div>
+
+        <h3>Disclaimer</h3>
+
+        <p>
+          Tool and generated-output information.
+        </p>
+
+      </a>
+
+    </div>
+
+  </section>
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+  <div class="container">
+
+    <div class="footer-brand">
+      DIPO<span>WORLD</span>
+    </div>
+
+    <p class="footer-text">
+      Creative digital tools by DIPO WORLD.
+    </p>
+
+    <div class="footer-links">
+
+      <a href="../../index.html">Home</a>
+
+      <a href="../about/index.html">About</a>
+
+      <a href="../privacy/index.html">Privacy</a>
+
+      <a href="../terms/index.html">Terms</a>
+
+      <a href="../disclaimer/index.html">Disclaimer</a>
+
+      <a href="../copyright/index.html">Copyright</a>
+
+    </div>
+
+    <div class="footer-bottom">
+      © <span id="year"></span> DIPO WORLD ·
+      Made With ❤️ in India ·
+      All copyrights reserved @ 𝔄 𝔇𝔐 𝔭𝔯𝔬𝔡𝔲𝔠𝔱
+    </div>
+
+  </div>
+
+</footer>
+
+
+<!-- BACK TO TOP -->
+
+<button
+  class="top-btn"
+  id="topBtn"
+  aria-label="Back to top"
+  type="button"
+>
+  ↑
+</button>
+
+
+<script>
+
+/* =========================
+   YEAR
+========================= */
+
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+
+
+/* =========================
+   BACK TO TOP
+========================= */
+
+const topBtn = document.getElementById("topBtn");
+
+window.addEventListener("scroll",function(){
+
+  if(window.scrollY > 500){
+    topBtn.classList.add("show");
+  }else{
+    topBtn.classList.remove("show");
+  }
+
+});
+
+topBtn.addEventListener("click",function(){
+
+  window.scrollTo({
+    top:0,
+    behavior:"smooth"
+  });
+
+});
+
+</script>
 
 </body>
 </html>

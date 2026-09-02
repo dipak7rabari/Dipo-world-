@@ -5,50 +5,49 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#ffffff">
 
-<title>DIPO BIO — Stylish Fonts</title>
+<title>DIPO BIO — 2050 Stylish Fonts</title>
 
 <style>
-*{
-  box-sizing:border-box;
-}
+*{box-sizing:border-box}
 
-html{
-  scroll-behavior:smooth;
-}
+html{scroll-behavior:smooth}
 
 body{
   margin:0;
-  background:#fff;
-  color:#111;
+  background:#f8fafc;
+  color:#111827;
   font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
 }
 
+button,input,textarea,select{font:inherit}
+
 .container{
-  width:min(1000px,94%);
+  width:min(1080px,94%);
   margin:auto;
 }
 
 /* HEADER */
 
 header{
-  background:#fff;
-  border-bottom:1px solid #e8e8e8;
-  padding:22px 0;
   position:sticky;
   top:0;
-  z-index:20;
+  z-index:50;
+  background:rgba(255,255,255,.94);
+  backdrop-filter:blur(18px);
+  border-bottom:1px solid #e7eaf0;
 }
 
 .nav{
+  min-height:68px;
   display:flex;
-  justify-content:space-between;
   align-items:center;
-  gap:20px;
+  justify-content:space-between;
+  gap:12px;
 }
 
 .logo{
-  font-size:30px;
-  font-weight:900;
+  font-size:28px;
+  font-weight:950;
   letter-spacing:-2px;
 }
 
@@ -56,41 +55,95 @@ header{
   color:#2859d7;
 }
 
-.back{
-  color:#222;
-  font-size:18px;
-  font-weight:700;
+.nav-right{
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+
+.nav-btn{
   text-decoration:none;
+  border:1px solid #e3e7ed;
+  background:#fff;
+  color:#222;
+  padding:9px 13px;
+  border-radius:12px;
+  font-size:12px;
+  font-weight:900;
+}
+
+.nav-btn.ai{
+  background:#111827;
+  color:#fff;
+  border-color:#111827;
 }
 
 /* MAIN */
 
 main{
-  padding:38px 0 80px;
+  padding:34px 0 85px;
+}
+
+/* HERO */
+
+.hero{
+  margin-bottom:25px;
+}
+
+.hero-top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:15px;
+}
+
+.eyebrow{
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  color:#2859d7;
+  background:#eef3ff;
+  border:1px solid #dce5ff;
+  border-radius:50px;
+  padding:8px 13px;
+  font-size:10px;
+  font-weight:950;
+  letter-spacing:1.3px;
+}
+
+.random-btn{
+  border:1px solid #e1e5eb;
+  background:#fff;
+  color:#222;
+  border-radius:12px;
+  padding:9px 13px;
+  cursor:pointer;
+  font-size:11px;
+  font-weight:950;
 }
 
 h1{
-  font-size:clamp(42px,8vw,72px);
-  line-height:1;
-  letter-spacing:-3px;
-  margin:0 0 20px;
+  margin:14px 0 9px;
+  font-size:clamp(44px,8vw,78px);
+  line-height:.92;
+  letter-spacing:-4px;
 }
 
 .subtitle{
-  color:#777;
-  font-size:20px;
-  margin:0 0 30px;
+  margin:0;
+  color:#737b88;
+  font-size:17px;
 }
 
 /* INPUT */
 
 .input-box{
   background:#fff;
-  border:2px solid #e5e2da;
-  border-radius:25px;
-  padding:15px;
-  box-shadow:0 8px 25px rgba(0,0,0,.04);
-  margin-bottom:14px;
+  border:1px solid #e2e6ed;
+  border-radius:26px;
+  padding:14px;
+  box-shadow:0 15px 45px rgba(20,30,50,.07);
+  margin-bottom:12px;
 }
 
 .input-wrap{
@@ -99,46 +152,54 @@ h1{
 
 textarea{
   width:100%;
-  height:110px;
+  height:115px;
   resize:none;
-  border:2px solid #e6e2d8;
-  border-radius:18px;
-  padding:20px 80px 20px 20px;
-  font-size:27px;
+  border:2px solid #e5e9ef;
+  border-radius:19px;
+  background:#fafbfc;
   outline:none;
+  padding:19px 75px 19px 19px;
+  font-size:27px;
   color:#111;
-  background:#fafafa;
-  font-family:inherit;
+  transition:.2s ease;
 }
 
 textarea:focus{
   border-color:#2859d7;
+  background:#fff;
 }
 
 .counter{
   position:absolute;
-  right:18px;
-  top:18px;
-  color:#999;
-  font-size:16px;
-  font-weight:700;
+  right:17px;
+  top:15px;
+  color:#9ba2ad;
+  font-size:12px;
+  font-weight:900;
 }
 
-/* SEARCH */
+/* TOOLBAR */
+
+.toolbar{
+  display:grid;
+  grid-template-columns:1fr auto auto;
+  gap:8px;
+  margin-bottom:14px;
+}
 
 .search-box{
+  min-height:46px;
   display:flex;
   align-items:center;
-  gap:10px;
-  background:#fafafa;
-  border:2px solid #e5e2da;
-  border-radius:16px;
-  padding:0 16px;
-  margin-bottom:30px;
+  gap:8px;
+  background:#fff;
+  border:1px solid #e2e6ed;
+  border-radius:13px;
+  padding:0 13px;
 }
 
-.search-icon{
-  font-size:21px;
+.search-box span{
+  font-size:17px;
 }
 
 .search-box input{
@@ -146,49 +207,83 @@ textarea:focus{
   border:0;
   outline:0;
   background:transparent;
-  padding:16px 0;
-  font-size:17px;
-}
-
-.style-count{
-  white-space:nowrap;
-  color:#999;
   font-size:14px;
-  font-weight:800;
 }
 
-/* CATEGORY */
+.tool-btn{
+  min-height:46px;
+  border:1px solid #e2e6ed;
+  background:#fff;
+  border-radius:13px;
+  padding:0 14px;
+  cursor:pointer;
+  font-size:11px;
+  font-weight:950;
+}
 
-.category{
-  margin:28px 0 14px;
+.tool-btn:hover{
+  border-color:#2859d7;
+}
+
+.tool-btn.active{
+  background:#2859d7;
+  color:#fff;
+  border-color:#2859d7;
+}
+
+/* CATEGORIES */
+
+.categories{
+  display:flex;
+  gap:7px;
+  overflow:auto;
+  padding:2px 0 10px;
+  scrollbar-width:none;
+  margin-bottom:16px;
+}
+
+.categories::-webkit-scrollbar{
+  display:none;
+}
+
+.category-btn{
+  flex:0 0 auto;
+  border:1px solid #e0e4ea;
+  background:#fff;
+  color:#656d79;
+  border-radius:50px;
+  padding:9px 13px;
+  cursor:pointer;
+  font-size:10px;
+  font-weight:950;
+}
+
+.category-btn.active{
+  background:#111827;
+  color:#fff;
+  border-color:#111827;
+}
+
+/* STATS */
+
+.stats{
   display:flex;
   align-items:center;
-  gap:12px;
+  justify-content:space-between;
+  gap:10px;
+  margin:8px 0 15px;
 }
 
-.category h2{
-  margin:0;
-  color:#2859d7;
-  font-size:25px;
+.stats-title{
+  font-size:20px;
+  font-weight:950;
   letter-spacing:-.5px;
-  white-space:nowrap;
 }
 
-.category-line{
-  height:2px;
-  background:#ddd;
-  flex:1;
-}
-
-.category-count{
-  background:#f3f5ff;
-  border:1px solid #dfe4f5;
-  border-radius:30px;
-  padding:7px 13px;
-  color:#555;
-  font-size:12px;
-  font-weight:800;
-  white-space:nowrap;
+.stats-count{
+  color:#8b929e;
+  font-size:11px;
+  font-weight:900;
 }
 
 /* GRID */
@@ -196,7 +291,7 @@ textarea:focus{
 .font-grid{
   display:grid;
   grid-template-columns:repeat(2,1fr);
-  gap:12px;
+  gap:10px;
 }
 
 /* CARD */
@@ -204,132 +299,151 @@ textarea:focus{
 .font-card{
   position:relative;
   background:#fff;
-  border:2px solid #e7e5df;
-  border-radius:19px;
-  padding:15px 16px 13px;
+  border:1px solid #e1e5eb;
+  border-radius:18px;
+  padding:13px;
   min-height:145px;
-  transition:.18s ease;
   overflow:hidden;
+  transition:.18s ease;
 }
 
 .font-card:hover{
-  border-color:#2859d7;
   transform:translateY(-2px);
+  border-color:#b8c7f5;
+  box-shadow:0 10px 30px rgba(30,50,100,.07);
 }
 
 .font-card.favorite{
-  border-color:#15945a;
-  background:#f1fff8;
+  border-color:#e0a900;
+  background:#fffdf4;
 }
 
 .card-top{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  gap:8px;
-  border-bottom:2px solid #eeeae2;
-  padding-bottom:10px;
+  gap:7px;
+  padding-bottom:8px;
+  border-bottom:1px solid #edf0f4;
 }
 
 .font-name{
-  color:#5e5e5e;
-  font-size:13px;
-  font-weight:900;
-  letter-spacing:2px;
+  min-width:0;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  color:#69717d;
+  font-size:9px;
+  font-weight:950;
+  letter-spacing:1px;
   text-transform:uppercase;
 }
 
 .badge{
-  background:#f6f6f4;
-  color:#999;
-  border-radius:10px;
-  padding:7px 10px;
-  font-size:10px;
-  font-weight:900;
-  white-space:nowrap;
+  flex:0 0 auto;
+  background:#f1f3f6;
+  color:#777f8c;
+  border-radius:7px;
+  padding:5px 7px;
+  font-size:7px;
+  font-weight:950;
 }
 
-/* PREVIEW */
+.badge.new{
+  background:#eef8f3;
+  color:#168b54;
+}
+
+.badge.god{
+  background:#fff3d8;
+  color:#a76d00;
+}
+
+.badge.trending{
+  background:#fff0f4;
+  color:#d43b67;
+}
 
 .preview{
-  height:42px;
+  height:52px;
   display:flex;
   align-items:center;
-  margin:10px 0;
-  font-size:20px;
-  line-height:1;
-  white-space:nowrap;
   overflow:hidden;
+  white-space:nowrap;
   text-overflow:ellipsis;
+  font-size:19px;
+  line-height:1;
+  margin:8px 0;
 }
-
-/* BUTTONS */
 
 .actions{
   display:flex;
   justify-content:flex-end;
-  align-items:center;
-  gap:8px;
+  gap:6px;
 }
 
-.favorite-btn{
-  width:42px;
-  height:36px;
-  border-radius:10px;
-  border:2px solid #e7e3da;
-  background:#fff;
-  font-size:20px;
-  color:#999;
+.action{
+  border:0;
+  border-radius:9px;
+  padding:8px 11px;
   cursor:pointer;
-}
-
-.favorite-btn.active{
-  color:#ff3b6b;
-  border-color:#ffb8c8;
+  font-size:9px;
+  font-weight:950;
 }
 
 .copy-btn{
-  border:0;
   background:#2859d7;
   color:#fff;
-  border-radius:10px;
-  padding:10px 20px;
-  min-width:90px;
-  font-size:13px;
-  font-weight:900;
-  cursor:pointer;
 }
 
-.copy-btn.copied{
+.copy-btn.done{
   background:#168b54;
+}
+
+.remix-btn{
+  background:#f0f2f5;
+  color:#333;
+}
+
+.favorite-btn{
+  width:33px;
+  padding:0;
+  background:#fff;
+  border:1px solid #e2e5ea;
+  color:#9299a4;
+}
+
+.favorite-btn.active{
+  color:#e5a500;
+  border-color:#f0c65a;
+  background:#fffaf0;
 }
 
 /* EMPTY */
 
 .empty{
-  text-align:center;
-  padding:50px 20px;
-  color:#888;
   display:none;
+  text-align:center;
+  padding:60px 20px;
+  color:#8c939e;
 }
 
 /* TOAST */
 
 .toast{
   position:fixed;
-  left:50%;
-  bottom:25px;
-  transform:translate(-50%,120px);
-  background:#168b54;
-  color:#fff;
-  padding:16px 25px;
-  border-radius:17px;
-  font-weight:900;
-  font-size:15px;
-  box-shadow:0 12px 35px rgba(0,0,0,.2);
-  transition:.3s ease;
   z-index:100;
-  text-align:center;
+  left:50%;
+  bottom:22px;
+  transform:translate(-50%,130px);
+  background:#111827;
+  color:#fff;
+  border-radius:15px;
+  padding:14px 20px;
+  font-size:12px;
+  font-weight:950;
+  box-shadow:0 15px 40px rgba(0,0,0,.22);
+  transition:.3s ease;
 }
 
 .toast.show{
@@ -338,172 +452,117 @@ textarea:focus{
 
 /* MOBILE */
 
-@media(max-width:600px){
+@media(max-width:650px){
 
   .container{
     width:92%;
   }
 
-  header{
-    padding:18px 0;
+  .nav{
+    min-height:62px;
   }
 
   .logo{
-    font-size:25px;
+    font-size:23px;
   }
 
-  .back{
-    font-size:16px;
+  .nav-btn{
+    padding:8px 10px;
+    font-size:10px;
   }
 
   main{
-    padding:30px 0 70px;
+    padding:27px 0 70px;
   }
 
   h1{
     font-size:48px;
-    letter-spacing:-2.5px;
+    letter-spacing:-3px;
   }
 
   .subtitle{
-    font-size:17px;
-    margin-bottom:22px;
+    font-size:15px;
   }
 
-  .input-box{
-    padding:10px;
-    border-radius:20px;
+  .hero-top{
+    align-items:flex-start;
+  }
+
+  .random-btn{
+    font-size:9px;
+    padding:8px 9px;
   }
 
   textarea{
-    height:82px;
+    height:92px;
     font-size:22px;
     padding:16px 60px 16px 16px;
   }
 
-  .counter{
-    font-size:13px;
-    top:14px;
-    right:14px;
+  .toolbar{
+    grid-template-columns:1fr auto;
   }
 
   .search-box{
-    margin-bottom:20px;
+    grid-column:1/-1;
   }
 
-  .search-box input{
-    font-size:15px;
-    padding:13px 0;
+  .tool-btn{
+    min-height:43px;
   }
-
-  .style-count{
-    font-size:11px;
-  }
-
-  .category{
-    margin:20px 0 10px;
-  }
-
-  .category h2{
-    font-size:20px;
-  }
-
-  .category-count{
-    padding:5px 9px;
-    font-size:10px;
-  }
-
-  /*
-    COMPACT MOBILE GRID
-    2 cards per row = 6 cards visible much faster
-  */
 
   .font-grid{
-    grid-template-columns:repeat(2,1fr);
-    gap:9px;
+    gap:8px;
   }
 
   .font-card{
     min-height:126px;
+    padding:10px;
     border-radius:15px;
-    padding:11px 11px 10px;
-  }
-
-  .card-top{
-    padding-bottom:7px;
-  }
-
-  .font-name{
-    font-size:10px;
-    letter-spacing:1.3px;
-  }
-
-  .badge{
-    font-size:8px;
-    padding:5px 7px;
   }
 
   .preview{
-    height:34px;
-    margin:7px 0;
-    font-size:16px;
+    height:42px;
+    font-size:15px;
+    margin:6px 0;
   }
 
-  .actions{
-    gap:5px;
+  .font-name{
+    font-size:7px;
+    letter-spacing:.8px;
+  }
+
+  .badge{
+    font-size:6px;
+    padding:4px 5px;
+  }
+
+  .action{
+    padding:7px 8px;
+    font-size:8px;
   }
 
   .favorite-btn{
-    width:34px;
-    height:31px;
-    font-size:17px;
-    border-radius:8px;
-  }
-
-  .copy-btn{
-    min-width:68px;
-    padding:8px 9px;
-    font-size:10px;
-    border-radius:8px;
-  }
-
-  .toast{
-    width:calc(100% - 40px);
-    font-size:14px;
+    width:29px;
   }
 }
 
-/* VERY SMALL PHONES */
-
 @media(max-width:380px){
-
-  .logo{
-    font-size:22px;
-  }
-
-  .back{
-    font-size:14px;
-  }
-
-  h1{
-    font-size:42px;
-  }
 
   .font-grid{
     gap:7px;
   }
 
   .font-card{
-    min-height:118px;
-    padding:9px;
+    padding:8px;
   }
 
   .preview{
-    font-size:14px;
+    font-size:13px;
   }
 
-  .copy-btn{
-    min-width:60px;
+  .action{
+    padding:6px 7px;
   }
 }
 </style>
@@ -515,34 +574,68 @@ textarea:focus{
   <div class="container nav">
 
     <div class="logo">
-      DIPO<span>WORLD</span>
+      DIPO<span>BIO</span>
     </div>
 
-    <a class="back" href="index.html">
-      ← Bio Tools
-    </a>
+    <div class="nav-right">
+
+      <a
+        class="nav-btn ai"
+        href="ai-font-lab.html">
+        ⚡ AI LAB
+      </a>
+
+      <a
+        class="nav-btn"
+        href="index.html">
+        ← Back
+      </a>
+
+    </div>
 
   </div>
 </header>
 
+
 <main class="container">
 
-  <h1>Stylish Fonts</h1>
+  <section class="hero">
 
-  <p class="subtitle">
-    Type text and copy your favorite style.
-  </p>
+    <div class="hero-top">
+
+      <div class="eyebrow">
+        ✦ DIPO BIO • 2050 FONT ENGINE
+      </div>
+
+      <button
+        id="randomBtn"
+        class="random-btn">
+        🎲 Random
+      </button>
+
+    </div>
+
+    <h1>
+      Stylish Fonts
+    </h1>
+
+    <p class="subtitle">
+      Create futuristic text for your bio, username & profile.
+    </p>
+
+  </section>
+
 
   <!-- INPUT -->
 
-  <div class="input-box">
+  <section class="input-box">
 
     <div class="input-wrap">
 
       <textarea
-        id="text"
+        id="textInput"
         maxlength="200"
-        placeholder="Enter or Paste Your Text"
+        placeholder="Enter or paste your text..."
       >DIPO WORLD</textarea>
 
       <div class="counter">
@@ -551,982 +644,1047 @@ textarea:focus{
 
     </div>
 
+  </section>
+
+
+  <!-- TOOLBAR -->
+
+  <div class="toolbar">
+
+    <div class="search-box">
+
+      <span>⌕</span>
+
+      <input
+        id="searchInput"
+        type="search"
+        placeholder="Search fonts, cyber, luxury..."
+      >
+
+    </div>
+
+    <button
+      id="favoriteFilter"
+      class="tool-btn">
+      ♡ Favorites
+    </button>
+
+    <button
+      id="clearSearch"
+      class="tool-btn">
+      Clear
+    </button>
+
   </div>
 
-  <!-- SEARCH -->
 
-  <div class="search-box">
+  <!-- CATEGORIES -->
 
-    <span class="search-icon">🔎</span>
+  <div class="categories">
 
-    <input
-      id="search"
-      type="text"
-      placeholder="Search styles by name..."
-    >
+    <button
+      class="category-btn active"
+      data-category="all">
+      ✦ ALL
+    </button>
 
-    <span class="style-count">
-      <span id="totalCount">120</span> styles
-    </span>
+    <button
+      class="category-btn"
+      data-category="unicode">
+      🔥 UNICODE
+    </button>
+
+    <button
+      class="category-btn"
+      data-category="cyber">
+      🤖 CYBER
+    </button>
+
+    <button
+      class="category-btn"
+      data-category="luxury">
+      👑 LUXURY
+    </button>
+
+    <button
+      class="category-btn"
+      data-category="effects">
+      ⚡ EFFECTS
+    </button>
+
+    <button
+      class="category-btn"
+      data-category="social">
+      📱 SOCIAL
+    </button>
+
+    <button
+      class="category-btn"
+      data-category="gaming">
+      🎮 GAMING
+    </button>
+
+    <button
+      class="category-btn"
+      data-category="cute">
+      🧸 CUTE
+    </button>
 
   </div>
 
-  <!-- FONT RESULTS -->
 
-  <div id="fontContainer"></div>
+  <!-- STATS -->
 
-  <div id="empty" class="empty">
-    😭 No font style found.
-    <br>
-    Try another search.
+  <div class="stats">
+
+    <div class="stats-title">
+      Font Collection
+    </div>
+
+    <div class="stats-count">
+      <span id="totalCount">0</span> styles
+    </div>
+
+  </div>
+
+
+  <div
+    id="fontGrid"
+    class="font-grid">
+  </div>
+
+
+  <div
+    id="empty"
+    class="empty">
+    😭 No font style found.<br>
+    Try another search or category.
   </div>
 
 </main>
 
-<div id="toast" class="toast">
-  ✓ COPIED TO CLIPBOARD!
+
+<div
+  id="toast"
+  class="toast">
+  ✓ COPIED
 </div>
 
 
 <script>
 
-/* =====================================================
+/* =========================================================
+   DIPO BIO — 2050 FONT ENGINE
+========================================================= */
+
+const A = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+const a = "abcdefghijklmnopqrstuvwxyz";
+
+
+/* =========================================================
    UNICODE FONT MAPS
-===================================================== */
+========================================================= */
 
-const upperNormal =
-"ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+const boldU =
+"𝗔𝗕𝗖𝗗𝗘𝗙𝗚𝗛𝗜𝗝𝗞𝗟𝗠𝗡𝗢𝗣𝗤𝗥𝗦𝗧𝗨𝗩𝗪𝗫𝗬𝗭";
 
-const lowerNormal =
-"abcdefghijklmnopqrstuvwxyz";
-
-const digitsNormal =
-"0123456789";
+const boldL =
+"𝗮𝗯𝗰𝗱𝗲𝗳𝗴𝗵𝗶𝗷𝗸𝗹𝗺𝗻𝗼𝗽𝗾𝗿𝘀𝘁𝘂𝘃𝘄𝘅𝘆𝘇";
 
 
-const boldUpper =
-"𝐀𝐁𝐂𝐃𝐄𝐅𝐆𝐇𝐈𝐉𝐊𝐋𝐌𝐍𝐎𝐏𝐐𝐑𝐒𝐓𝐔𝐕𝐖𝐗𝐘𝐙";
+const italicU =
+"𝘈𝘉𝘊𝘋𝘌𝘍𝘎𝘏𝘐𝘑𝘒𝘓𝘔𝘕𝘖𝘗𝘘𝘙𝘚𝘛𝘜𝘝𝘞𝘟𝘠𝘡";
 
-const boldLower =
-"𝐚𝐛𝐜𝐝𝐞𝐟𝐠𝐡𝐢𝐣𝐤𝐥𝐦𝐧𝐨𝐩𝐪𝐫𝐬𝐭𝐮𝐯𝐰𝐱𝐲𝐳";
-
-
-const italicUpper =
-"𝐴𝐵𝐶𝐷𝐸𝐹𝐺𝐻𝐼𝐽𝐾𝐿𝑀𝑁𝑂𝑃𝑄𝑅𝑆𝑇𝑈𝑉𝑊𝑋𝑌𝑍";
-
-const italicLower =
-"𝑎𝑏𝑐𝑑𝑒𝑓𝑔ℎ𝑖𝑗𝑘𝑙𝑚𝑛𝑜𝑝𝑞𝑟𝑠𝑡𝑢𝑣𝑤𝑥𝑦𝑧";
+const italicL =
+"𝘢𝘣𝘤𝘥𝘦𝘧𝘨𝘩𝘪𝘫𝘬𝘭𝘮𝘯𝘰𝘱𝘲𝘳𝘴𝘵𝘶𝘷𝘸𝘹𝘺𝘻";
 
 
-const boldItalicUpper =
-"𝑨𝑩𝑪𝑫𝑬𝑭𝑮𝑯𝑰𝑱𝑲𝑳𝑴𝑵𝑶𝑷𝑸𝑹𝑺𝑻𝑼𝑽𝑾𝑿𝒀𝒁";
+const boldItalicU =
+"𝘼𝘽𝘾𝘿𝙀𝙁𝙂𝙃𝙄𝙅𝙆𝙇𝙈𝙉𝙊𝙋𝙌𝙍𝙎𝙏𝙐𝙑𝙒𝙓𝙔𝙕";
 
-const boldItalicLower =
-"𝒂𝒃𝒄𝒅𝒆𝒇𝒈𝒉𝒊𝒋𝒌𝒍𝒎𝒏𝒐𝒑𝒒𝒓𝒔𝒕𝒖𝒗𝒘𝒙𝒚𝒛";
-
-
-const doubleUpper =
-"𝔸𝔹ℂ𝔻𝔼𝔽𝔾ℍ𝕀𝕁𝕂𝕃𝕄ℕ𝕆ℙℚℝ𝕊𝕋𝕌𝕍𝕎𝕏𝕐ℤ";
-
-const doubleLower =
-"𝕒𝕓𝕔𝕕𝕖𝕗𝕘𝕙𝕚𝕛𝕜𝕝𝕞𝕟𝕠𝕡𝕢𝕣𝕤𝕥𝕦𝕧𝕨𝕩𝕪𝕫";
+const boldItalicL =
+"𝙖𝙗𝙘𝙙𝙚𝙛𝙜𝙝𝙞𝙟𝙠𝙡𝙢𝙣𝙤𝙥𝙦𝙧𝙨𝙩𝙪𝙫𝙬𝙭𝙮𝙯";
 
 
-const monoUpper =
-"𝙰𝙱𝙲𝙳𝙴𝙵𝙶𝙷𝙸𝙹𝙺𝙻𝙼𝙽𝙾𝙿𝚀𝚁𝚂𝚃𝚄𝚅𝚆𝚇𝚈𝚉";
+const sansU =
+"𝖠𝖡𝖢𝖣𝖤𝖥𝖦𝖧𝖨𝖩𝖪𝖫𝖬𝖭𝖮𝖯𝖰𝖱𝖲𝖳𝖴𝖵𝖶𝖷𝖸𝖹";
 
-const monoLower =
-"𝚊𝚋𝚌𝚍𝚎𝚏𝚐𝚑𝚒𝚓𝚔𝚕𝚖𝚗𝚘𝚙𝚚𝚛𝚜𝚝𝚞𝚟𝚠𝚡𝚢𝚣";
+const sansL =
+"𝖺𝖻𝖼𝖽𝖾𝖿𝗀𝗁𝗂𝗃𝗄𝗅𝗆𝗇𝗈𝗉𝗊𝗋𝗌𝗍𝗎𝗏𝗐𝗑𝗒𝗓";
 
 
-const circledUpper =
+const frakturU =
+"𝔄𝔅ℭ𝔇𝔈𝔉𝔊ℌℑ𝔍𝔎𝔏𝔐𝔑𝔒𝔓𝔔ℜ𝔖𝔗𝔘𝔙𝔚𝔛𝔜ℨ";
+
+const frakturL =
+"𝔞𝔟𝔠𝔡𝔢𝔣𝔤𝔥𝔦𝔧𝔨𝔩𝔪𝔫𝔬𝔭𝔮𝔯𝔰𝔱𝔲𝔳𝔴𝔵𝔶𝔷";
+
+
+const scriptU =
+"𝒜ℬ𝒞𝒟ℰℱ𝒢ℋℐ𝒥𝒦ℒℳ𝒩𝒪𝒫𝒬ℛ𝒮𝒯𝒰𝒱𝒲𝒳𝒴𝒵";
+
+const scriptL =
+"𝒶𝒷𝒸𝒹ℯ𝒻ℊ𝒽𝒾𝒿𝓀𝓁𝓂𝓃ℴ𝓅𝓆𝓇𝓈𝓉𝓊𝓋𝓌𝓍𝓎𝓏";
+
+
+const boldFrakturU =
+"𝕬𝕭𝕮𝕯𝕰𝕱𝕲𝕳𝕴𝕵𝕶𝕷𝕸𝕹𝕺𝕻𝕼𝕽𝕾𝕿𝖀𝖁𝖂𝖃𝖄𝖅";
+
+const boldFrakturL =
+"𝖆𝖇𝖈𝖉𝖊𝖋𝖌𝖍𝖎𝖏𝖐𝖑𝖒𝖓𝖔𝖕𝖖𝖗𝖘𝖙𝖚𝖛𝖜𝖝𝖞𝖟";
+
+
+const boldScriptU =
+"𝓐𝓑𝓒𝓓𝓔𝓕𝓖𝓗𝓘𝓙𝓚𝓛𝓜𝓝𝓞𝓟𝓠𝓡𝓢𝓣𝓤𝓥𝓦𝓧𝓨𝓩";
+
+const boldScriptL =
+"𝓪𝓫𝓬𝓭𝓮𝓯𝓰𝓱𝓲𝓳𝓴𝓵𝓶𝓷𝓸𝓹𝓺𝓻𝓼𝓽𝓾𝓿𝔀𝔁𝔂𝔃";
+
+
+const smallCaps =
+"ᴀʙᴄᴅᴇꜰɢʜɪᴊᴋʟᴍɴᴏᴘǫʀꜱᴛᴜᴠᴡxʏᴢ";
+
+
+const circledU =
 "ⒶⒷⒸⒹⒺⒻⒼⒽⒾⒿⓀⓁⓂⓃⓄⓅⓆⓇⓈⓉⓊⓋⓌⓍⓎⓏ";
 
-
-const fullUpper =
-"ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺ";
-
-const fullLower =
-"ａｂｃｄｅｆｇｈｉｊｋｌｍｎｏｐｑｒｓｔｕｖｗｘｙｚ";
+const circledL =
+"ⓐⓑⓒⓓⓔⓕⓖⓗⓘⓙⓚⓛⓜⓝⓞⓟⓠⓡⓢⓣⓤⓥⓦⓧⓨⓩ";
 
 
-/* =====================================================
-   TRANSLATOR
-===================================================== */
+const squared =
+"🄰🄱🄲🄳🄴🄵🄶🄷🄸🄹🄺🄻🄼🄽🄾🄿🅀🅁🅂🅃🅄🅅🅆🅇🅈🅉";
 
-function convert(text, upper, lower){
 
-  let result="";
+const negativeSquared =
+"🅰🅱🅲🅳🅴🅵🅶🅷🅸🅹🅺🅻🅼🅽🅾🅿🆀🆁🆂🆃🆄🆅🆆🆇🆈🆉";
 
-  for(const char of text){
 
-    const upperIndex =
-      upperNormal.indexOf(char.toUpperCase());
+/* =========================================================
+   CONVERTERS
+========================================================= */
 
-    const lowerIndex =
-      lowerNormal.indexOf(char.toLowerCase());
+function convert(text,upper,lower){
 
-    if(
-      char >= "A" &&
-      char <= "Z" &&
-      upperIndex >= 0 &&
-      upper[upperIndex]
-    ){
-      result += upper[upperIndex];
+  return Array.from(text).map(ch=>{
+
+    const ui=A.indexOf(ch);
+
+    if(ui!==-1 && upper[ui]){
+      return upper[ui];
     }
 
-    else if(
-      char >= "a" &&
-      char <= "z" &&
-      lowerIndex >= 0 &&
-      lower[lowerIndex]
-    ){
-      result += lower[lowerIndex];
+    const li=a.indexOf(ch);
+
+    if(li!==-1 && lower[li]){
+      return lower[li];
     }
 
-    else{
-      result += char;
-    }
-  }
+    return ch;
 
-  return result;
+  }).join("");
+
 }
 
 
-/* =====================================================
-   STYLE HELPERS
-===================================================== */
+function sameMap(text,map){
+
+  return Array.from(text).map(ch=>{
+
+    const i=A.indexOf(ch.toUpperCase());
+
+    return i>=0 && map[i]
+      ? map[i]
+      : ch;
+
+  }).join("");
+
+}
+
+
+function effect(text,mark){
+
+  return Array.from(text).map(ch=>{
+
+    if(/[A-Za-z0-9]/.test(ch)){
+      return ch+mark;
+    }
+
+    return ch;
+
+  }).join("");
+
+}
+
+
+function spaced(text){
+
+  return Array.from(text).join(" ");
+
+}
+
+
+/* =========================================================
+   STYLE LIBRARY
+========================================================= */
 
 const styles=[];
 
-function add(name,category,badge,fn){
+function add(name,category,badge,fn,tags=[]){
+
   styles.push({
+    id:name.toLowerCase().replace(/[^a-z0-9]+/g,"-"),
     name,
     category,
     badge,
-    fn
+    fn,
+    tags:[name,category,badge,...tags]
+      .join(" ")
+      .toLowerCase()
   });
+
 }
 
 
-/* BASIC */
-
-add("Bold","🔥 Popular","FANCY",
- t=>convert(t,boldUpper,boldLower));
-
-add("Italic","🔥 Popular","FANCY",
- t=>convert(t,italicUpper,italicLower));
-
-add("Bold Italic","🔥 Popular","FANCY",
- t=>convert(t,boldItalicUpper,boldItalicLower));
-
-add("Double","🔥 Popular","FANCY",
- t=>convert(t,doubleUpper,doubleLower));
-
-add("Monospace","🔥 Popular","FANCY",
- t=>convert(t,monoUpper,monoLower));
-
-add("Circled","🔥 Popular","FANCY",
- t=>convert(t,circledUpper,circledUpper.toLowerCase()));
-
-add("Full Width","🔥 Popular","AESTHETIC",
- t=>convert(t,fullUpper,fullLower));
-
-
-/* SYMBOL STYLES */
-
-add("Sparkle","✨ Aesthetic","GEN Z",
- t=>"✦ "+t+" ✦");
-
-add("Sparkle 2","✨ Aesthetic","GEN Z",
- t=>"✧ "+t+" ✧");
-
-add("Stars","✨ Aesthetic","GEN Z",
- t=>"★ "+t+" ★");
-
-add("Stars 2","✨ Aesthetic","GEN Z",
- t=>"☆ "+t+" ☆");
-
-add("Diamond","✨ Aesthetic","GEN Z",
- t=>"◆ "+t+" ◆");
-
-add("Diamond 2","✨ Aesthetic","GEN Z",
- t=>"◇ "+t+" ◇");
-
-add("Cloud","☁️ Cute","CUTE",
- t=>"☁️ "+t+" ☁️");
-
-add("Flower","🌸 Cute","CUTE",
- t=>"🌸 "+t+" 🌸");
-
-add("Butterfly","🦋 Cute","CUTE",
- t=>"🦋 "+t+" 🦋");
-
-add("Cherry","🍒 Cute","CUTE",
- t=>"🍒 "+t+" 🍒");
-
-add("Crown","👑 Luxury","HOT",
- t=>"👑 "+t+" 👑");
-
-add("Fire","🔥 Hot","HOT",
- t=>"🔥 "+t+" 🔥");
-
-add("Heart","❤️ Love","LOVE",
- t=>"♡ "+t+" ♡");
-
-add("Heart 2","❤️ Love","LOVE",
- t=>"♥ "+t+" ♥");
-
-add("Angel","😇 Cute","CUTE",
- t=>"𓆩♡𓆪 "+t+" 𓆩♡𓆪");
-
-add("Peace","☮️ Aesthetic","VIBE",
- t=>"☮️ "+t+" ☮️");
-
-add("Skull","💀 Dark","DARK",
- t=>"☠ "+t+" ☠");
-
-add("Devil","😈 Hot","HOT",
- t=>"😈 "+t+" 😈");
-
-add("Hot","🥵 Hot","HOT",
- t=>"🥵 "+t+" 🥵");
-
-add("Money","💸 Luxury","FLEX",
- t=>"💸 "+t+" 💸");
-
-add("Verified","✅ Social","SOCIAL",
- t=>"✓ "+t);
-
-add("Arrow","➜ Social","GEN Z",
- t=>"➜ "+t+" ⇢");
-
-add("Minimal","— Minimal","CLEAN",
- t=>"— "+t+" —");
-
-add("Brackets","〔 Minimal 〕","CLEAN",
- t=>"〔 "+t+" 〕");
-
-add("Japanese","和 Aesthetic","VIBE",
- t=>"『 "+t+" 』");
-
-add("Kawaii","૮₍ ˶ᵔ ᵕ ᵔ˶ ₎ა","CUTE",
- t=>"૮₍ ˶ᵔ ᵕ ᵔ˶ ₎ა "+t);
-
-add("Cute Face","Cute","CUTE",
- t=>"(づ｡◕‿‿◕｡)づ "+t);
-
-add("Lenny","Meme","MEME",
- t=>"☞ "+t+" ☜");
-
-add("Flex","💪 Gen Z","FLEX",
- t=>"💪 "+t+" 🔥");
-
-add("Drip","💧 Gen Z","DRIP",
- t=>"💧 "+t+" 💧");
-
-add("Aesthetic","✦ Aesthetic","VIBE",
- t=>"⋆｡°✩ "+t+" ✩°｡⋆");
-
-add("Dreamy","☾ Dreamy","VIBE",
- t=>"☾ "+t+" ☽");
-
-add("Moon","🌙 Aesthetic","VIBE",
- t=>"☾ "+t+" ☽");
-
-add("Ocean","🌊 Vibe","VIBE",
- t=>"🌊 "+t+" 🌊");
-
-add("Sun","☀️ Vibe","VIBE",
- t=>"☀️ "+t+" ☀️");
-
-add("Energy","⚡ Gen Z","HOT",
- t=>"⚡ "+t+" ⚡");
-
-add("Warning","⚠️ Gen Z","HOT",
- t=>"⚠️ "+t+" ⚠️");
-
-add("No Cap","🧢 Gen Z","GEN Z",
- t=>"🧢 "+t+" 🧢");
-
-add("Slay","💅 Gen Z","HOT",
- t=>"💅 "+t+" ✨");
-
-add("Queen","👸 Gen Z","HOT",
- t=>"👑 "+t+" 💅");
-
-add("Boss","😎 Gen Z","FLEX",
- t=>"😎 "+t+" 💯");
-
-add("Cool","🕶️ Gen Z","COOL",
- t=>"🕶️ "+t+" 🕶️");
-
-add("Vibe","✨ Gen Z","VIBE",
- t=>"✨ "+t+" 🪩");
-
-add("Party","🪩 Gen Z","GEN Z",
- t=>"🪩 "+t+" 🪩");
-
-add("Music","🎧 Gen Z","VIBE",
- t=>"🎧 "+t+" 🎵");
-
-add("Gaming","🎮 Gen Z","GAMING",
- t=>"🎮 "+t+" 🎮");
-
-add("Tech","💻 Gen Z","TECH",
- t=>"💻 "+t+" ⚡");
-
-add("AI","🤖 Gen Z","TECH",
- t=>"🤖 "+t+" AI");
-
-add("Rocket","🚀 Gen Z","FUTURE",
- t=>"🚀 "+t+" 🚀");
-
-add("Galaxy","🌌 Aesthetic","VIBE",
- t=>"🌌 "+t+" 🌌");
-
-add("Alien","👽 Gen Z","WEIRD",
- t=>"👽 "+t+" 👽");
-
-add("Ghost","👻 Gen Z","DARK",
- t=>"👻 "+t+" 👻");
-
-add("Vampire","🧛 Dark","DARK",
- t=>"🧛 "+t+" 🧛");
-
-add("Dark","🖤 Dark","DARK",
- t=>"🖤 "+t+" 🖤");
-
-add("Black Heart","🖤 Dark","DARK",
- t=>"♥︎ "+t+" ♥︎");
-
-add("Broken","💔 Dark","DARK",
- t=>"💔 "+t+" 💔");
-
-add("Red Flag","🚩 Gen Z","GEN Z",
- t=>"🚩 "+t+" 🚩");
-
-add("Green Flag","🟢 Gen Z","GEN Z",
- t=>"🟢 "+t+" 🟢");
-
-add("Blue Vibe","🔵 Vibe","VIBE",
- t=>"🔵 "+t+" 🔵");
-
-add("Purple Vibe","🟣 Vibe","VIBE",
- t=>"🟣 "+t+" 🟣");
-
-add("Orange","🟠 Vibe","VIBE",
- t=>"🟠 "+t+" 🟠");
-
-add("Fire Line","🔥 Hot","HOT",
- t=>"🔥 ━ "+t+" ━ 🔥");
-
-add("Star Line","⭐ Aesthetic","VIBE",
- t=>"★ ── "+t+" ── ★");
-
-add("Fancy Line","✦ Fancy","FANCY",
- t=>"╰┈➤ "+t+" ✦");
-
-add("Royal","♛ Luxury","LUXURY",
- t=>"♛ "+t+" ♛");
-
-add("Luxury","♔ Luxury","LUXURY",
- t=>"♔ "+t+" ♔");
-
-add("Diamond Line","◇ Luxury","LUXURY",
- t=>"◇━━ "+t+" ━━◇");
-
-add("Classic","༺ Classic","CLASSIC",
- t=>"༺ "+t+" ༻");
-
-add("Royal 2","꧁ Royal","LUXURY",
- t=>"꧁ "+t+" ꧂");
-
-add("Mystic","𓆩 Mystic","MYSTIC",
- t=>"𓆩 "+t+" 𓆪");
-
-add("Ancient","𓂀 Mystic","MYSTIC",
- t=>"𓂀 "+t+" 𓂀");
-
-add("Egypt","𓂀 Aesthetic","MYSTIC",
- t=>"𓂀 "+t+" 𓂀");
-
-add("Infinity","∞ Aesthetic","VIBE",
- t=>"∞ "+t+" ∞");
-
-add("Infinity 2","♾️ Vibe","VIBE",
- t=>"♾️ "+t+" ♾️");
-
-add("Cross","✝ Aesthetic","MYSTIC",
- t=>"✝ "+t+" ✝");
-
-add("Flower 2","❀ Cute","CUTE",
- t=>"❀ "+t+" ❀");
-
-add("Flower 3","✿ Cute","CUTE",
- t=>"✿ "+t+" ✿");
-
-add("Rose","🌹 Love","LOVE",
- t=>"🌹 "+t+" 🌹");
-
-add("Love Letter","💌 Love","LOVE",
- t=>"💌 "+t+" 💌");
-
-add("Kiss","💋 Love","LOVE",
- t=>"💋 "+t+" 💋");
-
-add("Love 2","💗 Love","LOVE",
- t=>"💗 "+t+" 💗");
-
-add("Love 3","💖 Love","LOVE",
- t=>"💖 "+t+" 💖");
-
-add("Sparkle Heart","💫 Love","LOVE",
- t=>"💫 "+t+" 💫");
-
-add("Star Heart","💞 Love","LOVE",
- t=>"★♡ "+t+" ♡★");
-
-add("Pretty","୨୧ Cute","CUTE",
- t=>"୨୧ "+t+" ୨୧");
-
-add("Ribbon","🎀 Cute","CUTE",
- t=>"🎀 "+t+" 🎀");
-
-add("Teddy","🧸 Cute","CUTE",
- t=>"🧸 "+t+" 🧸");
-
-add("Bunny","🐰 Cute","CUTE",
- t=>"🐰 "+t+" 🐰");
-
-add("Cat","🐱 Cute","CUTE",
- t=>"ฅ^•ﻌ•^ฅ "+t);
-
-add("Bear","ʕ•ᴥ•ʔ Cute","CUTE",
- t=>"ʕ•ᴥ•ʔ "+t);
-
-add("UwU","UwU","CUTE",
- t=>"UwU "+t+" >w<");
-
-add("Emo","x_x","DARK",
- t=>"x_x "+t+" x_x");
-
-add("Glitch","⚠ GLITCH","GLITCH",
- t=>"⚠ "+t+" ⚠");
-
-add("Error","ERROR","GLITCH",
- t=>"【ERROR】 "+t);
-
-add("404","404","GLITCH",
- t=>"404 | "+t);
-
-add("Cyber","CYBER","TECH",
- t=>"// "+t+" //");
-
-add("Matrix","MATRIX","TECH",
- t=>"[ "+t+" ]");
-
-add("Code","CODE","TECH",
- t=>"<"+t+">");
-
-add("Terminal","TERMINAL","TECH",
- t=>"$ "+t);
-
-add("Hacker","HACKER","TECH",
- t=>"root@"+t);
-
-add("Pixel","PIXEL","GAMING",
- t=>"[ "+t+" ]");
-
-add("Arcade","ARCADE","GAMING",
- t=>"★ "+t+" ★");
-
-add("Game Over","GAMING","GAMING",
- t=>"GAME // "+t);
-
-add("XP","GAMING","GAMING",
- t=>"+100 XP "+t);
-
-add("Level Up","GAMING","GAMING",
- t=>"LEVEL UP ↑ "+t);
-
-add("Pro","GAMING","GAMING",
- t=>"PRO • "+t);
-
-add("Legend","🏆 Gaming","GAMING",
- t=>"🏆 "+t+" 🏆");
-
-add("Winner","🥇 Gaming","GAMING",
- t=>"🥇 "+t+" 🥇");
-
-add("Fire Gamer","🔥 Gaming","GAMING",
- t=>"🔥🎮 "+t+" 🎮🔥");
-
-add("Football","⚽ Sports","SPORT",
- t=>"⚽ "+t+" ⚽");
-
-add("Champion","🏆 Sports","SPORT",
- t=>"🏆 "+t+" 🏆");
-
-add("Verified 2","☑ Social","SOCIAL",
- t=>"☑ "+t);
-
-add("Instagram","📸 Social","SOCIAL",
- t=>"📸 "+t);
-
-add("Creator","🎬 Social","SOCIAL",
- t=>"🎬 "+t);
-
-add("YouTube","▶ Social","SOCIAL",
- t=>"▶ "+t);
-
-add("TikTok","♪ Social","SOCIAL",
- t=>"♪ "+t);
-
-add("Follow","➕ Social","SOCIAL",
- t=>"＋ "+t);
-
-add("Link","🔗 Social","SOCIAL",
- t=>"🔗 "+t);
-
-add("Bio","✦ Social","SOCIAL",
- t=>"✦ "+t+" ✦");
-
-add("Profile","👤 Social","SOCIAL",
- t=>"👤 "+t);
-
-add("Minimal 2","• Minimal","CLEAN",
- t=>"• "+t);
-
-add("Minimal 3","· Minimal","CLEAN",
- t=>"· "+t+" ·");
-
-add("Simple","Simple","CLEAN",
- t=>t);
-
-add("Clean Line","— Clean","CLEAN",
- t=>"— "+t);
-
-add("Modern","MODERN","CLEAN",
- t=>"「"+t+"」");
-
-add("Aesthetic Line","Aesthetic","VIBE",
- t=>"˚₊‧ "+t+" ‧₊˚");
-
-add("Soft","Soft","CUTE",
- t=>"♡ "+t+" ♡");
-
-add("Dream","Dream","VIBE",
- t=>"｡･:* "+t+" *:･｡");
-
-add("Fairy","🧚 Fairy","CUTE",
- t=>"🧚 "+t+" ✨");
-
-add("Magic","🪄 Magic","MYSTIC",
- t=>"🪄 "+t+" ✨");
-
-add("Potion","🧪 Magic","MYSTIC",
- t=>"🧪 "+t+" 🧪");
-
-add("Crystal","🔮 Magic","MYSTIC",
- t=>"🔮 "+t+" 🔮");
-
-add("Moon Star","☾ Star","MYSTIC",
- t=>"☾⋆ "+t+" ⋆☽");
-
-add("Night","🌙 Dark","DARK",
- t=>"🌙 "+t+" 🌙");
-
-add("Midnight","☾ Dark","DARK",
- t=>"☾ "+t+" ☾");
-
-add("Savage","😈 Gen Z","HOT",
- t=>"😈 "+t+" 💀");
-
-add("Attitude","😎 Gen Z","HOT",
- t=>"😎 "+t+" 🔥");
-
-add("Bad Boy","🖤 Gen Z","HOT",
- t=>"🖤 "+t+" 😈");
-
-add("Bad Girl","💅 Gen Z","HOT",
- t=>"💅 "+t+" 🖤");
-
-add("Main Character","✨ Gen Z","HOT",
- t=>"✦ "+t+" ✦");
-
-add("Iconic","👑 Gen Z","HOT",
- t=>"👑 "+t+" ✨");
-
-add("Slay 2","💅 Gen Z","HOT",
- t=>"💅🏻 "+t+" 💅🏻");
-
-add("Hot Girl","🥵 Gen Z","HOT",
- t=>"🥵 "+t+" 💋");
-
-add("Hot Boy","🔥 Gen Z","HOT",
- t=>"🔥 "+t+" 😎");
-
-add("Drippy","💧 Gen Z","DRIP",
- t=>"💧💧 "+t+" 💧💧");
-
-add("Flex 2","💪 Gen Z","FLEX",
- t=>"💪 "+t+" 💰");
-
-add("Rich","💰 Luxury","FLEX",
- t=>"💰 "+t+" 💰");
-
-add("Millionaire","💵 Luxury","FLEX",
- t=>"💵 "+t+" 💵");
-
-add("CEO","👔 Luxury","FLEX",
- t=>"👔 "+t+" 💼");
-
-add("VIP","💎 Luxury","LUXURY",
- t=>"💎 "+t+" 💎");
-
-add("Diamond 3","💎 Luxury","LUXURY",
- t=>"💎━━ "+t+" ━━💎");
-
-add("Gold","🥇 Luxury","LUXURY",
- t=>"🥇 "+t+" 🥇");
-
-add("Platinum","⚜ Luxury","LUXURY",
- t=>"⚜ "+t+" ⚜");
-
-add("Elite","♛ Luxury","LUXURY",
- t=>"♛ "+t+" • ELITE");
-
-add("Premium","✦ Luxury","LUXURY",
- t=>"✦ "+t+" • PREMIUM");
-
-add("Signature","✍️ Luxury","LUXURY",
- t=>"✍️ "+t);
-
-add("Exclusive","🔐 Luxury","LUXURY",
- t=>"🔐 "+t+" 🔐");
-
-
-/* =====================================================
-   ADD MORE UNIQUE VARIATIONS AUTOMATICALLY
-   Keeps library above 100 styles.
-===================================================== */
-
-const wrappers = [
-
-  ["Arrow Left","➜","➜"],
-  ["Arrow Right","➤","➤"],
-  ["Double Arrow","»","«"],
-  ["Chevron","‹","›"],
-  ["Triangle","△","△"],
-  ["Circle","◉","◉"],
-  ["Dot","•","•"],
-  ["Square","■","■"],
-  ["Hollow Square","□","□"],
-  ["Plus","＋","＋"],
-  ["Equals","＝","＝"],
-  ["Slash","/","/"],
-  ["Backslash","\\","\\"],
-  ["Vertical","│","│"],
-  ["Wave","〰","〰"],
-  ["Dash","━","━"],
-  ["Double Dash","━━","━━"],
-  ["Asterisk","＊","＊"],
-  ["Star 3","✶","✶"],
-  ["Star 4","✷","✷"],
-  ["Star 5","✸","✸"],
-  ["Star 6","✹","✹"],
-  ["Flower 4","❁","❁"],
-  ["Flower 5","❃","❃"],
-  ["Heart 4","♡","♡"],
-  ["Heart 5","ღ","ღ"],
-  ["Music 2","♫","♫"],
-  ["Music 3","♪","♪"],
-  ["Peace 2","☮","☮"],
-  ["Sun 2","☼","☼"],
-  ["Moon 2","☽","☾"],
-  ["Sparkle 3","✧","✧"],
-  ["Sparkle 4","✦","✦"],
-  ["Diamond 4","◇","◇"],
-  ["Diamond 5","◆","◆"],
-  ["Crown 2","♕","♕"],
-  ["Crown 3","♛","♛"],
-  ["Cross 2","✞","✞"],
-  ["Cross 3","✟","✟"],
-  ["Check","✓","✓"],
-  ["Check 2","✔","✔"],
-  ["Question","?","?"],
-  ["Exclamation","!","!"],
-  ["Brackets 2","【","】"],
-  ["Brackets 3","〖","〗"],
-  ["Brackets 4","〘","〙"],
-  ["Brackets 5","〈","〉"],
-  ["Brackets 6","《","》"],
-  ["Brackets 7","「","」"],
-  ["Brackets 8","『","』"],
-  ["Brackets 9","〔","〕"],
-  ["Brackets 10","〚","〛"]
+/* =========================================================
+   REAL UNICODE FONTS
+========================================================= */
+
+add(
+  "Bold",
+  "unicode",
+  "CORE",
+  t=>convert(t,boldU,boldL),
+  ["font"]
+);
+
+add(
+  "Italic",
+  "unicode",
+  "CORE",
+  t=>convert(t,italicU,italicL)
+);
+
+add(
+  "Bold Italic",
+  "unicode",
+  "CORE",
+  t=>convert(t,boldItalicU,boldItalicL)
+);
+
+add(
+  "Sans Serif",
+  "unicode",
+  "NEW",
+  t=>convert(t,sansU,sansL)
+);
+
+add(
+  "Sans Bold",
+  "unicode",
+  "NEW",
+  t=>convert(t,boldU,boldL)
+);
+
+add(
+  "Sans Italic",
+  "unicode",
+  "NEW",
+  t=>convert(t,italicU,italicL)
+);
+
+add(
+  "Sans Bold Italic",
+  "unicode",
+  "GOD",
+  t=>convert(t,boldItalicU,boldItalicL)
+);
+
+add(
+  "Fraktur",
+  "unicode",
+  "NEW",
+  t=>convert(t,frakturU,frakturL)
+);
+
+add(
+  "Blackletter",
+  "unicode",
+  "GOD",
+  t=>convert(t,boldFrakturU,boldFrakturL)
+);
+
+add(
+  "Script",
+  "unicode",
+  "NEW",
+  t=>convert(t,scriptU,scriptL)
+);
+
+add(
+  "Royal Script",
+  "unicode",
+  "GOD",
+  t=>convert(t,boldScriptU,boldScriptL)
+);
+
+add(
+  "Small Caps",
+  "unicode",
+  "NEW",
+  t=>sameMap(t,smallCaps)
+);
+
+add(
+  "Circled",
+  "unicode",
+  "NEW",
+  t=>convert(t,circledU,circledL)
+);
+
+add(
+  "Squared",
+  "unicode",
+  "NEW",
+  t=>sameMap(t,squared)
+);
+
+add(
+  "Negative Squared",
+  "unicode",
+  "GOD",
+  t=>sameMap(t,negativeSquared)
+);
+
+
+/* =========================================================
+   TEXT EFFECTS
+========================================================= */
+
+add(
+  "Underline",
+  "effects",
+  "NEW",
+  t=>effect(t,"\u0332")
+);
+
+add(
+  "Strike",
+  "effects",
+  "NEW",
+  t=>effect(t,"\u0336")
+);
+
+add(
+  "Slash",
+  "effects",
+  "NEW",
+  t=>effect(t,"\u0337")
+);
+
+add(
+  "Double Underline",
+  "effects",
+  "NEW",
+  t=>effect(t,"\u0333")
+);
+
+add(
+  "Overline",
+  "effects",
+  "NEW",
+  t=>effect(t,"\u0305")
+);
+
+add(
+  "Dot Text",
+  "effects",
+  "NEW",
+  t=>effect(t,"\u0307")
+);
+
+add(
+  "Wave Text",
+  "effects",
+  "NEW",
+  t=>effect(t,"\u0303")
+);
+
+add(
+  "Ring Text",
+  "effects",
+  "NEW",
+  t=>effect(t,"\u030A")
+);
+
+add(
+  "Cyber Double",
+  "effects",
+  "GOD",
+  t=>effect(t,"\u0336\u0305")
+);
+
+add(
+  "Neon Line",
+  "effects",
+  "GOD",
+  t=>effect(t,"\u0332\u0307")
+);
+
+
+/* =========================================================
+   SPACING
+========================================================= */
+
+add(
+  "Spaced",
+  "effects",
+  "NEW",
+  t=>spaced(t)
+);
+
+add(
+  "Ultra Spaced",
+  "effects",
+  "GOD",
+  t=>Array.from(t).join("  ")
+);
+
+add(
+  "Dot Matrix",
+  "effects",
+  "NEW",
+  t=>Array.from(t).join(" · ")
+);
+
+add(
+  "Digital Pipe",
+  "effects",
+  "NEW",
+  t=>Array.from(t).join(" │ ")
+);
+
+
+/* =========================================================
+   CYBER / 2050
+========================================================= */
+
+add(
+  "Cyber Core",
+  "cyber",
+  "GOD",
+  t=>"⟦ "+convert(t,boldU,boldL)+" ⟧"
+);
+
+add(
+  "Quantum",
+  "cyber",
+  "GOD",
+  t=>"⌁ "+convert(t,sansU,sansL)+" ⌁"
+);
+
+add(
+  "Neural",
+  "cyber",
+  "NEW",
+  t=>"⟨ "+convert(t,italicU,italicL)+" ⟩"
+);
+
+add(
+  "Hologram",
+  "cyber",
+  "GOD",
+  t=>"╭─ "+convert(t,boldU,boldL)+" ─╮"
+);
+
+add(
+  "Digital Soul",
+  "cyber",
+  "NEW",
+  t=>"《 "+convert(t,sansU,sansL)+" 》"
+);
+
+add(
+  "Matrix",
+  "cyber",
+  "GOD",
+  t=>"▓ "+convert(t,boldU,boldL)+" ▓"
+);
+
+add(
+  "Neo Code",
+  "cyber",
+  "NEW",
+  t=>">_"+convert(t,sansU,sansL)
+);
+
+add(
+  "Terminal",
+  "cyber",
+  "NEW",
+  t=>"// "+convert(t,boldU,boldL)
+);
+
+add(
+  "Quantum Frame",
+  "cyber",
+  "GOD",
+  t=>"⌈ "+convert(t,boldItalicU,boldItalicL)+" ⌋"
+);
+
+add(
+  "Cyber Matrix",
+  "cyber",
+  "GOD",
+  t=>"⟪ "+convert(t,boldItalicU,boldItalicL)+" ⟫"
+);
+
+add(
+  "Future Signal",
+  "cyber",
+  "NEW",
+  t=>"⌁ "+convert(t,boldU,boldL)+" ⌁"
+);
+
+
+/* =========================================================
+   LUXURY
+========================================================= */
+
+add(
+  "Luxury",
+  "luxury",
+  "GOD",
+  t=>"◆ "+convert(t,boldU,boldL)+" ◆"
+);
+
+add(
+  "Royal",
+  "luxury",
+  "GOD",
+  t=>"♛ "+convert(t,boldFrakturU,boldFrakturL)+" ♛"
+);
+
+add(
+  "Imperial",
+  "luxury",
+  "GOD",
+  t=>"༺ "+convert(t,frakturU,frakturL)+" ༻"
+);
+
+add(
+  "Golden Script",
+  "luxury",
+  "NEW",
+  t=>"✦ "+convert(t,scriptU,scriptL)+" ✦"
+);
+
+add(
+  "Diamond Elite",
+  "luxury",
+  "GOD",
+  t=>"◇ "+convert(t,boldU,boldL)+" ◇"
+);
+
+add(
+  "Crown Elite",
+  "luxury",
+  "GOD",
+  t=>"♕ "+convert(t,boldU,boldL)+" ♕"
+);
+
+add(
+  "Signature",
+  "luxury",
+  "NEW",
+  t=>"— "+convert(t,scriptU,scriptL)+" —"
+);
+
+add(
+  "Neo Luxury",
+  "luxury",
+  "GOD",
+  t=>"𓆩 "+convert(t,scriptU,scriptL)+" 𓆪"
+);
+
+add(
+  "Elite Black",
+  "luxury",
+  "GOD",
+  t=>"◆ "+convert(t,boldFrakturU,boldFrakturL)+" ◆"
+);
+
+
+/* =========================================================
+   SOCIAL
+========================================================= */
+
+add(
+  "Creator",
+  "social",
+  "TRENDING",
+  t=>"✦ "+convert(t,boldU,boldL)
+);
+
+add(
+  "Verified",
+  "social",
+  "TRENDING",
+  t=>"✓ "+convert(t,boldU,boldL)
+);
+
+add(
+  "Bio Style",
+  "social",
+  "NEW",
+  t=>"♡ "+convert(t,italicU,italicL)+" ♡"
+);
+
+add(
+  "Profile Glow",
+  "social",
+  "NEW",
+  t=>"✧ "+convert(t,sansU,sansL)+" ✧"
+);
+
+add(
+  "Username Pro",
+  "social",
+  "NEW",
+  t=>convert(t,boldU,boldL)+" • 2050"
+);
+
+add(
+  "Creator Elite",
+  "social",
+  "GOD",
+  t=>"⟡ "+convert(t,boldItalicU,boldItalicL)+" ⟡"
+);
+
+add(
+  "Social Star",
+  "social",
+  "TRENDING",
+  t=>"★ "+convert(t,boldItalicU,boldItalicL)
+);
+
+
+/* =========================================================
+   GAMING
+========================================================= */
+
+add(
+  "Legend",
+  "gaming",
+  "GOD",
+  t=>"⚡ "+convert(t,boldU,boldL)+" ⚡"
+);
+
+add(
+  "Boss",
+  "gaming",
+  "GOD",
+  t=>"『"+convert(t,boldU,boldL)+"』"
+);
+
+add(
+  "Final Boss",
+  "gaming",
+  "GOD",
+  t=>"༒ "+convert(t,boldItalicU,boldItalicL)+" ༒"
+);
+
+add(
+  "Shadow Gamer",
+  "gaming",
+  "NEW",
+  t=>"☾ "+convert(t,frakturU,frakturL)+" ☽"
+);
+
+add(
+  "Game Over",
+  "gaming",
+  "NEW",
+  t=>"☠ "+convert(t,boldFrakturU,boldFrakturL)+" ☠"
+);
+
+add(
+  "XP Mode",
+  "gaming",
+  "NEW",
+  t=>"⌁ XP "+convert(t,boldU,boldL)
+);
+
+add(
+  "Pro Gamer",
+  "gaming",
+  "TRENDING",
+  t=>"⚔ "+convert(t,boldU,boldL)+" ⚔"
+);
+
+add(
+  "Champion",
+  "gaming",
+  "GOD",
+  t=>"🏆 "+convert(t,boldU,boldL)
+);
+
+
+/* =========================================================
+   CUTE
+========================================================= */
+
+add(
+  "Cute Heart",
+  "cute",
+  "NEW",
+  t=>"♡ "+t+" ♡"
+);
+
+add(
+  "Lovely",
+  "cute",
+  "NEW",
+  t=>"♥ "+convert(t,italicU,italicL)+" ♥"
+);
+
+add(
+  "Kawaii",
+  "cute",
+  "TRENDING",
+  t=>"૮₍ ˶ᵔ ᵕ ᵔ˶ ₎ა "+t
+);
+
+add(
+  "Bunny",
+  "cute",
+  "NEW",
+  t=>"₍ᐢ. .ᐢ₎ "+t+" ₍ᐢ. .ᐢ₎"
+);
+
+add(
+  "Angel",
+  "cute",
+  "NEW",
+  t=>"୨୧ "+t+" ୨୧"
+);
+
+add(
+  "Fairy",
+  "cute",
+  "NEW",
+  t=>"꧁ "+t+" ꧂"
+);
+
+add(
+  "Dreamy",
+  "cute",
+  "NEW",
+  t=>"☾⋆⁺₊ "+t+" ₊⁺⋆☽"
+);
+
+
+/* =========================================================
+   GENERATED GOD-LEVEL COMBINATIONS
+========================================================= */
+
+const comboFonts=[
+  t=>convert(t,boldU,boldL),
+  t=>convert(t,italicU,italicL),
+  t=>convert(t,boldItalicU,boldItalicL),
+  t=>convert(t,sansU,sansL),
+  t=>convert(t,frakturU,frakturL),
+  t=>convert(t,boldFrakturU,boldFrakturL),
+  t=>convert(t,scriptU,scriptL),
+  t=>convert(t,boldScriptU,boldScriptL),
+  t=>sameMap(t,smallCaps)
 ];
 
-wrappers.forEach((item,index)=>{
+const comboFrames=[
+  ["『 "," 』"],
+  ["【 "," 】"],
+  ["《 "," 》"],
+  ["⟦ "," ⟧"],
+  ["⟪ "," ⟫"],
+  ["╭─ "," ─╮"],
+  ["༺ "," ༻"],
+  ["⌈ "," ⌋"],
+  ["⟨ "," ⟩"],
+  ["〔 "," 〕"]
+];
 
-  const [name,left,right]=item;
+const comboSymbols=[
+  ["✦ "," ✦"],
+  ["✧ "," ✧"],
+  ["◆ "," ◆"],
+  ["◇ "," ◇"],
+  ["⚡ "," ⚡"],
+  ["∞ "," ∞"],
+  ["⟡ "," ⟡"],
+  ["♛ "," ♛"],
+  ["☾ "," ☽"],
+  ["★ "," ★"]
+];
 
-  add(
-    name,
-    "✨ Symbols",
-    "FANCY",
-    text=>left+" "+text+" "+right
-  );
+let comboNumber=1;
 
-});
+for(const font of comboFonts){
 
+  for(const frame of comboFrames){
 
-/* =====================================================
-   FINAL DATA
-===================================================== */
-
-const input =
-document.getElementById("text");
-
-const search =
-document.getElementById("search");
-
-const container =
-document.getElementById("fontContainer");
-
-const empty =
-document.getElementById("empty");
-
-const counter =
-document.getElementById("counter");
-
-const totalCount =
-document.getElementById("totalCount");
-
-const toast =
-document.getElementById("toast");
-
-
-/* =====================================================
-   RENDER
-===================================================== */
-
-function render(){
-
-  const text =
-    input.value.trim() || "Type above to preview";
-
-  const query =
-    search.value.toLowerCase().trim();
-
-  container.innerHTML="";
-
-  let visible =
-    styles.filter(style=>
-      style.name.toLowerCase().includes(query) ||
-      style.category.toLowerCase().includes(query) ||
-      style.badge.toLowerCase().includes(query)
+    add(
+      "2050 Frame "+comboNumber++,
+      "cyber",
+      "2050",
+      t=>frame[0]+font(t)+frame[1]
     );
 
-  totalCount.textContent=styles.length;
-
-  if(visible.length===0){
-
-    empty.style.display="block";
-    return;
-
+    if(comboNumber>55) break;
   }
 
-  empty.style.display="none";
-
-  const groups={};
-
-  visible.forEach(style=>{
-
-    if(!groups[style.category]){
-      groups[style.category]=[];
-    }
-
-    groups[style.category].push(style);
-
-  });
-
-
-  Object.keys(groups).forEach(category=>{
-
-    const section=
-      document.createElement("section");
-
-    const title=
-      document.createElement("div");
-
-    title.className="category";
-
-    title.innerHTML=`
-      <h2>${category}</h2>
-      <div class="category-line"></div>
-      <span class="category-count">
-        ${groups[category].length} STYLES
-      </span>
-    `;
-
-    const grid=
-      document.createElement("div");
-
-    grid.className="font-grid";
-
-
-    groups[category].forEach(style=>{
-
-      const card=
-        document.createElement("div");
-
-      card.className="font-card";
-
-
-      const top=
-        document.createElement("div");
-
-      top.className="card-top";
-
-      top.innerHTML=`
-        <span class="font-name">
-          ${style.name}
-        </span>
-
-        <span class="badge">
-          ${style.badge}
-        </span>
-      `;
-
-
-      const preview=
-        document.createElement("div");
-
-      preview.className="preview";
-
-      preview.textContent=
-        style.fn(text);
-
-
-      const actions=
-        document.createElement("div");
-
-      actions.className="actions";
-
-
-      const fav=
-        document.createElement("button");
-
-      fav.className="favorite-btn";
-
-      fav.innerHTML="♡";
-
-      fav.setAttribute(
-        "aria-label",
-        "Favorite"
-      );
-
-
-      fav.onclick=()=>{
-
-        fav.classList.toggle("active");
-
-        fav.innerHTML=
-          fav.classList.contains("active")
-          ? "♥"
-          : "♡";
-
-        card.classList.toggle(
-          "favorite"
-        );
-
-      };
-
-
-      const copy=
-        document.createElement("button");
-
-      copy.className="copy-btn";
-
-      copy.textContent="COPY";
-
-
-      copy.onclick=async()=>{
-
-        try{
-
-          await navigator.clipboard.writeText(
-            preview.textContent
-          );
-
-        }catch(e){
-
-          const temp=
-            document.createElement("textarea");
-
-          temp.value=
-            preview.textContent;
-
-          document.body.appendChild(temp);
-
-          temp.select();
-
-          document.execCommand("copy");
-
-          temp.remove();
-
-        }
-
-
-        copy.textContent="COPIED!";
-
-        copy.classList.add("copied");
-
-        showToast();
-
-
-        setTimeout(()=>{
-
-          copy.textContent="COPY";
-
-          copy.classList.remove("copied");
-
-        },1500);
-
-      };
-
-
-      actions.appendChild(fav);
-      actions.appendChild(copy);
-
-      card.appendChild(top);
-      card.appendChild(preview);
-      card.appendChild(actions);
-
-      grid.appendChild(card);
-
-    });
-
-
-    section.appendChild(title);
-    section.appendChild(grid);
-
-    container.appendChild(section);
-
-  });
-
+  if(comboNumber>55) break;
 }
 
 
-/* =====================================================
+for(const font of comboFonts){
+
+  for(const symbol of comboSymbols){
+
+    add(
+      "2050 Remix "+comboNumber++,
+      "cyber",
+      "AI",
+      t=>symbol[0]+font(t)+symbol[1]
+    );
+
+    if(comboNumber>105) break;
+  }
+
+  if(comboNumber>105) break;
+}
+
+
+/* =========================================================
+   EXTRA PREMIUM COMBINATIONS
+========================================================= */
+
+add(
+  "Infinity Royal",
+  "luxury",
+  "GOD",
+  t=>"∞ "+convert(t,boldFrakturU,boldFrakturL)+" ∞"
+);
+
+add(
+  "Diamond Script",
+  "luxury",
+  "GOD",
+  t=>"◇ "+convert(t,scriptU,scriptL)+" ◇"
+);
+
+add(
+  "Royal Signature",
+  "luxury",
+  "GOD",
+  t=>"♛ "+convert(t,boldScriptU,boldScriptL)+" ♛"
+);
+
+add(
+  "Cyber Royal",
+  "cyber",
+  "GOD",
+  t=>"⟦♛ "+convert(t,boldU,boldL)+" ♛⟧"
+);
+
+add(
+  "Quantum Elite",
+  "cyber",
+  "GOD",
+  t=>"⌁◆ "+convert(t,boldItalicU,boldItalicL)+" ◆⌁"
+);
+
+add(
+  "Holographic",
+  "cyber",
+  "GOD",
+  t=>"╭─✦ "+convert(t,boldU,boldL)+" ✦─╮"
+);
+
+add(
+  "Neural Crown",
+  "cyber",
+  "GOD",
+  t=>"♛ "+convert(t,sansU,sansL)+" ♛"
+);
+
+add(
+  "Future Legend",
+  "gaming",
+  "GOD",
+  t=>"⚡༒ "+convert(t,boldFrakturU,boldFrakturL)+" ༒⚡"
+);
+
+add(
+  "Dark Infinity",
+  "gaming",
+  "GOD",
+  t=>"☾∞ "+convert(t,frakturU,frakturL)+" ∞☽"
+);
+
+add(
+  "Cyber Champion",
+  "gaming",
+  "GOD",
+  t=>"⚔ "+convert(t,boldItalicU,boldItalicL)+" ⚔"
+);
+
+
+/* =========================================================
+   DOM
+========================================================= */
+
+const textInput=
+document.getElementById("textInput");
+
+const counter=
+document.getElementById("counter");
+
+const searchInput=
+document.getElementById("searchInput");
+
+const fontGrid=
+document.getElementById("fontGrid");
+
+const totalCount=
+document.getElementById("totalCount");
+
+const empty=
+document.getElementById("empty");
+
+const toast=
+document.getElementById("toast");
+
+const favoriteFilter=
+document.getElementById("favoriteFilter");
+
+let activeCategory="all";
+let favoritesOnly=false;
+
+let favorites=
+JSON.parse(
+  localStorage.getItem("dipoBioFontFavorites") || "[]"
+);
+
+
+/* =========================================================
    TOAST
-===================================================== */
+========================================================= */
 
 let toastTimer;
 
-function showToast(){
+function showToast(message){
+
+  toast.textContent=message;
 
   toast.classList.add("show");
 
@@ -1536,37 +1694,512 @@ function showToast(){
 
     toast.classList.remove("show");
 
-  },1800);
+  },1700);
 
 }
 
 
-/* =====================================================
-   INPUT EVENTS
-===================================================== */
+/* =========================================================
+   COPY
+========================================================= */
 
-input.addEventListener("input",()=>{
+async function copyText(text,button){
 
-  counter.textContent=
-    input.value.length;
+  try{
+
+    await navigator.clipboard.writeText(text);
+
+  }catch(error){
+
+    const temp=document.createElement("textarea");
+
+    temp.value=text;
+
+    document.body.appendChild(temp);
+
+    temp.select();
+
+    document.execCommand("copy");
+
+    temp.remove();
+
+  }
+
+  const old=button.textContent;
+
+  button.textContent="✓ Copied";
+
+  button.classList.add("done");
+
+  showToast("✓ COPIED TO CLIPBOARD");
+
+  setTimeout(()=>{
+
+    button.textContent=old;
+
+    button.classList.remove("done");
+
+  },1100);
+
+}
+
+
+/* =========================================================
+   FAVORITES
+========================================================= */
+
+function saveFavorites(){
+
+  localStorage.setItem(
+    "dipoBioFontFavorites",
+    JSON.stringify(favorites)
+  );
+
+}
+
+
+function toggleFavorite(id){
+
+  if(favorites.includes(id)){
+
+    favorites=
+      favorites.filter(x=>x!==id);
+
+  }else{
+
+    favorites.push(id);
+
+  }
+
+  saveFavorites();
 
   render();
 
-});
+  showToast(
+    favorites.includes(id)
+      ? "★ SAVED TO FAVORITES"
+      : "♡ REMOVED"
+  );
+
+}
 
 
-search.addEventListener(
+/* =========================================================
+   RENDER
+========================================================= */
+
+function render(){
+
+  const text=
+    textInput.value.trim() ||
+    "DIPO WORLD";
+
+  const query=
+    searchInput.value.trim().toLowerCase();
+
+
+  let filtered=
+    styles.filter(style=>{
+
+      const categoryOK=
+        activeCategory==="all" ||
+        style.category===activeCategory;
+
+      const searchOK=
+        !query ||
+        style.tags.includes(query) ||
+        style.name.toLowerCase().includes(query) ||
+        style.category.toLowerCase().includes(query);
+
+      const favoriteOK=
+        !favoritesOnly ||
+        favorites.includes(style.id);
+
+      return categoryOK &&
+             searchOK &&
+             favoriteOK;
+
+    });
+
+
+  fontGrid.innerHTML="";
+
+  totalCount.textContent=
+    filtered.length;
+
+  empty.style.display=
+    filtered.length
+      ? "none"
+      : "block";
+
+
+  filtered.forEach(style=>{
+
+    const card=
+      document.createElement("article");
+
+    card.className=
+      "font-card"+
+      (
+        favorites.includes(style.id)
+          ? " favorite"
+          : ""
+      );
+
+
+    const top=
+      document.createElement("div");
+
+    top.className="card-top";
+
+
+    const name=
+      document.createElement("div");
+
+    name.className="font-name";
+
+    name.textContent=
+      style.name;
+
+
+    const badge=
+      document.createElement("div");
+
+    badge.className="badge";
+
+    if(style.badge==="NEW")
+      badge.classList.add("new");
+
+    if(style.badge==="GOD")
+      badge.classList.add("god");
+
+    if(style.badge==="TRENDING")
+      badge.classList.add("trending");
+
+    badge.textContent=
+      style.badge;
+
+
+    top.appendChild(name);
+
+    top.appendChild(badge);
+
+
+    const preview=
+      document.createElement("div");
+
+    preview.className="preview";
+
+    preview.textContent=
+      style.fn(text);
+
+
+    const actions=
+      document.createElement("div");
+
+    actions.className="actions";
+
+
+    const fav=
+      document.createElement("button");
+
+    fav.className=
+      "action favorite-btn"+
+      (
+        favorites.includes(style.id)
+          ? " active"
+          : ""
+      );
+
+    fav.textContent=
+      favorites.includes(style.id)
+        ? "★"
+        : "♡";
+
+    fav.title="Favorite";
+
+
+    fav.addEventListener(
+      "click",
+      ()=>toggleFavorite(style.id)
+    );
+
+
+    const remix=
+      document.createElement("button");
+
+    remix.className=
+      "action remix-btn";
+
+    remix.textContent=
+      "🔄 Remix";
+
+
+    remix.addEventListener(
+      "click",
+      ()=>{
+
+        const random=
+          comboFonts[
+            Math.floor(
+              Math.random()*comboFonts.length
+            )
+          ];
+
+        const symbols=
+          comboSymbols[
+            Math.floor(
+              Math.random()*comboSymbols.length
+            )
+          ];
+
+        const newText=
+          symbols[0]+
+          random(text)+
+          symbols[1];
+
+        preview.textContent=
+          newText;
+
+        copy.dataset.text=
+          newText;
+
+        showToast("✦ REMIXED");
+
+      }
+    );
+
+
+    const copy=
+      document.createElement("button");
+
+    copy.className=
+      "action copy-btn";
+
+    copy.textContent=
+      "Copy";
+
+    copy.dataset.text=
+      style.fn(text);
+
+
+    copy.addEventListener(
+      "click",
+      ()=>copyText(
+        copy.dataset.text,
+        copy
+      )
+    );
+
+
+    actions.appendChild(fav);
+    actions.appendChild(remix);
+    actions.appendChild(copy);
+
+
+    card.appendChild(top);
+    card.appendChild(preview);
+    card.appendChild(actions);
+
+    fontGrid.appendChild(card);
+
+  });
+
+}
+
+
+/* =========================================================
+   LIVE INPUT
+========================================================= */
+
+textInput.addEventListener(
+  "input",
+  ()=>{
+
+    counter.textContent=
+      textInput.value.length;
+
+    render();
+
+  }
+);
+
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+searchInput.addEventListener(
   "input",
   render
 );
 
 
-/* =====================================================
-   START
-===================================================== */
+/* =========================================================
+   CATEGORIES
+========================================================= */
+
+document.querySelectorAll(".category-btn")
+.forEach(button=>{
+
+  button.addEventListener(
+    "click",
+    ()=>{
+
+      activeCategory=
+        button.dataset.category;
+
+      document
+        .querySelectorAll(".category-btn")
+        .forEach(btn=>{
+
+          btn.classList.toggle(
+            "active",
+            btn===button
+          );
+
+        });
+
+      render();
+
+    }
+  );
+
+});
+
+
+/* =========================================================
+   FAVORITE FILTER
+========================================================= */
+
+favoriteFilter.addEventListener(
+  "click",
+  ()=>{
+
+    favoritesOnly=
+      !favoritesOnly;
+
+    favoriteFilter.classList.toggle(
+      "active",
+      favoritesOnly
+    );
+
+    favoriteFilter.textContent=
+      favoritesOnly
+        ? "★ Favorites"
+        : "♡ Favorites";
+
+    render();
+
+  }
+);
+
+
+/* =========================================================
+   CLEAR SEARCH
+========================================================= */
+
+document.getElementById("clearSearch")
+.addEventListener(
+  "click",
+  ()=>{
+
+    searchInput.value="";
+
+    activeCategory="all";
+
+    document
+      .querySelectorAll(".category-btn")
+      .forEach(btn=>{
+
+        btn.classList.toggle(
+          "active",
+          btn.dataset.category==="all"
+        );
+
+      });
+
+    render();
+
+  }
+);
+
+
+/* =========================================================
+   RANDOM STYLE
+========================================================= */
+
+document.getElementById("randomBtn")
+.addEventListener(
+  "click",
+  ()=>{
+
+    const text=
+      textInput.value.trim() ||
+      "DIPO WORLD";
+
+    const randomStyle=
+      styles[
+        Math.floor(
+          Math.random()*styles.length
+        )
+      ];
+
+    searchInput.value="";
+
+    activeCategory="all";
+
+    document
+      .querySelectorAll(".category-btn")
+      .forEach(btn=>{
+
+        btn.classList.toggle(
+          "active",
+          btn.dataset.category==="all"
+        );
+
+      });
+
+
+    render();
+
+    setTimeout(()=>{
+
+      const cards=
+        document.querySelectorAll(
+          ".font-card"
+        );
+
+      const index=
+        styles.findIndex(
+          s=>s.id===randomStyle.id
+        );
+
+      if(cards[index]){
+
+        cards[index].scrollIntoView({
+          behavior:"smooth",
+          block:"center"
+        });
+
+      }
+
+      showToast(
+        "🎲 "+randomStyle.name
+      );
+
+    },50);
+
+  }
+);
+
+
+/* =========================================================
+   INITIAL
+========================================================= */
 
 counter.textContent=
-  input.value.length;
+  textInput.value.length;
 
 render();
 

@@ -1,0 +1,1466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#ffffff">
+
+<title>DIPO BIO — AI Font Lab</title>
+
+<style>
+*{box-sizing:border-box;}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  background:#f8fafc;
+  color:#111827;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+}
+
+.container{
+  width:min(1050px,94%);
+  margin:auto;
+}
+
+/* HEADER */
+
+header{
+  position:sticky;
+  top:0;
+  z-index:50;
+  background:rgba(255,255,255,.92);
+  backdrop-filter:blur(18px);
+  border-bottom:1px solid #e8ebf0;
+}
+
+.nav{
+  min-height:70px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:15px;
+}
+
+.logo{
+  font-size:27px;
+  font-weight:950;
+  letter-spacing:-2px;
+}
+
+.logo span{
+  color:#2859d7;
+}
+
+.back{
+  text-decoration:none;
+  color:#222;
+  font-weight:800;
+  font-size:15px;
+}
+
+/* HERO */
+
+main{
+  padding:35px 0 80px;
+}
+
+.hero{
+  text-align:center;
+  margin-bottom:25px;
+}
+
+.eyebrow{
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  background:#eef3ff;
+  color:#2859d7;
+  border:1px solid #dce5ff;
+  border-radius:50px;
+  padding:8px 14px;
+  font-size:11px;
+  font-weight:950;
+  letter-spacing:1.2px;
+}
+
+h1{
+  margin:14px 0 10px;
+  font-size:clamp(42px,8vw,76px);
+  line-height:.95;
+  letter-spacing:-4px;
+}
+
+.hero p{
+  margin:0;
+  color:#737b88;
+  font-size:18px;
+}
+
+/* INPUT */
+
+.lab-box{
+  background:#fff;
+  border:1px solid #e4e8ef;
+  border-radius:27px;
+  padding:15px;
+  box-shadow:0 15px 45px rgba(20,30,50,.07);
+  margin-bottom:18px;
+}
+
+.input-wrap{
+  position:relative;
+}
+
+textarea{
+  width:100%;
+  height:125px;
+  resize:none;
+  border:2px solid #e5e9ef;
+  border-radius:20px;
+  background:#f9fafb;
+  outline:none;
+  padding:20px 75px 20px 20px;
+  font-size:28px;
+  color:#111;
+  font-family:inherit;
+  transition:.2s ease;
+}
+
+textarea:focus{
+  border-color:#2859d7;
+  background:#fff;
+}
+
+.counter{
+  position:absolute;
+  right:18px;
+  top:17px;
+  color:#9aa1ad;
+  font-size:12px;
+  font-weight:900;
+}
+
+/* CONTROLS */
+
+.controls{
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:10px;
+  margin-bottom:20px;
+}
+
+.select,
+.action-btn{
+  min-height:48px;
+  border-radius:14px;
+  border:2px solid #e5e9ef;
+  background:#fff;
+  padding:0 15px;
+  font-weight:850;
+  font-size:14px;
+}
+
+.select{
+  outline:none;
+}
+
+.action-btn{
+  cursor:pointer;
+}
+
+.action-btn:hover{
+  border-color:#2859d7;
+}
+
+.generate{
+  background:#2859d7;
+  color:#fff;
+  border-color:#2859d7;
+}
+
+/* MODE CHIPS */
+
+.modes{
+  display:flex;
+  gap:8px;
+  overflow:auto;
+  padding:2px 0 8px;
+  scrollbar-width:none;
+  margin-bottom:25px;
+}
+
+.modes::-webkit-scrollbar{
+  display:none;
+}
+
+.mode{
+  flex:0 0 auto;
+  border:1px solid #e1e5ec;
+  background:#fff;
+  border-radius:50px;
+  padding:9px 14px;
+  cursor:pointer;
+  font-size:12px;
+  font-weight:900;
+  color:#606876;
+}
+
+.mode.active{
+  background:#111827;
+  color:#fff;
+  border-color:#111827;
+}
+
+/* RESULTS */
+
+.result-head{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  margin:20px 0 12px;
+}
+
+.result-head h2{
+  margin:0;
+  font-size:23px;
+  letter-spacing:-.7px;
+}
+
+.result-count{
+  color:#9097a3;
+  font-size:12px;
+  font-weight:900;
+}
+
+.results{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:11px;
+}
+
+.result{
+  position:relative;
+  background:#fff;
+  border:1px solid #e3e7ed;
+  border-radius:19px;
+  padding:14px;
+  min-height:145px;
+  overflow:hidden;
+  transition:.18s ease;
+}
+
+.result:hover{
+  transform:translateY(-2px);
+  border-color:#b9c8f7;
+  box-shadow:0 10px 28px rgba(30,50,100,.07);
+}
+
+.result-top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:8px;
+  border-bottom:1px solid #edf0f4;
+  padding-bottom:9px;
+}
+
+.result-name{
+  font-size:10px;
+  letter-spacing:1.2px;
+  text-transform:uppercase;
+  color:#777f8d;
+  font-weight:950;
+}
+
+.result-tag{
+  padding:5px 8px;
+  border-radius:8px;
+  background:#f1f4f8;
+  color:#747d8b;
+  font-size:8px;
+  font-weight:950;
+}
+
+.result-text{
+  min-height:55px;
+  display:flex;
+  align-items:center;
+  overflow:hidden;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  font-size:19px;
+  margin:8px 0;
+}
+
+.result-actions{
+  display:flex;
+  justify-content:flex-end;
+  gap:7px;
+}
+
+.copy,
+.remix{
+  border:0;
+  border-radius:9px;
+  padding:8px 12px;
+  cursor:pointer;
+  font-size:10px;
+  font-weight:950;
+}
+
+.copy{
+  background:#2859d7;
+  color:#fff;
+}
+
+.remix{
+  background:#f1f3f6;
+  color:#333;
+}
+
+.copy.done{
+  background:#168b54;
+}
+
+/* EMPTY */
+
+.empty{
+  display:none;
+  text-align:center;
+  padding:55px 20px;
+  color:#8a919d;
+}
+
+/* TOAST */
+
+.toast{
+  position:fixed;
+  left:50%;
+  bottom:22px;
+  transform:translate(-50%,120px);
+  background:#111827;
+  color:#fff;
+  padding:14px 20px;
+  border-radius:15px;
+  font-size:13px;
+  font-weight:900;
+  box-shadow:0 15px 40px rgba(0,0,0,.2);
+  transition:.3s ease;
+  z-index:100;
+}
+
+.toast.show{
+  transform:translate(-50%,0);
+}
+
+/* MOBILE */
+
+@media(max-width:650px){
+
+  .container{
+    width:92%;
+  }
+
+  .nav{
+    min-height:62px;
+  }
+
+  .logo{
+    font-size:23px;
+  }
+
+  .back{
+    font-size:13px;
+  }
+
+  main{
+    padding:28px 0 65px;
+  }
+
+  h1{
+    font-size:48px;
+    letter-spacing:-3px;
+  }
+
+  .hero p{
+    font-size:15px;
+  }
+
+  textarea{
+    height:95px;
+    font-size:22px;
+    padding:16px 60px 16px 16px;
+  }
+
+  .controls{
+    grid-template-columns:1fr;
+  }
+
+  .results{
+    gap:8px;
+  }
+
+  .result{
+    min-height:126px;
+    padding:10px;
+    border-radius:15px;
+  }
+
+  .result-text{
+    font-size:15px;
+    min-height:45px;
+  }
+
+  .result-name{
+    font-size:8px;
+  }
+
+  .result-tag{
+    font-size:7px;
+    padding:4px 6px;
+  }
+
+  .copy,
+  .remix{
+    padding:7px 9px;
+    font-size:9px;
+  }
+}
+
+@media(max-width:380px){
+
+  .results{
+    grid-template-columns:1fr 1fr;
+    gap:7px;
+  }
+
+  .result-text{
+    font-size:13px;
+  }
+
+  h1{
+    font-size:41px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="container nav">
+    <div class="logo">DIPO<span>BIO</span></div>
+    <a class="back" href="index.html">← Bio Tools</a>
+  </div>
+</header>
+
+<main class="container">
+
+  <section class="hero">
+    <div class="eyebrow">✦ AI FONT LAB • 2050 ENGINE</div>
+
+    <h1>AI Font Lab</h1>
+
+    <p>
+      Create futuristic font combinations in one tap.
+    </p>
+  </section>
+
+  <section class="lab-box">
+
+    <div class="input-wrap">
+
+      <textarea
+        id="inputText"
+        maxlength="120"
+        placeholder="Enter your text..."
+      >DIPO WORLD</textarea>
+
+      <div class="counter">
+        <span id="counter">10</span> / 120
+      </div>
+
+    </div>
+
+  </section>
+
+  <div class="controls">
+
+    <select id="styleMode" class="select">
+      <option value="all">⚡ AI Auto — All Styles</option>
+      <option value="cyber">🤖 Cyber</option>
+      <option value="luxury">👑 Luxury</option>
+      <option value="social">📱 Social</option>
+      <option value="gaming">🎮 Gaming</option>
+      <option value="clean">🧊 Clean</option>
+      <option value="dark">🌑 Dark</option>
+    </select>
+
+    <button id="generate" class="action-btn generate">
+      ✨ Generate
+    </button>
+
+  </div>
+
+  <div class="modes">
+
+    <button class="mode active" data-mode="all">
+      ✦ ALL
+    </button>
+
+    <button class="mode" data-mode="cyber">
+      🤖 CYBER
+    </button>
+
+    <button class="mode" data-mode="luxury">
+      👑 LUXURY
+    </button>
+
+    <button class="mode" data-mode="social">
+      📱 SOCIAL
+    </button>
+
+    <button class="mode" data-mode="gaming">
+      🎮 GAMING
+    </button>
+
+    <button class="mode" data-mode="clean">
+      🧊 CLEAN
+    </button>
+
+    <button class="mode" data-mode="dark">
+      🌑 DARK
+    </button>
+
+  </div>
+
+  <div class="result-head">
+
+    <h2>AI Generated Styles</h2>
+
+    <div class="result-count">
+      <span id="resultCount">0</span> styles
+    </div>
+
+  </div>
+
+  <div id="results" class="results"></div>
+
+  <div id="empty" class="empty">
+    ✨ No styles found.
+  </div>
+
+</main>
+
+<div id="toast" class="toast">
+  ✓ COPIED
+</div>
+
+
+<script>
+
+/* =========================================================
+   DIPO BIO — AI FONT LAB 2050
+========================================================= */
+
+
+/* ---------- BASIC MAPS ---------- */
+
+const A = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+const a = "abcdefghijklmnopqrstuvwxyz";
+
+const boldU =
+"𝗔𝗕𝗖𝗗𝗘𝗙𝗚𝗛𝗜𝗝𝗞𝗟𝗠𝗡𝗢𝗣𝗤𝗥𝗦𝗧𝗨𝗩𝗪𝗫𝗬𝗭";
+
+const boldL =
+"𝗮𝗯𝗰𝗱𝗲𝗳𝗴𝗵𝗶𝗷𝗸𝗹𝗺𝗻𝗼𝗽𝗾𝗿𝘀𝘁𝘂𝘃𝘄𝘅𝘆𝘇";
+
+const italicU =
+"𝘈𝘉𝘊𝘋𝘌𝘍𝘎𝘏𝘐𝘑𝘒𝘓𝘔𝘕𝘖𝘗𝘘𝘙𝘚𝘛𝘜𝘝𝘞𝘟𝘠𝘡";
+
+const italicL =
+"𝘢𝘣𝘤𝘥𝘦𝘧𝘨𝘩𝘪𝘫𝘬𝘭𝘮𝘯𝘰𝘱𝘲𝘳𝘴𝘵𝘶𝘷𝘸𝘹𝘺𝘻";
+
+const boldItalicU =
+"𝘼𝘽𝘾𝘿𝙀𝙁𝙂𝙃𝙄𝙅𝙆𝙇𝙈𝙉𝙊𝙋𝙌𝙍𝙎𝙏𝙐𝙑𝙒𝙓𝙔𝙕";
+
+const boldItalicL =
+"𝙖𝙗𝙘𝙙𝙚𝙛𝙜𝙝𝙞𝙟𝙠𝙡𝙢𝙣𝙤𝙥𝙦𝙧𝙨𝙩𝙪𝙫𝙬𝙭𝙮𝙯";
+
+const sansU =
+"𝖠𝖡𝖢𝖣𝖤𝖥𝖦𝖧𝖨𝖩𝖪𝖫𝖬𝖭𝖮𝖯𝖰𝖱𝖲𝖳𝖴𝖵𝖶𝖷𝖸𝖹";
+
+const sansL =
+"𝖺𝖻𝖼𝖽𝖾𝖿𝗀𝗁𝗂𝗃𝗄𝗅𝗆𝗇𝗈𝗉𝗊𝗋𝗌𝗍𝗎𝗏𝗐𝗑𝗒𝗓";
+
+const frakturU =
+"𝔄𝔅ℭ𝔇𝔈𝔉𝔊ℌℑ𝔍𝔎𝔏𝔐𝔑𝔒𝔓𝔔ℜ𝔖𝔗𝔘𝔙𝔚𝔛𝔜ℨ";
+
+const frakturL =
+"𝔞𝔟𝔠𝔡𝔢𝔣𝔤𝔥𝔦𝔧𝔨𝔩𝔪𝔫𝔬𝔭𝔮𝔯𝔰𝔱𝔲𝔳𝔴𝔵𝔶𝔷";
+
+const scriptU =
+"𝒜ℬ𝒞𝒟ℰℱ𝒢ℋℐ𝒥𝒦ℒℳ𝒩𝒪𝒫𝒬ℛ𝒮𝒯𝒰𝒱𝒲𝒳𝒴𝒵";
+
+const scriptL =
+"𝒶𝒷𝒸𝒹ℯ𝒻ℊ𝒽𝒾𝒿𝓀𝓁𝓂𝓃ℴ𝓅𝓆𝓇𝓈𝓉𝓊𝓋𝓌𝓍𝓎𝓏";
+
+const smallCaps =
+"ᴀʙᴄᴅᴇꜰɢʜɪᴊᴋʟᴍɴᴏᴘǫʀꜱᴛᴜᴠᴡxʏᴢ";
+
+
+/* ---------- CONVERTER ---------- */
+
+function convert(text, upper, lower){
+
+  return Array.from(text).map(ch => {
+
+    const ui = A.indexOf(ch);
+
+    if(ui !== -1 && upper[ui]){
+      return upper[ui];
+    }
+
+    const li = a.indexOf(ch);
+
+    if(li !== -1 && lower[li]){
+      return lower[li];
+    }
+
+    return ch;
+
+  }).join("");
+
+}
+
+
+/* ---------- SAME MAP ---------- */
+
+function sameMap(text,map){
+
+  return Array.from(text).map(ch => {
+
+    const i = A.indexOf(ch.toUpperCase());
+
+    return i >= 0 && map[i] ? map[i] : ch;
+
+  }).join("");
+
+}
+
+
+/* =========================================================
+   AI STYLE LIBRARY
+========================================================= */
+
+const engines = [
+
+  {
+    name:"Neural Bold",
+    tag:"CYBER",
+    modes:["all","cyber"],
+    fn:t=>"⟦ "+convert(t,boldU,boldL)+" ⟧"
+  },
+
+  {
+    name:"Quantum",
+    tag:"2050",
+    modes:["all","cyber"],
+    fn:t=>"⌁ "+convert(t,sansU,sansL)+" ⌁"
+  },
+
+  {
+    name:"Cyber Core",
+    tag:"GOD",
+    modes:["all","cyber","gaming"],
+    fn:t=>"⟪ "+convert(t,boldItalicU,boldItalicL)+" ⟫"
+  },
+
+  {
+    name:"Neural Network",
+    tag:"AI",
+    modes:["all","cyber"],
+    fn:t=>"╭─ "+convert(t,boldU,boldL)+" ─╮"
+  },
+
+  {
+    name:"Hologram",
+    tag:"2050",
+    modes:["all","cyber"],
+    fn:t=>"『 "+convert(t,italicU,italicL)+" 』"
+  },
+
+  {
+    name:"Digital Soul",
+    tag:"AI",
+    modes:["all","cyber"],
+    fn:t=>"《 "+convert(t,sansU,sansL)+" 》"
+  },
+
+  {
+    name:"Cyber Matrix",
+    tag:"MATRIX",
+    modes:["all","cyber","gaming"],
+    fn:t=>"▓ "+convert(t,boldU,boldL)+" ▓"
+  },
+
+  {
+    name:"Quantum Frame",
+    tag:"GOD",
+    modes:["all","cyber"],
+    fn:t=>"⌈ "+convert(t,boldItalicU,boldItalicL)+" ⌋"
+  },
+
+  {
+    name:"Neo Code",
+    tag:"CODE",
+    modes:["all","cyber","gaming"],
+    fn:t=>">_"+convert(t,sansU,sansL)
+  },
+
+  {
+    name:"Future Terminal",
+    tag:"TECH",
+    modes:["all","cyber","gaming"],
+    fn:t=>"// "+convert(t,boldU,boldL)
+  },
+
+
+  /* ---------- LUXURY ---------- */
+
+  {
+    name:"Royal Script",
+    tag:"ROYAL",
+    modes:["all","luxury"],
+    fn:t=>"♛ "+convert(t,scriptU,scriptL)+" ♛"
+  },
+
+  {
+    name:"Luxury Fraktur",
+    tag:"ELITE",
+    modes:["all","luxury"],
+    fn:t=>"𓆩 "+convert(t,frakturU,frakturL)+" 𓆪"
+  },
+
+  {
+    name:"Diamond Elite",
+    tag:"ELITE",
+    modes:["all","luxury"],
+    fn:t=>"◆ "+convert(t,boldU,boldL)+" ◆"
+  },
+
+  {
+    name:"Royal Crown",
+    tag:"CROWN",
+    modes:["all","luxury"],
+    fn:t=>"♕ "+convert(t,boldU,boldL)+" ♕"
+  },
+
+  {
+    name:"Golden Soul",
+    tag:"GOLD",
+    modes:["all","luxury"],
+    fn:t=>"✦ "+convert(t,scriptU,scriptL)+" ✦"
+  },
+
+  {
+    name:"Imperial",
+    tag:"VIP",
+    modes:["all","luxury"],
+    fn:t=>"༺ "+convert(t,frakturU,frakturL)+" ༻"
+  },
+
+  {
+    name:"Signature",
+    tag:"PRO",
+    modes:["all","luxury"],
+    fn:t=>"— "+convert(t,scriptU,scriptL)+" —"
+  },
+
+
+  /* ---------- SOCIAL ---------- */
+
+  {
+    name:"Creator Pro",
+    tag:"CREATOR",
+    modes:["all","social"],
+    fn:t=>"✦ "+convert(t,boldU,boldL)
+  },
+
+  {
+    name:"Verified Bio",
+    tag:"✓ VERIFIED",
+    modes:["all","social"],
+    fn:t=>"✓ "+convert(t,boldU,boldL)
+  },
+
+  {
+    name:"Profile Glow",
+    tag:"SOCIAL",
+    modes:["all","social"],
+    fn:t=>"✧ "+convert(t,sansU,sansL)+" ✧"
+  },
+
+  {
+    name:"Bio Signature",
+    tag:"BIO",
+    modes:["all","social"],
+    fn:t=>"♡ "+convert(t,italicU,italicL)+" ♡"
+  },
+
+  {
+    name:"Username Pro",
+    tag:"USERNAME",
+    modes:["all","social"],
+    fn:t=>convert(t,boldU,boldL)+" • 2050"
+  },
+
+  {
+    name:"Social Star",
+    tag:"TRENDING",
+    modes:["all","social"],
+    fn:t=>"★ "+convert(t,boldItalicU,boldItalicL)
+  },
+
+
+  /* ---------- GAMING ---------- */
+
+  {
+    name:"Legend Mode",
+    tag:"LEGEND",
+    modes:["all","gaming"],
+    fn:t=>"⚡ "+convert(t,boldU,boldL)+" ⚡"
+  },
+
+  {
+    name:"Boss Mode",
+    tag:"BOSS",
+    modes:["all","gaming"],
+    fn:t=>"『"+convert(t,boldU,boldL)+"』"
+  },
+
+  {
+    name:"Game Over",
+    tag:"GAMER",
+    modes:["all","gaming"],
+    fn:t=>"☠ "+convert(t,frakturU,frakturL)+" ☠"
+  },
+
+  {
+    name:"XP Mode",
+    tag:"XP",
+    modes:["all","gaming"],
+    fn:t=>"⌁ XP "+convert(t,boldU,boldL)
+  },
+
+  {
+    name:"Final Boss",
+    tag:"GOD",
+    modes:["all","gaming"],
+    fn:t=>"༒ "+convert(t,boldItalicU,boldItalicL)+" ༒"
+  },
+
+  {
+    name:"Shadow Gamer",
+    tag:"DARK",
+    modes:["all","gaming","dark"],
+    fn:t=>"☾ "+convert(t,frakturU,frakturL)+" ☽"
+  },
+
+
+  /* ---------- CLEAN ---------- */
+
+  {
+    name:"Clean Sans",
+    tag:"CLEAN",
+    modes:["all","clean"],
+    fn:t=>convert(t,sansU,sansL)
+  },
+
+  {
+    name:"Clean Bold",
+    tag:"CLEAN",
+    modes:["all","clean"],
+    fn:t=>convert(t,boldU,boldL)
+  },
+
+  {
+    name:"Small Caps",
+    tag:"MINIMAL",
+    modes:["all","clean"],
+    fn:t=>sameMap(t,smallCaps)
+  },
+
+  {
+    name:"Spaced Clean",
+    tag:"MINIMAL",
+    modes:["all","clean"],
+    fn:t=>Array.from(t).join(" ")
+  },
+
+  {
+    name:"Dot Clean",
+    tag:"MODERN",
+    modes:["all","clean"],
+    fn:t=>Array.from(t).join(" · ")
+  },
+
+
+  /* ---------- DARK ---------- */
+
+  {
+    name:"Dark Lord",
+    tag:"DARK",
+    modes:["all","dark"],
+    fn:t=>"☠ "+convert(t,frakturU,frakturL)+" ☠"
+  },
+
+  {
+    name:"Dark Crown",
+    tag:"DARK",
+    modes:["all","dark","luxury"],
+    fn:t=>"♛ "+convert(t,boldItalicU,boldItalicL)+" ♛"
+  },
+
+  {
+    name:"Night Soul",
+    tag:"NIGHT",
+    modes:["all","dark"],
+    fn:t=>"☾ "+convert(t,italicU,italicL)+" ☽"
+  },
+
+  {
+    name:"Black Heart",
+    tag:"DARK",
+    modes:["all","dark","social"],
+    fn:t=>"🖤 "+convert(t,boldU,boldL)+" 🖤"
+  },
+
+  {
+    name:"Void",
+    tag:"VOID",
+    modes:["all","dark"],
+    fn:t=>"⛧ "+convert(t,frakturU,frakturL)+" ⛧"
+  }
+
+];
+
+
+/* =========================================================
+   EXTRA COMBINATION ENGINE
+========================================================= */
+
+const prefixes = [
+  "✦ ",
+  "✧ ",
+  "⚡ ",
+  "◆ ",
+  "◇ ",
+  "♛ ",
+  "∞ ",
+  "⌁ ",
+  "⟡ ",
+  "𓆩 "
+];
+
+const suffixes = [
+  " ✦",
+  " ✧",
+  " ⚡",
+  " ◆",
+  " ◇",
+  " ♛",
+  " ∞",
+  " ⌁",
+  " ⟡",
+  " 𓆪"
+];
+
+const frames = [
+  ["『 "," 』"],
+  ["【 "," 】"],
+  ["《 "," 》"],
+  ["⟦ "," ⟧"],
+  ["╭─ "," ─╮"],
+  ["༺ "," ༻"],
+  ["⟪ "," ⟫"],
+  ["⌈ "," ⌋"]
+];
+
+
+/* =========================================================
+   AI GENERATION
+========================================================= */
+
+function buildAIResults(text,mode){
+
+  const base = engines.filter(engine =>
+    engine.modes.includes(mode)
+  );
+
+  const results = [];
+
+  /* BASE ENGINES */
+
+  base.forEach(engine => {
+
+    results.push({
+      name:engine.name,
+      tag:engine.tag,
+      text:engine.fn(text)
+    });
+
+  });
+
+
+  /* FONT + SYMBOL MIX */
+
+  const fontFns = [
+
+    t=>convert(t,boldU,boldL),
+    t=>convert(t,italicU,italicL),
+    t=>convert(t,boldItalicU,boldItalicL),
+    t=>convert(t,sansU,sansL),
+    t=>convert(t,frakturU,frakturL),
+    t=>convert(t,scriptU,scriptL),
+    t=>sameMap(t,smallCaps)
+
+  ];
+
+
+  fontFns.forEach((font,index)=>{
+
+    prefixes.forEach((prefix,pIndex)=>{
+
+      if(results.length >= 90) return;
+
+      const suffix =
+        suffixes[(index+pIndex)%suffixes.length];
+
+      results.push({
+
+        name:"AI Remix "+(results.length+1),
+
+        tag:"AI MIX",
+
+        text:
+          prefix +
+          font(text) +
+          suffix
+
+      });
+
+    });
+
+  });
+
+
+  /* FRAMES */
+
+  fontFns.forEach((font,index)=>{
+
+    frames.forEach((frame,fIndex)=>{
+
+      if(results.length >= 120) return;
+
+      results.push({
+
+        name:"AI Frame "+(results.length+1),
+
+        tag:"2050",
+
+        text:
+          frame[0] +
+          font(text) +
+          frame[1]
+
+      });
+
+    });
+
+  });
+
+
+  /* UNIQUE FILTER */
+
+  const seen = new Set();
+
+  return results.filter(item=>{
+
+    if(seen.has(item.text)) return false;
+
+    seen.add(item.text);
+
+    return true;
+
+  }).slice(0,120);
+
+}
+
+
+/* =========================================================
+   RENDER
+========================================================= */
+
+const input =
+document.getElementById("inputText");
+
+const counter =
+document.getElementById("counter");
+
+const results =
+document.getElementById("results");
+
+const empty =
+document.getElementById("empty");
+
+const resultCount =
+document.getElementById("resultCount");
+
+const modeSelect =
+document.getElementById("styleMode");
+
+const generate =
+document.getElementById("generate");
+
+let currentMode = "all";
+
+
+function render(){
+
+  const text =
+    input.value.trim() || "DIPO WORLD";
+
+  const generated =
+    buildAIResults(text,currentMode);
+
+  results.innerHTML = "";
+
+  resultCount.textContent =
+    generated.length;
+
+  empty.style.display =
+    generated.length ? "none" : "block";
+
+
+  generated.forEach((item,index)=>{
+
+    const card =
+      document.createElement("div");
+
+    card.className = "result";
+
+
+    card.innerHTML = `
+
+      <div class="result-top">
+
+        <div class="result-name">
+          ${item.name}
+        </div>
+
+        <div class="result-tag">
+          ${item.tag}
+        </div>
+
+      </div>
+
+      <div class="result-text"></div>
+
+      <div class="result-actions">
+
+        <button
+          class="remix"
+          data-index="${index}">
+          🔄 Remix
+        </button>
+
+        <button
+          class="copy"
+          data-copy="">
+          Copy
+        </button>
+
+      </div>
+
+    `;
+
+
+    const textBox =
+      card.querySelector(".result-text");
+
+    textBox.textContent =
+      item.text;
+
+
+    const copyBtn =
+      card.querySelector(".copy");
+
+    copyBtn.dataset.copy =
+      item.text;
+
+
+    copyBtn.addEventListener("click",()=>{
+
+      copyText(
+        item.text,
+        copyBtn
+      );
+
+    });
+
+
+    const remixBtn =
+      card.querySelector(".remix");
+
+    remixBtn.addEventListener("click",()=>{
+
+      const randomEngine =
+        engines[
+          Math.floor(
+            Math.random()*engines.length
+          )
+        ];
+
+      const newText =
+        randomEngine.fn(text);
+
+      textBox.textContent =
+        newText;
+
+      copyBtn.dataset.copy =
+        newText;
+
+      showToast("✦ REMIXED");
+
+    });
+
+
+    results.appendChild(card);
+
+  });
+
+}
+
+
+/* =========================================================
+   COPY
+========================================================= */
+
+async function copyText(text,button){
+
+  try{
+
+    await navigator.clipboard.writeText(text);
+
+  }catch(e){
+
+    const area =
+      document.createElement("textarea");
+
+    area.value = text;
+
+    document.body.appendChild(area);
+
+    area.select();
+
+    document.execCommand("copy");
+
+    area.remove();
+
+  }
+
+  button.textContent =
+    "✓ Copied";
+
+  button.classList.add("done");
+
+  showToast("✓ COPIED TO CLIPBOARD");
+
+  setTimeout(()=>{
+
+    button.textContent =
+      "Copy";
+
+    button.classList.remove("done");
+
+  },1200);
+
+}
+
+
+/* =========================================================
+   TOAST
+========================================================= */
+
+let toastTimer;
+
+function showToast(message){
+
+  const toast =
+    document.getElementById("toast");
+
+  toast.textContent =
+    message;
+
+  toast.classList.add("show");
+
+  clearTimeout(toastTimer);
+
+  toastTimer =
+    setTimeout(()=>{
+
+      toast.classList.remove("show");
+
+    },1800);
+
+}
+
+
+/* =========================================================
+   INPUT
+========================================================= */
+
+input.addEventListener("input",()=>{
+
+  counter.textContent =
+    input.value.length;
+
+  render();
+
+});
+
+
+/* =========================================================
+   GENERATE BUTTON
+========================================================= */
+
+generate.addEventListener("click",()=>{
+
+  generate.textContent =
+    "⚡ Generating...";
+
+  setTimeout(()=>{
+
+    render();
+
+    generate.textContent =
+      "✨ Generate";
+
+    showToast("✦ 2050 STYLES GENERATED");
+
+  },180);
+
+});
+
+
+/* =========================================================
+   SELECT MODE
+========================================================= */
+
+modeSelect.addEventListener("change",()=>{
+
+  currentMode =
+    modeSelect.value;
+
+  document.querySelectorAll(".mode")
+    .forEach(btn=>{
+
+      btn.classList.toggle(
+        "active",
+        btn.dataset.mode === currentMode
+      );
+
+    });
+
+  render();
+
+});
+
+
+/* =========================================================
+   MODE BUTTONS
+========================================================= */
+
+document.querySelectorAll(".mode")
+.forEach(button=>{
+
+  button.addEventListener("click",()=>{
+
+    currentMode =
+      button.dataset.mode;
+
+    modeSelect.value =
+      currentMode;
+
+    document.querySelectorAll(".mode")
+      .forEach(btn=>{
+
+        btn.classList.toggle(
+          "active",
+          btn === button
+        );
+
+      });
+
+    render();
+
+  });
+
+});
+
+
+/* =========================================================
+   RANDOM AI TEXT
+========================================================= */
+
+input.addEventListener("dblclick",()=>{
+
+  const examples = [
+
+    "DIPO WORLD",
+    "DIPO BIO",
+    "DIPO LABS",
+    "Future Creator",
+    "Digital King",
+    "AI Creator",
+    "Gaming Legend",
+    "Dream Big",
+    "Stay Different",
+    "Born To Create"
+
+  ];
+
+  input.value =
+    examples[
+      Math.floor(
+        Math.random()*examples.length
+      )
+    ];
+
+  counter.textContent =
+    input.value.length;
+
+  render();
+
+});
+
+
+/* =========================================================
+   INITIAL
+========================================================= */
+
+counter.textContent =
+  input.value.length;
+
+render();
+
+</script>
+
+</body>
+</html>

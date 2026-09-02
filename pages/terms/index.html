@@ -1,986 +1,2399 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
+<meta name="theme-color" content="#050709">
+<meta name="color-scheme" content="dark">
 
-  <meta
-    name="description"
-    content="DIPO-WORLD Terms & Conditions. Read the rules and conditions for using DIPO-WORLD services, tools, AI features and projects."
-  >
+<meta
+  name="description"
+  content="DIPO WORLD Terms & Conditions — rules, services, user content, AI features, intellectual property, availability and platform usage."
+>
 
-  <meta
-    name="robots"
-    content="index, follow"
-  >
+<title>Terms & Conditions — DIPO WORLD</title>
 
-  <title>Terms & Conditions | DIPO-WORLD</title>
+<style>
+/* =========================================================
+   DIPO WORLD — TERMS & CONDITIONS
+   Premium Gen-Z Legal Page
+   ========================================================= */
 
-  <style>
-    :root {
-      --bg: #05070a;
-      --surface: #0b0f14;
-      --surface-2: #10161d;
-      --border: #1d2731;
-      --text: #f4f7fa;
-      --muted: #a7b0ba;
-      --accent: #39d353;
-      --accent-soft: rgba(57, 211, 83, 0.12);
-      --danger: #ff6b6b;
-      --max-width: 1100px;
-    }
+:root{
+  --bg:#050709;
+  --bg-2:#080b0e;
+  --card:#0b1014;
+  --card-2:#0e1419;
+  --border:#1b2932;
+  --border-soft:#142028;
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+  --text:#f4f7f8;
+  --text-2:#aab5bf;
+  --text-3:#71808b;
 
-    html {
-      scroll-behavior: smooth;
-    }
+  --green:#28e35b;
+  --green-2:#17c94b;
+  --green-soft:rgba(40,227,91,.12);
+  --green-glow:rgba(40,227,91,.22);
 
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family:
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        Roboto,
-        Helvetica,
-        Arial,
-        sans-serif;
-      line-height: 1.7;
-    }
+  --red:#ff626c;
+  --red-soft:rgba(255,98,108,.10);
 
-    a {
-      color: var(--accent);
-      text-decoration: none;
-    }
+  --yellow:#ffd35a;
+  --blue:#62a7ff;
 
-    a:hover {
-      text-decoration: underline;
-    }
+  --radius:28px;
+  --shadow:0 25px 80px rgba(0,0,0,.35);
 
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: rgba(5, 7, 10, 0.92);
-      backdrop-filter: blur(14px);
-      border-bottom: 1px solid var(--border);
-    }
+  --max:1080px;
+}
 
-    .header-inner {
-      width: min(100% - 32px, var(--max-width));
-      margin: auto;
-      min-height: 68px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-    }
+*{
+  box-sizing:border-box;
+}
 
-    .brand {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      color: var(--text);
-      font-size: 20px;
-      font-weight: 800;
-      letter-spacing: 0.4px;
-    }
+html{
+  scroll-behavior:smooth;
+  scroll-padding-top:100px;
+}
 
-    .brand-mark {
-      width: 34px;
-      height: 34px;
-      display: grid;
-      place-items: center;
-      border-radius: 9px;
-      background: var(--accent);
-      color: #061008;
-      font-weight: 900;
-    }
+body{
+  margin:0;
+  background:
+    radial-gradient(circle at 15% 5%,rgba(40,227,91,.07),transparent 28%),
+    radial-gradient(circle at 85% 25%,rgba(65,130,255,.055),transparent 30%),
+    var(--bg);
+  color:var(--text);
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "SF Pro Display",
+    "SF Pro Text",
+    "Segoe UI",
+    Arial,
+    sans-serif;
+  line-height:1.7;
+  overflow-x:hidden;
+}
 
-    .back-link {
-      padding: 8px 14px;
-      border: 1px solid var(--border);
-      border-radius: 9px;
-      color: var(--muted);
-      font-size: 14px;
-      transition: 0.2s ease;
-    }
+::selection{
+  background:var(--green);
+  color:#001006;
+}
 
-    .back-link:hover {
-      color: var(--text);
-      border-color: var(--accent);
-      text-decoration: none;
-    }
+a{
+  color:inherit;
+}
 
-    main {
-      width: min(100% - 32px, var(--max-width));
-      margin: 0 auto;
-      padding: 64px 0 90px;
-    }
+/* =========================================================
+   BACKGROUND EFFECTS
+   ========================================================= */
 
-    .hero {
-      margin-bottom: 40px;
-      padding: 38px;
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      background:
-        linear-gradient(
-          145deg,
-          rgba(57, 211, 83, 0.09),
-          rgba(11, 15, 20, 0.96) 45%
-        );
-    }
+.background{
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  overflow:hidden;
+  z-index:-2;
+}
 
-    .eyebrow {
-      display: inline-block;
-      margin-bottom: 12px;
-      padding: 5px 10px;
-      border-radius: 999px;
-      background: var(--accent-soft);
-      color: var(--accent);
-      font-size: 12px;
-      font-weight: 800;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-    }
+.orb{
+  position:absolute;
+  width:380px;
+  height:380px;
+  border-radius:50%;
+  filter:blur(90px);
+  opacity:.08;
+  animation:float 12s ease-in-out infinite;
+}
 
-    h1 {
-      margin-bottom: 12px;
-      font-size: clamp(32px, 6vw, 54px);
-      line-height: 1.1;
-      letter-spacing: -1px;
-    }
+.orb.one{
+  background:var(--green);
+  top:-150px;
+  left:-120px;
+}
 
-    .hero p {
-      max-width: 760px;
-      color: var(--muted);
-      font-size: 16px;
-    }
+.orb.two{
+  background:#277cff;
+  right:-170px;
+  top:25%;
+  animation-delay:-4s;
+}
 
-    .updated {
-      margin-top: 18px;
-      color: #7f8a95;
-      font-size: 13px;
-    }
+.orb.three{
+  background:#8a5cff;
+  left:30%;
+  bottom:-250px;
+  animation-delay:-8s;
+}
 
-    .layout {
-      display: grid;
-      grid-template-columns: 250px minmax(0, 1fr);
-      gap: 28px;
-      align-items: start;
-    }
+.grid-bg{
+  position:absolute;
+  inset:0;
+  opacity:.035;
+  background-image:
+    linear-gradient(rgba(255,255,255,.5) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.5) 1px,transparent 1px);
+  background-size:55px 55px;
+  mask-image:linear-gradient(to bottom,black,transparent 80%);
+}
 
-    .toc {
-      position: sticky;
-      top: 92px;
-      padding: 20px;
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      background: var(--surface);
-    }
+@keyframes float{
+  0%,100%{
+    transform:translate3d(0,0,0) scale(1);
+  }
+  50%{
+    transform:translate3d(30px,-25px,0) scale(1.08);
+  }
+}
 
-    .toc-title {
-      margin-bottom: 12px;
-      color: var(--text);
-      font-size: 14px;
-      font-weight: 800;
-    }
+/* =========================================================
+   READING PROGRESS
+   ========================================================= */
 
-    .toc a {
-      display: block;
-      padding: 7px 0;
-      color: var(--muted);
-      font-size: 13px;
-    }
+.progress{
+  position:fixed;
+  top:0;
+  left:0;
+  width:0%;
+  height:3px;
+  background:linear-gradient(
+    90deg,
+    var(--green),
+    #7cff9a
+  );
+  box-shadow:0 0 15px var(--green);
+  z-index:1000;
+}
 
-    .toc a:hover {
-      color: var(--accent);
-      text-decoration: none;
-    }
+/* =========================================================
+   HEADER
+   ========================================================= */
 
-    .content {
-      min-width: 0;
-    }
+.header{
+  position:sticky;
+  top:0;
+  z-index:100;
+  border-bottom:1px solid rgba(255,255,255,.07);
+  background:rgba(5,7,9,.78);
+  backdrop-filter:blur(22px);
+  -webkit-backdrop-filter:blur(22px);
+}
 
-    .section {
-      margin-bottom: 24px;
-      padding: 28px;
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      background: var(--surface);
-      scroll-margin-top: 90px;
-    }
+.header-inner{
+  width:min(var(--max),calc(100% - 40px));
+  margin:auto;
+  min-height:86px;
 
-    h2 {
-      margin-bottom: 14px;
-      color: var(--text);
-      font-size: 24px;
-      line-height: 1.3;
-    }
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
 
-    h3 {
-      margin: 22px 0 8px;
-      font-size: 17px;
-    }
+.brand{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  text-decoration:none;
+}
 
-    p {
-      margin-bottom: 12px;
-      color: var(--muted);
-    }
+.logo{
+  width:48px;
+  height:48px;
+  border-radius:15px;
+  display:grid;
+  place-items:center;
 
-    ul {
-      margin: 12px 0 14px 20px;
-      color: var(--muted);
-    }
+  background:var(--green);
+  color:#041008;
 
-    li {
-      margin-bottom: 7px;
-    }
+  font-size:27px;
+  font-weight:1000;
+  letter-spacing:-2px;
 
-    .notice {
-      margin-top: 18px;
-      padding: 16px 18px;
-      border-left: 3px solid var(--accent);
-      border-radius: 8px;
-      background: var(--accent-soft);
-    }
+  box-shadow:
+    0 0 0 1px rgba(40,227,91,.15),
+    0 10px 35px rgba(40,227,91,.18);
 
-    .notice p {
-      margin: 0;
-    }
+  transition:.25s ease;
+}
 
-    .warning {
-      border-left-color: var(--danger);
-      background: rgba(255, 107, 107, 0.08);
-    }
+.brand:hover .logo{
+  transform:rotate(-5deg) scale(1.05);
+  box-shadow:
+    0 0 0 1px rgba(40,227,91,.25),
+    0 15px 45px rgba(40,227,91,.28);
+}
 
-    footer {
-      border-top: 1px solid var(--border);
-      background: #030507;
-    }
+.brand-name{
+  font-size:25px;
+  font-weight:950;
+  letter-spacing:-1px;
+}
 
-    .footer-inner {
-      width: min(100% - 32px, var(--max-width));
-      margin: auto;
-      padding: 30px 0;
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
+.back-home{
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
 
-    .footer-copy {
-      color: #727d87;
-      font-size: 13px;
-    }
+  padding:12px 18px;
 
-    .footer-links {
-      display: flex;
-      gap: 16px;
-      flex-wrap: wrap;
-      font-size: 13px;
-    }
+  border:1px solid var(--border);
+  border-radius:15px;
 
-    @media (max-width: 800px) {
-      .layout {
-        grid-template-columns: 1fr;
-      }
+  color:var(--text-2);
+  text-decoration:none;
+  font-size:15px;
+  font-weight:750;
 
-      .toc {
-        position: static;
-      }
+  background:rgba(255,255,255,.025);
 
-      .hero {
-        padding: 26px;
-      }
+  transition:.25s ease;
+}
 
-      .section {
-        padding: 22px;
-      }
+.back-home:hover{
+  color:var(--text);
+  border-color:rgba(40,227,91,.45);
+  background:var(--green-soft);
+  transform:translateY(-2px);
+}
 
-      main {
-        padding-top: 38px;
-      }
-    }
+/* =========================================================
+   MAIN
+   ========================================================= */
 
-    @media (max-width: 520px) {
-      .header-inner {
-        min-height: 60px;
-      }
+.container{
+  width:min(var(--max),calc(100% - 40px));
+  margin:auto;
+}
 
-      .brand {
-        font-size: 17px;
-      }
+main{
+  padding:70px 0 100px;
+}
 
-      .brand-mark {
-        width: 30px;
-        height: 30px;
-      }
+/* =========================================================
+   HERO
+   ========================================================= */
 
-      .back-link {
-        padding: 6px 10px;
-        font-size: 12px;
-      }
+.hero{
+  position:relative;
+  overflow:hidden;
 
-      .hero {
-        border-radius: 15px;
-      }
+  padding:65px;
+  border:1px solid var(--border);
+  border-radius:34px;
 
-      .section {
-        border-radius: 13px;
-      }
+  background:
+    radial-gradient(
+      circle at 90% 0%,
+      rgba(40,227,91,.10),
+      transparent 38%
+    ),
+    linear-gradient(
+      145deg,
+      rgba(14,21,25,.96),
+      rgba(7,10,13,.96)
+    );
 
-      h2 {
-        font-size: 21px;
-      }
-    }
-  </style>
+  box-shadow:var(--shadow);
+
+  animation:heroIn .8s ease both;
+}
+
+.hero::before{
+  content:"";
+  position:absolute;
+  width:220px;
+  height:220px;
+  right:-100px;
+  top:-100px;
+
+  border-radius:50%;
+  background:var(--green);
+  filter:blur(100px);
+  opacity:.12;
+}
+
+.hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+
+  background:
+    linear-gradient(
+      120deg,
+      transparent 30%,
+      rgba(255,255,255,.025) 50%,
+      transparent 70%
+    );
+
+  transform:translateX(-100%);
+  animation:shine 8s ease-in-out infinite;
+}
+
+@keyframes shine{
+  0%,65%{
+    transform:translateX(-100%);
+  }
+  85%,100%{
+    transform:translateX(100%);
+  }
+}
+
+@keyframes heroIn{
+  from{
+    opacity:0;
+    transform:translateY(25px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+}
+
+.eyebrow{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+
+  padding:9px 15px;
+  border-radius:999px;
+
+  color:var(--green);
+  background:var(--green-soft);
+  border:1px solid rgba(40,227,91,.14);
+
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.eyebrow-dot{
+  width:7px;
+  height:7px;
+  border-radius:50%;
+  background:var(--green);
+  box-shadow:0 0 12px var(--green);
+  animation:pulse 1.8s infinite;
+}
+
+@keyframes pulse{
+  0%,100%{
+    opacity:1;
+    transform:scale(1);
+  }
+  50%{
+    opacity:.45;
+    transform:scale(.7);
+  }
+}
+
+.hero h1{
+  margin:25px 0 18px;
+
+  max-width:800px;
+
+  font-size:clamp(48px,8vw,82px);
+  line-height:.98;
+  letter-spacing:-4px;
+  font-weight:950;
+}
+
+.hero h1 span{
+  color:var(--green);
+}
+
+.hero-description{
+  max-width:760px;
+  margin:0;
+
+  color:var(--text-2);
+  font-size:20px;
+  line-height:1.7;
+}
+
+.meta{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:28px;
+}
+
+.meta-item{
+  padding:9px 13px;
+
+  border:1px solid var(--border);
+  border-radius:12px;
+
+  color:var(--text-3);
+  background:rgba(255,255,255,.02);
+
+  font-size:13px;
+  font-weight:700;
+}
+
+.meta-item strong{
+  color:var(--text-2);
+}
+
+/* =========================================================
+   LAYOUT
+   ========================================================= */
+
+.content-layout{
+  display:grid;
+  grid-template-columns:290px minmax(0,1fr);
+  gap:24px;
+  margin-top:28px;
+  align-items:start;
+}
+
+/* =========================================================
+   TABLE OF CONTENTS
+   ========================================================= */
+
+.toc{
+  position:sticky;
+  top:108px;
+
+  padding:24px;
+
+  border:1px solid var(--border);
+  border-radius:25px;
+
+  background:rgba(10,15,19,.88);
+  backdrop-filter:blur(18px);
+  -webkit-backdrop-filter:blur(18px);
+
+  box-shadow:0 20px 60px rgba(0,0,0,.2);
+}
+
+.toc-title{
+  margin:0 0 18px;
+
+  color:var(--text);
+  font-size:17px;
+  font-weight:900;
+}
+
+.toc-list{
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+
+  margin:0;
+  padding:0;
+
+  list-style:none;
+  max-height:70vh;
+  overflow:auto;
+}
+
+.toc-list::-webkit-scrollbar{
+  width:4px;
+}
+
+.toc-list::-webkit-scrollbar-thumb{
+  background:var(--border);
+  border-radius:10px;
+}
+
+.toc-list a{
+  display:flex;
+  align-items:center;
+  gap:10px;
+
+  padding:9px 10px;
+
+  border-radius:10px;
+
+  color:var(--text-3);
+  text-decoration:none;
+
+  font-size:13px;
+  font-weight:700;
+
+  transition:.2s ease;
+}
+
+.toc-number{
+  min-width:22px;
+  color:#58656e;
+  font-size:11px;
+}
+
+.toc-list a:hover{
+  color:var(--text);
+  background:rgba(255,255,255,.035);
+}
+
+.toc-list a.active{
+  color:var(--green);
+  background:var(--green-soft);
+}
+
+.toc-list a.active .toc-number{
+  color:var(--green);
+}
+
+/* =========================================================
+   LEGAL CONTENT
+   ========================================================= */
+
+.legal{
+  min-width:0;
+}
+
+.section{
+  position:relative;
+
+  margin-bottom:18px;
+  padding:38px 40px;
+
+  border:1px solid var(--border);
+  border-radius:27px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(13,18,22,.96),
+      rgba(8,12,15,.96)
+    );
+
+  box-shadow:0 15px 50px rgba(0,0,0,.16);
+
+  scroll-margin-top:105px;
+
+  opacity:0;
+  transform:translateY(22px);
+  transition:
+    opacity .7s ease,
+    transform .7s ease,
+    border-color .3s ease,
+    box-shadow .3s ease;
+}
+
+.section.visible{
+  opacity:1;
+  transform:translateY(0);
+}
+
+.section:hover{
+  border-color:#263943;
+  box-shadow:0 20px 65px rgba(0,0,0,.24);
+}
+
+.section::before{
+  content:"";
+  position:absolute;
+  left:-1px;
+  top:28px;
+  bottom:28px;
+  width:3px;
+
+  border-radius:0 5px 5px 0;
+
+  background:transparent;
+  transition:.3s ease;
+}
+
+.section:hover::before{
+  background:var(--green);
+  box-shadow:0 0 16px var(--green);
+}
+
+.section-label{
+  margin-bottom:8px;
+
+  color:var(--green);
+
+  font-size:11px;
+  font-weight:950;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.section h2{
+  margin:0 0 18px;
+
+  color:var(--text);
+
+  font-size:clamp(25px,4vw,36px);
+  line-height:1.15;
+  letter-spacing:-1.4px;
+  font-weight:900;
+}
+
+.section p{
+  margin:0 0 18px;
+
+  color:var(--text-2);
+
+  font-size:16px;
+  line-height:1.85;
+}
+
+.section p:last-child{
+  margin-bottom:0;
+}
+
+.section strong{
+  color:var(--text);
+}
+
+.section ul{
+  margin:15px 0 20px;
+  padding-left:22px;
+  color:var(--text-2);
+}
+
+.section li{
+  margin:9px 0;
+  line-height:1.75;
+}
+
+.section li::marker{
+  color:var(--green);
+}
+
+/* =========================================================
+   CALLOUTS
+   ========================================================= */
+
+.callout{
+  margin:22px 0 4px;
+  padding:20px 22px;
+
+  border:1px solid var(--border);
+  border-radius:18px;
+
+  background:rgba(255,255,255,.025);
+}
+
+.callout p{
+  margin:0;
+}
+
+.callout.green{
+  border-color:rgba(40,227,91,.20);
+  background:rgba(40,227,91,.055);
+}
+
+.callout.warning{
+  border-color:rgba(255,211,90,.20);
+  background:rgba(255,211,90,.045);
+}
+
+.callout.danger{
+  border-color:rgba(255,98,108,.20);
+  background:var(--red-soft);
+}
+
+.callout-title{
+  display:flex;
+  align-items:center;
+  gap:9px;
+
+  margin-bottom:8px;
+
+  color:var(--text);
+  font-size:15px;
+  font-weight:900;
+}
+
+.callout-title .icon{
+  font-size:18px;
+}
+
+/* =========================================================
+   LINK STYLE
+   ========================================================= */
+
+.legal-link{
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+
+  color:var(--green);
+  text-decoration:none;
+  font-weight:850;
+
+  transition:.2s ease;
+}
+
+.legal-link:hover{
+  gap:11px;
+  color:#7dff9b;
+}
+
+/* =========================================================
+   DOCUMENT NAV
+   ========================================================= */
+
+.doc-nav{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
+
+  margin-top:18px;
+}
+
+.doc-card{
+  padding:22px;
+
+  border:1px solid var(--border);
+  border-radius:22px;
+
+  background:var(--card);
+
+  text-decoration:none;
+
+  transition:.25s ease;
+}
+
+.doc-card:hover{
+  transform:translateY(-4px);
+  border-color:rgba(40,227,91,.35);
+  background:var(--green-soft);
+}
+
+.doc-card-label{
+  color:var(--text-3);
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+}
+
+.doc-card-title{
+  margin-top:7px;
+  color:var(--text);
+  font-size:18px;
+  font-weight:900;
+}
+
+.doc-card-arrow{
+  margin-top:12px;
+  color:var(--green);
+  font-size:14px;
+  font-weight:900;
+}
+
+/* =========================================================
+   FINAL NOTICE
+   ========================================================= */
+
+.final-notice{
+  position:relative;
+  overflow:hidden;
+
+  margin-top:18px;
+  padding:38px 40px;
+
+  border:1px solid rgba(255,98,108,.20);
+  border-radius:27px;
+
+  background:
+    radial-gradient(
+      circle at 100% 0%,
+      rgba(255,98,108,.10),
+      transparent 45%
+    ),
+    #100d10;
+}
+
+.final-notice h2{
+  margin:0 0 15px;
+
+  color:var(--text);
+  font-size:30px;
+  letter-spacing:-1px;
+}
+
+.final-notice p{
+  margin:0;
+
+  color:#b7aeb4;
+  line-height:1.85;
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer{
+  padding:50px 0 65px;
+  border-top:1px solid rgba(255,255,255,.07);
+}
+
+.footer-inner{
+  width:min(var(--max),calc(100% - 40px));
+  margin:auto;
+}
+
+.footer-brand{
+  color:var(--text);
+  font-size:22px;
+  font-weight:950;
+}
+
+.footer-tagline{
+  margin:8px 0 22px;
+  color:var(--text-3);
+  font-size:14px;
+}
+
+.footer-links{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-bottom:25px;
+}
+
+.footer-links a{
+  padding:8px 12px;
+
+  color:var(--text-3);
+  border:1px solid var(--border);
+  border-radius:10px;
+
+  text-decoration:none;
+  font-size:12px;
+  font-weight:750;
+
+  transition:.2s ease;
+}
+
+.footer-links a:hover{
+  color:var(--green);
+  border-color:rgba(40,227,91,.35);
+  background:var(--green-soft);
+}
+
+.footer-copy{
+  padding-top:22px;
+  border-top:1px solid rgba(255,255,255,.06);
+
+  color:#59656e;
+  font-size:12px;
+  line-height:1.8;
+}
+
+.footer-copy strong{
+  color:#84909a;
+}
+
+/* =========================================================
+   BACK TO TOP
+   ========================================================= */
+
+.top-btn{
+  position:fixed;
+  right:22px;
+  bottom:22px;
+
+  width:46px;
+  height:46px;
+
+  display:grid;
+  place-items:center;
+
+  border:1px solid var(--border);
+  border-radius:15px;
+
+  background:rgba(12,17,21,.88);
+  color:var(--green);
+
+  font-size:20px;
+  cursor:pointer;
+
+  opacity:0;
+  visibility:hidden;
+  transform:translateY(15px);
+
+  transition:.25s ease;
+  z-index:90;
+
+  backdrop-filter:blur(14px);
+}
+
+.top-btn.show{
+  opacity:1;
+  visibility:visible;
+  transform:translateY(0);
+}
+
+.top-btn:hover{
+  border-color:var(--green);
+  background:var(--green-soft);
+  transform:translateY(-3px);
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media(max-width:850px){
+
+  .content-layout{
+    grid-template-columns:1fr;
+  }
+
+  .toc{
+    position:relative;
+    top:auto;
+  }
+
+  .toc-list{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    max-height:none;
+  }
+
+  .hero{
+    padding:45px 32px;
+  }
+}
+
+@media(max-width:600px){
+
+  .container,
+  .header-inner,
+  .footer-inner{
+    width:calc(100% - 28px);
+  }
+
+  .header-inner{
+    min-height:72px;
+  }
+
+  .logo{
+    width:42px;
+    height:42px;
+    border-radius:13px;
+    font-size:24px;
+  }
+
+  .brand-name{
+    font-size:20px;
+  }
+
+  .back-home{
+    padding:10px 12px;
+    font-size:13px;
+  }
+
+  .back-home span{
+    display:none;
+  }
+
+  main{
+    padding:35px 0 70px;
+  }
+
+  .hero{
+    padding:34px 22px;
+    border-radius:24px;
+  }
+
+  .eyebrow{
+    font-size:10px;
+    letter-spacing:1.5px;
+  }
+
+  .hero h1{
+    margin-top:20px;
+    font-size:47px;
+    letter-spacing:-2.8px;
+  }
+
+  .hero-description{
+    font-size:16px;
+    line-height:1.65;
+  }
+
+  .meta{
+    gap:7px;
+  }
+
+  .meta-item{
+    padding:7px 10px;
+    font-size:11px;
+  }
+
+  .content-layout{
+    margin-top:16px;
+    gap:15px;
+  }
+
+  .toc{
+    padding:18px;
+    border-radius:21px;
+  }
+
+  .toc-title{
+    font-size:15px;
+  }
+
+  .toc-list{
+    grid-template-columns:1fr;
+  }
+
+  .toc-list a{
+    padding:8px;
+    font-size:12px;
+  }
+
+  .section{
+    padding:27px 22px;
+    border-radius:22px;
+  }
+
+  .section::before{
+    top:22px;
+    bottom:22px;
+  }
+
+  .section h2{
+    font-size:27px;
+  }
+
+  .section p{
+    font-size:15px;
+    line-height:1.8;
+  }
+
+  .section ul{
+    padding-left:19px;
+    font-size:15px;
+  }
+
+  .callout{
+    padding:17px;
+    border-radius:16px;
+  }
+
+  .doc-nav{
+    grid-template-columns:1fr;
+  }
+
+  .final-notice{
+    padding:27px 22px;
+    border-radius:22px;
+  }
+
+  .final-notice h2{
+    font-size:26px;
+  }
+
+  .top-btn{
+    right:15px;
+    bottom:15px;
+    width:43px;
+    height:43px;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media(prefers-reduced-motion:reduce){
+
+  *,
+  *::before,
+  *::after{
+    animation-duration:.01ms !important;
+    animation-iteration-count:1 !important;
+    scroll-behavior:auto !important;
+    transition-duration:.01ms !important;
+  }
+
+  .section{
+    opacity:1;
+    transform:none;
+  }
+}
+</style>
 </head>
 
 <body>
 
-  <header>
-    <div class="header-inner">
+<div class="progress" id="progress"></div>
 
-      <a class="brand" href="../../index.html">
-        <span class="brand-mark">D</span>
-        <span>DIPO-WORLD</span>
-      </a>
+<div class="background" aria-hidden="true">
+  <div class="orb one"></div>
+  <div class="orb two"></div>
+  <div class="orb three"></div>
+  <div class="grid-bg"></div>
+</div>
 
-      <a class="back-link" href="../../index.html">
-        ← Back to Home
-      </a>
+<!-- =======================================================
+     HEADER
+     ======================================================= -->
 
-    </div>
-  </header>
+<header class="header">
+
+  <div class="header-inner">
+
+    <a class="brand" href="../../index.html" aria-label="DIPO WORLD Home">
+
+      <div class="logo">D</div>
+
+      <div class="brand-name">
+        DIPO-WORLD
+      </div>
+
+    </a>
+
+    <a class="back-home" href="../../index.html">
+      ← <span>Back to Home</span>
+    </a>
+
+  </div>
+
+</header>
 
 
-  <main>
+<!-- =======================================================
+     MAIN
+     ======================================================= -->
 
-    <section class="hero">
+<main class="container">
 
-      <span class="eyebrow">
-        Legal
-      </span>
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div class="hero-content">
+
+      <div class="eyebrow">
+        <span class="eyebrow-dot"></span>
+        Legal · DIPO WORLD
+      </div>
 
       <h1>
-        Terms & Conditions
+        Terms <span>&</span><br>
+        Conditions.
       </h1>
 
-      <p>
+      <p class="hero-description">
         These Terms & Conditions explain the rules and conditions
-        that apply when you access or use DIPO-WORLD and its
+        that apply when you access or use DIPO WORLD and its
         related tools, services, pages, features and content.
       </p>
 
-      <p class="updated">
-        Last updated: September 1, 2026
-      </p>
+      <div class="meta">
 
-    </section>
-
-
-    <div class="layout">
-
-      <aside class="toc">
-
-        <div class="toc-title">
-          On this page
+        <div class="meta-item">
+          Status: <strong>Active</strong>
         </div>
 
-        <a href="#acceptance">
-          1. Acceptance
-        </a>
+        <div class="meta-item">
+          Last updated: <strong>September 2, 2026</strong>
+        </div>
 
-        <a href="#services">
-          2. Our Services
-        </a>
+        <div class="meta-item">
+          Platform: <strong>DIPO WORLD</strong>
+        </div>
 
-        <a href="#accounts">
-          3. Accounts
-        </a>
+      </div>
 
-        <a href="#user-content">
-          4. User Content
-        </a>
+    </div>
 
-        <a href="#ai">
-          5. AI Features
-        </a>
-
-        <a href="#projects">
-          6. Projects & Files
-        </a>
-
-        <a href="#payments">
-          7. Free & Paid Services
-        </a>
-
-        <a href="#intellectual-property">
-          8. Intellectual Property
-        </a>
-
-        <a href="#third-party">
-          9. Third-Party Services
-        </a>
-
-        <a href="#prohibited">
-          10. Prohibited Use
-        </a>
-
-        <a href="#availability">
-          11. Availability
-        </a>
-
-        <a href="#termination">
-          12. Termination
-        </a>
-
-        <a href="#disclaimer">
-          13. Disclaimer
-        </a>
-
-        <a href="#liability">
-          14. Liability
-        </a>
-
-        <a href="#changes">
-          15. Changes
-        </a>
-
-        <a href="#contact">
-          16. Contact
-        </a>
-
-      </aside>
+  </section>
 
 
-      <article class="content">
+  <!-- CONTENT -->
+
+  <div class="content-layout">
+
+    <!-- TABLE OF CONTENTS -->
+
+    <aside class="toc">
+
+      <h2 class="toc-title">
+        On this page
+      </h2>
+
+      <ol class="toc-list">
+
+        <li>
+          <a href="#acceptance">
+            <span class="toc-number">01</span>
+            Acceptance
+          </a>
+        </li>
+
+        <li>
+          <a href="#services">
+            <span class="toc-number">02</span>
+            Our Services
+          </a>
+        </li>
+
+        <li>
+          <a href="#accounts">
+            <span class="toc-number">03</span>
+            Accounts
+          </a>
+        </li>
+
+        <li>
+          <a href="#content">
+            <span class="toc-number">04</span>
+            User Content
+          </a>
+        </li>
+
+        <li>
+          <a href="#ai">
+            <span class="toc-number">05</span>
+            AI Features
+          </a>
+        </li>
+
+        <li>
+          <a href="#projects">
+            <span class="toc-number">06</span>
+            Projects & Files
+          </a>
+        </li>
+
+        <li>
+          <a href="#paid">
+            <span class="toc-number">07</span>
+            Free & Paid Services
+          </a>
+        </li>
+
+        <li>
+          <a href="#ip">
+            <span class="toc-number">08</span>
+            Intellectual Property
+          </a>
+        </li>
+
+        <li>
+          <a href="#third-party">
+            <span class="toc-number">09</span>
+            Third-Party Services
+          </a>
+        </li>
+
+        <li>
+          <a href="#prohibited">
+            <span class="toc-number">10</span>
+            Prohibited Use
+          </a>
+        </li>
+
+        <li>
+          <a href="#availability">
+            <span class="toc-number">11</span>
+            Availability
+          </a>
+        </li>
+
+        <li>
+          <a href="#termination">
+            <span class="toc-number">12</span>
+            Termination
+          </a>
+        </li>
+
+        <li>
+          <a href="#disclaimer">
+            <span class="toc-number">13</span>
+            Disclaimer
+          </a>
+        </li>
+
+        <li>
+          <a href="#liability">
+            <span class="toc-number">14</span>
+            Liability
+          </a>
+        </li>
+
+        <li>
+          <a href="#changes">
+            <span class="toc-number">15</span>
+            Changes
+          </a>
+        </li>
+
+        <li>
+          <a href="#contact">
+            <span class="toc-number">16</span>
+            Contact
+          </a>
+        </li>
+
+      </ol>
+
+    </aside>
 
 
-        <section class="section" id="acceptance">
+    <!-- LEGAL DOCUMENT -->
 
-          <h2>
-            1. Acceptance of Terms
-          </h2>
-
-          <p>
-            By accessing or using DIPO-WORLD, you agree to these
-            Terms & Conditions and agree to follow all applicable
-            laws and regulations.
-          </p>
-
-          <p>
-            If you do not agree with these terms, please do not
-            use the services.
-          </p>
-
-        </section>
+    <div class="legal">
 
 
-        <section class="section" id="services">
+      <!-- 01 -->
 
-          <h2>
-            2. Our Services
-          </h2>
+      <section class="section" id="acceptance">
 
-          <p>
-            DIPO-WORLD may provide web-based tools, developer
-            utilities, AI-powered features, code-related tools,
-            project features, file management features,
-            QR-related tools and other digital services.
-          </p>
+        <div class="section-label">
+          01 · Acceptance
+        </div>
 
-          <p>
-            Features may be added, modified, improved or removed
-            as the platform develops.
-          </p>
+        <h2>
+          Acceptance of Terms
+        </h2>
 
-        </section>
+        <p>
+          By accessing, browsing or using DIPO WORLD, you acknowledge
+          that you have read, understood and agree to be bound by these
+          Terms & Conditions.
+        </p>
 
+        <p>
+          If you do not agree with these Terms, you should not use
+          DIPO WORLD or its related tools, services, pages or features.
+        </p>
 
-        <section class="section" id="accounts">
+        <div class="callout green">
 
-          <h2>
-            3. User Accounts
-          </h2>
-
-          <p>
-            Some features may require you to create an account.
-            You are responsible for maintaining the security of
-            your account and login information.
-          </p>
-
-          <ul>
-            <li>
-              Provide accurate information where required.
-            </li>
-
-            <li>
-              Keep your account credentials secure.
-            </li>
-
-            <li>
-              Do not share access in a way that violates
-              applicable service rules.
-            </li>
-
-            <li>
-              Notify us if you believe your account has been
-              accessed without authorization.
-            </li>
-          </ul>
-
-        </section>
-
-
-        <section class="section" id="user-content">
-
-          <h2>
-            4. User Content
-          </h2>
-
-          <p>
-            You may submit text, code, files, images, links,
-            project data or other content while using certain
-            DIPO-WORLD features.
-          </p>
-
-          <p>
-            You remain responsible for the content you submit and
-            for ensuring that you have the necessary rights or
-            permissions to use it.
-          </p>
-
-          <div class="notice">
-            <p>
-              Do not upload or submit content that you do not have
-              the legal right to use.
-            </p>
+          <div class="callout-title">
+            <span class="icon">✓</span>
+            Your use means acceptance
           </div>
 
-        </section>
-
-
-        <section class="section" id="ai">
-
-          <h2>
-            5. AI Features
-          </h2>
-
           <p>
-            DIPO-WORLD may provide AI-powered features for
-            generating, transforming, analyzing or assisting with
-            content and code.
-          </p>
-
-          <p>
-            AI-generated output may contain errors, omissions or
-            inaccurate information. You are responsible for
-            reviewing output before relying on or publishing it.
-          </p>
-
-          <p>
-            AI features should not be treated as a replacement for
-            professional, legal, financial, medical or other
-            specialized advice.
-          </p>
-
-        </section>
-
-
-        <section class="section" id="projects">
-
-          <h2>
-            6. Projects & Files
-          </h2>
-
-          <p>
-            DIPO-WORLD may allow users to create projects and
-            manage files through available platform features.
-          </p>
-
-          <p>
-            You are responsible for maintaining appropriate
-            backups of important information. Unless a specific
-            service explicitly guarantees storage or recovery,
-            DIPO-WORLD does not guarantee that files or project
-            data will always remain available.
-          </p>
-
-        </section>
-
-
-        <section class="section" id="payments">
-
-          <h2>
-            7. Free & Paid Services
-          </h2>
-
-          <p>
-            DIPO-WORLD may offer both free and paid plans or
-            features.
-          </p>
-
-          <p>
-            Paid features, pricing, limits and billing conditions
-            may be displayed separately when those services become
-            available.
-          </p>
-
-          <p>
-            We may change pricing or plan features in accordance
-            with applicable law and the terms presented at the
-            time of purchase.
-          </p>
-
-        </section>
-
-
-        <section class="section" id="intellectual-property">
-
-          <h2>
-            8. Intellectual Property
-          </h2>
-
-          <p>
-            DIPO-WORLD branding, logos, original interface designs,
-            platform code, documentation, graphics and other
-            original materials may be protected by applicable
-            intellectual-property laws.
-          </p>
-
-          <p>
-            You may not copy, reproduce, distribute, modify or
-            commercially exploit protected DIPO-WORLD materials
-            without appropriate permission.
-          </p>
-
-          <p>
-            User-created content remains subject to the rights
-            applicable to that content and its creator.
-          </p>
-
-        </section>
-
-
-        <section class="section" id="third-party">
-
-          <h2>
-            9. Third-Party Services
-          </h2>
-
-          <p>
-            Certain features may depend on third-party services,
-            APIs, hosting providers, authentication providers,
-            AI providers, analytics services or other external
-            technologies.
-          </p>
-
-          <p>
-            Third-party services may have their own terms,
-            policies and availability requirements.
-          </p>
-
-        </section>
-
-
-        <section class="section" id="prohibited">
-
-          <h2>
-            10. Prohibited Use
-          </h2>
-
-          <p>
-            You agree not to use DIPO-WORLD to:
-          </p>
-
-          <ul>
-            <li>
-              Break or violate applicable laws.
-            </li>
-
-            <li>
-              Distribute malware, viruses or malicious code.
-            </li>
-
-            <li>
-              Attempt unauthorized access to systems or accounts.
-            </li>
-
-            <li>
-              Abuse, overload or disrupt platform infrastructure.
-            </li>
-
-            <li>
-              Infringe another person's intellectual-property
-              rights.
-            </li>
-
-            <li>
-              Conduct fraudulent or deceptive activities.
-            </li>
-
-            <li>
-              Circumvent reasonable security or usage controls.
-            </li>
-          </ul>
-
-        </section>
-
-
-        <section class="section" id="availability">
-
-          <h2>
-            11. Service Availability
-          </h2>
-
-          <p>
-            We aim to keep DIPO-WORLD reliable and available,
-            but continuous or uninterrupted availability cannot
-            always be guaranteed.
-          </p>
-
-          <p>
-            Services may temporarily become unavailable because
-            of maintenance, updates, technical problems, security
-            events, infrastructure issues or circumstances beyond
-            reasonable control.
-          </p>
-
-        </section>
-
-
-        <section class="section" id="termination">
-
-          <h2>
-            12. Suspension & Termination
-          </h2>
-
-          <p>
-            Access to certain features or services may be
-            restricted, suspended or terminated if necessary to
-            protect the platform, users, systems or comply with
-            legal requirements.
-          </p>
-
-          <p>
-            Where appropriate, users may also stop using the
-            services at any time.
-          </p>
-
-        </section>
-
-
-        <section class="section" id="disclaimer">
-
-          <h2>
-            13. Disclaimer
-          </h2>
-
-          <p>
-            DIPO-WORLD services are provided on an
-            “as available” and “as is” basis to the extent
-            permitted by applicable law.
-          </p>
-
-          <p>
-            We do not guarantee that every generated result,
-            tool output, code suggestion, AI response or other
-            platform result will always be accurate, complete,
-            secure or suitable for a particular purpose.
-          </p>
-
-        </section>
-
-
-        <section class="section" id="liability">
-
-          <h2>
-            14. Limitation of Liability
-          </h2>
-
-          <p>
-            To the maximum extent permitted by applicable law,
-            DIPO-WORLD and its operators will not be responsible
-            for indirect, incidental, special or consequential
-            losses resulting from the use of or inability to use
-            the services.
-          </p>
-
-          <p>
-            Nothing in these terms is intended to exclude any
-            liability that cannot legally be excluded under
+            Continued use of the platform after changes to these Terms
+            may constitute acceptance of the updated Terms, subject to
             applicable law.
           </p>
 
-        </section>
+        </div>
+
+      </section>
 
 
-        <section class="section" id="changes">
+      <!-- 02 -->
 
-          <h2>
-            15. Changes to These Terms
-          </h2>
+      <section class="section" id="services">
 
-          <p>
-            These Terms & Conditions may be updated as DIPO-WORLD
-            evolves, new features are introduced or legal
-            requirements change.
-          </p>
+        <div class="section-label">
+          02 · Platform
+        </div>
 
-          <p>
-            When changes are made, the updated version will be
-            published on this page with a revised “Last updated”
-            date.
-          </p>
+        <h2>
+          Our Services
+        </h2>
 
-          <div class="notice">
-            <p>
-              Your continued use of DIPO-WORLD after an updated
-              version becomes effective means you accept the
-              updated terms, to the extent permitted by law.
-            </p>
+        <p>
+          DIPO WORLD is a browser-based digital platform designed to
+          provide creative, productivity and customization tools.
+        </p>
+
+        <p>
+          Depending on the current version of the platform, services
+          may include DIPO BIO, DIPO QR and other digital tools,
+          generators, editors, previews, utilities and related features.
+        </p>
+
+        <p>
+          Features may change as the platform evolves. Some features
+          may be free, limited, experimental or made available only
+          to eligible users or plans.
+        </p>
+
+      </section>
+
+
+      <!-- 03 -->
+
+      <section class="section" id="accounts">
+
+        <div class="section-label">
+          03 · Accounts
+        </div>
+
+        <h2>
+          Accounts & Access
+        </h2>
+
+        <p>
+          Certain features may require an account or authentication.
+          When an account is required, you are responsible for providing
+          accurate information and maintaining the security of your
+          account credentials.
+        </p>
+
+        <p>
+          You are responsible for activity performed through your
+          account and should take reasonable steps to prevent
+          unauthorized access.
+        </p>
+
+        <p>
+          If you believe your account has been compromised, you should
+          take appropriate steps to secure it and contact DIPO WORLD
+          through the available official channel.
+        </p>
+
+      </section>
+
+
+      <!-- 04 -->
+
+      <section class="section" id="content">
+
+        <div class="section-label">
+          04 · User Content
+        </div>
+
+        <h2>
+          Content Created by Users
+        </h2>
+
+        <p>
+          DIPO WORLD tools may allow users to enter text, links, images,
+          logos, files or other content for processing, customization
+          or generation.
+        </p>
+
+        <p>
+          You remain responsible for the content you submit, generate,
+          download, publish or distribute using the platform.
+        </p>
+
+        <ul>
+
+          <li>
+            You should have the necessary rights or permissions
+            for content you submit.
+          </li>
+
+          <li>
+            You should respect copyright, trademark, privacy and
+            other applicable rights.
+          </li>
+
+          <li>
+            You should not use the platform to create or distribute
+            unlawful or harmful material.
+          </li>
+
+        </ul>
+
+        <div class="callout warning">
+
+          <div class="callout-title">
+            <span class="icon">⚠️</span>
+            User responsibility
           </div>
 
-        </section>
-
-
-        <section class="section" id="contact">
-
-          <h2>
-            16. Contact
-          </h2>
-
           <p>
-            If you have questions about these Terms & Conditions,
-            please use the official DIPO-WORLD contact channel
-            provided on the Contact page.
+            DIPO WORLD does not automatically determine whether every
+            piece of user-provided content is lawful, accurate or
+            authorized.
           </p>
 
-          <p>
-            <a href="../contact/index.html">
-              Go to Contact Page →
-            </a>
-          </p>
+        </div>
 
-        </section>
+      </section>
 
 
-        <section class="section">
+      <!-- 05 -->
 
-          <h2>
-            Important Notice
-          </h2>
+      <section class="section" id="ai">
 
-          <div class="notice warning">
+        <div class="section-label">
+          05 · AI
+        </div>
 
-            <p>
-              This page is intended to provide the platform's
-              general Terms & Conditions. Before DIPO-WORLD
-              launches commercial services, subscriptions,
-              payments or services involving specific legal
-              obligations, the final legal documents should be
-              reviewed and approved for the applicable
-              jurisdiction.
-            </p>
+        <h2>
+          AI Features
+        </h2>
 
+        <p>
+          Certain DIPO WORLD features may use artificial intelligence
+          or automated technologies to generate, transform, organize
+          or assist with content.
+        </p>
+
+        <p>
+          AI-generated results may contain inaccuracies, unexpected
+          output, errors, omissions or similarities to existing
+          material.
+        </p>
+
+        <p>
+          You are responsible for reviewing generated results before
+          using them for important, commercial, public or sensitive
+          purposes.
+        </p>
+
+        <div class="callout">
+
+          <div class="callout-title">
+            <span class="icon">✦</span>
+            AI output is not guaranteed
           </div>
 
-        </section>
+          <p>
+            Generated content should be treated as an assistive result,
+            not as a guarantee of factual accuracy, originality,
+            suitability or legal clearance.
+          </p>
+
+        </div>
+
+      </section>
 
 
-      </article>
+      <!-- 06 -->
 
-    </div>
+      <section class="section" id="projects">
 
-  </main>
+        <div class="section-label">
+          06 · Projects
+        </div>
+
+        <h2>
+          Projects & Files
+        </h2>
+
+        <p>
+          DIPO WORLD may provide project, file, export, preview or
+          storage-related functionality depending on the current
+          platform version.
+        </p>
+
+        <p>
+          Users are responsible for maintaining appropriate backups
+          of important files and project materials.
+        </p>
+
+        <p>
+          Platform availability, storage limits, browser limitations,
+          technical failures or other circumstances may affect access
+          to projects or files.
+        </p>
+
+      </section>
 
 
-  <footer>
+      <!-- 07 -->
 
-    <div class="footer-inner">
+      <section class="section" id="paid">
 
-      <div class="footer-copy">
-        © 2026 DIPO-WORLD. All rights reserved.
+        <div class="section-label">
+          07 · Plans
+        </div>
+
+        <h2>
+          Free & Paid Services
+        </h2>
+
+        <p>
+          DIPO WORLD may offer both free and paid services, plans,
+          subscriptions or usage-based features.
+        </p>
+
+        <p>
+          Pricing, limits, included features, billing periods and
+          availability may be changed, introduced or discontinued
+          as the platform develops.
+        </p>
+
+        <p>
+          If paid services are introduced, applicable billing,
+          cancellation, renewal and refund conditions may be provided
+          separately and will apply in addition to these Terms.
+        </p>
+
+        <div class="callout warning">
+
+          <div class="callout-title">
+            <span class="icon">💳</span>
+            Commercial services
+          </div>
+
+          <p>
+            Before launching or purchasing any commercial service,
+            users should review the specific pricing and billing
+            information presented at the time of purchase.
+          </p>
+
+        </div>
+
+      </section>
+
+
+      <!-- 08 -->
+
+      <section class="section" id="ip">
+
+        <div class="section-label">
+          08 · Ownership
+        </div>
+
+        <h2>
+          Intellectual Property
+        </h2>
+
+        <p>
+          Unless otherwise stated, DIPO WORLD's original interface,
+          written content, visual design, code structure, branding,
+          graphics and project assets are protected by applicable
+          intellectual property laws.
+        </p>
+
+        <p>
+          The names <strong>DIPO WORLD</strong>,
+          <strong>DIPO BIO</strong> and <strong>DIPO QR</strong>
+          are used as project and product identifiers.
+        </p>
+
+        <p>
+          Nothing in these Terms automatically grants permission to
+          copy, reproduce, redistribute, resell or represent DIPO
+          WORLD's original materials as your own.
+        </p>
+
+        <div class="callout">
+
+          <div class="callout-title">
+            <span class="icon">©</span>
+            Original project materials
+          </div>
+
+          <p>
+            Third-party materials remain subject to the rights and
+            licenses of their respective owners.
+          </p>
+
+        </div>
+
+      </section>
+
+
+      <!-- 09 -->
+
+      <section class="section" id="third-party">
+
+        <div class="section-label">
+          09 · External Services
+        </div>
+
+        <h2>
+          Third-Party Services
+        </h2>
+
+        <p>
+          DIPO WORLD may provide integrations, presets, references,
+          icons, libraries, browser technologies or other resources
+          associated with third-party platforms or services.
+        </p>
+
+        <p>
+          Third-party names, logos, trademarks and brand identities
+          belong to their respective owners.
+        </p>
+
+        <p>
+          Unless explicitly stated, DIPO WORLD is not affiliated with,
+          sponsored by or endorsed by those third-party organizations.
+        </p>
+
+        <p>
+          Third-party services may have their own terms, privacy
+          policies, limitations and availability requirements.
+        </p>
+
+      </section>
+
+
+      <!-- 10 -->
+
+      <section class="section" id="prohibited">
+
+        <div class="section-label">
+          10 · Safety
+        </div>
+
+        <h2>
+          Prohibited Use
+        </h2>
+
+        <p>
+          Users must not use DIPO WORLD in a manner that violates
+          applicable law, infringes the rights of others or attempts
+          to compromise the platform or its users.
+        </p>
+
+        <p>
+          Prohibited activities may include:
+        </p>
+
+        <ul>
+
+          <li>
+            Creating or distributing unlawful content.
+          </li>
+
+          <li>
+            Infringing copyright, trademarks or other intellectual
+            property rights.
+          </li>
+
+          <li>
+            Impersonating another person, organization or service.
+          </li>
+
+          <li>
+            Attempting to gain unauthorized access to accounts,
+            systems or data.
+          </li>
+
+          <li>
+            Introducing malicious code, malware or harmful software.
+          </li>
+
+          <li>
+            Abusing automated systems, APIs or platform resources.
+          </li>
+
+          <li>
+            Using generated content to mislead, defraud, harm or
+            manipulate another person or organization.
+          </li>
+
+        </ul>
+
+        <div class="callout danger">
+
+          <div class="callout-title">
+            <span class="icon">🚫</span>
+            No abuse
+          </div>
+
+          <p>
+            DIPO WORLD should not be used to facilitate fraud,
+            impersonation, harassment, malicious activity or other
+            unlawful behavior.
+          </p>
+
+        </div>
+
+      </section>
+
+
+      <!-- 11 -->
+
+      <section class="section" id="availability">
+
+        <div class="section-label">
+          11 · Availability
+        </div>
+
+        <h2>
+          Service Availability
+        </h2>
+
+        <p>
+          We aim to keep DIPO WORLD reliable and useful, but we do not
+          guarantee that every feature will always operate without
+          interruption, errors or compatibility limitations.
+        </p>
+
+        <p>
+          Features may be updated, modified, temporarily disabled or
+          removed as the platform evolves.
+        </p>
+
+        <p>
+          Browser capabilities, operating-system restrictions,
+          device limitations, network conditions and third-party
+          technologies may also affect feature availability.
+        </p>
+
+        <p>
+          We may improve or change the platform without guaranteeing
+          that every historical behavior or interface will remain
+          unchanged.
+        </p>
+
+      </section>
+
+
+      <!-- 12 -->
+
+      <section class="section" id="termination">
+
+        <div class="section-label">
+          12 · Access
+        </div>
+
+        <h2>
+          Suspension & Termination
+        </h2>
+
+        <p>
+          Access to DIPO WORLD or particular features may be limited,
+          suspended or discontinued when reasonably necessary to
+          protect the platform, its users, security, legal compliance
+          or service integrity.
+        </p>
+
+        <p>
+          Users may stop using the platform at any time, subject to
+          any separate obligations associated with paid services.
+        </p>
+
+        <p>
+          Termination or suspension does not automatically remove
+          obligations that by their nature should continue after
+          access ends.
+        </p>
+
+      </section>
+
+
+      <!-- 13 -->
+
+      <section class="section" id="disclaimer">
+
+        <div class="section-label">
+          13 · Disclaimer
+        </div>
+
+        <h2>
+          Use at Your Own Judgment
+        </h2>
+
+        <p>
+          DIPO WORLD provides browser-based digital tools for general
+          creative, productivity and customization purposes.
+        </p>
+
+        <p>
+          Information and generated results provided through the
+          platform should be reviewed before important use,
+          publication, printing, selling, distribution or reliance.
+        </p>
+
+        <p>
+          Nothing provided through DIPO WORLD should be treated as
+          professional legal, financial, medical or other professional
+          advice unless expressly stated otherwise.
+        </p>
+
+        <div class="callout warning">
+
+          <div class="callout-title">
+            <span class="icon">⚠️</span>
+            Important
+          </div>
+
+          <p>
+            You are responsible for independently evaluating whether
+            a generated result is suitable for your intended purpose.
+          </p>
+
+        </div>
+
+      </section>
+
+
+      <!-- 14 -->
+
+      <section class="section" id="liability">
+
+        <div class="section-label">
+          14 · Liability
+        </div>
+
+        <h2>
+          Limitation of Liability
+        </h2>
+
+        <p>
+          To the extent permitted by applicable law, DIPO WORLD and
+          its contributors should not be understood as guaranteeing
+          uninterrupted availability, error-free operation or that
+          every generated result will meet a particular requirement.
+        </p>
+
+        <p>
+          Users should exercise appropriate judgment when relying on
+          information, generated content, exports, designs or other
+          platform output.
+        </p>
+
+        <p>
+          Nothing in these Terms is intended to exclude or limit any
+          rights or protections that cannot lawfully be excluded or
+          limited under applicable law.
+        </p>
+
+      </section>
+
+
+      <!-- 15 -->
+
+      <section class="section" id="changes">
+
+        <div class="section-label">
+          15 · Updates
+        </div>
+
+        <h2>
+          Changes to These Terms
+        </h2>
+
+        <p>
+          DIPO WORLD may update these Terms & Conditions from time to
+          time to reflect changes to the platform, services, features,
+          legal requirements or operating practices.
+        </p>
+
+        <p>
+          When appropriate, the updated version will be published on
+          this page with a revised update date.
+        </p>
+
+        <p>
+          Your continued use of DIPO WORLD after an updated version
+          becomes effective may constitute acceptance of the revised
+          Terms, subject to applicable law.
+        </p>
+
+      </section>
+
+
+      <!-- 16 -->
+
+      <section class="section" id="contact">
+
+        <div class="section-label">
+          16 · Contact
+        </div>
+
+        <h2>
+          Questions About These Terms?
+        </h2>
+
+        <p>
+          If you have questions, concerns or requests relating to
+          these Terms & Conditions, please use the official DIPO WORLD
+          contact channel made available by the platform.
+        </p>
+
+        <p>
+          Please include enough information for your request to be
+          understood and reviewed appropriately.
+        </p>
+
+        <a class="legal-link" href="../../index.html">
+          Go to DIPO WORLD →
+        </a>
+
+      </section>
+
+
+      <!-- DOCUMENT NAVIGATION -->
+
+      <div class="doc-nav">
+
+        <a class="doc-card" href="../privacy/index.html">
+
+          <div class="doc-card-label">
+            Privacy
+          </div>
+
+          <div class="doc-card-title">
+            Privacy Policy
+          </div>
+
+          <div class="doc-card-arrow">
+            Read Privacy →
+          </div>
+
+        </a>
+
+
+        <a class="doc-card" href="../copyright/index.html">
+
+          <div class="doc-card-label">
+            Ownership
+          </div>
+
+          <div class="doc-card-title">
+            Copyright
+          </div>
+
+          <div class="doc-card-arrow">
+            Read Copyright →
+          </div>
+
+        </a>
+
+
+        <a class="doc-card" href="../disclaimer/index.html">
+
+          <div class="doc-card-label">
+            Legal
+          </div>
+
+          <div class="doc-card-title">
+            Disclaimer
+          </div>
+
+          <div class="doc-card-arrow">
+            Read Disclaimer →
+          </div>
+
+        </a>
+
+
+        <a class="doc-card" href="../../index.html">
+
+          <div class="doc-card-label">
+            Platform
+          </div>
+
+          <div class="doc-card-title">
+            DIPO WORLD
+          </div>
+
+          <div class="doc-card-arrow">
+            Back Home →
+          </div>
+
+        </a>
+
       </div>
 
-      <nav class="footer-links">
 
-        <a href="../privacy/index.html">
-          Privacy
-        </a>
+      <!-- FINAL NOTICE -->
 
-        <a href="../terms/index.html">
-          Terms
-        </a>
+      <div class="final-notice">
 
-        <a href="../disclaimer/index.html">
-          Disclaimer
-        </a>
+        <h2>
+          Important Notice
+        </h2>
 
-        <a href="../copyright/index.html">
-          Copyright
-        </a>
+        <p>
+          These Terms & Conditions are intended to describe the general
+          rules governing use of DIPO WORLD. They should be reviewed
+          and adapted for the applicable jurisdiction before being
+          relied upon as a final commercial or legal agreement,
+          particularly before launching subscriptions, payments,
+          enterprise services or other services involving specific
+          legal obligations.
+        </p>
 
-        <a href="../contact/index.html">
-          Contact
-        </a>
-
-      </nav>
+      </div>
 
     </div>
 
-  </footer>
+  </div>
+
+</main>
 
 
-  <script>
-    /*
-      DIPO-WORLD Terms Page
-      ----------------------
-      This small script keeps the page lightweight and provides
-      smooth navigation for the Terms of Service table of contents.
-    */
+<!-- =======================================================
+     FOOTER
+     ======================================================= -->
 
-    document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+<footer>
 
-      link.addEventListener("click", function (event) {
+  <div class="footer-inner">
 
-        const targetId = this.getAttribute("href");
+    <div class="footer-brand">
+      DIPO WORLD
+    </div>
 
-        const target = document.querySelector(targetId);
+    <div class="footer-tagline">
+      Creative tools. Simple experiences. Made for the next generation.
+    </div>
 
-        if (!target) {
-          return;
+    <div class="footer-links">
+
+      <a href="../privacy/index.html">
+        Privacy
+      </a>
+
+      <a href="../copyright/index.html">
+        Copyright
+      </a>
+
+      <a href="../disclaimer/index.html">
+        Disclaimer
+      </a>
+
+      <a href="../terms/index.html">
+        Terms
+      </a>
+
+      <a href="../../index.html">
+        Home
+      </a>
+
+    </div>
+
+    <div class="footer-copy">
+
+      <strong>Made With ❤️ in India</strong><br>
+
+      𝔄 𝔇𝔐 𝔭𝔯𝔬𝔡𝔲𝔠𝔱<br>
+
+      All copyrights reserved @ 𝔄 𝔇𝔐 𝔭𝔯𝔬𝔡𝔲𝔠𝔱
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+<!-- BACK TO TOP -->
+
+<button
+  class="top-btn"
+  id="topBtn"
+  type="button"
+  aria-label="Back to top"
+>
+  ↑
+</button>
+
+
+<script>
+/* =========================================================
+   DIPO WORLD — TERMS INTERACTIONS
+   ========================================================= */
+
+(function(){
+
+  const progress = document.getElementById("progress");
+  const topBtn = document.getElementById("topBtn");
+  const sections = [...document.querySelectorAll(".section")];
+  const tocLinks = [...document.querySelectorAll(".toc-list a")];
+
+  /* -------------------------------------------------------
+     Reading Progress
+     ------------------------------------------------------- */
+
+  function updateProgress(){
+
+    const scrollTop =
+      window.scrollY ||
+      document.documentElement.scrollTop;
+
+    const documentHeight =
+      document.documentElement.scrollHeight -
+      window.innerHeight;
+
+    const percent =
+      documentHeight > 0
+        ? (scrollTop / documentHeight) * 100
+        : 0;
+
+    progress.style.width =
+      Math.min(100, Math.max(0, percent)) + "%";
+
+    /* Back to top */
+
+    if(scrollTop > 500){
+      topBtn.classList.add("show");
+    }else{
+      topBtn.classList.remove("show");
+    }
+  }
+
+  window.addEventListener(
+    "scroll",
+    updateProgress,
+    {passive:true}
+  );
+
+  updateProgress();
+
+
+  /* -------------------------------------------------------
+     Back To Top
+     ------------------------------------------------------- */
+
+  topBtn.addEventListener("click", function(){
+
+    window.scrollTo({
+      top:0,
+      behavior:"smooth"
+    });
+
+  });
+
+
+  /* -------------------------------------------------------
+     Scroll Reveal
+     ------------------------------------------------------- */
+
+  if("IntersectionObserver" in window){
+
+    const observer =
+      new IntersectionObserver(
+        function(entries){
+
+          entries.forEach(function(entry){
+
+            if(entry.isIntersecting){
+
+              entry.target.classList.add("visible");
+
+              observer.unobserve(entry.target);
+
+            }
+
+          });
+
+        },
+        {
+          threshold:.08,
+          rootMargin:"0px 0px -40px 0px"
         }
+      );
 
-        event.preventDefault();
+    sections.forEach(function(section){
+      observer.observe(section);
+    });
 
-        target.scrollIntoView({
-          behavior: "smooth",
-          block: "start"
-        });
+  }else{
 
-        history.replaceState(
-          null,
-          "",
-          targetId
-        );
+    sections.forEach(function(section){
+      section.classList.add("visible");
+    });
 
+  }
+
+
+  /* -------------------------------------------------------
+     Active TOC
+     ------------------------------------------------------- */
+
+  if("IntersectionObserver" in window){
+
+    const activeObserver =
+      new IntersectionObserver(
+        function(entries){
+
+          entries.forEach(function(entry){
+
+            if(!entry.isIntersecting){
+              return;
+            }
+
+            const id =
+              entry.target.getAttribute("id");
+
+            tocLinks.forEach(function(link){
+
+              link.classList.remove("active");
+
+              if(
+                link.getAttribute("href") ===
+                "#" + id
+              ){
+
+                link.classList.add("active");
+
+              }
+
+            });
+
+          });
+
+        },
+        {
+          rootMargin:"-20% 0px -65% 0px",
+          threshold:0
+        }
+      );
+
+    sections.forEach(function(section){
+      activeObserver.observe(section);
+    });
+
+  }
+
+
+  /* -------------------------------------------------------
+     Smooth TOC Navigation
+     ------------------------------------------------------- */
+
+  tocLinks.forEach(function(link){
+
+    link.addEventListener("click", function(event){
+
+      const targetId =
+        link.getAttribute("href");
+
+      if(!targetId || targetId.charAt(0) !== "#"){
+        return;
+      }
+
+      const target =
+        document.querySelector(targetId);
+
+      if(!target){
+        return;
+      }
+
+      event.preventDefault();
+
+      target.scrollIntoView({
+        behavior:"smooth",
+        block:"start"
       });
 
+      history.replaceState(
+        null,
+        "",
+        targetId
+      );
+
     });
-  </script>
+
+  });
+
+
+  /* -------------------------------------------------------
+     Initial visible state for first section
+     ------------------------------------------------------- */
+
+  window.addEventListener("load", function(){
+
+    sections.slice(0,2).forEach(function(section){
+      section.classList.add("visible");
+    });
+
+  });
+
+})();
+</script>
 
 </body>
 </html>

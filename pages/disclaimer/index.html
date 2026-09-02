@@ -1,691 +1,3243 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0, viewport-fit=cover"
-  >
+<meta charset="UTF-8">
 
-  <meta
-    name="description"
-    content="Disclaimer for DIPO WORLD, DIPO BIO and DIPO QR tools and generated content."
-  >
+<meta
+  name="viewport"
+  content="width=device-width,initial-scale=1,viewport-fit=cover">
 
-  <meta
-    name="robots"
-    content="index, follow"
-  >
+<meta
+  name="theme-color"
+  content="#f6f9ff">
 
-  <meta
-    name="theme-color"
-    content="#f5f7f2"
-  >
+<meta
+  name="description"
+  content="DIPO WORLD Disclaimer — important information about tools, generated content, third-party services, availability and user responsibility.">
 
-  <link
-    rel="canonical"
-    href="/pages/disclaimer/"
-  >
+<title>Disclaimer — DIPO WORLD</title>
 
-  <title>Disclaimer — DIPO WORLD</title>
 
-  <link
-    rel="stylesheet"
-    href="../../assets/css/app.css"
-  >
+<style>
 
-  <link
-    rel="manifest"
-    href="../../manifest.json"
-  >
+/* =========================================================
+   DIPO WORLD — DISCLAIMER
+   FUTURE / GEN-Z / PREMIUM LEGAL UI
+========================================================= */
 
-  <link
-    rel="icon"
-    href="../../favicon.ico"
-  >
+:root{
+
+  --bg:#f6f9ff;
+  --bg2:#eef4ff;
+
+  --card:rgba(255,255,255,.78);
+  --card-solid:#ffffff;
+
+  --text:#101827;
+  --text-soft:#394456;
+  --muted:#737e90;
+
+  --line:#e2e8f2;
+
+  --blue:#2860ff;
+  --blue-dark:#173ca8;
+  --cyan:#46d9ff;
+
+  --green:#16a66a;
+  --orange:#ff9f1c;
+  --red:#ff527f;
+
+  --shadow:
+    0 22px 70px rgba(35,65,120,.09);
+
+  --shadow-small:
+    0 10px 30px rgba(35,65,120,.06);
+
+  --radius:28px;
+
+}
+
+
+*{
+  box-sizing:border-box;
+}
+
+
+html{
+  scroll-behavior:smooth;
+  scroll-padding-top:100px;
+}
+
+
+body{
+
+  margin:0;
+
+  color:var(--text);
+
+  background:
+
+    radial-gradient(
+      circle at 8% 5%,
+      rgba(70,217,255,.16),
+      transparent 28%
+    ),
+
+    radial-gradient(
+      circle at 95% 18%,
+      rgba(40,96,255,.13),
+      transparent 30%
+    ),
+
+    linear-gradient(
+      180deg,
+      #fbfdff 0%,
+      var(--bg) 48%,
+      #f5f8fd 100%
+    );
+
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "SF Pro Display",
+    "SF Pro Text",
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+  overflow-x:hidden;
+
+}
+
+
+::selection{
+  background:#dce7ff;
+  color:#173ca8;
+}
+
+
+a{
+  color:inherit;
+}
+
+
+/* =========================================================
+   BACKGROUND EFFECT
+========================================================= */
+
+.bg-orb{
+
+  position:fixed;
+
+  width:240px;
+  height:240px;
+
+  border-radius:50%;
+
+  filter:blur(70px);
+
+  pointer-events:none;
+
+  z-index:-1;
+
+  opacity:.42;
+
+}
+
+
+.orb-one{
+
+  top:150px;
+  left:-130px;
+
+  background:#8eeaff;
+
+}
+
+
+.orb-two{
+
+  top:800px;
+  right:-140px;
+
+  background:#a9bfff;
+
+}
+
+
+.orb-three{
+
+  top:1500px;
+  left:-150px;
+
+  background:#d6aaff;
+
+}
+
+
+/* =========================================================
+   SKIP
+========================================================= */
+
+.skip{
+
+  position:absolute;
+
+  top:-60px;
+  left:15px;
+
+  z-index:999;
+
+  padding:11px 15px;
+
+  border-radius:12px;
+
+  background:#111827;
+  color:#fff;
+
+  text-decoration:none;
+
+  font-size:12px;
+  font-weight:900;
+
+}
+
+
+.skip:focus{
+  top:15px;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.header{
+
+  position:sticky;
+
+  top:0;
+
+  z-index:100;
+
+  border-bottom:
+    1px solid rgba(220,228,239,.85);
+
+  background:
+    rgba(255,255,255,.76);
+
+  backdrop-filter:blur(24px);
+  -webkit-backdrop-filter:blur(24px);
+
+}
+
+
+.nav{
+
+  width:min(1120px,92%);
+
+  min-height:72px;
+
+  margin:auto;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:space-between;
+
+  gap:15px;
+
+}
+
+
+.brand{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:10px;
+
+  text-decoration:none;
+
+}
+
+
+.brand-mark{
+
+  width:40px;
+  height:40px;
+
+  display:grid;
+
+  place-items:center;
+
+  border-radius:13px;
+
+  color:#fff;
+
+  font-size:15px;
+
+  font-weight:950;
+
+  background:
+
+    linear-gradient(
+      135deg,
+      #101827,
+      #2860ff 55%,
+      #49d9ff
+    );
+
+  box-shadow:
+    0 9px 25px rgba(40,96,255,.24);
+
+}
+
+
+.brand-name{
+
+  font-size:19px;
+
+  font-weight:950;
+
+  letter-spacing:-.8px;
+
+}
+
+
+.brand-name span{
+  color:var(--blue);
+}
+
+
+.header-actions{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:8px;
+
+}
+
+
+.header-btn{
+
+  display:inline-flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  gap:6px;
+
+  min-height:40px;
+
+  padding:9px 13px;
+
+  border-radius:13px;
+
+  border:1px solid var(--line);
+
+  background:#fff;
+
+  text-decoration:none;
+
+  font-size:11px;
+
+  font-weight:900;
+
+  transition:.2s ease;
+
+}
+
+
+.header-btn:hover{
+
+  transform:translateY(-2px);
+
+  border-color:#c4d2f4;
+
+  box-shadow:var(--shadow-small);
+
+}
+
+
+.header-btn.primary{
+
+  background:#111827;
+
+  color:#fff;
+
+  border-color:#111827;
+
+}
+
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+main{
+
+  width:min(1120px,92%);
+
+  margin:auto;
+
+  padding:48px 0 90px;
+
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+
+  position:relative;
+
+  padding:25px 0 45px;
+
+}
+
+
+.eyebrow{
+
+  display:inline-flex;
+
+  align-items:center;
+
+  gap:8px;
+
+  padding:9px 13px;
+
+  border:1px solid #dce5fa;
+
+  border-radius:50px;
+
+  background:
+    rgba(239,244,255,.86);
+
+  color:#365ed0;
+
+  font-size:9px;
+
+  font-weight:950;
+
+  letter-spacing:1.5px;
+
+  text-transform:uppercase;
+
+  animation:fadeUp .7s ease both;
+
+}
+
+
+.status-dot{
+
+  width:7px;
+  height:7px;
+
+  border-radius:50%;
+
+  background:#20bb76;
+
+  box-shadow:
+    0 0 0 5px rgba(32,187,118,.11);
+
+  animation:pulse 1.8s infinite;
+
+}
+
+
+.hero h1{
+
+  max-width:850px;
+
+  margin:19px 0 16px;
+
+  font-size:
+    clamp(52px,8vw,92px);
+
+  line-height:.91;
+
+  letter-spacing:-5px;
+
+  font-weight:950;
+
+  animation:
+    fadeUp .75s .08s ease both;
+
+}
+
+
+.hero h1 span{
+
+  background:
+
+    linear-gradient(
+      100deg,
+      #111827 0%,
+      #2860ff 40%,
+      #45d9ff 72%,
+      #111827 100%
+    );
+
+  background-size:220% auto;
+
+  -webkit-background-clip:text;
+  background-clip:text;
+
+  color:transparent;
+
+  animation:
+    gradientMove 7s linear infinite;
+
+}
+
+
+.hero-description{
+
+  max-width:720px;
+
+  margin:0;
+
+  color:var(--muted);
+
+  font-size:17px;
+
+  line-height:1.7;
+
+  animation:
+    fadeUp .75s .16s ease both;
+
+}
+
+
+.hero-meta{
+
+  display:flex;
+
+  flex-wrap:wrap;
+
+  gap:8px;
+
+  margin-top:22px;
+
+}
+
+
+.meta-pill{
+
+  padding:8px 11px;
+
+  border-radius:10px;
+
+  border:1px solid var(--line);
+
+  background:#fff;
+
+  color:#778193;
+
+  font-size:9px;
+
+  font-weight:900;
+
+}
+
+
+.hero-line{
+
+  height:1px;
+
+  width:100%;
+
+  margin-top:36px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      #dce4f0,
+      transparent
+    );
+
+}
+
+
+/* =========================================================
+   QUICK NAV
+========================================================= */
+
+.quick-nav{
+
+  position:sticky;
+
+  top:88px;
+
+  z-index:30;
+
+  margin-bottom:38px;
+
+  padding:10px;
+
+  border:1px solid rgba(220,228,239,.9);
+
+  border-radius:19px;
+
+  background:
+    rgba(255,255,255,.72);
+
+  backdrop-filter:blur(18px);
+  -webkit-backdrop-filter:blur(18px);
+
+  box-shadow:
+    0 12px 35px rgba(30,60,110,.06);
+
+}
+
+
+.quick-scroll{
+
+  display:flex;
+
+  gap:7px;
+
+  overflow-x:auto;
+
+  scrollbar-width:none;
+
+}
+
+
+.quick-scroll::-webkit-scrollbar{
+  display:none;
+}
+
+
+.quick-link{
+
+  flex:0 0 auto;
+
+  padding:9px 12px;
+
+  border-radius:11px;
+
+  text-decoration:none;
+
+  color:#707b8d;
+
+  font-size:10px;
+
+  font-weight:900;
+
+  transition:.2s ease;
+
+}
+
+
+.quick-link:hover{
+
+  background:#eef3ff;
+
+  color:var(--blue);
+
+}
+
+
+/* =========================================================
+   CONTENT LAYOUT
+========================================================= */
+
+.content-layout{
+
+  display:grid;
+
+  grid-template-columns:
+    210px
+    minmax(0,1fr);
+
+  gap:25px;
+
+  align-items:start;
+
+}
+
+
+/* =========================================================
+   SIDE INDEX
+========================================================= */
+
+.side-index{
+
+  position:sticky;
+
+  top:145px;
+
+  padding:17px;
+
+  border:1px solid var(--line);
+
+  border-radius:21px;
+
+  background:
+    rgba(255,255,255,.72);
+
+  box-shadow:var(--shadow-small);
+
+}
+
+
+.side-title{
+
+  margin-bottom:12px;
+
+  color:#8b95a5;
+
+  font-size:9px;
+
+  font-weight:950;
+
+  letter-spacing:1.4px;
+
+  text-transform:uppercase;
+
+}
+
+
+.side-index a{
+
+  display:block;
+
+  padding:8px 9px;
+
+  border-radius:9px;
+
+  color:#717c8d;
+
+  text-decoration:none;
+
+  font-size:10px;
+
+  font-weight:800;
+
+  transition:.2s ease;
+
+}
+
+
+.side-index a:hover{
+
+  color:var(--blue);
+
+  background:#eff4ff;
+
+}
+
+
+/* =========================================================
+   LEGAL SECTIONS
+========================================================= */
+
+.legal-content{
+
+  min-width:0;
+
+}
+
+
+.legal-section{
+
+  position:relative;
+
+  margin-bottom:18px;
+
+  padding:29px;
+
+  border:1px solid var(--line);
+
+  border-radius:var(--radius);
+
+  background:
+    rgba(255,255,255,.78);
+
+  box-shadow:var(--shadow-small);
+
+  overflow:hidden;
+
+  animation:fadeUp .7s ease both;
+
+}
+
+
+.legal-section::before{
+
+  content:"";
+
+  position:absolute;
+
+  top:0;
+  left:0;
+
+  width:100%;
+  height:3px;
+
+  background:
+    linear-gradient(
+      90deg,
+      var(--blue),
+      var(--cyan),
+      transparent
+    );
+
+  opacity:.7;
+
+}
+
+
+.section-number{
+
+  display:inline-flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  width:32px;
+  height:32px;
+
+  margin-bottom:15px;
+
+  border-radius:10px;
+
+  background:#eef3ff;
+
+  border:1px solid #dce6ff;
+
+  color:var(--blue);
+
+  font-size:10px;
+
+  font-weight:950;
+
+}
+
+
+.section-label{
+
+  margin-bottom:7px;
+
+  color:#8c96a5;
+
+  font-size:9px;
+
+  font-weight:950;
+
+  letter-spacing:1.5px;
+
+  text-transform:uppercase;
+
+}
+
+
+.legal-section h2{
+
+  margin:0 0 15px;
+
+  color:var(--text);
+
+  font-size:
+    clamp(27px,4vw,42px);
+
+  line-height:1;
+
+  letter-spacing:-2px;
+
+  font-weight:950;
+
+}
+
+
+.legal-section p{
+
+  margin:0 0 16px;
+
+  color:#596577;
+
+  font-size:14px;
+
+  line-height:1.75;
+
+}
+
+
+.legal-section p:last-child{
+  margin-bottom:0;
+}
+
+
+.legal-list{
+
+  display:grid;
+
+  gap:9px;
+
+  margin:18px 0 0;
+
+  padding:0;
+
+  list-style:none;
+
+}
+
+
+.legal-list li{
+
+  position:relative;
+
+  padding:12px 13px 12px 37px;
+
+  border:1px solid #e8edf4;
+
+  border-radius:13px;
+
+  background:#fafcff;
+
+  color:#667184;
+
+  font-size:12px;
+
+  line-height:1.55;
+
+}
+
+
+.legal-list li::before{
+
+  content:"✓";
+
+  position:absolute;
+
+  left:12px;
+  top:11px;
+
+  width:17px;
+  height:17px;
+
+  display:grid;
+
+  place-items:center;
+
+  border-radius:6px;
+
+  background:#eaf8f1;
+
+  color:#14935d;
+
+  font-size:10px;
+
+  font-weight:950;
+
+}
+
+
+/* =========================================================
+   IMPORTANT NOTICE
+========================================================= */
+
+.notice{
+
+  margin-bottom:18px;
+
+  padding:20px;
+
+  border-radius:21px;
+
+  border:1px solid #d9e4ff;
+
+  background:
+
+    linear-gradient(
+      135deg,
+      #eef4ff,
+      #f7fbff
+    );
+
+}
+
+
+.notice-top{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:10px;
+
+  margin-bottom:8px;
+
+}
+
+
+.notice-icon{
+
+  width:36px;
+  height:36px;
+
+  display:grid;
+
+  place-items:center;
+
+  border-radius:11px;
+
+  background:#fff;
+
+  border:1px solid #dce6ff;
+
+  font-size:17px;
+
+}
+
+
+.notice strong{
+
+  font-size:13px;
+
+}
+
+
+.notice p{
+
+  margin:0;
+
+  color:#66748a;
+
+  font-size:12px;
+
+  line-height:1.65;
+
+}
+
+
+/* =========================================================
+   RESPONSIBILITY GRID
+========================================================= */
+
+.responsibility-grid{
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(3,1fr);
+
+  gap:10px;
+
+  margin-top:20px;
+
+}
+
+
+.responsibility{
+
+  padding:16px;
+
+  border:1px solid #e5eaf2;
+
+  border-radius:17px;
+
+  background:#fbfdff;
+
+}
+
+
+.responsibility-icon{
+
+  font-size:20px;
+
+  margin-bottom:10px;
+
+}
+
+
+.responsibility strong{
+
+  display:block;
+
+  margin-bottom:5px;
+
+  font-size:12px;
+
+}
+
+
+.responsibility span{
+
+  display:block;
+
+  color:#7b8595;
+
+  font-size:10px;
+
+  line-height:1.5;
+
+}
+
+
+/* =========================================================
+   MORE INFORMATION
+========================================================= */
+
+.more{
+
+  margin-top:45px;
+
+}
+
+
+.more-head{
+
+  margin-bottom:20px;
+
+}
+
+
+.more-head .section-label{
+  margin-bottom:8px;
+}
+
+
+.more-head h2{
+
+  margin:0;
+
+  font-size:
+    clamp(32px,5vw,52px);
+
+  letter-spacing:-3px;
+
+  line-height:1;
+
+  font-weight:950;
+
+}
+
+
+.more-grid{
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(3,1fr);
+
+  gap:12px;
+
+}
+
+
+.more-card{
+
+  position:relative;
+
+  min-height:190px;
+
+  padding:21px;
+
+  border:1px solid var(--line);
+
+  border-radius:22px;
+
+  background:
+    rgba(255,255,255,.8);
+
+  text-decoration:none;
+
+  box-shadow:var(--shadow-small);
+
+  overflow:hidden;
+
+  transition:.25s ease;
+
+}
+
+
+.more-card::after{
+
+  content:"→";
+
+  position:absolute;
+
+  right:20px;
+  bottom:17px;
+
+  color:#b4bdca;
+
+  font-size:20px;
+
+  transition:.2s ease;
+
+}
+
+
+.more-card:hover{
+
+  transform:translateY(-5px);
+
+  border-color:#c8d6f5;
+
+  box-shadow:var(--shadow);
+
+}
+
+
+.more-card:hover::after{
+
+  color:var(--blue);
+
+  transform:translateX(5px);
+
+}
+
+
+.more-icon{
+
+  width:42px;
+  height:42px;
+
+  display:grid;
+
+  place-items:center;
+
+  margin-bottom:17px;
+
+  border-radius:13px;
+
+  background:#eef3ff;
+
+  border:1px solid #dce5ff;
+
+  font-size:18px;
+
+}
+
+
+.more-card:nth-child(2)
+.more-icon{
+
+  background:#fff0f5;
+
+  border-color:#ffd9e6;
+
+}
+
+
+.more-card:nth-child(3)
+.more-icon{
+
+  background:#fff8e7;
+
+  border-color:#ffe5ad;
+
+}
+
+
+.more-card h3{
+
+  margin:0 0 8px;
+
+  font-size:19px;
+
+  letter-spacing:-.8px;
+
+}
+
+
+.more-card p{
+
+  margin:0;
+
+  max-width:300px;
+
+  color:#778294;
+
+  font-size:11px;
+
+  line-height:1.6;
+
+}
+
+
+/* =========================================================
+   BOTTOM CTA
+========================================================= */
+
+.bottom-cta{
+
+  position:relative;
+
+  margin-top:45px;
+
+  padding:30px;
+
+  border-radius:28px;
+
+  overflow:hidden;
+
+  background:
+
+    radial-gradient(
+      circle at 90% 20%,
+      rgba(69,217,255,.18),
+      transparent 30%
+    ),
+
+    linear-gradient(
+      135deg,
+      #101827,
+      #18264a
+    );
+
+  color:#fff;
+
+  box-shadow:
+    0 25px 65px rgba(15,30,65,.18);
+
+}
+
+
+.bottom-cta::before{
+
+  content:"✦";
+
+  position:absolute;
+
+  right:25px;
+  top:10px;
+
+  color:rgba(255,255,255,.09);
+
+  font-size:100px;
+
+}
+
+
+.bottom-cta .section-label{
+
+  color:#93a0b7;
+
+}
+
+
+.bottom-cta h2{
+
+  max-width:650px;
+
+  margin:7px 0 10px;
+
+  font-size:
+    clamp(30px,5vw,48px);
+
+  line-height:1;
+
+  letter-spacing:-2.5px;
+
+}
+
+
+.bottom-cta p{
+
+  max-width:650px;
+
+  margin:0 0 20px;
+
+  color:#aeb8c9;
+
+  font-size:13px;
+
+  line-height:1.7;
+
+}
+
+
+.cta-actions{
+
+  display:flex;
+
+  flex-wrap:wrap;
+
+  gap:8px;
+
+}
+
+
+.cta-btn{
+
+  display:inline-flex;
+
+  align-items:center;
+
+  gap:7px;
+
+  padding:11px 14px;
+
+  border-radius:12px;
+
+  text-decoration:none;
+
+  font-size:11px;
+
+  font-weight:900;
+
+  background:#fff;
+
+  color:#111827;
+
+  transition:.2s ease;
+
+}
+
+
+.cta-btn:hover{
+
+  transform:translateY(-2px);
+
+}
+
+
+.cta-btn.secondary{
+
+  color:#fff;
+
+  background:rgba(255,255,255,.08);
+
+  border:1px solid rgba(255,255,255,.12);
+
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer{
+
+  border-top:1px solid var(--line);
+
+  padding:30px 0 26px;
+
+  background:rgba(255,255,255,.5);
+
+}
+
+
+.footer-inner{
+
+  width:min(1120px,92%);
+
+  margin:auto;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:space-between;
+
+  gap:20px;
+
+}
+
+
+.footer-brand{
+
+  font-size:15px;
+
+  font-weight:950;
+
+}
+
+
+.footer-brand span{
+  color:var(--blue);
+}
+
+
+.footer-copy{
+
+  color:#8993a2;
+
+  font-size:9px;
+
+  line-height:1.75;
+
+  text-align:right;
+
+}
+
+
+.footer-copy strong{
+  color:#566173;
+}
+
+
+/* =========================================================
+   FLOATING BUTTONS
+========================================================= */
+
+.float-tools{
+
+  position:fixed;
+
+  right:18px;
+  bottom:20px;
+
+  z-index:80;
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:7px;
+
+}
+
+
+.float-btn{
+
+  width:42px;
+  height:42px;
+
+  display:grid;
+
+  place-items:center;
+
+  border:1px solid var(--line);
+
+  border-radius:13px;
+
+  background:
+    rgba(255,255,255,.88);
+
+  color:#596579;
+
+  cursor:pointer;
+
+  box-shadow:
+    0 10px 28px rgba(20,50,100,.12);
+
+  transition:.2s ease;
+
+}
+
+
+.float-btn:hover{
+
+  transform:translateY(-3px);
+
+  color:var(--blue);
+
+}
+
+
+/* =========================================================
+   TOAST
+========================================================= */
+
+.toast{
+
+  position:fixed;
+
+  left:50%;
+  bottom:25px;
+
+  z-index:999;
+
+  transform:
+    translate(-50%,130px);
+
+  opacity:0;
+
+  pointer-events:none;
+
+  padding:12px 17px;
+
+  border-radius:13px;
+
+  background:#111827;
+
+  color:#fff;
+
+  font-size:10px;
+
+  font-weight:950;
+
+  box-shadow:
+    0 15px 40px rgba(0,0,0,.22);
+
+  transition:.3s ease;
+
+}
+
+
+.toast.show{
+
+  transform:
+    translate(-50%,0);
+
+  opacity:1;
+
+}
+
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes fadeUp{
+
+  from{
+    opacity:0;
+    transform:translateY(18px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+
+}
+
+
+@keyframes pulse{
+
+  0%,100%{
+    transform:scale(1);
+  }
+
+  50%{
+    transform:scale(.75);
+  }
+
+}
+
+
+@keyframes gradientMove{
+
+  0%{
+    background-position:0% center;
+  }
+
+  100%{
+    background-position:220% center;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media(max-width:850px){
+
+  .content-layout{
+
+    grid-template-columns:1fr;
+
+  }
+
+
+  .side-index{
+
+    display:none;
+
+  }
+
+
+  .more-grid{
+
+    grid-template-columns:1fr;
+
+  }
+
+
+  .responsibility-grid{
+
+    grid-template-columns:1fr;
+
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:600px){
+
+  .nav{
+
+    min-height:62px;
+
+  }
+
+
+  .brand-mark{
+
+    width:35px;
+    height:35px;
+
+    border-radius:11px;
+
+  }
+
+
+  .brand-name{
+
+    font-size:17px;
+
+  }
+
+
+  .header-btn{
+
+    min-height:36px;
+
+    padding:8px 10px;
+
+    font-size:9px;
+
+  }
+
+
+  .header-btn.primary{
+
+    display:none;
+
+  }
+
+
+  main{
+
+    width:92%;
+
+    padding-top:28px;
+
+    padding-bottom:65px;
+
+  }
+
+
+  .hero{
+
+    padding-top:12px;
+
+    padding-bottom:30px;
+
+  }
+
+
+  .eyebrow{
+
+    padding:8px 11px;
+
+    font-size:8px;
+
+  }
+
+
+  .hero h1{
+
+    margin-top:16px;
+
+    font-size:52px;
+
+    letter-spacing:-3.5px;
+
+  }
+
+
+  .hero-description{
+
+    font-size:14px;
+
+    line-height:1.65;
+
+  }
+
+
+  .hero-meta{
+
+    gap:6px;
+
+  }
+
+
+  .meta-pill{
+
+    font-size:8px;
+
+    padding:7px 9px;
+
+  }
+
+
+  .quick-nav{
+
+    top:70px;
+
+    margin-bottom:25px;
+
+  }
+
+
+  .quick-link{
+
+    padding:8px 10px;
+
+    font-size:9px;
+
+  }
+
+
+  .legal-section{
+
+    padding:21px;
+
+    border-radius:21px;
+
+  }
+
+
+  .legal-section h2{
+
+    font-size:29px;
+
+    letter-spacing:-1.5px;
+
+  }
+
+
+  .legal-section p{
+
+    font-size:13px;
+
+    line-height:1.7;
+
+  }
+
+
+  .notice{
+
+    padding:17px;
+
+    border-radius:18px;
+
+  }
+
+
+  .bottom-cta{
+
+    padding:22px;
+
+    border-radius:23px;
+
+  }
+
+
+  .bottom-cta h2{
+
+    font-size:34px;
+
+    letter-spacing:-1.8px;
+
+  }
+
+
+  .footer-inner{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+  }
+
+
+  .footer-copy{
+
+    text-align:left;
+
+  }
+
+
+  .float-tools{
+
+    right:13px;
+
+    bottom:16px;
+
+  }
+
+
+  .float-btn{
+
+    width:39px;
+    height:39px;
+
+    border-radius:12px;
+
+  }
+
+
+  .toast{
+
+    width:calc(100% - 35px);
+
+    text-align:center;
+
+  }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media(prefers-reduced-motion:reduce){
+
+  *{
+
+    animation-duration:.01ms !important;
+
+    animation-iteration-count:1 !important;
+
+    scroll-behavior:auto !important;
+
+    transition-duration:.01ms !important;
+
+  }
+
+}
+
+</style>
+
 </head>
 
-<body
-  class="page page-disclaimer"
-  data-page="disclaimer"
-  data-product="dipo-world"
->
 
-  <!-- Accessibility -->
-  <a
-    class="skip-link"
-    href="#main-content"
-  >
-    Skip to content
-  </a>
+<body>
 
 
-  <!-- Global Navigation -->
-  <header
-    id="site-header"
-    data-component="navbar"
-    data-component-src="../../components/navbar.html"
-  >
-    <!-- Navbar component -->
-  </header>
+<!-- BACKGROUND -->
+
+<div class="bg-orb orb-one"></div>
+<div class="bg-orb orb-two"></div>
+<div class="bg-orb orb-three"></div>
 
 
-  <!-- Main Content -->
-  <main
-    id="main-content"
-    class="legal-page"
-    tabindex="-1"
-  >
+<a
+  class="skip"
+  href="#content">
 
-    <!-- Hero -->
-    <section
-      class="page-hero section"
-      aria-labelledby="disclaimer-title"
-    >
+  Skip to content
 
-      <div class="container">
+</a>
 
-        <span class="section-kicker">
-          LEGAL
-        </span>
 
-        <h1 id="disclaimer-title">
-          Disclaimer.
-        </h1>
+<!-- =======================================================
+     HEADER
+======================================================= -->
 
-        <p class="page-hero-description">
-          Important information about DIPO WORLD tools,
-          generated results and user responsibility.
-        </p>
+<header class="header">
 
+  <nav class="nav">
+
+
+    <a
+      class="brand"
+      href="../../index.html"
+      aria-label="DIPO WORLD Home">
+
+      <div class="brand-mark">
+        D
       </div>
 
-    </section>
-
-
-    <!-- General Disclaimer -->
-    <section
-      class="legal-content-section section"
-      aria-labelledby="general-title"
-    >
-
-      <div class="container">
-
-        <article class="content-card">
-
-          <span class="section-kicker">
-            GENERAL
-          </span>
-
-          <h2 id="general-title">
-            General Information
-          </h2>
-
-          <p>
-            DIPO WORLD provides browser-based digital tools designed
-            for creative, productivity and customization purposes.
-          </p>
-
-          <p>
-            The information and functionality provided through
-            DIPO WORLD are offered for general informational and
-            utility purposes and should be used with appropriate
-            judgment.
-          </p>
-
-          <p>
-            We aim to keep the platform reliable and useful, but we
-            cannot guarantee that every feature will always operate
-            without interruption, errors or compatibility limitations.
-          </p>
-
-        </article>
-
+      <div class="brand-name">
+        DIPO<span>WORLD</span>
       </div>
 
-    </section>
+    </a>
 
 
-    <!-- Generated Content -->
-    <section
-      class="legal-content-section section"
-      aria-labelledby="generated-title"
-    >
+    <div class="header-actions">
 
-      <div class="container">
+      <a
+        class="header-btn"
+        href="../../index.html">
 
-        <article class="content-card">
+        ← Home
 
-          <span class="section-kicker">
-            GENERATED RESULTS
-          </span>
+      </a>
 
-          <h2 id="generated-title">
-            Generated Content
-          </h2>
+      <a
+        class="header-btn primary"
+        href="../contact/index.html">
 
-          <p>
-            DIPO WORLD may generate or transform content based on
-            information, text, links, images, settings or other
-            inputs supplied by the user.
-          </p>
+        Contact →
 
-          <p>
-            Generated results may contain mistakes, formatting
-            differences or unexpected results. Users should review
-            all generated content before using it publicly,
-            commercially or professionally.
-          </p>
+      </a>
 
-          <p>
-            DIPO WORLD does not guarantee that a generated result
-            will meet every user's specific technical, commercial,
-            legal or design requirement.
-          </p>
+    </div>
 
-        </article>
 
-      </div>
-
-    </section>
-
-
-    <!-- DIPO BIO -->
-    <section
-      class="legal-content-section section"
-      aria-labelledby="bio-title"
-    >
-
-      <div class="container">
-
-        <article class="content-card">
-
-          <span class="section-kicker">
-            DIPO BIO
-          </span>
-
-          <h2 id="bio-title">
-            DIPO BIO
-          </h2>
-
-          <p>
-            DIPO BIO provides tools for creating bios, styled text,
-            symbols, templates, kaomoji and related profile content.
-          </p>
-
-          <p>
-            Users are responsible for reviewing the final text before
-            publishing it on social media, websites, profiles or other
-            platforms.
-          </p>
-
-          <p>
-            Availability, appearance and rendering of fonts, symbols
-            and special characters may vary between devices,
-            operating systems and applications.
-          </p>
-
-        </article>
-
-      </div>
-
-    </section>
-
-
-    <!-- DIPO QR -->
-    <section
-      class="legal-content-section section"
-      aria-labelledby="qr-title"
-    >
-
-      <div class="container">
-
-        <article class="content-card">
-
-          <span class="section-kicker">
-            DIPO QR
-          </span>
-
-          <h2 id="qr-title">
-            DIPO QR
-          </h2>
-
-          <p>
-            DIPO QR provides tools for generating customized QR codes,
-            artistic QR designs, barcodes and related visual outputs.
-          </p>
-
-          <p>
-            Styling, logos, colors, frames and other visual
-            customizations can affect scanning performance.
-          </p>
-
-          <p>
-            Users should test every generated QR code or barcode with
-            the intended scanner or device before printing,
-            publishing, packaging or commercial use.
-          </p>
-
-          <p>
-            A successful preview does not guarantee successful
-            scanning under every lighting condition, screen,
-            printing process or scanning device.
-          </p>
-
-        </article>
-
-      </div>
-
-    </section>
-
-
-    <!-- Links and QR -->
-    <section
-      class="legal-content-section section"
-      aria-labelledby="links-title"
-    >
-
-      <div class="container">
-
-        <article class="content-card">
-
-          <span class="section-kicker">
-            USER INPUT
-          </span>
-
-          <h2 id="links-title">
-            Links, Text and User-Provided Information
-          </h2>
-
-          <p>
-            Users are responsible for verifying URLs, phone numbers,
-            payment identifiers, social media links, Wi-Fi details
-            and other information entered into DIPO WORLD tools.
-          </p>
-
-          <p>
-            DIPO WORLD does not verify or endorse every destination
-            represented by a user-generated QR code or barcode.
-          </p>
-
-          <p>
-            Users should not use generated codes to mislead,
-            impersonate, defraud or harm another person or
-            organization.
-          </p>
-
-        </article>
-
-      </div>
-
-    </section>
-
-
-    <!-- Third Party -->
-    <section
-      class="legal-content-section section"
-      aria-labelledby="third-party-title"
-    >
-
-      <div class="container">
-
-        <article class="content-card">
-
-          <span class="section-kicker">
-            THIRD-PARTY SERVICES
-          </span>
-
-          <h2 id="third-party-title">
-            Third-Party Services and Brands
-          </h2>
-
-          <p>
-            DIPO WORLD may provide presets, icons, references or
-            integrations associated with third-party platforms and
-            brands.
-          </p>
-
-          <p>
-            Third-party names, logos and trademarks belong to their
-            respective owners.
-          </p>
-
-          <p>
-            Unless explicitly stated, DIPO WORLD is not affiliated
-            with, sponsored by or endorsed by those third-party
-            organizations.
-          </p>
-
-        </article>
-
-      </div>
-
-    </section>
-
-
-    <!-- Availability -->
-    <section
-      class="legal-content-section section"
-      aria-labelledby="availability-title"
-    >
-
-      <div class="container">
-
-        <article class="content-card">
-
-          <span class="section-kicker">
-            AVAILABILITY
-          </span>
-
-          <h2 id="availability-title">
-            Service Availability
-          </h2>
-
-          <p>
-            Features may be updated, modified, temporarily disabled
-            or removed as the platform evolves.
-          </p>
-
-          <p>
-            Browser capabilities, operating-system restrictions,
-            device limitations and third-party technologies may also
-            affect feature availability.
-          </p>
-
-          <p>
-            We may improve or change the platform without guaranteeing
-            that every historical behavior or interface will remain
-            unchanged.
-          </p>
-
-        </article>
-
-      </div>
-
-    </section>
-
-
-    <!-- User Responsibility -->
-    <section
-      class="legal-content-section section"
-      aria-labelledby="responsibility-title"
-    >
-
-      <div class="container">
-
-        <article class="content-card">
-
-          <span class="section-kicker">
-            USER RESPONSIBILITY
-          </span>
-
-          <h2 id="responsibility-title">
-            Your Responsibility
-          </h2>
-
-          <p>
-            You are responsible for checking the accuracy and
-            suitability of content produced using DIPO WORLD before
-            relying on it.
-          </p>
-
-          <p>
-            You are also responsible for ensuring that your use of
-            generated content complies with applicable laws,
-            platform rules, copyright requirements, trademark rights
-            and other applicable restrictions.
-          </p>
-
-        </article>
-
-      </div>
-
-    </section>
-
-
-    <!-- No Professional Advice -->
-    <section
-      class="legal-content-section section"
-      aria-labelledby="advice-title"
-    >
-
-      <div class="container">
-
-        <article class="content-card">
-
-          <span class="section-kicker">
-            IMPORTANT
-          </span>
-
-          <h2 id="advice-title">
-            Not Professional Advice
-          </h2>
-
-          <p>
-            Unless specifically stated otherwise, DIPO WORLD content
-            and tools are not intended to provide legal, financial,
-            medical, technical or other professional advice.
-          </p>
-
-          <p>
-            Where professional advice is required, users should
-            consult an appropriately qualified professional.
-          </p>
-
-        </article>
-
-      </div>
-
-    </section>
-
-
-    <!-- Limitation -->
-    <section
-      class="legal-content-section section"
-      aria-labelledby="limitation-title"
-    >
-
-      <div class="container">
-
-        <article class="content-card">
-
-          <span class="section-kicker">
-            LIMITATION
-          </span>
-
-          <h2 id="limitation-title">
-            Use at Your Own Judgment
-          </h2>
-
-          <p>
-            By using DIPO WORLD, you acknowledge that digital tools
-            can have technical limitations and that generated output
-            should be reviewed before important use.
-          </p>
-
-          <p>
-            Nothing in this disclaimer is intended to exclude or
-            limit any rights or protections that cannot lawfully be
-            excluded or limited under applicable law.
-          </p>
-
-        </article>
-
-      </div>
-
-    </section>
-
-
-    <!-- Legal Navigation -->
-    <section
-      class="legal-navigation-section section"
-      aria-labelledby="legal-navigation-title"
-    >
-
-      <div class="container">
-
-        <div class="section-heading section-heading-center">
-
-          <span class="section-kicker">
-            LEGAL
-          </span>
-
-          <h2 id="legal-navigation-title">
-            More information
-          </h2>
-
-        </div>
-
-
-        <div class="product-grid">
-
-
-          <a
-            class="product-card product-card-link-card"
-            href="../privacy/"
-            data-route="/privacy"
-          >
-
-            <div
-              class="product-card-icon"
-              aria-hidden="true"
-            >
-              ◌
-            </div>
-
-            <div class="product-card-content">
-
-              <h3>
-                Privacy Policy
-              </h3>
-
-              <p>
-                Learn how DIPO WORLD approaches privacy and data.
-              </p>
-
-              <span class="product-card-link">
-                <span>Read Privacy</span>
-                <span aria-hidden="true">→</span>
-              </span>
-
-            </div>
-
-          </a>
-
-
-          <a
-            class="product-card product-card-link-card"
-            href="../terms/"
-            data-route="/terms"
-          >
-
-            <div
-              class="product-card-icon"
-              aria-hidden="true"
-            >
-              ✦
-            </div>
-
-            <div class="product-card-content">
-
-              <h3>
-                Terms of Use
-              </h3>
-
-              <p>
-                Read the terms for using DIPO WORLD.
-              </p>
-
-              <span class="product-card-link">
-                <span>Read Terms</span>
-                <span aria-hidden="true">→</span>
-              </span>
-
-            </div>
-
-          </a>
-
-
-          <a
-            class="product-card product-card-link-card"
-            href="../copyright/"
-            data-route="/copyright"
-          >
-
-            <div
-              class="product-card-icon"
-              aria-hidden="true"
-            >
-              ©
-            </div>
-
-            <div class="product-card-content">
-
-              <h3>
-                Copyright
-              </h3>
-
-              <p>
-                Information about ownership and intellectual property.
-              </p>
-
-              <span class="product-card-link">
-                <span>Read Copyright</span>
-                <span aria-hidden="true">→</span>
-              </span>
-
-            </div>
-
-          </a>
-
-
-        </div>
-
-      </div>
-
-    </section>
-
-  </main>
-
-
-  <!-- Global Footer -->
-  <footer
-    id="site-footer"
-    data-component="footer"
-    data-component-src="../../components/footer.html"
-  >
-    <!-- Footer component -->
-  </footer>
-
-
-  <!-- Mobile Navigation -->
-  <nav
-    id="bottom-navigation"
-    data-component="bottom-nav"
-    data-component-src="../../components/bottom-nav.html"
-    aria-label="Mobile navigation"
-  >
-    <!-- Bottom navigation component -->
   </nav>
 
+</header>
 
-  <!-- Toast -->
-  <div
-    id="toast-root"
-    data-component="toast"
-    aria-live="polite"
-    aria-atomic="true"
-  >
-    <!-- Toast component -->
+
+
+<main id="content">
+
+
+<!-- =======================================================
+     HERO
+======================================================= -->
+
+<section class="hero">
+
+
+  <div class="eyebrow">
+
+    <span class="status-dot"></span>
+
+    DIPO WORLD • LEGAL
+
   </div>
 
 
-  <!-- Application -->
-  <script
-    type="module"
-    src="../../assets/js/core/app.js"
-  ></script>
+  <h1>
+
+    Use with <span>clarity.</span>
+
+  </h1>
+
+
+  <p class="hero-description">
+
+    Important information about DIPO WORLD tools,
+    generated content, third-party services,
+    availability and user responsibility.
+
+  </p>
+
+
+  <div class="hero-meta">
+
+    <span class="meta-pill">
+      LEGAL INFORMATION
+    </span>
+
+    <span class="meta-pill">
+      USER RESPONSIBILITY
+    </span>
+
+    <span class="meta-pill">
+      SERVICE AVAILABILITY
+    </span>
+
+    <span class="meta-pill">
+      © DIPO WORLD
+    </span>
+
+  </div>
+
+
+  <div class="hero-line"></div>
+
+
+</section>
+
+
+
+<!-- =======================================================
+     QUICK NAV
+======================================================= -->
+
+<nav class="quick-nav">
+
+  <div class="quick-scroll">
+
+    <a
+      class="quick-link"
+      href="#general">
+
+      General
+
+    </a>
+
+    <a
+      class="quick-link"
+      href="#generated">
+
+      Generated Content
+
+    </a>
+
+    <a
+      class="quick-link"
+      href="#user">
+
+      User Responsibility
+
+    </a>
+
+    <a
+      class="quick-link"
+      href="#third-party">
+
+      Third-Party
+
+    </a>
+
+    <a
+      class="quick-link"
+      href="#availability">
+
+      Availability
+
+    </a>
+
+    <a
+      class="quick-link"
+      href="#limitation">
+
+      Limitation
+
+    </a>
+
+    <a
+      class="quick-link"
+      href="#legal">
+
+      Legal
+
+    </a>
+
+  </div>
+
+</nav>
+
+
+
+<!-- =======================================================
+     CONTENT
+======================================================= -->
+
+<div class="content-layout">
+
+
+<!-- SIDE INDEX -->
+
+<aside class="side-index">
+
+  <div class="side-title">
+    ON THIS PAGE
+  </div>
+
+
+  <a href="#general">
+    01 — General
+  </a>
+
+  <a href="#generated">
+    02 — Generated
+  </a>
+
+  <a href="#user">
+    03 — Responsibility
+  </a>
+
+  <a href="#third-party">
+    04 — Third-Party
+  </a>
+
+  <a href="#availability">
+    05 — Availability
+  </a>
+
+  <a href="#limitation">
+    06 — Limitation
+  </a>
+
+  <a href="#legal">
+    07 — Legal
+  </a>
+
+</aside>
+
+
+
+<!-- LEGAL CONTENT -->
+
+<div class="legal-content">
+
+
+<!-- =======================================================
+     IMPORTANT NOTICE
+======================================================= -->
+
+<div class="notice">
+
+  <div class="notice-top">
+
+    <div class="notice-icon">
+      ℹ️
+    </div>
+
+    <strong>
+      Please read before using DIPO WORLD
+    </strong>
+
+  </div>
+
+  <p>
+
+    DIPO WORLD provides browser-based digital
+    tools for creative, productivity and
+    customization purposes. By using the
+    platform, you acknowledge the information
+    below.
+
+  </p>
+
+</div>
+
+
+
+<!-- =======================================================
+     01 GENERAL
+======================================================= -->
+
+<section
+  class="legal-section"
+  id="general">
+
+  <div class="section-number">
+    01
+  </div>
+
+  <div class="section-label">
+    GENERAL
+  </div>
+
+  <h2>
+    General Information
+  </h2>
+
+
+  <p>
+
+    DIPO WORLD provides browser-based digital
+    tools designed for creative, productivity
+    and customization purposes.
+
+  </p>
+
+
+  <p>
+
+    The information and functionality provided
+    through DIPO WORLD are offered for general
+    informational and utility purposes and
+    should be used with appropriate judgment.
+
+  </p>
+
+
+  <p>
+
+    We aim to keep the platform reliable and
+    useful, but we cannot guarantee that every
+    feature will always operate without
+    interruption, errors or compatibility
+    limitations.
+
+  </p>
+
+</section>
+
+
+
+<!-- =======================================================
+     02 GENERATED
+======================================================= -->
+
+<section
+  class="legal-section"
+  id="generated">
+
+  <div class="section-number">
+    02
+  </div>
+
+  <div class="section-label">
+    GENERATED RESULTS
+  </div>
+
+  <h2>
+    Generated Content
+  </h2>
+
+
+  <p>
+
+    DIPO WORLD may generate or transform content
+    based on information, text, links, images,
+    settings or other inputs supplied by the user.
+
+  </p>
+
+
+  <p>
+
+    Generated results may vary depending on the
+    input, browser, device, available technologies
+    and other technical conditions.
+
+  </p>
+
+
+  <p>
+
+    Users are responsible for reviewing generated
+    content before using it for important,
+    commercial, public or consequential purposes.
+
+  </p>
+
+
+  <ul class="legal-list">
+
+    <li>
+      Review generated output before publishing.
+    </li>
+
+    <li>
+      Verify important information independently.
+    </li>
+
+    <li>
+      Do not treat generated content as guaranteed
+      professional advice.
+    </li>
+
+  </ul>
+
+</section>
+
+
+
+<!-- =======================================================
+     03 USER RESPONSIBILITY
+======================================================= -->
+
+<section
+  class="legal-section"
+  id="user">
+
+  <div class="section-number">
+    03
+  </div>
+
+  <div class="section-label">
+    USER RESPONSIBILITY
+  </div>
+
+  <h2>
+    Use Your Own Judgment
+  </h2>
+
+
+  <p>
+
+    By using DIPO WORLD, you acknowledge that
+    digital tools can have technical limitations
+    and that generated output should be reviewed
+    before important use.
+
+  </p>
+
+
+  <p>
+
+    Users are responsible for the information,
+    content and materials they enter into or
+    generate through the platform.
+
+  </p>
+
+
+  <p>
+
+    Users should not use generated codes,
+    content or materials to mislead, impersonate,
+    defraud or harm another person or organization.
+
+  </p>
+
+
+  <div class="responsibility-grid">
+
+
+    <div class="responsibility">
+
+      <div class="responsibility-icon">
+        🧠
+      </div>
+
+      <strong>
+        Think
+      </strong>
+
+      <span>
+        Review results before relying on them.
+      </span>
+
+    </div>
+
+
+    <div class="responsibility">
+
+      <div class="responsibility-icon">
+        🔍
+      </div>
+
+      <strong>
+        Verify
+      </strong>
+
+      <span>
+        Check important information independently.
+      </span>
+
+    </div>
+
+
+    <div class="responsibility">
+
+      <div class="responsibility-icon">
+        🛡️
+      </div>
+
+      <strong>
+        Use Responsibly
+      </strong>
+
+      <span>
+        Respect people, platforms and applicable laws.
+      </span>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =======================================================
+     04 THIRD PARTY
+======================================================= -->
+
+<section
+  class="legal-section"
+  id="third-party">
+
+  <div class="section-number">
+    04
+  </div>
+
+  <div class="section-label">
+    THIRD-PARTY SERVICES
+  </div>
+
+  <h2>
+    Third-Party Services and Brands
+  </h2>
+
+
+  <p>
+
+    DIPO WORLD may provide presets, icons,
+    references or integrations associated with
+    third-party platforms and brands.
+
+  </p>
+
+
+  <p>
+
+    Third-party names, logos and trademarks
+    belong to their respective owners.
+
+  </p>
+
+
+  <p>
+
+    Unless explicitly stated, DIPO WORLD is not
+    affiliated with, sponsored by or endorsed by
+    those third-party organizations.
+
+  </p>
+
+
+  <ul class="legal-list">
+
+    <li>
+      Third-party trademarks remain the property
+      of their respective owners.
+    </li>
+
+    <li>
+      External services may have their own terms,
+      privacy policies and availability.
+    </li>
+
+    <li>
+      DIPO WORLD does not guarantee the behavior
+      or availability of external services.
+    </li>
+
+  </ul>
+
+</section>
+
+
+
+<!-- =======================================================
+     05 AVAILABILITY
+======================================================= -->
+
+<section
+  class="legal-section"
+  id="availability">
+
+  <div class="section-number">
+    05
+  </div>
+
+  <div class="section-label">
+    AVAILABILITY
+  </div>
+
+  <h2>
+    Service Availability
+  </h2>
+
+
+  <p>
+
+    Features may be updated, modified,
+    temporarily disabled or removed as the
+    platform evolves.
+
+  </p>
+
+
+  <p>
+
+    Browser capabilities, operating-system
+    restrictions, device limitations and
+    third-party technologies may also affect
+    feature availability.
+
+  </p>
+
+
+  <p>
+
+    We may improve or change the platform
+    without guaranteeing that every historical
+    behavior or interface will remain unchanged.
+
+  </p>
+
+</section>
+
+
+
+<!-- =======================================================
+     06 LIMITATION
+======================================================= -->
+
+<section
+  class="legal-section"
+  id="limitation">
+
+  <div class="section-number">
+    06
+  </div>
+
+  <div class="section-label">
+    LIMITATION
+  </div>
+
+  <h2>
+    Use at Your Own Judgment
+  </h2>
+
+
+  <p>
+
+    By using DIPO WORLD, you acknowledge that
+    digital tools can have technical limitations
+    and that generated output should be reviewed
+    before important use.
+
+  </p>
+
+
+  <p>
+
+    DIPO WORLD aims to provide useful and
+    reliable tools, but features may experience
+    bugs, interruptions, compatibility issues
+    or other technical limitations.
+
+  </p>
+
+
+  <p>
+
+    Nothing in this disclaimer is intended to
+    exclude or limit any rights or protections
+    that cannot lawfully be excluded or limited
+    under applicable law.
+
+  </p>
+
+</section>
+
+
+
+<!-- =======================================================
+     07 LEGAL
+======================================================= -->
+
+<section
+  class="legal-section"
+  id="legal">
+
+  <div class="section-number">
+    07
+  </div>
+
+  <div class="section-label">
+    LEGAL
+  </div>
+
+  <h2>
+    Important Legal Notice
+  </h2>
+
+
+  <p>
+
+    This disclaimer is provided for general
+    informational purposes and describes
+    important limitations associated with
+    using DIPO WORLD.
+
+  </p>
+
+
+  <p>
+
+    Nothing in this disclaimer is intended to
+    create rights, guarantees or obligations
+    beyond those required under applicable law.
+
+  </p>
+
+
+  <p>
+
+    If you have a specific legal question,
+    consider obtaining advice from an
+    appropriately qualified professional.
+
+  </p>
+
+</section>
+
+
+
+<!-- =======================================================
+     MORE INFORMATION
+======================================================= -->
+
+<section class="more">
+
+
+  <div class="more-head">
+
+    <div class="section-label">
+      MORE INFORMATION
+    </div>
+
+    <h2>
+      Know your rights.
+    </h2>
+
+  </div>
+
+
+  <div class="more-grid">
+
+
+    <!-- PRIVACY -->
+
+    <a
+      class="more-card"
+      href="../privacy/index.html">
+
+      <div class="more-icon">
+        ◌
+      </div>
+
+      <h3>
+        Privacy Policy
+      </h3>
+
+      <p>
+        Learn how DIPO WORLD approaches privacy,
+        information and data.
+      </p>
+
+    </a>
+
+
+    <!-- TERMS -->
+
+    <a
+      class="more-card"
+      href="../terms/index.html">
+
+      <div class="more-icon">
+        ✦
+      </div>
+
+      <h3>
+        Terms of Use
+      </h3>
+
+      <p>
+        Read the terms and conditions for
+        using DIPO WORLD.
+      </p>
+
+    </a>
+
+
+    <!-- COPYRIGHT -->
+
+    <a
+      class="more-card"
+      href="../copyright/index.html">
+
+      <div class="more-icon">
+        ©
+      </div>
+
+      <h3>
+        Copyright
+      </h3>
+
+      <p>
+        Information about ownership and
+        intellectual property.
+      </p>
+
+    </a>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =======================================================
+     BOTTOM CTA
+======================================================= -->
+
+<section class="bottom-cta">
+
+
+  <div class="section-label">
+    DIPO WORLD
+  </div>
+
+
+  <h2>
+    Create freely.<br>
+    Use responsibly.
+  </h2>
+
+
+  <p>
+
+    DIPO WORLD is built to make digital
+    creativity simpler, faster and more
+    accessible. Please use every tool with
+    good judgment and respect for others.
+
+  </p>
+
+
+  <div class="cta-actions">
+
+    <a
+      class="cta-btn"
+      href="../../index.html">
+
+      ← Explore DIPO WORLD
+
+    </a>
+
+
+    <a
+      class="cta-btn secondary"
+      href="../contact/index.html">
+
+      Contact us →
+
+    </a>
+
+  </div>
+
+
+</section>
+
+
+</div>
+
+</div>
+
+</main>
+
+
+
+<!-- =======================================================
+     FOOTER
+======================================================= -->
+
+<footer class="footer">
+
+  <div class="footer-inner">
+
+
+    <div class="footer-brand">
+
+      DIPO<span>WORLD</span>
+
+    </div>
+
+
+    <div class="footer-copy">
+
+      Made With ❤️ in India
+
+      <br>
+
+      <strong>
+        𝔄 𝔇𝔐 𝔭𝔯𝔬𝔡𝔲𝔠𝔱
+      </strong>
+
+      <br>
+
+      All copyrights reserved @
+      <strong>
+        𝔄 𝔇𝔐 𝔭𝔯𝔬𝔡𝔲𝔠𝔱
+      </strong>
+
+    </div>
+
+
+  </div>
+
+</footer>
+
+
+
+<!-- =======================================================
+     FLOATING TOOLS
+======================================================= -->
+
+<div class="float-tools">
+
+
+  <button
+    class="float-btn"
+    id="copyLink"
+    aria-label="Copy page link"
+    title="Copy page link">
+
+    🔗
+
+  </button>
+
+
+  <button
+    class="float-btn"
+    id="topBtn"
+    aria-label="Back to top"
+    title="Back to top">
+
+    ↑
+
+  </button>
+
+
+</div>
+
+
+
+<!-- TOAST -->
+
+<div
+  class="toast"
+  id="toast"
+  role="status"
+  aria-live="polite">
+
+</div>
+
+
+
+<script>
+
+/* =========================================================
+   DIPO WORLD DISCLAIMER ENGINE
+========================================================= */
+
+
+/* ---------------------------------------------------------
+   ELEMENTS
+--------------------------------------------------------- */
+
+const toast =
+  document.getElementById("toast");
+
+const topBtn =
+  document.getElementById("topBtn");
+
+const copyLink =
+  document.getElementById("copyLink");
+
+
+/* ---------------------------------------------------------
+   TOAST
+--------------------------------------------------------- */
+
+let toastTimer = null;
+
+
+function showToast(message){
+
+  toast.textContent = message;
+
+  toast.classList.add("show");
+
+  clearTimeout(toastTimer);
+
+  toastTimer = setTimeout(() => {
+
+    toast.classList.remove("show");
+
+  },2200);
+
+}
+
+
+/* ---------------------------------------------------------
+   COPY PAGE LINK
+--------------------------------------------------------- */
+
+copyLink.addEventListener("click",async()=>{
+
+  try{
+
+    await navigator.clipboard.writeText(
+      window.location.href
+    );
+
+    showToast(
+      "✓ Disclaimer link copied"
+    );
+
+  }catch(error){
+
+    const temp =
+      document.createElement("input");
+
+    temp.value =
+      window.location.href;
+
+    document.body.appendChild(temp);
+
+    temp.select();
+
+    document.execCommand("copy");
+
+    temp.remove();
+
+    showToast(
+      "✓ Disclaimer link copied"
+    );
+
+  }
+
+});
+
+
+/* ---------------------------------------------------------
+   BACK TO TOP
+--------------------------------------------------------- */
+
+topBtn.addEventListener("click",()=>{
+
+  window.scrollTo({
+    top:0,
+    behavior:"smooth"
+  });
+
+});
+
+
+/* ---------------------------------------------------------
+   SHOW / HIDE TOP BUTTON
+--------------------------------------------------------- */
+
+function updateTopButton(){
+
+  if(window.scrollY > 500){
+
+    topBtn.style.opacity = "1";
+    topBtn.style.pointerEvents = "auto";
+
+  }else{
+
+    topBtn.style.opacity = ".55";
+    topBtn.style.pointerEvents = "auto";
+
+  }
+
+}
+
+
+window.addEventListener(
+  "scroll",
+  updateTopButton,
+  {passive:true}
+);
+
+updateTopButton();
+
+
+/* ---------------------------------------------------------
+   SCROLL REVEAL
+--------------------------------------------------------- */
+
+const sections =
+  document.querySelectorAll(
+    ".legal-section,.more-card,.bottom-cta"
+  );
+
+
+if("IntersectionObserver" in window){
+
+  const observer =
+    new IntersectionObserver(
+      entries => {
+
+        entries.forEach(entry => {
+
+          if(entry.isIntersecting){
+
+            entry.target.style.animation =
+              "fadeUp .65s ease both";
+
+            observer.unobserve(
+              entry.target
+            );
+
+          }
+
+        });
+
+      },
+      {
+        threshold:.08
+      }
+    );
+
+
+  sections.forEach(section => {
+
+    section.style.opacity = "0";
+
+    observer.observe(section);
+
+  });
+
+}
+
+
+/* ---------------------------------------------------------
+   QUICK NAV SMOOTH SCROLL
+--------------------------------------------------------- */
+
+document
+  .querySelectorAll(
+    '.quick-link[href^="#"]'
+  )
+  .forEach(link => {
+
+    link.addEventListener(
+      "click",
+      event => {
+
+        const target =
+          document.querySelector(
+            link.getAttribute("href")
+          );
+
+        if(!target) return;
+
+        event.preventDefault();
+
+        target.scrollIntoView({
+          behavior:"smooth",
+          block:"start"
+        });
+
+      }
+    );
+
+  });
+
+
+/* ---------------------------------------------------------
+   SIDE INDEX ACTIVE SECTION
+--------------------------------------------------------- */
+
+const legalSections =
+  document.querySelectorAll(
+    ".legal-section"
+  );
+
+const sideLinks =
+  document.querySelectorAll(
+    ".side-index a"
+  );
+
+
+if(
+  "IntersectionObserver" in window &&
+  legalSections.length
+){
+
+  const activeObserver =
+    new IntersectionObserver(
+      entries => {
+
+        entries.forEach(entry => {
+
+          if(entry.isIntersecting){
+
+            sideLinks.forEach(link => {
+
+              link.style.background =
+                "transparent";
+
+              link.style.color =
+                "#717c8d";
+
+            });
+
+
+            const active =
+              document.querySelector(
+                '.side-index a[href="#' +
+                entry.target.id +
+                '"]'
+              );
+
+
+            if(active){
+
+              active.style.background =
+                "#eef3ff";
+
+              active.style.color =
+                "#2860ff";
+
+            }
+
+          }
+
+        });
+
+      },
+      {
+        rootMargin:
+          "-25% 0px -65% 0px"
+      }
+    );
+
+
+  legalSections.forEach(section => {
+
+    activeObserver.observe(section);
+
+  });
+
+}
+
+
+/* ---------------------------------------------------------
+   KEYBOARD SHORTCUT
+   H = HOME
+--------------------------------------------------------- */
+
+document.addEventListener(
+  "keydown",
+  event => {
+
+    if(
+      event.key.toLowerCase() === "h" &&
+      !["INPUT","TEXTAREA","SELECT"]
+        .includes(
+          document.activeElement.tagName
+        )
+    ){
+
+      window.location.href =
+        "../../index.html";
+
+    }
+
+  }
+);
+
+</script>
+
 
 </body>
 </html>
