@@ -10,7 +10,7 @@
 
   <meta
     name="description"
-    content="DIPO WORLD — A next-generation digital ecosystem for creative tools, identity, QR, AI, labs and more."
+    content="DIPO WORLD — A next-generation digital ecosystem for creative tools, identity, QR, coding, AI, labs and more."
   >
 
   <meta
@@ -264,6 +264,20 @@
       box-shadow:
         0 0 0 8px rgba(84, 189, 120, .10),
         0 15px 35px rgba(4, 47, 49, .16);
+
+      transition:
+        transform .35s cubic-bezier(.16,1,.3,1),
+        box-shadow .35s ease;
+    }
+
+    .brand:hover .brand-mark {
+      transform:
+        rotate(-6deg)
+        scale(1.05);
+
+      box-shadow:
+        0 0 0 9px rgba(84, 189, 120, .13),
+        0 18px 40px rgba(4, 47, 49, .22);
     }
 
     .brand-letter {
@@ -314,6 +328,41 @@
         rgba(84, 189, 120, .10);
 
       transform: translateY(-2px);
+    }
+
+    /* DIPO RUN nav highlight */
+
+    .nav-links a.dipo-run-nav {
+      color: var(--dark);
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(84, 189, 120, .13),
+          rgba(191, 232, 199, .28)
+        );
+
+      border:
+        1px solid rgba(84, 189, 120, .16);
+    }
+
+    .nav-links a.dipo-run-nav::after {
+      content: "NEW";
+
+      margin-left: 5px;
+
+      padding: 2px 5px;
+
+      border-radius: 999px;
+
+      color: #267344;
+
+      background: rgba(84, 189, 120, .14);
+
+      font-size: 7px;
+      font-weight: 950;
+
+      vertical-align: middle;
     }
 
     .mobile-menu {
@@ -626,6 +675,54 @@
         1px solid rgba(5,45,47,.11);
     }
 
+    /* DIPO RUN hero button */
+
+    .btn-run {
+      position: relative;
+
+      overflow: hidden;
+
+      color: var(--dark);
+
+      background:
+        linear-gradient(
+          135deg,
+          #dff5e4,
+          #c6ecd0
+        );
+
+      border:
+        1px solid rgba(84,189,120,.30);
+
+      box-shadow:
+        0 14px 30px
+        rgba(84,189,120,.12);
+    }
+
+    .btn-run::before {
+      content: "";
+
+      position: absolute;
+
+      width: 80px;
+      height: 160px;
+
+      top: -50px;
+      left: -100px;
+
+      transform: rotate(25deg);
+
+      background:
+        rgba(255,255,255,.65);
+
+      transition:
+        left .55s ease;
+    }
+
+    .btn-run:hover::before {
+      left: 120%;
+    }
+
 
     /* =========================================================
        TOOLS SECTION
@@ -680,7 +777,7 @@
       display: grid;
 
       grid-template-columns:
-        repeat(2, minmax(0, 1fr));
+        repeat(3, minmax(0, 1fr));
 
       gap: 18px;
     }
@@ -756,6 +853,98 @@
 
 
     /* =========================================================
+       DIPO RUN SPECIAL CARD
+       ========================================================= */
+
+    .tool-card.dipo-run-card {
+      background:
+        linear-gradient(
+          145deg,
+          rgba(255,255,255,.92),
+          rgba(232,248,238,.86)
+        );
+
+      border-color:
+        rgba(84,189,120,.18);
+    }
+
+    .tool-card.dipo-run-card::after {
+      content: "NEW";
+
+      position: absolute;
+
+      top: 18px;
+      right: 18px;
+
+      z-index: 5;
+
+      padding: 5px 8px;
+
+      border-radius: 999px;
+
+      color: #267344;
+
+      background:
+        rgba(84,189,120,.13);
+
+      border:
+        1px solid rgba(84,189,120,.18);
+
+      font-size: 8px;
+      font-weight: 950;
+
+      letter-spacing: .8px;
+    }
+
+    .run-icon {
+      position: relative;
+
+      animation:
+        runIconFloat 3s ease-in-out infinite;
+    }
+
+    .run-icon::after {
+      content: "";
+
+      position: absolute;
+
+      width: 9px;
+      height: 9px;
+
+      right: -4px;
+      top: -4px;
+
+      border-radius: 50%;
+
+      background: #8de0aa;
+
+      box-shadow:
+        0 0 18px
+        rgba(84,189,120,.75);
+
+      animation:
+        pulse 1.5s infinite;
+    }
+
+    @keyframes runIconFloat {
+
+      0%,
+      100% {
+        transform:
+          translateY(0)
+          rotate(0deg);
+      }
+
+      50% {
+        transform:
+          translateY(-5px)
+          rotate(-4deg);
+      }
+
+    }
+
+
+    /* =========================================================
        TOOL ICON
        ========================================================= */
 
@@ -825,6 +1014,8 @@
     }
 
     .tool-link span {
+      display: inline-block;
+
       color: var(--green);
 
       transition:
@@ -1024,6 +1215,16 @@
        MOBILE
        ========================================================= */
 
+    @media (max-width: 900px) {
+
+      .tools-grid {
+        grid-template-columns:
+          repeat(2, minmax(0, 1fr));
+      }
+
+    }
+
+
     @media (max-width: 760px) {
 
       .container {
@@ -1075,6 +1276,7 @@
 
       .nav-links a {
         padding: 14px;
+        width: 100%;
       }
 
       .hero {
@@ -1226,6 +1428,15 @@
             DIPO QR
           </a>
 
+          <!-- DIPO RUN CONNECTION -->
+
+          <a
+            href="./pages/dipo-run/index.html"
+            class="dipo-run-nav"
+          >
+            DIPO RUN
+          </a>
+
           <a href="./pages/about/index.html">
             About
           </a>
@@ -1304,6 +1515,17 @@
                 <span>→</span>
               </a>
 
+
+              <!-- DIPO RUN -->
+
+              <a
+                class="btn btn-run"
+                href="./pages/dipo-run/index.html"
+              >
+                DIPO RUN
+                <span>⚡</span>
+              </a>
+
             </div>
 
           </div>
@@ -1344,7 +1566,9 @@
         <div class="tools-grid">
 
 
-          <!-- DIPO BIO -->
+          <!-- =================================================
+               DIPO BIO
+               ================================================= -->
 
           <article class="tool-card">
 
@@ -1374,7 +1598,9 @@
           </article>
 
 
-          <!-- DIPO QR -->
+          <!-- =================================================
+               DIPO QR
+               ================================================= -->
 
           <article class="tool-card">
 
@@ -1401,6 +1627,40 @@
             </a>
 
           </article>
+
+
+          <!-- =================================================
+               DIPO RUN
+               ================================================= -->
+
+          <article class="tool-card dipo-run-card">
+
+            <div class="tool-icon run-icon">
+              ▶
+            </div>
+
+            <h3>
+              DIPO RUN
+            </h3>
+
+            <p>
+              Write, run, test and preview your
+              code instantly with automatic
+              language detection, live preview,
+              responsive devices and developer console.
+            </p>
+
+            <a
+              class="tool-link"
+              href="./pages/dipo-run/index.html"
+              aria-label="Open DIPO RUN"
+            >
+              Open DIPO RUN
+              <span> →</span>
+            </a>
+
+          </article>
+
 
         </div>
 
@@ -1489,6 +1749,12 @@
 
           <a href="./pages/dipo-qr/index.html">
             DIPO QR
+          </a>
+
+          <!-- DIPO RUN -->
+
+          <a href="./pages/dipo-run/index.html">
+            DIPO RUN
           </a>
 
         </div>
@@ -1628,11 +1894,50 @@
           "./pages/dipo-bio/index.html",
 
         qr:
-          "./pages/dipo-qr/index.html"
+          "./pages/dipo-qr/index.html",
 
-      })
+        run:
+          "./pages/dipo-run/index.html"
+
+      }),
+
+      products: Object.freeze([
+
+        "DIPO BIO",
+        "DIPO QR",
+        "DIPO RUN"
+
+      ])
 
     });
+
+
+    /* =========================================================
+       DIPO RUN CONNECTION
+       ========================================================= */
+
+    window.DIPO_WORLD_RUN = Object.freeze({
+
+      name: "DIPO RUN",
+
+      parent:
+        "DIPO WORLD",
+
+      tagline:
+        "Run. Test. Preview. Ship.",
+
+      path:
+        "./pages/dipo-run/index.html",
+
+      open() {
+
+        window.location.href =
+          this.path;
+
+      }
+
+    });
+
 
   </script>
 

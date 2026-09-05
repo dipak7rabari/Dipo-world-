@@ -1,0 +1,2919 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, viewport-fit=cover"
+  />
+
+  <meta
+    name="theme-color"
+    content="#dff6ff"
+  />
+
+  <title>DIPO RUN — Run. Test. Preview. Ship.</title>
+
+  <meta
+    name="description"
+    content="DIPO RUN — Write, run, preview and test code instantly. Part of DIPO WORLD."
+  />
+
+  <style>
+    /* =========================================================
+       DIPO RUN
+       GOD LEVEL GEN-Z CODE TAPE
+       FINAL SINGLE-FILE BUILD
+       ========================================================= */
+
+    :root {
+      --ice: #eafaff;
+      --ice-2: #d9f5ff;
+      --cyan: #4eb6d8;
+      --cyan-2: #72d8ed;
+      --mint: #63d19b;
+      --navy: #06151d;
+      --navy-2: #081c25;
+      --navy-3: #0b2631;
+      --text: #071923;
+      --muted: #75929f;
+      --white: #ffffff;
+      --line: rgba(255,255,255,.10);
+      --dark-line: rgba(7,25,35,.10);
+      --shadow:
+        0 30px 80px rgba(20,80,105,.15),
+        0 8px 25px rgba(20,80,105,.08);
+      --radius-xl: 38px;
+      --radius-lg: 28px;
+      --radius-md: 20px;
+    }
+
+    * {
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        radial-gradient(
+          circle at 10% 10%,
+          rgba(111,214,238,.30),
+          transparent 30%
+        ),
+        radial-gradient(
+          circle at 90% 35%,
+          rgba(110,223,180,.18),
+          transparent 28%
+        ),
+        linear-gradient(
+          145deg,
+          #edfaff,
+          #d9f4fb 48%,
+          #e9fbff
+        );
+      color: var(--text);
+      font-family:
+        Inter,
+        ui-sans-serif,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+      overflow-x: hidden;
+    }
+
+    button,
+    textarea {
+      font: inherit;
+    }
+
+    button {
+      border: 0;
+    }
+
+    /* =========================================================
+       BACKGROUND
+       ========================================================= */
+
+    .bg-orb {
+      position: fixed;
+      width: 230px;
+      height: 230px;
+      border-radius: 50%;
+      pointer-events: none;
+      filter: blur(45px);
+      opacity: .28;
+      z-index: -1;
+    }
+
+    .orb-one {
+      top: 90px;
+      left: -100px;
+      background: #63cce5;
+      animation: orbFloat 9s ease-in-out infinite;
+    }
+
+    .orb-two {
+      right: -100px;
+      top: 48%;
+      background: #6ed4ac;
+      animation: orbFloat 12s ease-in-out infinite reverse;
+    }
+
+    @keyframes orbFloat {
+      0%,100% {
+        transform: translate3d(0,0,0) scale(1);
+      }
+
+      50% {
+        transform: translate3d(30px,-35px,0) scale(1.08);
+      }
+    }
+
+    /* =========================================================
+       HEADER
+       ========================================================= */
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      min-height: 112px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding:
+        18px
+        max(20px, env(safe-area-inset-right))
+        18px
+        max(20px, env(safe-area-inset-left));
+      background: rgba(238,250,255,.84);
+      border-bottom: 1px solid rgba(255,255,255,.70);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      min-width: 0;
+    }
+
+    .brand-mark {
+      position: relative;
+      width: 72px;
+      height: 72px;
+      flex: 0 0 72px;
+      border-radius: 25px;
+      display: grid;
+      place-items: center;
+      background:
+        linear-gradient(
+          145deg,
+          rgba(255,255,255,.98),
+          rgba(225,248,255,.85)
+        );
+      border: 1px solid rgba(255,255,255,.95);
+      box-shadow:
+        0 15px 35px rgba(50,150,185,.16),
+        inset 0 0 0 10px rgba(115,213,237,.10);
+      overflow: hidden;
+    }
+
+    .brand-mark::before {
+      content: "";
+      width: 40px;
+      height: 40px;
+      border-radius: 13px 20px 15px 20px;
+      background:
+        linear-gradient(
+          135deg,
+          #48b7dd,
+          #65d6c0
+        );
+      animation:
+        markMorph 5s ease-in-out infinite,
+        markGlow 2.8s ease-in-out infinite;
+    }
+
+    .brand-mark::after {
+      content: "";
+      position: absolute;
+      inset: -30px;
+      background:
+        conic-gradient(
+          transparent,
+          rgba(255,255,255,.75),
+          transparent 25%
+        );
+      animation: markSpin 4s linear infinite;
+    }
+
+    @keyframes markMorph {
+      0%,100% {
+        border-radius: 13px 20px 15px 20px;
+        transform: rotate(-3deg);
+      }
+
+      50% {
+        border-radius: 20px 12px 20px 14px;
+        transform: rotate(5deg) scale(1.05);
+      }
+    }
+
+    @keyframes markGlow {
+      0%,100% {
+        filter: drop-shadow(0 0 0 rgba(75,190,220,0));
+      }
+
+      50% {
+        filter: drop-shadow(0 0 15px rgba(75,190,220,.5));
+      }
+    }
+
+    @keyframes markSpin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .brand-name {
+      font-size: clamp(27px,5vw,38px);
+      font-weight: 950;
+      letter-spacing: -2px;
+      white-space: nowrap;
+    }
+
+    .brand-name span {
+      color: #45a9cc;
+    }
+
+    .back-btn {
+      width: 64px;
+      height: 64px;
+      border-radius: 22px;
+      background: rgba(255,255,255,.70);
+      border: 1px solid rgba(255,255,255,.95);
+      color: #65818d;
+      font-size: 36px;
+      display: grid;
+      place-items: center;
+      cursor: pointer;
+      box-shadow: 0 10px 25px rgba(50,120,145,.08);
+      transition: .25s ease;
+    }
+
+    .back-btn:hover {
+      transform: translateX(-4px);
+      background: #fff;
+    }
+
+    /* =========================================================
+       MAIN
+       ========================================================= */
+
+    .app {
+      width: min(1100px, calc(100% - 28px));
+      margin: 32px auto 80px;
+    }
+
+    /* =========================================================
+       CODE CARD / TAPE
+       ========================================================= */
+
+    .code-card {
+      position: relative;
+      overflow: hidden;
+      background:
+        linear-gradient(
+          145deg,
+          rgba(255,255,255,.92),
+          rgba(246,253,255,.78)
+        );
+      border: 1px solid rgba(255,255,255,.95);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow);
+      margin-bottom: 28px;
+    }
+
+    .code-head {
+      padding: 38px 34px 28px;
+    }
+
+    .code-title-row {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+    }
+
+    .code-icon {
+      width: 100px;
+      height: 100px;
+      flex: 0 0 100px;
+      display: grid;
+      place-items: center;
+      border-radius: 32px;
+      background:
+        linear-gradient(
+          145deg,
+          #eefcff,
+          #e4f7ff
+        );
+      border: 2px solid rgba(83,200,232,.22);
+      color: #092431;
+      font-size: 45px;
+      font-weight: 950;
+      box-shadow: 0 15px 35px rgba(60,170,205,.08);
+    }
+
+    .code-title {
+      margin: 0;
+      font-size: clamp(35px,7vw,52px);
+      letter-spacing: -2.8px;
+      line-height: 1;
+      font-weight: 950;
+    }
+
+    .code-subtitle {
+      margin: 14px 0 0;
+      color: #718d99;
+      font-size: clamp(18px,4vw,25px);
+      letter-spacing: .2px;
+    }
+
+    /* =========================================================
+       TOOLBAR
+       ========================================================= */
+
+    .toolbar {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 0 34px 30px;
+      flex-wrap: wrap;
+    }
+
+    .tool-btn {
+      min-width: 72px;
+      height: 70px;
+      padding: 0 18px;
+      border-radius: 23px;
+      background:
+        linear-gradient(
+          145deg,
+          #ffffff,
+          #f3fbfe
+        );
+      border: 1px solid rgba(7,35,46,.08);
+      color: #66818d;
+      font-size: 25px;
+      cursor: pointer;
+      box-shadow:
+        0 9px 22px rgba(30,100,125,.07);
+      transition: .25s ease;
+    }
+
+    .tool-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 14px 28px rgba(30,100,125,.12);
+    }
+
+    .tool-btn.primary {
+      background: #061b24;
+      color: #fff;
+      min-width: 90px;
+      box-shadow:
+        0 15px 35px rgba(5,25,34,.24);
+    }
+
+    .tool-btn.record {
+      color: #ff6262;
+    }
+
+    .tool-btn.download {
+      color: #429fbe;
+    }
+
+    .tool-btn.active {
+      background: #dff8ec;
+      color: #2e8b68;
+    }
+
+    /* =========================================================
+       STATUS
+       ========================================================= */
+
+    .status-strip {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      padding: 30px 34px;
+      border-top: 1px solid rgba(7,30,40,.06);
+      border-bottom: 1px solid rgba(7,30,40,.06);
+    }
+
+    .status-pill {
+      min-height: 68px;
+      border-radius: 40px;
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      padding: 0 22px;
+      font-weight: 900;
+      color: #307c9a;
+      background: #e5f6ff;
+    }
+
+    .status-pill.green {
+      color: #338263;
+      background: #e7f9ef;
+    }
+
+    .status-dot {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #4eaac8;
+      box-shadow: 0 0 0 9px rgba(78,170,200,.10);
+      flex: 0 0 20px;
+    }
+
+    .green .status-dot {
+      background: #4fc18d;
+      box-shadow: 0 0 0 9px rgba(79,193,141,.10);
+    }
+
+    /* =========================================================
+       CODE TAPE
+       ========================================================= */
+
+    .tape {
+      background:
+        radial-gradient(
+          circle at 85% 15%,
+          rgba(69,188,220,.10),
+          transparent 25%
+        ),
+        #06151d;
+      color: #d7edf4;
+      overflow: hidden;
+    }
+
+    .tape-top {
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 28px;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+
+    .traffic {
+      display: flex;
+      gap: 12px;
+    }
+
+    .traffic span {
+      width: 17px;
+      height: 17px;
+      border-radius: 50%;
+      background: #24434f;
+    }
+
+    .language {
+      color: #83a6b3;
+      font-size: 18px;
+      font-weight: 900;
+      letter-spacing: 2px;
+    }
+
+    .editor-wrap {
+      position: relative;
+      display: flex;
+      min-height: 520px;
+      max-height: 720px;
+      overflow: hidden;
+    }
+
+    .line-numbers {
+      width: 76px;
+      flex: 0 0 76px;
+      padding: 25px 15px 35px 0;
+      text-align: right;
+      color: #386373;
+      border-right: 1px solid rgba(255,255,255,.07);
+      font:
+        17px/1.9
+        ui-monospace,
+        SFMono-Regular,
+        Menlo,
+        monospace;
+      user-select: none;
+      overflow: hidden;
+    }
+
+    .code-input {
+      width: 100%;
+      min-height: 520px;
+      resize: none;
+      outline: none;
+      border: 0;
+      padding: 25px 25px 35px;
+      background: transparent;
+      color: #d7edf4;
+      caret-color: #69d8ec;
+      font:
+        17px/1.9
+        ui-monospace,
+        SFMono-Regular,
+        Menlo,
+        Monaco,
+        Consolas,
+        monospace;
+      tab-size: 2;
+      white-space: pre;
+      overflow: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .code-input::selection {
+      background: rgba(77,190,221,.30);
+    }
+
+    .code-input::placeholder {
+      color: #41616d;
+    }
+
+    /* =========================================================
+       PREVIEW
+       ========================================================= */
+
+    .preview-card,
+    .console-card {
+      background: #06151d;
+      color: white;
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      box-shadow:
+        0 25px 65px rgba(3,20,27,.18);
+      margin-bottom: 28px;
+    }
+
+    .preview-head {
+      padding: 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+
+    .preview-title {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .live-dot {
+      width: 19px;
+      height: 19px;
+      border-radius: 50%;
+      background: #57d29d;
+      box-shadow:
+        0 0 0 10px rgba(87,210,157,.09),
+        0 0 25px rgba(87,210,157,.35);
+      animation: livePulse 1.6s ease-in-out infinite;
+    }
+
+    @keyframes livePulse {
+      0%,100% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.15);
+      }
+    }
+
+    .preview-title h2 {
+      margin: 0;
+      font-size: 31px;
+      letter-spacing: -.8px;
+    }
+
+    .preview-url {
+      margin: 5px 0 0;
+      color: #7395a2;
+      font-size: 15px;
+    }
+
+    .preview-actions {
+      display: flex;
+      gap: 10px;
+    }
+
+    .mini-btn {
+      width: 62px;
+      height: 62px;
+      border-radius: 20px;
+      background: #0b202a;
+      border: 1px solid rgba(255,255,255,.08);
+      color: #94b0bb;
+      font-size: 25px;
+      cursor: pointer;
+      transition: .2s ease;
+    }
+
+    .mini-btn:hover {
+      transform: translateY(-2px);
+      background: #102b36;
+      color: #fff;
+    }
+
+    /* =========================================================
+       DEVICES
+       ========================================================= */
+
+    .devices {
+      display: flex;
+      gap: 14px;
+      padding: 24px 28px;
+      overflow-x: auto;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+      scrollbar-width: none;
+    }
+
+    .devices::-webkit-scrollbar {
+      display: none;
+    }
+
+    .device-btn {
+      flex: 0 0 auto;
+      min-width: 175px;
+      height: 68px;
+      padding: 0 22px;
+      border-radius: 22px;
+      border: 1px solid rgba(255,255,255,.08);
+      background: #081c25;
+      color: #718f9c;
+      font-weight: 900;
+      font-size: 18px;
+      cursor: pointer;
+      transition: .25s ease;
+    }
+
+    .device-btn.active {
+      color: #fff;
+      background: #19303b;
+      box-shadow:
+        inset 0 0 0 1px rgba(140,210,230,.15),
+        0 8px 25px rgba(0,0,0,.15);
+    }
+
+    /* =========================================================
+       PREVIEW STAGE
+       ========================================================= */
+
+    .preview-stage {
+      padding: 32px;
+      display: flex;
+      justify-content: center;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(43,127,157,.05) 1px,
+          transparent 1px
+        ),
+        linear-gradient(
+          rgba(43,127,157,.05) 1px,
+          transparent 1px
+        ),
+        #020a0f;
+      background-size: 48px 48px;
+    }
+
+    .device-frame {
+      width: 100%;
+      max-width: 900px;
+      min-height: 540px;
+      background: #000;
+      border: 2px solid rgba(255,255,255,.92);
+      border-radius: 36px;
+      overflow: hidden;
+      box-shadow:
+        0 30px 70px rgba(0,0,0,.35);
+      transition:
+        width .4s ease,
+        min-height .4s ease,
+        border-radius .4s ease;
+    }
+
+    .device-frame.mobile {
+      width: 390px;
+      min-height: 690px;
+      border-radius: 40px;
+    }
+
+    .device-frame.tablet {
+      width: 680px;
+      min-height: 760px;
+      border-radius: 34px;
+    }
+
+    .device-frame.laptop {
+      width: 900px;
+      min-height: 560px;
+      border-radius: 28px;
+    }
+
+    .device-frame.desktop {
+      width: 100%;
+      min-height: 600px;
+      border-radius: 24px;
+    }
+
+    #previewFrame {
+      display: block;
+      width: 100%;
+      height: 100%;
+      min-height: inherit;
+      border: 0;
+      background: #02070b;
+    }
+
+    /* =========================================================
+       CONSOLE
+       ========================================================= */
+
+    .console-head {
+      min-height: 88px;
+      padding: 0 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+
+    .console-title {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .console-title h2 {
+      margin: 0;
+      font-size: 30px;
+    }
+
+    .console-count {
+      color: #8ca8b4;
+      font-size: 24px;
+      font-weight: 900;
+    }
+
+    .console-actions {
+      display: flex;
+      gap: 25px;
+    }
+
+    .console-action {
+      color: #91a9b4;
+      font-weight: 900;
+      cursor: pointer;
+      background: transparent;
+    }
+
+    .console-output {
+      min-height: 260px;
+      max-height: 390px;
+      overflow: auto;
+      padding: 25px 28px 35px;
+      font:
+        16px/2
+        ui-monospace,
+        SFMono-Regular,
+        Menlo,
+        monospace;
+    }
+
+    .console-line {
+      white-space: pre-wrap;
+      margin-bottom: 5px;
+    }
+
+    .console-line.success {
+      color: #7be0ac;
+    }
+
+    .console-line.info {
+      color: #7dcce8;
+    }
+
+    .console-line.warning {
+      color: #f3cb76;
+    }
+
+    .console-line.error {
+      color: #ff8d8d;
+    }
+
+    /* =========================================================
+       FOOTER
+       ========================================================= */
+
+    footer {
+      text-align: center;
+      padding: 40px 20px 80px;
+      color: #7895a1;
+    }
+
+    footer p {
+      margin: 11px 0;
+      font-size: 18px;
+    }
+
+    footer strong {
+      color: #34596a;
+    }
+
+    .product-font {
+      margin-top: 16px;
+      font-family: Georgia, serif;
+      font-weight: 800;
+      letter-spacing: 1px;
+      color: #526b76;
+    }
+
+    /* =========================================================
+       TOAST
+       ========================================================= */
+
+    .toast {
+      position: fixed;
+      left: 50%;
+      bottom: 28px;
+      z-index: 999;
+      transform:
+        translate(-50%, 30px)
+        scale(.95);
+      opacity: 0;
+      pointer-events: none;
+      padding: 15px 22px;
+      border-radius: 18px;
+      background: #061a23;
+      color: #fff;
+      font-weight: 800;
+      box-shadow: 0 20px 50px rgba(0,0,0,.25);
+      transition: .3s ease;
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform:
+        translate(-50%, 0)
+        scale(1);
+    }
+
+    /* =========================================================
+       FULLSCREEN
+       ========================================================= */
+
+    .fullscreen .topbar,
+    .fullscreen .code-card,
+    .fullscreen .console-card,
+    .fullscreen footer {
+      display: none;
+    }
+
+    .fullscreen .preview-card {
+      position: fixed;
+      inset: 0;
+      z-index: 1000;
+      border-radius: 0;
+      margin: 0;
+    }
+
+    .fullscreen .preview-stage {
+      height: calc(100vh - 170px);
+    }
+
+    /* =========================================================
+       MOBILE
+       ========================================================= */
+
+    @media (max-width: 700px) {
+
+      .topbar {
+        min-height: 100px;
+      }
+
+      .brand-mark {
+        width: 68px;
+        height: 68px;
+        flex-basis: 68px;
+      }
+
+      .brand-name {
+        font-size: 28px;
+      }
+
+      .back-btn {
+        width: 62px;
+        height: 62px;
+      }
+
+      .app {
+        width: calc(100% - 22px);
+        margin-top: 18px;
+      }
+
+      .code-head {
+        padding: 28px 22px 24px;
+      }
+
+      .code-icon {
+        width: 78px;
+        height: 78px;
+        flex-basis: 78px;
+        border-radius: 25px;
+        font-size: 35px;
+      }
+
+      .code-title-row {
+        gap: 16px;
+      }
+
+      .code-title {
+        font-size: 34px;
+      }
+
+      .code-subtitle {
+        font-size: 17px;
+      }
+
+      .toolbar {
+        padding: 0 22px 25px;
+        display: grid;
+        grid-template-columns:
+          repeat(5, 1fr);
+        gap: 8px;
+      }
+
+      .tool-btn {
+        min-width: 0;
+        width: 100%;
+        height: 62px;
+        padding: 0;
+        border-radius: 18px;
+        font-size: 20px;
+      }
+
+      .status-strip {
+        grid-template-columns: 1fr;
+        padding: 20px 22px;
+        gap: 12px;
+      }
+
+      .status-pill {
+        min-height: 58px;
+        font-size: 14px;
+      }
+
+      .tape-top {
+        height: 64px;
+        padding: 0 18px;
+      }
+
+      .editor-wrap {
+        min-height: 450px;
+      }
+
+      .line-numbers {
+        width: 53px;
+        flex-basis: 53px;
+        font-size: 13px;
+        padding-right: 10px;
+      }
+
+      .code-input {
+        min-height: 450px;
+        padding: 20px 18px 30px;
+        font-size: 14px;
+        line-height: 1.8;
+      }
+
+      .preview-head {
+        padding: 23px 20px;
+      }
+
+      .preview-title h2 {
+        font-size: 25px;
+      }
+
+      .preview-actions {
+        gap: 6px;
+      }
+
+      .mini-btn {
+        width: 52px;
+        height: 52px;
+      }
+
+      .devices {
+        padding: 17px 18px;
+      }
+
+      .device-btn {
+        min-width: 155px;
+        height: 60px;
+        font-size: 15px;
+      }
+
+      .preview-stage {
+        padding: 18px 12px;
+      }
+
+      .device-frame {
+        min-height: 520px;
+        border-radius: 28px;
+      }
+
+      .device-frame.mobile {
+        width: 100%;
+        min-height: 620px;
+      }
+
+      .device-frame.tablet {
+        width: 100%;
+        min-height: 650px;
+      }
+
+      .device-frame.laptop,
+      .device-frame.desktop {
+        width: 100%;
+        min-height: 540px;
+      }
+
+      .console-head {
+        padding: 0 20px;
+        min-height: 76px;
+      }
+
+      .console-title h2 {
+        font-size: 25px;
+      }
+
+      .console-actions {
+        gap: 14px;
+      }
+
+      .console-output {
+        padding: 20px;
+        font-size: 13px;
+      }
+    }
+
+    @media (max-width: 430px) {
+      .brand-mark {
+        width: 58px;
+        height: 58px;
+        flex-basis: 58px;
+        border-radius: 20px;
+      }
+
+      .brand-mark::before {
+        width: 32px;
+        height: 32px;
+      }
+
+      .brand-name {
+        font-size: 25px;
+        letter-spacing: -1.5px;
+      }
+
+      .back-btn {
+        width: 56px;
+        height: 56px;
+      }
+
+      .toolbar {
+        grid-template-columns:
+          repeat(5, 1fr);
+      }
+
+      .tool-btn {
+        height: 56px;
+        font-size: 18px;
+      }
+
+      .code-icon {
+        width: 66px;
+        height: 66px;
+        flex-basis: 66px;
+        font-size: 29px;
+      }
+
+      .code-title {
+        font-size: 29px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="bg-orb orb-one"></div>
+  <div class="bg-orb orb-two"></div>
+
+  <!-- =======================================================
+       HEADER
+       ======================================================= -->
+
+  <header class="topbar">
+
+    <div class="brand">
+
+      <div class="brand-mark"></div>
+
+      <div class="brand-name">
+        DIPO <span>RUN</span>
+      </div>
+
+    </div>
+
+    <button
+      class="back-btn"
+      id="backBtn"
+      type="button"
+      aria-label="Back to DIPO WORLD"
+    >
+      ←
+    </button>
+
+  </header>
+
+
+  <main class="app" id="dipoRunApp">
+
+    <!-- =====================================================
+         CODE TAPE
+         ===================================================== -->
+
+    <section class="code-card">
+
+      <div class="code-head">
+
+        <div class="code-title-row">
+
+          <div class="code-icon">
+            &lt;/&gt;
+          </div>
+
+          <div>
+            <h1 class="code-title">
+              Live Code
+            </h1>
+
+            <p class="code-subtitle">
+              Write · Paste · Auto Run
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- TOOLBAR -->
+
+      <div class="toolbar">
+
+        <button
+          class="tool-btn"
+          id="clearBtn"
+          title="Clear code"
+          type="button"
+        >
+          ×
+        </button>
+
+        <button
+          class="tool-btn"
+          id="saveBtn"
+          title="Save project"
+          type="button"
+        >
+          💾
+        </button>
+
+        <button
+          class="tool-btn"
+          id="shareBtn"
+          title="Share code"
+          type="button"
+        >
+          🔗
+        </button>
+
+        <button
+          class="tool-btn download"
+          id="downloadCodeBtn"
+          title="Download HTML"
+          type="button"
+        >
+          ↓
+        </button>
+
+        <button
+          class="tool-btn primary"
+          id="runBtn"
+          title="Run code"
+          type="button"
+        >
+          ▶
+        </button>
+
+      </div>
+
+
+      <!-- STATUS -->
+
+      <div class="status-strip">
+
+        <div class="status-pill">
+
+          <span class="status-dot"></span>
+
+          <span id="languageStatus">
+            Auto Detect · HTML
+          </span>
+
+        </div>
+
+        <div class="status-pill green">
+
+          <span class="status-dot"></span>
+
+          <span id="autoRunStatus">
+            Auto Run ON
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <!-- CODE TAPE -->
+
+      <div class="tape">
+
+        <div class="tape-top">
+
+          <div class="traffic">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <div
+            class="language"
+            id="languageBadge"
+          >
+            HTML
+          </div>
+
+        </div>
+
+
+        <div class="editor-wrap">
+
+          <div
+            class="line-numbers"
+            id="lineNumbers"
+            aria-hidden="true"
+          >
+            1
+          </div>
+
+          <textarea
+            id="codeEditor"
+            class="code-input"
+            spellcheck="false"
+            autocapitalize="off"
+            autocomplete="off"
+            autocorrect="off"
+            wrap="off"
+            aria-label="DIPO RUN code editor"
+            placeholder="Write or paste your code here..."
+          ></textarea>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         LIVE PREVIEW
+         ===================================================== -->
+
+    <section
+      class="preview-card"
+      id="previewShell"
+    >
+
+      <div class="preview-head">
+
+        <div>
+
+          <div class="preview-title">
+
+            <span class="live-dot"></span>
+
+            <div>
+              <h2>
+                Live Preview
+              </h2>
+
+              <p class="preview-url">
+                dipo-run://live-preview
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="preview-actions">
+
+          <button
+            class="mini-btn"
+            id="refreshBtn"
+            type="button"
+            title="Refresh preview"
+            aria-label="Refresh preview"
+          >
+            ↻
+          </button>
+
+          <button
+            class="mini-btn"
+            id="fullscreenBtn"
+            type="button"
+            title="Fullscreen"
+            aria-label="Fullscreen preview"
+          >
+            ⛶
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <!-- DEVICES -->
+
+      <div
+        class="devices"
+        id="deviceControls"
+      >
+
+        <button
+          class="device-btn active"
+          data-device="mobile"
+          type="button"
+        >
+          📱 Mobile
+        </button>
+
+        <button
+          class="device-btn"
+          data-device="tablet"
+          type="button"
+        >
+          ▣ Tablet
+        </button>
+
+        <button
+          class="device-btn"
+          data-device="laptop"
+          type="button"
+        >
+          💻 Laptop
+        </button>
+
+        <button
+          class="device-btn"
+          data-device="desktop"
+          type="button"
+        >
+          🖥️ Desktop
+        </button>
+
+      </div>
+
+
+      <!-- PREVIEW -->
+
+      <div class="preview-stage">
+
+        <div
+          class="device-frame mobile"
+          id="deviceFrame"
+        >
+
+          <iframe
+            id="previewFrame"
+            title="DIPO RUN live code preview"
+            sandbox="allow-scripts allow-forms allow-modals allow-popups"
+          ></iframe>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         CONSOLE
+         ===================================================== -->
+
+    <section
+      class="console-card"
+      id="consolePanel"
+    >
+
+      <div class="console-head">
+
+        <div class="console-title">
+
+          <span>ϟ</span>
+
+          <h2>
+            Console
+          </h2>
+
+          <span
+            class="console-count"
+            id="consoleCount"
+          >
+            0
+          </span>
+
+        </div>
+
+
+        <div class="console-actions">
+
+          <button
+            class="console-action"
+            id="clearConsoleBtn"
+            type="button"
+          >
+            Clear
+          </button>
+
+          <button
+            class="console-action"
+            id="collapseConsoleBtn"
+            type="button"
+          >
+            Collapse
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <div
+        class="console-output"
+        id="consoleOutput"
+        aria-live="polite"
+      ></div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =======================================================
+       FOOTER
+       ======================================================= -->
+
+  <footer>
+
+    <p>
+      DIPO RUN · Part of
+      <strong>DIPO WORLD</strong>
+    </p>
+
+    <p>
+      Run. Test. Preview. Ship.
+    </p>
+
+    <p>
+      Made With ❤️ in India
+    </p>
+
+    <p class="product-font">
+      𝔄 𝔇𝔐 𝔭𝔯𝔬𝔡𝔲𝔠𝔱
+    </p>
+
+    <p>
+      All copyrights reserved @ 𝔄 𝔇𝔐 𝔭𝔯𝔬𝔡𝔲𝔠𝔱
+    </p>
+
+  </footer>
+
+
+  <!-- =======================================================
+       TOAST
+       ======================================================= -->
+
+  <div
+    class="toast"
+    id="toast"
+    role="status"
+    aria-live="polite"
+  ></div>
+
+
+  <script>
+    /* =========================================================
+       DIPO RUN ENGINE
+       GOD LEVEL FINAL
+       ========================================================= */
+
+    (() => {
+      "use strict";
+
+      const $ = (id) =>
+        document.getElementById(id);
+
+      const editor =
+        $("codeEditor");
+
+      const preview =
+        $("previewFrame");
+
+      const lineNumbers =
+        $("lineNumbers");
+
+      const deviceFrame =
+        $("deviceFrame");
+
+      const languageBadge =
+        $("languageBadge");
+
+      const languageStatus =
+        $("languageStatus");
+
+      const consoleOutput =
+        $("consoleOutput");
+
+      const consoleCount =
+        $("consoleCount");
+
+      const toast =
+        $("toast");
+
+      let autoRun = true;
+
+      let timer = null;
+
+      let consoleLines = 0;
+
+
+      /* =======================================================
+         STARTER CODE
+         ======================================================= */
+
+      const starterCode = `<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width,initial-scale=1.0">
+
+<title>DIPO RUN</title>
+
+<style>
+
+*{
+  box-sizing:border-box;
+}
+
+body{
+  margin:0;
+  min-height:100vh;
+  display:grid;
+  place-items:center;
+  overflow:hidden;
+  background:
+    radial-gradient(
+      circle at 80% 20%,
+      #2d7180,
+      transparent 30%
+    ),
+    #06151d;
+  color:white;
+  font-family:
+    Inter,
+    system-ui,
+    sans-serif;
+}
+
+.card{
+  width:min(650px,90vw);
+  padding:80px 30px;
+  text-align:center;
+  border-radius:45px;
+  background:#0a2933;
+  box-shadow:
+    0 30px 80px
+    rgba(0,0,0,.35);
+  animation:
+    float 4s
+    ease-in-out
+    infinite;
+}
+
+h1{
+  margin:0;
+  font-size:
+    clamp(45px,9vw,90px);
+  letter-spacing:-5px;
+}
+
+p{
+  color:#9bb9c4;
+  font-size:22px;
+}
+
+button{
+  margin-top:20px;
+  padding:18px 40px;
+  border:0;
+  border-radius:50px;
+  background:#6cdaa6;
+  color:#06151d;
+  font-weight:900;
+  font-size:18px;
+  cursor:pointer;
+}
+
+button:hover{
+  transform:scale(1.05);
+}
+
+@keyframes float{
+  0%,100%{
+    transform:translateY(0);
+  }
+
+  50%{
+    transform:translateY(-20px);
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+<h1>DIPO RUN ⚡</h1>
+
+<p>
+Write. Animate. Preview.
+</p>
+
+<button
+onclick="this.textContent='RUNNING ✓'"
+>
+CLICK ME
+</button>
+
+</div>
+
+</body>
+</html>`;
+
+
+      /* =======================================================
+         TOAST
+         ======================================================= */
+
+      function showToast(message) {
+
+        toast.textContent = message;
+
+        toast.classList.add("show");
+
+        clearTimeout(
+          showToast.timer
+        );
+
+        showToast.timer =
+          setTimeout(() => {
+            toast.classList.remove("show");
+          }, 2200);
+      }
+
+
+      /* =======================================================
+         CONSOLE
+         ======================================================= */
+
+      function log(
+        message,
+        type = "info"
+      ) {
+
+        consoleLines++;
+
+        consoleCount.textContent =
+          consoleLines;
+
+        const line =
+          document.createElement("div");
+
+        line.className =
+          "console-line " + type;
+
+        line.textContent =
+          message;
+
+        consoleOutput.appendChild(line);
+
+        consoleOutput.scrollTop =
+          consoleOutput.scrollHeight;
+      }
+
+
+      function clearConsole() {
+
+        consoleOutput.innerHTML = "";
+
+        consoleLines = 0;
+
+        consoleCount.textContent = "0";
+
+      }
+
+
+      /* =======================================================
+         LINE NUMBERS
+         ======================================================= */
+
+      function updateLineNumbers() {
+
+        const count =
+          editor.value.split("\n").length;
+
+        let html = "";
+
+        for (
+          let i = 1;
+          i <= count;
+          i++
+        ) {
+          html += i + "<br>";
+        }
+
+        lineNumbers.innerHTML =
+          html;
+      }
+
+
+      /* =======================================================
+         LANGUAGE DETECTION
+         ======================================================= */
+
+      function detectLanguage(code) {
+
+        const text =
+          code.trim();
+
+        if (!text) {
+          return "HTML";
+        }
+
+        if (
+          /<!doctype\s+html/i.test(text) ||
+          /<html[\s>]/i.test(text) ||
+          /<body[\s>]/i.test(text)
+        ) {
+          return "HTML";
+        }
+
+        if (
+          /(^|\s)import\s.+from\s+['"]/.test(text) ||
+          /export\s+(default\s+)?/.test(text) ||
+          /interface\s+\w+\s*{/.test(text) ||
+          /:\s*(string|number|boolean)\b/.test(text)
+        ) {
+          return "TS";
+        }
+
+        if (
+          /<([A-Z][A-Za-z0-9]*)[\s>]/.test(text) &&
+          /<\/[A-Z][A-Za-z0-9]*>/.test(text)
+        ) {
+          return "JSX";
+        }
+
+        if (
+          /(^|\n)\s*[{.#][^{}]+\{/m.test(text) &&
+          /:\s*[^;]+;/.test(text)
+        ) {
+          return "CSS";
+        }
+
+        if (
+          /^\s*[\[{]/.test(text) &&
+          /["']?\w+["']?\s*:/.test(text)
+        ) {
+          try {
+            JSON.parse(text);
+            return "JSON";
+          } catch (_) {}
+        }
+
+        if (
+          /(^|\n)\s*(def|import|from|print)\b/.test(text) ||
+          /:\s*$/.test(text)
+        ) {
+          return "PYTHON";
+        }
+
+        if (
+          /#include\s*</.test(text) ||
+          /\bint\s+main\s*\(/.test(text)
+        ) {
+          return "C++";
+        }
+
+        return "JAVASCRIPT";
+      }
+
+
+      function updateLanguage() {
+
+        const language =
+          detectLanguage(
+            editor.value
+          );
+
+        languageBadge.textContent =
+          language;
+
+        languageStatus.textContent =
+          "Auto Detect · " +
+          language;
+
+        return language;
+      }
+
+
+      /* =======================================================
+         PREVIEW BUILDER
+         ======================================================= */
+
+      function buildPreview(
+        code,
+        language
+      ) {
+
+        if (!code.trim()) {
+
+          preview.srcdoc = `
+            <body style="
+              margin:0;
+              min-height:100vh;
+              display:grid;
+              place-items:center;
+              background:#02070b;
+              color:#7895a1;
+              font-family:system-ui;
+              text-align:center;
+            ">
+              <div>
+                <div style="
+                  font-size:50px;
+                  margin-bottom:15px;
+                ">⚡</div>
+
+                <h2>
+                  DIPO RUN
+                </h2>
+
+                <p>
+                  Write or paste code
+                  to start.
+                </p>
+              </div>
+            </body>
+          `;
+
+          return;
+        }
+
+
+        if (
+          language === "HTML" ||
+          language === "JSX"
+        ) {
+
+          preview.srcdoc = code;
+
+          return;
+        }
+
+
+        if (
+          language === "CSS"
+        ) {
+
+          preview.srcdoc = `
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+${code}
+</style>
+</head>
+<body>
+<div class="dipo-demo">
+DIPO RUN CSS Preview
+</div>
+</body>
+</html>`;
+
+          return;
+        }
+
+
+        if (
+          language === "JAVASCRIPT"
+        ) {
+
+          preview.srcdoc = `
+<!DOCTYPE html>
+<html>
+<body style="
+background:#06151d;
+color:white;
+font-family:system-ui;
+padding:30px;
+">
+<h2>DIPO RUN JavaScript</h2>
+
+<div id="output"></div>
+
+<script>
+
+const originalLog =
+console.log;
+
+console.log = function(...args){
+
+  originalLog(...args);
+
+  const output =
+    document.getElementById("output");
+
+  output.innerHTML +=
+    "<p>" +
+    args.join(" ") +
+    "</p>";
+};
+
+try{
+
+${code}
+
+}catch(error){
+
+document.body.innerHTML +=
+"<pre style='color:#ff8888'>" +
+error.message +
+"</pre>";
+
+}
+
+<\/script>
+
+</body>
+</html>`;
+
+          return;
+        }
+
+
+        if (
+          language === "JSON"
+        ) {
+
+          let formatted = "";
+
+          try {
+
+            formatted =
+              JSON.stringify(
+                JSON.parse(code),
+                null,
+                2
+              );
+
+          } catch (_) {
+
+            formatted = code;
+
+          }
+
+          preview.srcdoc = `
+<!DOCTYPE html>
+<html>
+<body style="
+margin:0;
+padding:30px;
+background:#06151d;
+color:#d7edf4;
+font-family:monospace;
+white-space:pre-wrap;
+">
+${escapeHTML(formatted)}
+</body>
+</html>`;
+
+          return;
+        }
+
+
+        preview.srcdoc = `
+<!DOCTYPE html>
+<html>
+<body style="
+margin:0;
+padding:40px;
+background:#06151d;
+color:#9eb8c3;
+font-family:system-ui;
+">
+<h2>
+${language}
+</h2>
+
+<p>
+This runtime is not yet enabled
+in the zero-cost browser engine.
+</p>
+
+</body>
+</html>`;
+
+      }
+
+
+      function escapeHTML(text) {
+
+        return text
+          .replaceAll("&", "&amp;")
+          .replaceAll("<", "&lt;")
+          .replaceAll(">", "&gt;")
+          .replaceAll('"', "&quot;")
+          .replaceAll("'", "&#039;");
+      }
+
+
+      /* =======================================================
+         RUN
+         ======================================================= */
+
+      function runCode() {
+
+        const code =
+          editor.value;
+
+        const language =
+          updateLanguage();
+
+        log(
+          "Code executed · " +
+          language,
+          "success"
+        );
+
+        buildPreview(
+          code,
+          language
+        );
+
+        setTimeout(() => {
+
+          log(
+            "Preview loaded successfully.",
+            "success"
+          );
+
+        }, 120);
+
+      }
+
+
+      function autoRunCode() {
+
+        clearTimeout(timer);
+
+        timer = setTimeout(
+          runCode,
+          450
+        );
+
+      }
+
+
+      /* =======================================================
+         SAVE
+         ======================================================= */
+
+      function saveProject() {
+
+        localStorage.setItem(
+          "dipoRunCode",
+          editor.value
+        );
+
+        log(
+          "Project saved locally.",
+          "success"
+        );
+
+        showToast(
+          "💾 Project saved locally"
+        );
+      }
+
+
+      function loadProject() {
+
+        const saved =
+          localStorage.getItem(
+            "dipoRunCode"
+          );
+
+        editor.value =
+          saved || starterCode;
+
+      }
+
+
+      /* =======================================================
+         DOWNLOAD CODE
+         ======================================================= */
+
+      function downloadCode() {
+
+        const blob =
+          new Blob(
+            [editor.value],
+            {
+              type:
+                "text/html;charset=utf-8"
+            }
+          );
+
+        const url =
+          URL.createObjectURL(blob);
+
+        const a =
+          document.createElement("a");
+
+        a.href = url;
+
+        a.download =
+          "dipo-run-project.html";
+
+        document.body.appendChild(a);
+
+        a.click();
+
+        a.remove();
+
+        URL.revokeObjectURL(url);
+
+        showToast(
+          "⬇️ Code downloaded"
+        );
+
+        log(
+          "Project downloaded as HTML.",
+          "success"
+        );
+      }
+
+
+      /* =======================================================
+         VIDEO RECORDING
+         ======================================================= */
+
+      let mediaRecorder = null;
+
+      let recordedChunks = [];
+
+      let recordingStream = null;
+
+
+      async function startRecording() {
+
+        if (
+          !navigator.mediaDevices ||
+          !navigator.mediaDevices.getDisplayMedia
+        ) {
+
+          showToast(
+            "Screen recording unavailable"
+          );
+
+          log(
+            "This browser does not support screen recording.",
+            "error"
+          );
+
+          return;
+        }
+
+
+        try {
+
+          recordingStream =
+            await navigator.mediaDevices.getDisplayMedia(
+              {
+                video: {
+                  frameRate: 30
+                },
+                audio: false
+              }
+            );
+
+
+          recordedChunks = [];
+
+
+          const mimeTypes = [
+            "video/webm;codecs=vp9",
+            "video/webm;codecs=vp8",
+            "video/webm"
+          ];
+
+
+          let mimeType =
+            "";
+
+          for (
+            const type of mimeTypes
+          ) {
+
+            if (
+              MediaRecorder.isTypeSupported(
+                type
+              )
+            ) {
+
+              mimeType =
+                type;
+
+              break;
+            }
+          }
+
+
+          mediaRecorder =
+            mimeType
+              ? new MediaRecorder(
+                  recordingStream,
+                  {
+                    mimeType
+                  }
+                )
+              : new MediaRecorder(
+                  recordingStream
+                );
+
+
+          mediaRecorder.ondataavailable =
+            event => {
+
+              if (
+                event.data &&
+                event.data.size > 0
+              ) {
+
+                recordedChunks.push(
+                  event.data
+                );
+              }
+
+            };
+
+
+          mediaRecorder.onstop =
+            finishRecording;
+
+
+          recordingStream
+            .getVideoTracks()
+            .forEach(track => {
+
+              track.addEventListener(
+                "ended",
+                () => {
+
+                  if (
+                    mediaRecorder &&
+                    mediaRecorder.state !==
+                      "inactive"
+                  ) {
+
+                    mediaRecorder.stop();
+
+                  }
+
+                }
+              );
+
+            });
+
+
+          mediaRecorder.start();
+
+          $("recordBtn").textContent =
+            "⏹";
+
+          $("recordBtn")
+            .classList.add("active");
+
+          $("recordBtn")
+            .title =
+            "Stop recording";
+
+          showToast(
+            "🔴 Recording started"
+          );
+
+          log(
+            "Video recording started.",
+            "warning"
+          );
+
+        } catch (error) {
+
+          log(
+            "Video recording cancelled.",
+            "warning"
+          );
+
+        }
+
+      }
+
+
+      function stopRecording() {
+
+        if (
+          mediaRecorder &&
+          mediaRecorder.state !==
+            "inactive"
+        ) {
+
+          mediaRecorder.stop();
+
+        }
+
+      }
+
+
+      function finishRecording() {
+
+        const blob =
+          new Blob(
+            recordedChunks,
+            {
+              type:
+                "video/webm"
+            }
+          );
+
+
+        const url =
+          URL.createObjectURL(blob);
+
+        const a =
+          document.createElement("a");
+
+        a.href = url;
+
+        a.download =
+          "DIPO-RUN-Preview.webm";
+
+        document.body.appendChild(a);
+
+        a.click();
+
+        a.remove();
+
+        URL.revokeObjectURL(url);
+
+
+        if (
+          recordingStream
+        ) {
+
+          recordingStream
+            .getTracks()
+            .forEach(
+              track =>
+                track.stop()
+            );
+
+        }
+
+
+        $("recordBtn").textContent =
+          "🎥";
+
+        $("recordBtn")
+          .classList.remove(
+            "active"
+          );
+
+        $("recordBtn")
+          .title =
+          "Record preview video";
+
+
+        showToast(
+          "⬇️ Video downloaded"
+        );
+
+        log(
+          "Preview video downloaded as WebM.",
+          "success"
+        );
+
+      }
+
+
+      /* =======================================================
+         SHARE
+         ======================================================= */
+
+      async function shareCode() {
+
+        const data = {
+          title:
+            "DIPO RUN Project",
+          text:
+            editor.value
+        };
+
+
+        if (
+          navigator.share
+        ) {
+
+          try {
+
+            await navigator.share(
+              data
+            );
+
+            log(
+              "Project shared.",
+              "success"
+            );
+
+            return;
+
+          } catch (_) {}
+
+        }
+
+
+        try {
+
+          await navigator.clipboard.writeText(
+            editor.value
+          );
+
+          showToast(
+            "🔗 Code copied"
+          );
+
+          log(
+            "Project code copied to clipboard.",
+            "success"
+          );
+
+        } catch (_) {
+
+          showToast(
+            "Share unavailable"
+          );
+
+        }
+
+      }
+
+
+      /* =======================================================
+         DEVICES
+         ======================================================= */
+
+      function setupDevices() {
+
+        document
+          .querySelectorAll(
+            ".device-btn"
+          )
+          .forEach(button => {
+
+            button.addEventListener(
+              "click",
+              () => {
+
+                document
+                  .querySelectorAll(
+                    ".device-btn"
+                  )
+                  .forEach(btn =>
+                    btn.classList.remove(
+                      "active"
+                    )
+                  );
+
+                button.classList.add(
+                  "active"
+                );
+
+
+                const device =
+                  button.dataset.device;
+
+                deviceFrame.className =
+                  "device-frame " +
+                  device;
+
+                showToast(
+                  device
+                    .charAt(0)
+                    .toUpperCase() +
+                  device.slice(1) +
+                  " preview"
+                );
+
+              }
+            );
+
+          });
+
+      }
+
+
+      /* =======================================================
+         EDITOR
+         ======================================================= */
+
+      function setupEditor() {
+
+        editor.addEventListener(
+          "input",
+          () => {
+
+            updateLineNumbers();
+
+            updateLanguage();
+
+            if (
+              autoRun
+            ) {
+
+              autoRunCode();
+
+            }
+
+          }
+        );
+
+
+        editor.addEventListener(
+          "scroll",
+          () => {
+
+            lineNumbers.scrollTop =
+              editor.scrollTop;
+
+          }
+        );
+
+
+        editor.addEventListener(
+          "keydown",
+          event => {
+
+            if (
+              event.key === "Tab"
+            ) {
+
+              event.preventDefault();
+
+              const start =
+                editor.selectionStart;
+
+              const end =
+                editor.selectionEnd;
+
+              editor.value =
+                editor.value.substring(
+                  0,
+                  start
+                ) +
+                "  " +
+                editor.value.substring(
+                  end
+                );
+
+              editor.selectionStart =
+                editor.selectionEnd =
+                  start + 2;
+
+              updateLineNumbers();
+
+              if (
+                autoRun
+              ) {
+
+                autoRunCode();
+
+              }
+
+            }
+
+          }
+        );
+
+      }
+
+
+      /* =======================================================
+         BUTTONS
+         ======================================================= */
+
+      function setupButtons() {
+
+        $("runBtn")
+          .addEventListener(
+            "click",
+            runCode
+          );
+
+
+        $("saveBtn")
+          .addEventListener(
+            "click",
+            saveProject
+          );
+
+
+        $("shareBtn")
+          .addEventListener(
+            "click",
+            shareCode
+          );
+
+
+        $("downloadCodeBtn")
+          .addEventListener(
+            "click",
+            downloadCode
+          );
+
+
+        $("clearBtn")
+          .addEventListener(
+            "click",
+            () => {
+
+              editor.value = "";
+
+              updateLineNumbers();
+
+              updateLanguage();
+
+              runCode();
+
+              showToast(
+                "Code cleared"
+              );
+
+            }
+          );
+
+
+        $("refreshBtn")
+          .addEventListener(
+            "click",
+            runCode
+          );
+
+
+        $("fullscreenBtn")
+          .addEventListener(
+            "click",
+            () => {
+
+              document.body.classList.toggle(
+                "fullscreen"
+              );
+
+            }
+          );
+
+
+        $("clearConsoleBtn")
+          .addEventListener(
+            "click",
+            clearConsole
+          );
+
+
+        $("collapseConsoleBtn")
+          .addEventListener(
+            "click",
+            () => {
+
+              const output =
+                $("consoleOutput");
+
+              const collapsed =
+                output.style.display ===
+                "none";
+
+              output.style.display =
+                collapsed
+                  ? ""
+                  : "none";
+
+              $("collapseConsoleBtn")
+                .textContent =
+                collapsed
+                  ? "Collapse"
+                  : "Expand";
+
+            }
+          );
+
+
+        $("backBtn")
+          .addEventListener(
+            "click",
+            () => {
+
+              window.location.href =
+                "../../index.html";
+
+            }
+          );
+
+      }
+
+
+      /* =======================================================
+         RECORD BUTTON
+         ======================================================= */
+
+      function createRecordButton() {
+
+        const toolbar =
+          document.querySelector(
+            ".toolbar"
+          );
+
+
+        const button =
+          document.createElement(
+            "button"
+          );
+
+        button.id =
+          "recordBtn";
+
+        button.type =
+          "button";
+
+        button.className =
+          "tool-btn record";
+
+        button.title =
+          "Record preview video";
+
+        button.setAttribute(
+          "aria-label",
+          "Record preview video"
+        );
+
+        button.textContent =
+          "🎥";
+
+
+        button.addEventListener(
+          "click",
+          () => {
+
+            if (
+              mediaRecorder &&
+              mediaRecorder.state ===
+                "recording"
+            ) {
+
+              stopRecording();
+
+            } else {
+
+              startRecording();
+
+            }
+
+          }
+        );
+
+
+        toolbar.insertBefore(
+          button,
+          $("runBtn")
+        );
+
+      }
+
+
+      /* =======================================================
+         INITIALIZE
+         ======================================================= */
+
+      function init() {
+
+        loadProject();
+
+        updateLineNumbers();
+
+        updateLanguage();
+
+        setupEditor();
+
+        setupButtons();
+
+        setupDevices();
+
+        createRecordButton();
+
+
+        log(
+          "DIPO RUN ready.",
+          "success"
+        );
+
+        log(
+          "Write or paste code to start a live preview.",
+          "info"
+        );
+
+
+        runCode();
+
+      }
+
+
+      init();
+
+    })();
+  </script>
+
+</body>
+</html>

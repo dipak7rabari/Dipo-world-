@@ -1,0 +1,432 @@
+/* =========================================================
+   DIPO RUN — LIVE PREVIEW
+   ========================================================= */
+
+.preview-panel {
+  display: flex;
+  flex-direction: column;
+
+  min-height: 720px;
+}
+
+
+/* =========================================================
+   PREVIEW HEADER
+   ========================================================= */
+
+.preview-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+
+  padding: 9px 12px;
+
+  background: #f8fbf9;
+
+  border-bottom: 1px solid var(--dw-border);
+}
+
+.preview-device-controls {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.preview-device-btn {
+  appearance: none;
+
+  width: 34px;
+  height: 32px;
+
+  display: grid;
+  place-items: center;
+
+  border: 1px solid transparent;
+  border-radius: 9px;
+
+  background: transparent;
+  color: var(--dw-text-soft);
+
+  cursor: pointer;
+
+  font-size: 15px;
+
+  transition: var(--dw-transition);
+}
+
+.preview-device-btn:hover {
+  background: #edf5f1;
+  color: var(--dw-navy);
+}
+
+.preview-device-btn.active {
+  background: var(--dw-navy);
+  color: #fff;
+
+  border-color: var(--dw-navy);
+}
+
+
+/* =========================================================
+   PREVIEW ACTIONS
+   ========================================================= */
+
+.preview-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.preview-action {
+  appearance: none;
+
+  min-height: 32px;
+  padding: 0 9px;
+
+  border: 1px solid var(--dw-border);
+  border-radius: 9px;
+
+  background: #fff;
+  color: var(--dw-navy);
+
+  cursor: pointer;
+
+  font-size: 11px;
+  font-weight: 850;
+
+  transition: var(--dw-transition);
+}
+
+.preview-action:hover {
+  border-color: var(--dw-green);
+  transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   PREVIEW STAGE
+   ========================================================= */
+
+.preview-stage {
+  position: relative;
+
+  flex: 1;
+
+  min-height: 580px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 30px;
+
+  background:
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(80,173,121,.08),
+      transparent 30%
+    ),
+    #edf3f1;
+
+  overflow: auto;
+}
+
+
+/* =========================================================
+   DEVICE FRAME
+   ========================================================= */
+
+.preview-device {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  min-height: 500px;
+
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+
+  transition:
+    width 400ms cubic-bezier(.2,.8,.2,1),
+    height 400ms cubic-bezier(.2,.8,.2,1),
+    transform 400ms cubic-bezier(.2,.8,.2,1);
+}
+
+.preview-device.is-mobile {
+  width: 390px;
+  max-width: 100%;
+}
+
+.preview-device.is-tablet {
+  width: 768px;
+  max-width: 100%;
+}
+
+.preview-device.is-desktop {
+  width: 100%;
+}
+
+
+/* =========================================================
+   DEVICE SHELL
+   ========================================================= */
+
+.preview-device-frame {
+  width: 100%;
+  height: 100%;
+
+  position: relative;
+
+  background: #fff;
+
+  border: 1px solid #dce4e1;
+  border-radius: 24px;
+
+  box-shadow:
+    0 25px 70px rgba(6,59,62,.15);
+
+  overflow: hidden;
+}
+
+.preview-device.is-mobile .preview-device-frame {
+  border-radius: 30px;
+}
+
+
+/* =========================================================
+   DEVICE TOP BAR
+   ========================================================= */
+
+.preview-browser-bar {
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 12px;
+
+  background: #f7f9f8;
+
+  border-bottom: 1px solid #e5ece8;
+}
+
+.preview-browser-dots {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.preview-browser-dot {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #c6d1cd;
+}
+
+.preview-browser-address {
+  flex: 1;
+
+  margin-left: 12px;
+
+  height: 22px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 9px;
+
+  border-radius: 7px;
+
+  background: #edf2ef;
+
+  color: #83918e;
+
+  font-family: var(--dw-mono);
+  font-size: 9px;
+
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   IFRAME
+   ========================================================= */
+
+.preview-frame {
+  display: block;
+
+  width: 100%;
+  height: calc(100% - 38px);
+
+  border: 0;
+
+  background: #fff;
+}
+
+
+/* =========================================================
+   EMPTY PREVIEW
+   ========================================================= */
+
+.preview-empty {
+  position: absolute;
+
+  inset: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 30px;
+
+  text-align: center;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(80,173,121,.09),
+      transparent 45%
+    );
+}
+
+.preview-empty-icon {
+  width: 68px;
+  height: 68px;
+
+  display: grid;
+  place-items: center;
+
+  margin-bottom: 15px;
+
+  border-radius: 22px;
+
+  background: var(--dw-green-soft);
+  color: var(--dw-green-dark);
+
+  font-size: 28px;
+
+  animation: dipoFloat 3.5s ease-in-out infinite;
+}
+
+.preview-empty-title {
+  margin: 0 0 7px;
+
+  color: var(--dw-navy);
+
+  font-size: 20px;
+  font-weight: 950;
+  letter-spacing: -.7px;
+}
+
+.preview-empty-text {
+  max-width: 300px;
+
+  margin: 0;
+
+  color: var(--dw-text-soft);
+
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   PREVIEW LOADING
+   ========================================================= */
+
+.preview-loading {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 10;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(237,243,241,.72);
+
+  backdrop-filter: blur(7px);
+}
+
+.preview-loader {
+  width: 38px;
+  height: 38px;
+
+  border: 3px solid #d8e7df;
+  border-top-color: var(--dw-green);
+
+  border-radius: 50%;
+
+  animation: dipoSpin .8s linear infinite;
+}
+
+
+/* =========================================================
+   PREVIEW ERROR
+   ========================================================= */
+
+.preview-error {
+  position: absolute;
+
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+
+  padding: 13px 15px;
+
+  border: 1px solid rgba(239,91,99,.25);
+  border-radius: 14px;
+
+  background: rgba(255,244,245,.96);
+  color: #a43d44;
+
+  font-family: var(--dw-mono);
+  font-size: 11px;
+  line-height: 1.5;
+
+  box-shadow: var(--dw-shadow);
+
+  z-index: 20;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  .preview-panel {
+    min-height: 620px;
+  }
+
+  .preview-stage {
+    min-height: 500px;
+    padding: 14px;
+  }
+
+  .preview-device {
+    min-height: 450px;
+  }
+
+  .preview-browser-bar {
+    height: 34px;
+  }
+
+  .preview-frame {
+    height: calc(100% - 34px);
+  }
+
+  .preview-actions .preview-action span {
+    display: none;
+  }
+}

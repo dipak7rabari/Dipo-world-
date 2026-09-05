@@ -1,0 +1,830 @@
+/* ============================================================
+   DIPO RUN — VIDEO RECORDER UI
+   GOD LEVEL / GEN-Z
+============================================================ */
+
+#dipoVideoRecorder {
+
+  position: fixed;
+
+  right: 22px;
+  bottom: 22px;
+
+  z-index: 99999;
+
+  width:
+    min(
+      calc(100vw - 32px),
+      420px
+    );
+
+  padding: 18px;
+
+  border:
+    1px solid
+    rgba(255,255,255,.10);
+
+  border-radius: 26px;
+
+  color: #eef7ff;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(13,18,27,.98),
+      rgba(5,8,14,.98)
+    );
+
+  box-shadow:
+    0 30px 100px
+    rgba(0,0,0,.55),
+
+    0 0 0 1px
+    rgba(255,255,255,.025);
+
+  backdrop-filter:
+    blur(24px);
+
+  -webkit-backdrop-filter:
+    blur(24px);
+
+  opacity: 0;
+
+  visibility: hidden;
+
+  transform:
+    translateY(25px)
+    scale(.96);
+
+  transition:
+    opacity .35s ease,
+    visibility .35s ease,
+    transform .35s
+    cubic-bezier(.16,1,.3,1);
+}
+
+
+#dipoVideoRecorder.active {
+
+  opacity: 1;
+
+  visibility: visible;
+
+  transform:
+    translateY(0)
+    scale(1);
+}
+
+
+/* ============================================================
+   HEAD
+============================================================ */
+
+.dvr-head {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content:
+    space-between;
+
+  gap: 15px;
+
+  margin-bottom: 15px;
+}
+
+
+.dvr-title-wrap {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+
+.dvr-icon {
+
+  width: 44px;
+  height: 44px;
+
+  display: grid;
+
+  place-items: center;
+
+  border-radius: 15px;
+
+  font-size: 20px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,.12),
+      rgba(255,255,255,.04)
+    );
+
+  border:
+    1px solid
+    rgba(255,255,255,.08);
+
+  box-shadow:
+    inset 0 1px
+    rgba(255,255,255,.08);
+}
+
+
+.dvr-title-wrap strong {
+
+  display: block;
+
+  font-size: 15px;
+
+  letter-spacing: -.2px;
+}
+
+
+.dvr-title-wrap span {
+
+  display: block;
+
+  margin-top: 3px;
+
+  color:
+    rgba(238,247,255,.52);
+
+  font-size: 11px;
+}
+
+
+.dvr-close {
+
+  width: 34px;
+  height: 34px;
+
+  display: grid;
+
+  place-items: center;
+
+  border: 0;
+
+  border-radius: 12px;
+
+  color:
+    rgba(255,255,255,.75);
+
+  background:
+    rgba(255,255,255,.06);
+
+  cursor: pointer;
+
+  font-size: 21px;
+
+  transition:
+    transform .2s ease,
+    background .2s ease;
+}
+
+
+.dvr-close:hover {
+
+  transform:
+    rotate(90deg);
+
+  background:
+    rgba(255,255,255,.12);
+}
+
+
+/* ============================================================
+   STATUS
+============================================================ */
+
+.dvr-status {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  min-height: 34px;
+
+  padding:
+    8px 11px;
+
+  margin-bottom: 13px;
+
+  border-radius: 12px;
+
+  background:
+    rgba(255,255,255,.035);
+
+  color:
+    rgba(238,247,255,.65);
+
+  font-size: 11px;
+}
+
+
+.dvr-status-dot {
+
+  width: 7px;
+  height: 7px;
+
+  flex: 0 0 7px;
+
+  border-radius: 50%;
+
+  background:
+    #67e8a0;
+
+  box-shadow:
+    0 0 12px
+    rgba(103,232,160,.75);
+}
+
+
+.dvr-status-dot.recording {
+
+  background:
+    #ff4d68;
+
+  box-shadow:
+    0 0 14px
+    rgba(255,77,104,.9);
+
+  animation:
+    dvrPulse
+    1s infinite;
+}
+
+
+.dvr-status-dot.processing {
+
+  background:
+    #ffd166;
+
+  box-shadow:
+    0 0 12px
+    rgba(255,209,102,.7);
+
+  animation:
+    dvrBlink
+    .8s infinite;
+}
+
+
+.dvr-status-dot.success {
+
+  background:
+    #67e8a0;
+
+  box-shadow:
+    0 0 14px
+    rgba(103,232,160,.9);
+}
+
+
+.dvr-status-dot.error {
+
+  background:
+    #ff5b72;
+
+  box-shadow:
+    0 0 14px
+    rgba(255,91,114,.8);
+}
+
+
+.dvr-time {
+
+  margin-left: auto;
+
+  font-variant-numeric:
+    tabular-nums;
+
+  color:
+    rgba(255,255,255,.85);
+
+  font-weight: 800;
+}
+
+
+/* ============================================================
+   VIDEO
+============================================================ */
+
+.dvr-video-wrap {
+
+  position: relative;
+
+  width: 100%;
+
+  min-height: 210px;
+
+  overflow: hidden;
+
+  border-radius: 18px;
+
+  background:
+    #020408;
+
+  border:
+    1px solid
+    rgba(255,255,255,.07);
+
+  box-shadow:
+    inset 0 0 40px
+    rgba(0,0,0,.35);
+}
+
+
+.dvr-video-wrap::before {
+
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      120deg,
+      transparent 20%,
+      rgba(255,255,255,.04),
+      transparent 80%
+    );
+
+  transform:
+    translateX(-100%);
+
+  animation:
+    dvrShine
+    4s infinite;
+}
+
+
+.dvr-empty {
+
+  min-height: 210px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 25px;
+
+  color:
+    rgba(255,255,255,.42);
+}
+
+
+.dvr-empty span {
+
+  margin-bottom: 10px;
+
+  font-size: 35px;
+
+  opacity: .75;
+}
+
+
+.dvr-empty p {
+
+  max-width: 220px;
+
+  margin: 0;
+
+  line-height: 1.5;
+
+  font-size: 11px;
+}
+
+
+.dvr-recorded-video {
+
+  display: block;
+
+  width: 100%;
+
+  height: 235px;
+
+  object-fit: contain;
+
+  background:
+    #000;
+}
+
+
+/* ============================================================
+   ACTIONS
+============================================================ */
+
+.dvr-actions {
+
+  display: grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap: 9px;
+
+  margin-top: 13px;
+}
+
+
+.dvr-btn {
+
+  min-height: 43px;
+
+  border: 0;
+
+  border-radius: 13px;
+
+  cursor: pointer;
+
+  font-size: 11px;
+
+  font-weight: 850;
+
+  letter-spacing: -.1px;
+
+  transition:
+    transform .2s ease,
+    opacity .2s ease,
+    box-shadow .2s ease;
+}
+
+
+.dvr-btn:hover:not(:disabled) {
+
+  transform:
+    translateY(-2px);
+}
+
+
+.dvr-btn:active:not(:disabled) {
+
+  transform:
+    translateY(0)
+    scale(.98);
+}
+
+
+.dvr-btn:disabled {
+
+  opacity: .32;
+
+  cursor:
+    not-allowed;
+}
+
+
+/* RECORD */
+
+.dvr-record {
+
+  color: white;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ff4865,
+      #e83255
+    );
+
+  box-shadow:
+    0 10px 25px
+    rgba(255,72,101,.22);
+}
+
+
+.dvr-record-dot {
+
+  display: inline-block;
+
+  width: 8px;
+  height: 8px;
+
+  margin-right: 5px;
+
+  border-radius: 50%;
+
+  background: white;
+
+  box-shadow:
+    0 0 8px
+    rgba(255,255,255,.8);
+}
+
+
+/* STOP */
+
+.dvr-stop {
+
+  color:
+    rgba(255,255,255,.8);
+
+  background:
+    rgba(255,255,255,.07);
+
+  border:
+    1px solid
+    rgba(255,255,255,.08);
+}
+
+
+/* DOWNLOAD */
+
+.dvr-download {
+
+  grid-column:
+    1 / -1;
+
+  color:
+    #061014;
+
+  background:
+    linear-gradient(
+      135deg,
+      #78f0ad,
+      #61d995
+    );
+
+  box-shadow:
+    0 10px 25px
+    rgba(97,217,149,.16);
+}
+
+
+.dvr-download:not(:disabled):hover {
+
+  box-shadow:
+    0 14px 32px
+    rgba(97,217,149,.25);
+}
+
+
+/* ============================================================
+   INFO
+============================================================ */
+
+.dvr-info {
+
+  display: flex;
+
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 7px;
+
+  margin-top: 12px;
+}
+
+
+.dvr-info span {
+
+  padding:
+    5px 8px;
+
+  border-radius: 8px;
+
+  color:
+    rgba(255,255,255,.38);
+
+  background:
+    rgba(255,255,255,.035);
+
+  font-size: 8px;
+
+  font-weight: 800;
+
+  letter-spacing: .7px;
+}
+
+
+/* ============================================================
+   RECORDING STATE
+============================================================ */
+
+#dipoVideoRecorder.recording {
+
+  border-color:
+    rgba(255,72,101,.28);
+
+  box-shadow:
+    0 30px 100px
+    rgba(0,0,0,.6),
+
+    0 0 50px
+    rgba(255,72,101,.07);
+}
+
+
+#dipoVideoRecorder.recording
+.dvr-record {
+
+  animation:
+    dvrRecordGlow
+    1.4s infinite;
+}
+
+
+/* ============================================================
+   TOAST
+============================================================ */
+
+.dvr-toast {
+
+  position: fixed;
+
+  left: 50%;
+
+  bottom: 25px;
+
+  z-index: 100000;
+
+  padding:
+    12px 17px;
+
+  border-radius: 13px;
+
+  color: white;
+
+  background:
+    rgba(7,11,17,.96);
+
+  border:
+    1px solid
+    rgba(255,255,255,.10);
+
+  box-shadow:
+    0 20px 50px
+    rgba(0,0,0,.35);
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  pointer-events: none;
+
+  opacity: 0;
+
+  transform:
+    translate(-50%, 15px);
+
+  transition:
+    opacity .25s ease,
+    transform .25s ease;
+}
+
+
+.dvr-toast.show {
+
+  opacity: 1;
+
+  transform:
+    translate(-50%, 0);
+}
+
+
+/* ============================================================
+   ANIMATIONS
+============================================================ */
+
+@keyframes dvrPulse {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(.65);
+  }
+}
+
+
+@keyframes dvrBlink {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: .35;
+  }
+}
+
+
+@keyframes dvrRecordGlow {
+
+  0%,
+  100% {
+    box-shadow:
+      0 10px 25px
+      rgba(255,72,101,.22);
+  }
+
+  50% {
+    box-shadow:
+      0 10px 35px
+      rgba(255,72,101,.48);
+  }
+}
+
+
+@keyframes dvrShine {
+
+  0% {
+    transform:
+      translateX(-120%);
+  }
+
+  40%,
+  100% {
+    transform:
+      translateX(120%);
+  }
+}
+
+
+/* ============================================================
+   MOBILE
+============================================================ */
+
+@media (max-width: 520px) {
+
+  #dipoVideoRecorder {
+
+    right: 10px;
+    left: 10px;
+
+    bottom: 10px;
+
+    width:
+      calc(100vw - 20px);
+
+    padding: 14px;
+
+    border-radius: 22px;
+  }
+
+
+  .dvr-video-wrap,
+  .dvr-empty {
+
+    min-height:
+      175px;
+  }
+
+
+  .dvr-recorded-video {
+
+    height:
+      195px;
+  }
+
+
+  .dvr-btn {
+
+    min-height:
+      45px;
+  }
+
+}
+
+
+/* ============================================================
+   REDUCED MOTION
+============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+  #dipoVideoRecorder,
+  .dvr-btn,
+  .dvr-toast {
+
+    transition: none;
+  }
+
+  .dvr-status-dot,
+  .dvr-record,
+  .dvr-video-wrap::before {
+
+    animation: none !important;
+  }
+
+}

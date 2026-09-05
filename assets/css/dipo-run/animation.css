@@ -1,0 +1,386 @@
+/* =========================================================
+   DIPO RUN — ANIMATION SYSTEM
+   ========================================================= */
+
+
+/* =========================================================
+   GLOBAL KEYFRAMES
+   ========================================================= */
+
+@keyframes dipoPulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1.22);
+    opacity: .72;
+  }
+}
+
+
+@keyframes dipoFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+
+@keyframes dipoSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+@keyframes dipoShimmer {
+  0% {
+    background-position: -300% 0;
+  }
+
+  100% {
+    background-position: 300% 0;
+  }
+}
+
+
+@keyframes dipoGlow {
+  0%,
+  100% {
+    box-shadow:
+      0 0 0 0 rgba(80,173,121,.12);
+  }
+
+  50% {
+    box-shadow:
+      0 0 0 12px rgba(80,173,121,0);
+  }
+}
+
+
+@keyframes dipoSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes dipoScaleIn {
+  from {
+    opacity: 0;
+    transform: scale(.94);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+@keyframes dipoSlideRight {
+  from {
+    opacity: 0;
+    transform: translateX(-18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+@keyframes dipoSuccess {
+  0% {
+    transform: scale(.85);
+    opacity: 0;
+  }
+
+  60% {
+    transform: scale(1.06);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+/* =========================================================
+   PAGE ENTER
+   ========================================================= */
+
+.dipo-run-app {
+  animation: dipoSlideUp .5s cubic-bezier(.2,.8,.2,1) both;
+}
+
+
+/* =========================================================
+   PANEL ENTER
+   ========================================================= */
+
+.run-panel {
+  animation: dipoScaleIn .5s cubic-bezier(.2,.8,.2,1) both;
+}
+
+.run-panel:nth-child(2) {
+  animation-delay: 70ms;
+}
+
+
+/* =========================================================
+   RUNNING STATE
+   ========================================================= */
+
+.is-running {
+  position: relative;
+}
+
+.is-running::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  border-radius: inherit;
+
+  box-shadow:
+    inset 0 0 0 1px rgba(80,173,121,.12);
+
+  animation: dipoGlow 1.8s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   RUN BUTTON
+   ========================================================= */
+
+.run-button {
+  position: relative;
+
+  overflow: hidden;
+
+  isolation: isolate;
+}
+
+.run-button::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  bottom: 0;
+
+  left: -120%;
+
+  width: 70%;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255,255,255,.25),
+      transparent
+    );
+
+  transform: skewX(-20deg);
+
+  transition: left .6s ease;
+
+  z-index: -1;
+}
+
+.run-button:hover::before {
+  left: 150%;
+}
+
+
+/* =========================================================
+   AUTO RUN
+   ========================================================= */
+
+.auto-run-active .run-wordmark-dot {
+  animation:
+    dipoPulse .8s infinite,
+    dipoGlow 1.8s infinite;
+}
+
+.auto-run-active .autorun-indicator {
+  animation: dipoFloat 2s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   PREVIEW UPDATE
+   ========================================================= */
+
+.preview-device.is-updating {
+  animation: dipoScaleIn .22s ease;
+}
+
+
+/* =========================================================
+   SUCCESS
+   ========================================================= */
+
+.run-success {
+  animation: dipoSuccess .45s cubic-bezier(.2,.9,.25,1) both;
+}
+
+
+/* =========================================================
+   TOAST
+   ========================================================= */
+
+.run-toast {
+  position: fixed;
+
+  left: 50%;
+  bottom: 24px;
+
+  z-index: 3000;
+
+  transform:
+    translate(-50%, 20px)
+    scale(.96);
+
+  opacity: 0;
+
+  pointer-events: none;
+
+  padding: 11px 15px;
+
+  border-radius: 999px;
+
+  background: var(--dw-navy);
+  color: #fff;
+
+  box-shadow: var(--dw-shadow-lg);
+
+  font-size: 12px;
+  font-weight: 850;
+
+  transition:
+    opacity .25s ease,
+    transform .25s ease;
+}
+
+.run-toast.show {
+  opacity: 1;
+
+  transform:
+    translate(-50%, 0)
+    scale(1);
+}
+
+
+/* =========================================================
+   SKELETON
+   ========================================================= */
+
+.dipo-skeleton {
+  background:
+    linear-gradient(
+      90deg,
+      #edf2ef 20%,
+      #f8faf9 40%,
+      #edf2ef 60%
+    );
+
+  background-size: 300% 100%;
+
+  animation:
+    dipoShimmer 1.4s linear infinite;
+}
+
+
+/* =========================================================
+   COPY SUCCESS
+   ========================================================= */
+
+.copy-success {
+  animation:
+    dipoSuccess .3s ease both;
+}
+
+
+/* =========================================================
+   ERROR SHAKE
+   ========================================================= */
+
+.error-shake {
+  animation:
+    dipoShake .38s ease;
+}
+
+@keyframes dipoShake {
+
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  20% {
+    transform: translateX(-5px);
+  }
+
+  40% {
+    transform: translateX(5px);
+  }
+
+  60% {
+    transform: translateX(-3px);
+  }
+
+  80% {
+    transform: translateX(3px);
+  }
+}
+
+
+/* =========================================================
+   DISABLED
+   ========================================================= */
+
+.is-disabled,
+button:disabled {
+  cursor: not-allowed !important;
+  opacity: .55;
+  transform: none !important;
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+}

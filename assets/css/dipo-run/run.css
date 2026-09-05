@@ -1,0 +1,720 @@
+/* =========================================================
+   DIPO RUN — CORE UI
+   DIPO WORLD
+   ========================================================= */
+
+:root {
+  --dw-bg: #f4f8f5;
+  --dw-surface: #ffffff;
+  --dw-surface-soft: #f7faf8;
+
+  --dw-navy: #063b3e;
+  --dw-navy-2: #092f32;
+
+  --dw-green: #50ad79;
+  --dw-green-dark: #348e61;
+  --dw-green-soft: #dff2e5;
+
+  --dw-ice: #edf8f4;
+  --dw-border: #dce9e3;
+
+  --dw-text: #092f32;
+  --dw-text-soft: #66777a;
+  --dw-muted: #91a09f;
+
+  --dw-danger: #ef5b63;
+  --dw-warning: #e7a93b;
+
+  --dw-shadow-sm:
+    0 4px 18px rgba(6, 59, 62, 0.06);
+
+  --dw-shadow:
+    0 16px 45px rgba(6, 59, 62, 0.10);
+
+  --dw-shadow-lg:
+    0 28px 80px rgba(6, 59, 62, 0.14);
+
+  --dw-radius-sm: 12px;
+  --dw-radius-md: 18px;
+  --dw-radius-lg: 26px;
+  --dw-radius-xl: 34px;
+
+  --dw-transition:
+    220ms cubic-bezier(.2,.8,.2,1);
+
+  --dw-font:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Inter,
+    Arial,
+    sans-serif;
+
+  --dw-mono:
+    "SFMono-Regular",
+    Consolas,
+    "Liberation Mono",
+    Menlo,
+    monospace;
+}
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+
+  background:
+    radial-gradient(
+      circle at 90% 0%,
+      rgba(185, 225, 194, 0.28),
+      transparent 28%
+    ),
+    var(--dw-bg);
+
+  color: var(--dw-text);
+  font-family: var(--dw-font);
+
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  color: inherit;
+}
+
+img,
+svg {
+  max-width: 100%;
+}
+
+
+/* =========================================================
+   APP
+   ========================================================= */
+
+.dipo-run-app {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.dipo-run-container {
+  width: min(1480px, calc(100% - 32px));
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.run-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  height: 76px;
+
+  background: rgba(255, 255, 255, 0.88);
+  border-bottom: 1px solid rgba(220, 233, 227, 0.9);
+
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+}
+
+.run-header-inner {
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+
+/* =========================================================
+   DIPO WORLD LOGO
+   ========================================================= */
+
+.run-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+
+  text-decoration: none;
+  user-select: none;
+}
+
+.run-brand-mark {
+  width: 46px;
+  height: 46px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 15px;
+
+  background: var(--dw-navy);
+  color: #fff;
+
+  font-size: 22px;
+  font-weight: 950;
+
+  box-shadow:
+    0 0 0 7px var(--dw-green-soft);
+
+  transition: var(--dw-transition);
+}
+
+.run-brand:hover .run-brand-mark {
+  transform: rotate(-4deg) scale(1.04);
+}
+
+.run-brand-name {
+  font-size: 21px;
+  font-weight: 950;
+  letter-spacing: -1.2px;
+  color: var(--dw-navy);
+}
+
+.run-brand-name span {
+  color: var(--dw-green);
+}
+
+
+/* =========================================================
+   RUN WORDMARK
+   ========================================================= */
+
+.run-wordmark {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 8px 14px;
+
+  border: 1px solid var(--dw-border);
+  border-radius: 999px;
+
+  background: rgba(247, 250, 248, 0.8);
+
+  font-size: 13px;
+  font-weight: 850;
+  letter-spacing: .5px;
+}
+
+.run-wordmark-dot {
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+  background: var(--dw-green);
+
+  box-shadow: 0 0 0 5px rgba(80, 173, 121, .12);
+
+  animation: dipoPulse 2.2s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   HEADER ACTIONS
+   ========================================================= */
+
+.run-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.run-icon-btn,
+.run-header-btn {
+  appearance: none;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  border: 1px solid var(--dw-border);
+  background: #fff;
+  color: var(--dw-navy);
+
+  cursor: pointer;
+
+  transition: var(--dw-transition);
+}
+
+.run-icon-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 13px;
+
+  font-size: 18px;
+}
+
+.run-header-btn {
+  min-height: 42px;
+  padding: 0 15px;
+
+  border-radius: 13px;
+
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.run-icon-btn:hover,
+.run-header-btn:hover {
+  border-color: var(--dw-green);
+  transform: translateY(-2px);
+  box-shadow: var(--dw-shadow-sm);
+}
+
+.run-icon-btn:active,
+.run-header-btn:active {
+  transform: scale(.96);
+}
+
+
+/* =========================================================
+   MAIN WORKSPACE
+   ========================================================= */
+
+.run-main {
+  padding: 24px 0 60px;
+}
+
+.run-workspace {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(360px, .95fr);
+
+  gap: 18px;
+
+  align-items: stretch;
+}
+
+
+/* =========================================================
+   PANEL
+   ========================================================= */
+
+.run-panel {
+  min-width: 0;
+
+  background: var(--dw-surface);
+
+  border: 1px solid var(--dw-border);
+  border-radius: var(--dw-radius-lg);
+
+  box-shadow: var(--dw-shadow);
+
+  overflow: hidden;
+}
+
+.run-panel-header {
+  min-height: 58px;
+
+  padding: 10px 14px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+
+  border-bottom: 1px solid var(--dw-border);
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,.98),
+      rgba(248,251,249,.95)
+    );
+}
+
+.run-panel-title {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: -.2px;
+}
+
+.run-panel-title-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+
+  background: var(--dw-green);
+}
+
+.run-panel-actions {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+
+/* =========================================================
+   TOOLBAR
+   ========================================================= */
+
+.run-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+
+  padding: 10px 12px;
+
+  background: var(--dw-navy);
+  color: #fff;
+
+  border-radius: 16px;
+}
+
+.run-toolbar-left,
+.run-toolbar-right {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.run-toolbar-btn {
+  appearance: none;
+
+  min-height: 36px;
+  padding: 0 11px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 10px;
+
+  background: rgba(255,255,255,.08);
+  color: #fff;
+
+  cursor: pointer;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  transition: var(--dw-transition);
+}
+
+.run-toolbar-btn:hover {
+  background: rgba(255,255,255,.15);
+  transform: translateY(-1px);
+}
+
+.run-toolbar-btn.primary {
+  background: var(--dw-green);
+  border-color: var(--dw-green);
+
+  color: #fff;
+}
+
+.run-toolbar-btn.primary:hover {
+  background: var(--dw-green-dark);
+}
+
+
+/* =========================================================
+   LANGUAGE BADGE
+   ========================================================= */
+
+.run-language {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  padding: 7px 10px;
+
+  border-radius: 10px;
+
+  background: rgba(80,173,121,.14);
+  color: #dff8e8;
+
+  font-size: 11px;
+  font-weight: 850;
+}
+
+.run-language-dot {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+  background: var(--dw-green);
+}
+
+
+/* =========================================================
+   STATUS
+   ========================================================= */
+
+.run-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--dw-text-soft);
+}
+
+.run-status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+
+  background: var(--dw-muted);
+}
+
+.run-status.is-ready .run-status-dot {
+  background: var(--dw-green);
+}
+
+.run-status.is-running .run-status-dot {
+  background: var(--dw-warning);
+  animation: dipoPulse 1s infinite;
+}
+
+.run-status.is-error .run-status-dot {
+  background: var(--dw-danger);
+}
+
+
+/* =========================================================
+   FLOATING DIPO RUN BRAND
+   ========================================================= */
+
+.dipo-run-float-brand {
+  position: fixed;
+
+  right: 22px;
+  bottom: 22px;
+
+  z-index: 900;
+
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  padding: 9px 13px 9px 9px;
+
+  border: 1px solid rgba(255,255,255,.55);
+  border-radius: 999px;
+
+  background: rgba(6,59,62,.92);
+  color: #fff;
+
+  box-shadow: var(--dw-shadow-lg);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  animation: dipoFloat 4s ease-in-out infinite;
+}
+
+.dipo-run-float-icon {
+  width: 31px;
+  height: 31px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  background: var(--dw-green);
+  color: #fff;
+
+  font-size: 13px;
+  font-weight: 950;
+}
+
+.dipo-run-float-text {
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: .6px;
+}
+
+
+/* =========================================================
+   UTILITY
+   ========================================================= */
+
+.hidden {
+  display: none !important;
+}
+
+.no-select {
+  user-select: none;
+}
+
+.full-width {
+  width: 100%;
+}
+
+
+/* =========================================================
+   SCROLLBAR
+   ========================================================= */
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #b9ccc3 transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #b9ccc3;
+  border-radius: 999px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: #8eaaa0;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1050px) {
+
+  .run-workspace {
+    grid-template-columns: 1fr;
+  }
+
+  .run-panel.preview-panel {
+    min-height: 620px;
+  }
+}
+
+
+@media (max-width: 700px) {
+
+  .dipo-run-container {
+    width: min(100% - 20px, 600px);
+  }
+
+  .run-header {
+    height: 66px;
+  }
+
+  .run-brand-mark {
+    width: 40px;
+    height: 40px;
+    border-radius: 13px;
+    font-size: 19px;
+  }
+
+  .run-brand-name {
+    font-size: 18px;
+  }
+
+  .run-wordmark {
+    display: none;
+  }
+
+  .run-header-btn {
+    padding: 0 11px;
+  }
+
+  .run-main {
+    padding-top: 12px;
+  }
+
+  .run-panel {
+    border-radius: 21px;
+  }
+
+  .run-panel-header {
+    min-height: 54px;
+  }
+
+  .dipo-run-float-brand {
+    right: 12px;
+    bottom: 12px;
+  }
+}
+
+
+@media (max-width: 420px) {
+
+  .run-brand-name {
+    display: none;
+  }
+
+  .run-header-actions {
+    gap: 5px;
+  }
+
+  .run-icon-btn {
+    width: 39px;
+    height: 39px;
+  }
+
+  .run-header-btn {
+    min-height: 39px;
+    font-size: 11px;
+  }
+
+  .run-toolbar {
+    border-radius: 13px;
+  }
+
+  .run-toolbar-btn {
+    min-height: 34px;
+    padding: 0 9px;
+  }
+
+  .dipo-run-float-text {
+    display: none;
+  }
+
+  .dipo-run-float-brand {
+    padding: 7px;
+  }
+}

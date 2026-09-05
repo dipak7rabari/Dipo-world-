@@ -1,0 +1,386 @@
+/* =========================================================
+   DIPO RUN — EDITOR
+   ========================================================= */
+
+.editor-panel {
+  display: flex;
+  flex-direction: column;
+
+  min-height: 720px;
+}
+
+
+/* =========================================================
+   EDITOR WRAPPER
+   ========================================================= */
+
+.editor-shell {
+  position: relative;
+
+  flex: 1;
+
+  min-height: 560px;
+
+  display: flex;
+
+  background: #071f22;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   LINE NUMBERS
+   ========================================================= */
+
+.editor-line-numbers {
+  width: 48px;
+
+  flex: 0 0 48px;
+
+  padding: 20px 8px;
+
+  overflow: hidden;
+
+  background: #06272a;
+
+  border-right: 1px solid rgba(255,255,255,.06);
+
+  color: #638184;
+
+  font-family: var(--dw-mono);
+  font-size: 13px;
+  line-height: 1.75;
+
+  text-align: right;
+
+  user-select: none;
+}
+
+.editor-line-numbers span {
+  display: block;
+  height: 23px;
+}
+
+
+/* =========================================================
+   EDITOR AREA
+   ========================================================= */
+
+.editor-area {
+  position: relative;
+
+  flex: 1;
+
+  min-width: 0;
+
+  overflow: auto;
+
+  background:
+    radial-gradient(
+      circle at 100% 0%,
+      rgba(80,173,121,.08),
+      transparent 32%
+    ),
+    #071f22;
+}
+
+
+/* =========================================================
+   CODE INPUT
+   ========================================================= */
+
+.editor-input {
+  display: block;
+
+  width: 100%;
+  min-width: 100%;
+
+  min-height: 100%;
+
+  padding: 20px;
+
+  border: 0;
+  outline: 0;
+
+  resize: none;
+
+  background: transparent;
+  color: #e7f5ee;
+
+  caret-color: #79d69d;
+
+  font-family: var(--dw-mono);
+  font-size: 14px;
+  line-height: 1.75;
+
+  tab-size: 2;
+
+  white-space: pre;
+  overflow-wrap: normal;
+
+  -webkit-overflow-scrolling: touch;
+}
+
+.editor-input::placeholder {
+  color: #587174;
+}
+
+.editor-input::selection {
+  background: rgba(80,173,121,.25);
+}
+
+
+/* =========================================================
+   CODE HIGHLIGHT LAYER
+   ========================================================= */
+
+.editor-highlight {
+  position: absolute;
+
+  inset: 0;
+
+  padding: 20px;
+
+  pointer-events: none;
+
+  font-family: var(--dw-mono);
+  font-size: 14px;
+  line-height: 1.75;
+
+  white-space: pre;
+  overflow: hidden;
+
+  color: #e7f5ee;
+}
+
+.editor-highlight code {
+  font: inherit;
+}
+
+
+/* =========================================================
+   AUTOCOMPLETE
+   ========================================================= */
+
+.editor-suggestions {
+  position: absolute;
+
+  left: 68px;
+  bottom: 20px;
+
+  width: min(290px, calc(100% - 88px));
+
+  padding: 7px;
+
+  border: 1px solid rgba(255,255,255,.10);
+  border-radius: 15px;
+
+  background: rgba(7,31,34,.96);
+
+  box-shadow: 0 20px 50px rgba(0,0,0,.28);
+
+  backdrop-filter: blur(16px);
+
+  z-index: 30;
+}
+
+.editor-suggestion {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+
+  padding: 9px 10px;
+
+  border: 0;
+  border-radius: 10px;
+
+  background: transparent;
+  color: #dcece5;
+
+  cursor: pointer;
+
+  text-align: left;
+
+  font-family: var(--dw-mono);
+  font-size: 12px;
+}
+
+.editor-suggestion:hover,
+.editor-suggestion.active {
+  background: rgba(80,173,121,.15);
+}
+
+
+/* =========================================================
+   EDITOR FOOTER
+   ========================================================= */
+
+.editor-footer {
+  min-height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+
+  padding: 8px 12px;
+
+  background: #06272a;
+
+  border-top: 1px solid rgba(255,255,255,.06);
+
+  color: #789092;
+
+  font-family: var(--dw-mono);
+  font-size: 10px;
+}
+
+.editor-footer-left,
+.editor-footer-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.editor-meta {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+
+/* =========================================================
+   AUTORUN INDICATOR
+   ========================================================= */
+
+.autorun-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  padding: 5px 8px;
+
+  border-radius: 999px;
+
+  background: rgba(80,173,121,.10);
+
+  color: #8fd9aa;
+
+  font-weight: 800;
+}
+
+.autorun-indicator::before {
+  content: "";
+
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: #50ad79;
+
+  animation: dipoPulse 1.7s infinite;
+}
+
+
+/* =========================================================
+   EDITOR ERROR
+   ========================================================= */
+
+.editor-error {
+  position: absolute;
+
+  left: 58px;
+  right: 14px;
+  bottom: 54px;
+
+  padding: 11px 13px;
+
+  border: 1px solid rgba(239,91,99,.25);
+  border-radius: 13px;
+
+  background: rgba(100,20,25,.94);
+  color: #ffd9dc;
+
+  font-family: var(--dw-mono);
+  font-size: 11px;
+  line-height: 1.5;
+
+  box-shadow: 0 15px 40px rgba(0,0,0,.25);
+
+  z-index: 20;
+}
+
+
+/* =========================================================
+   CODE TOKENS
+   ========================================================= */
+
+.token-tag {
+  color: #75c6e5;
+}
+
+.token-attr {
+  color: #b9d77a;
+}
+
+.token-string {
+  color: #d8c486;
+}
+
+.token-comment {
+  color: #648084;
+}
+
+.token-keyword {
+  color: #d8a9e8;
+}
+
+.token-number {
+  color: #efb06b;
+}
+
+.token-function {
+  color: #79d69d;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  .editor-panel {
+    min-height: 600px;
+  }
+
+  .editor-shell {
+    min-height: 470px;
+  }
+
+  .editor-line-numbers {
+    width: 38px;
+    flex-basis: 38px;
+
+    padding: 16px 6px;
+
+    font-size: 11px;
+  }
+
+  .editor-input,
+  .editor-highlight {
+    padding: 16px;
+
+    font-size: 12px;
+    line-height: 1.7;
+  }
+
+  .editor-suggestions {
+    left: 48px;
+    bottom: 16px;
+  }
+}

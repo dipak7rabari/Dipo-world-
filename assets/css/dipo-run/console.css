@@ -1,0 +1,314 @@
+/* =========================================================
+   DIPO RUN — CONSOLE
+   ========================================================= */
+
+.console-panel {
+  width: 100%;
+
+  background: #061d20;
+
+  border-radius: var(--dw-radius-md);
+
+  overflow: hidden;
+
+  color: #dcece5;
+}
+
+
+/* =========================================================
+   CONSOLE HEADER
+   ========================================================= */
+
+.console-header {
+  min-height: 46px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 8px 12px;
+
+  background: #08272a;
+
+  border-bottom: 1px solid rgba(255,255,255,.07);
+}
+
+.console-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  color: #e5f3ec;
+
+  font-family: var(--dw-mono);
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.console-title-icon {
+  color: var(--dw-green);
+}
+
+.console-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.console-btn {
+  appearance: none;
+
+  min-height: 29px;
+  padding: 0 9px;
+
+  border: 1px solid rgba(255,255,255,.09);
+  border-radius: 8px;
+
+  background: rgba(255,255,255,.05);
+  color: #9db3af;
+
+  cursor: pointer;
+
+  font-family: var(--dw-mono);
+  font-size: 9px;
+  font-weight: 800;
+
+  transition: var(--dw-transition);
+}
+
+.console-btn:hover {
+  background: rgba(255,255,255,.10);
+  color: #fff;
+}
+
+
+/* =========================================================
+   CONSOLE BODY
+   ========================================================= */
+
+.console-body {
+  min-height: 150px;
+  max-height: 300px;
+
+  padding: 12px;
+
+  overflow: auto;
+
+  font-family: var(--dw-mono);
+  font-size: 11px;
+  line-height: 1.65;
+}
+
+
+/* =========================================================
+   CONSOLE LINE
+   ========================================================= */
+
+.console-line {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+
+  padding: 4px 0;
+
+  word-break: break-word;
+}
+
+.console-time {
+  flex: 0 0 auto;
+
+  color: #506c70;
+
+  font-size: 9px;
+}
+
+.console-icon {
+  flex: 0 0 auto;
+
+  width: 15px;
+
+  text-align: center;
+}
+
+.console-message {
+  min-width: 0;
+  white-space: pre-wrap;
+}
+
+
+/* =========================================================
+   TYPES
+   ========================================================= */
+
+.console-line.info .console-icon {
+  color: #75c6e5;
+}
+
+.console-line.success .console-icon {
+  color: #70d394;
+}
+
+.console-line.warning .console-icon {
+  color: #efbd62;
+}
+
+.console-line.error .console-icon {
+  color: #ef6d76;
+}
+
+.console-line.info .console-message {
+  color: #c5d9d4;
+}
+
+.console-line.success .console-message {
+  color: #a8e4bc;
+}
+
+.console-line.warning .console-message {
+  color: #f2d08f;
+}
+
+.console-line.error .console-message {
+  color: #ffadb2;
+}
+
+
+/* =========================================================
+   CONSOLE EMPTY
+   ========================================================= */
+
+.console-empty {
+  min-height: 110px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #526c70;
+
+  font-size: 11px;
+  text-align: center;
+}
+
+
+/* =========================================================
+   CONSOLE ERROR CARD
+   ========================================================= */
+
+.console-error-card {
+  margin: 8px 0;
+
+  padding: 11px 12px;
+
+  border-left: 3px solid var(--dw-danger);
+  border-radius: 9px;
+
+  background: rgba(239,91,99,.08);
+
+  color: #ffb9be;
+}
+
+.console-error-title {
+  margin-bottom: 4px;
+
+  font-weight: 900;
+}
+
+.console-error-detail {
+  color: #b9898d;
+
+  white-space: pre-wrap;
+}
+
+
+/* =========================================================
+   CONSOLE INPUT
+   ========================================================= */
+
+.console-input-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 8px 10px;
+
+  border-top: 1px solid rgba(255,255,255,.06);
+
+  background: #051a1d;
+}
+
+.console-prompt {
+  color: var(--dw-green);
+
+  font-family: var(--dw-mono);
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.console-input {
+  min-width: 0;
+  flex: 1;
+
+  border: 0;
+  outline: 0;
+
+  background: transparent;
+  color: #e4f1eb;
+
+  font-family: var(--dw-mono);
+  font-size: 11px;
+}
+
+.console-input::placeholder {
+  color: #4e686c;
+}
+
+
+/* =========================================================
+   STATUS STRIP
+   ========================================================= */
+
+.console-status {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  min-height: 35px;
+
+  padding: 6px 11px;
+
+  background: #072326;
+
+  border-top: 1px solid rgba(255,255,255,.05);
+
+  color: #668083;
+
+  font-family: var(--dw-mono);
+  font-size: 9px;
+}
+
+.console-status-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  .console-body {
+    max-height: 240px;
+  }
+
+  .console-line {
+    gap: 6px;
+  }
+
+  .console-time {
+    display: none;
+  }
+}
